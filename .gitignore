@@ -5,10 +5,5 @@
 .vscode/*
 !.vscode/settings.json
 
-# LaTeX
-*.aux
-*.bcf
-*.log
-*.run.xml
-*.synctex.gz
-*.toc
+# LaTeX build output (aux, log, pdf, bibliography intermediates)
+build/

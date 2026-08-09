@@ -13,6 +13,7 @@ To set up this LaTeX thesis project from scratch on a Mac, thw following steps a
      ```
      brew install texlive
      ```
+   - **Bibliography:** This project uses `biblatex` with the `bibtex` backend (Homebrew TeX Live does not ship `biber`). Citations resolve via `latexmk` / BibTeX against `lit.bib`.
 
 2. **Install the LaTeX Workshop extension for VS Code**
    - **Why:** This extension provides LaTeX syntax highlighting, build tools, PDF preview, autocompletion, and other productivity features.
@@ -26,3 +27,13 @@ To set up this LaTeX thesis project from scratch on a Mac, thw following steps a
      brew install tex-fmt
      ```
    - In the `.vscode/setting.json`-file the formater get configured
+
+
+
+## Citation Workflow
+
+### Setup
+1. Install Zotero
+
+2. Install the Zotro Plugin [BetterBib Tex](https://github.com/retorquere/zotero-better-bibtex/releases):
+    - Follow [this video](https://www.youtube.com/watch?v=JBuzaWstB2w)
