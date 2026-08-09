@@ -6,4 +6,5 @@
 !.vscode/settings.json
 
 # LaTeX build output (aux, log, pdf, bibliography intermediates)
-build/
+build/*
+!build/*.pdf

@@ -3,6 +3,8 @@
   "latex-workshop.latex.root": "main.tex",
   "latex-workshop.latex.autoBuild.run": "onSave",
   "latex-workshop.latex.outDir": "%DIR%/build",
+  "latex-workshop.latex.build.forceRecipeUsage": true,
+  "latex-workshop.latex.build.enableMagicComments": false,
   "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
   "latex-workshop.latex.tools": [
     {
@@ -13,15 +15,18 @@
         "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
-        "-outdir=%OUTDIR%",
-        "%DOC%"
-      ]
+        "-outdir=build",
+        "%DOCFILE%"
+      ],
+      "env": {}
     }
   ],
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk (lualatex)",
-      "tools": ["latexmk"]
+      "tools": [
+        "latexmk"
+      ]
     }
   ]
 }
