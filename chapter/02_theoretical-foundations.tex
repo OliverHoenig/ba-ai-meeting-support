@@ -55,12 +55,40 @@ reduce meeting effectiveness.
 
 Dysfunctional communication—such as complaining, criticizing, and digressing—reduces effectiveness.
 \cite[130]{kauffeldMeetingsMatterEffects2012}
+
+-> Unausgeglichen / geringe participation
+-> Unvorhergesehen veränderungen im Meeting (flasch Annahmen, meetingziel ändert sich)
+-> technische Probleme: Instablie internetverbindungen, Störungen etc. (nicht im scope dieser arbeit aber
+dennoch relevant)
 \section{Facilitation Strategies for Remote Collaboration (RQ1)}
 \subsection{Empirical evidence on effective techniques (e.g., timeboxing, role assignment)}
 \subsection{Technological and social dynamics in virtual teams}
 \section{AI in Meeting Support Systems (RQ2)}
-\subsection{State-of-the-art: NLP, real-time transcription, and adaptive interventions}
-\subsection{Proactive AI-Interactions: Timing and triggers for AI-Systems}
+
+\subsection{Building blocks and Frameworks to design LLM-based Meeting AI-Agents}
+
+\textbf{AI-Agents in General}
+
+zunächste soll geklrät werden was unter KI-Agenten verstanden wird.
+Letztlich sind KI-Agenten system um teilaufgaben zu automaiseren.
+Um eine präzieres Verständnis zu bekommen lohtn es sich daher eine abgrezung zu klasssen worklof
+automatiserungen zu machen.
+
+Programmatische Prozessautomatisierung bezeichnet die regelbasierte Automatisierung von Abläufen, bei der
+festgelegte Bedingungen und strukturierte Entscheidungslogiken genutzt werden, um Prozesse effizient,
+zuverlässig und wiederholbar auszuführen. Technicken die hier zum einsatz kommen sind robotic Process
+Automation, Skritping und Markos.
+
+LLMs können kontext ldabei helfen unstruktierte aufgaben zu lösen. antrhopic whält folgende Defintion bz von
+Agenten welche KI-Agneten von Workflos abgrenzt.
+Workflows are systems where LLMs and tools are orchestrated through predefined code paths.
+Agents, on the other hand, are systems where LLMs dynamically direct their own processes and tool usage,
+maintaining control over how they accomplish tasks.
+
+\textbf{Building blocks for AI-Agents}
+
+\textbf{The Observe, Ask, Intervene Framework for designing AI Agents for more inclusive Meetings}
+
 In study by Houtti et al.\cite[p. 5]{houttiObserveAskIntervene2025},
 in which participants were asked to design virtual co-hosts during semi-structured design sessions,
 a widespread tendency emerged to design the co-host to be interactive rather than to let it act entirely
@@ -68,6 +96,51 @@ automatically.
 Common design patterns involved the co-host providing prompts in response to explicit instructions (e.g.,
 when explicitly asked or when a pin was set).
 The authors conclude that interactivity could help prevent mistrust.
+
+\textbf{What? When? Who? Framework for Goal relecting (Are we on track?)}
+
+\subsection{Proactive AI-Interactions: Timing and triggers for AI-Systems}
+
+To reduce the need for explicit prompts, an AI agent should be able to proactively recognize when it is its
+turn in an interaction sequence. In dyadic human-AI interactions, pauses or so-called “stop words” are often
+used for this purpose to identify a change in speaker. In multi-party scenarios (e.g., group conversations),
+however, this becomes significantly more complex and leads to the “multi-party turn-taking
+problem”. \cite{sacksSimplestSystematicsOrganization1974}
+
+Some approaches model the problem as a machine learning task by attempting to predict the next speaker based
+on previous speaker changes.
+\cite{bayserLearningMultiPartyTurnTaking2019}
+Bayer et al. employ traditional algorithms such as Maximum Likelihood Estimation (MLE) and Support Vector
+Machines (SVMs), as well as deep learning architectures including Convolutional Neural Networks (CNN) and
+Long Short-Term Memory (LSTM) networks. They distinguish two primary paradigms: agent-only
+models, which rely solely on speaker history, and agent-and-content models, which additionally incorporate
+conversational context. Both paradigms have been trained and evaluated across diverse, topic-oriented and
+chit-chat corpora using these varied algorithms.
+The empirical findings indicate that while simple agent-only models are sufficient for small, highly focused
+dialogues, incorporating conversational content becomes crucial in goal- and topic-oriented interactions
+characterized by complex, irregular turn-taking patterns. Conversely, in unstructured chit-chat scenarios,
+the integration of semantic content yields no statistically
+significant performance gain over simple, rule-based baselines such as the "Repeat Last heuristic"
+\cite[p. 2]{bayserLearningMultiPartyTurnTaking2019}
+
+With these approaches, however, it remains unclear why an agent should interact at a specific point in time.
+Due to the design of the ML algorithms, the timing of the interaction is decoupled from its cause or is only
+implicitly included in the model, but cannot be explicitly explained. (Example: We know that it is now the
+time for the agent to interact now -> But why? Whats the reason its like that he should talk? What should he say?)
+
+Die über die leltzten jahre stattgefunden entwicklung bei LLMs ermöglichen neue ansätze um diese Problem zu modellieren.
+Neus Paradgima von LLM-basierten Agentischen Systemen.
+Was ist das? -> Hier berscheiben was KI-Agenten sind (Anthopic definition finden und verwenden)
+LLM basierte AI-Agenten mit einer LLM pipelie welche intrisische gedanken simmuliert, könnte ein viel
+versprechender ansatz sein.
+
+Liu et al. verfolgenden diesen Ansatz um einen procativen conversationa Agent mit inner Thoughts zu
+modellieren. \cite{liuProactiveConversationalAgents2025}
+
+Y verfolgen diesen ansatz um eine proaktiven Chatbot zu modellieren und
+schlussfolgern, dass
+
+\textbf{Classic Worksflow}
 
 \subsection{Theoretical frameworks: Human-AI Interaction (HAI), Explainable AI (XAI) }
 \section{Technology Acceptance and Usability}
