@@ -1,5 +1,12 @@
 {
   "latex-workshop.formatting.latex": "tex-fmt",
+  "latex-workshop.formatting.tex-fmt.path": "/opt/homebrew/bin/tex-fmt",
+  "latex-workshop.formatting.tex-fmt.args": [
+    "--wraplen",
+    "120",
+    "--tabsize",
+    "2"
+  ],
   "latex-workshop.latex.root": "main.tex",
   "latex-workshop.latex.autoBuild.run": "onSave",
   "latex-workshop.latex.outDir": "%DIR%/build",
@@ -28,5 +35,13 @@
         "latexmk"
       ]
     }
-  ]
+  ],
+  "[latex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop",
+    "editor.rulers": [
+      120
+    ],
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "off"
+  }
 }
