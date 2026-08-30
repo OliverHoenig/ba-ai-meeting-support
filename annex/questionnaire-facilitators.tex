@@ -1,60 +1,242 @@
-\section{Semi-Structured Questionnaire for Interviews with Facilitators}
+\section{Semi-Structured Interview Guide for Expert Interviews with Facilitators}
+\label{annex:interview-guide-facilitators}
 
-\subsection*{Background and Role}
-\begin{enumerate}[label=1.\arabic*]
-  \item {How do you feel about online collaboration in general?}
-  \item {To start with facilitation: do you hold a generally positive or critical perspective
-    toward online facilitation? Why?}
-  \item {How long have you been working as a facilitator?}
-  \item {Why did you start facilitating, or how did you end up becoming a facilitator?}
-  \item {What do you like about being a facilitator?}
+This annex documents the original-language instrument (German) used in the expert interviews
+(Chapter~\ref{ch:empirical-analysis-of-facilitating-strategies}). The guide operationalizes
+RQ1 (facilitating strategies and challenges in goal-oriented remote meetings with convergent
+objectives) and prepares the derivation of design requirements for RQ2 (a proactive,
+context-sensitive AI moderation system). It does not address RQ3 (user acceptance among
+knowledge workers), which is examined in a separate study.
+
+The instrument follows the logic of a semi-structured expert interview: a small set of open
+narrative prompts (\textit{Hauptfragen}) secures thematic focus, while optional probes
+(\textit{Nachfragen}) are used only if a theoretically relevant aspect is not addressed
+spontaneously \cite[p.~877]{baurHandbuchMethodenEmpirischen2022}. The sequence may follow
+the conversation; not every probe needs to be asked. The intended duration is approximately
+30 minutes.
+
+\subsection*{Expected thematic clusters and coverage}
+
+The blocks are aligned with the challenges identified in the literature
+(Chapter~2) and with the system-design dimensions of RQ2 (detection, timing, addressee,
+and form of intervention). The following clusters are expected in the material; they serve as
+a sensitizing frame for later thematic coding, not as a closed coding scheme.
+
+\begin{enumerate}[label=\textbf{C\arabic*}]
+  \item \textbf{Goal clarity and structure.}
+    Unclear or poorly communicated objectives; agenda without operational sub-goals;
+    loss of a shared sense of ``on track''.
+    Covered by Block~2 and Block~3.
+  \item \textbf{Thematic deviation and time-to-decision.}
+    Off-topic sequences, circular discussion, delayed or avoided decisions in convergent
+    processes (decision-making, prioritization, problem-solving).
+    Covered by Block~2 and Block~4.
+  \item \textbf{Participation, hierarchy, and group dynamics.}
+    Unequal speaking time, dominance, reluctance to dissent, face-saving.
+    Covered by Block~2, Block~4 (public vs.\ private), and Block~6.
+  \item \textbf{Dynamic goals and situational uncertainty.}
+    Goals that shift during the meeting; false assumptions; need to renegotiate the mandate.
+    Covered by Block~2 and Block~3.
+  \item \textbf{Preparation versus in-meeting facilitation.}
+    What can be secured beforehand, and what can only be steered in situ.
+    Covered by Block~3.
+  \item \textbf{Recognizing critical moments (cues for detection).}
+    Verbal, temporal, social, and remote-specific signals from which facilitators infer
+    that goal orientation or decision quality is at risk. Directly informs the detection
+    logic of RQ2 (\textit{What? When? Who?}).
+    Covered by Block~4.
+  \item \textbf{Intervention repertoire.}
+    Methods, structures, and habits (e.g.\ timeboxing, roles, visualization);
+    choice of addressee and channel (group vs.\ private); tone and timing.
+    Covered by Block~3 and Block~4.
+  \item \textbf{Tool support and gaps.}
+    How current platforms help or hinder goal orientation; missing support.
+    Covered by Block~5.
+  \item \textbf{Role, agency, and limits of an AI co-facilitator.}
+    Proactive versus on-demand support; essential functions; undesired automation;
+    risks of unsolicited intervention (trust, control, false positives, privacy).
+    Covered by Block~6.
 \end{enumerate}
 
-\subsection*{Online vs. In-Person Collaboration}
-\begin{enumerate}[label=2.\arabic*]
-  \item {Compared with in-person collaboration, how would you rate online collaboration
-    overall?}
-  \item {In your experience, what are the main differences between online and in-person
-    collaboration?}
+Removed from the earlier draft were biographical and attitudinal items (general opinion of
+  online collaboration, career entry, liking the role, overall rating of online vs.\ in-person
+work). They do not contribute to RQ1 or RQ2 and consume time needed for narrative accounts
+of practice.
+
+\subsection*{Hinweise zur Durchführung}
+
+\begin{itemize}[leftmargin=*]
+  \item Anrede durchgängig \textit{Sie}; Fachbegriffe der interviewten Person aufnehmen
+    (Moderation, Facilitation, Prozessbegleitung).
+  \item Hauptfragen als Erzählaufforderungen stellen, nicht als Ja/Nein- oder
+    Bewertungsfragen.
+  \item Immanente Nachfragen (am Gesagten anknüpfen) haben Vorrang vor exmanenten Sondierungen.
+  \item Die optionalen Nachfragen sind Sensibilisierungsanker aus der Literatur; sie sollen
+    nicht als Checkliste abgefragt werden.
+  \item Nach dem Gespräch: unmittelbares Interviewprotokoll (erste Eindrücke, besondere
+    Sequenzen, Kontext) anfertigen, solange der Eindruck noch frisch ist.
+\end{itemize}
+
+\subsection*{Einstiegstext (sinngemäß)}
+
+Vielen Dank, dass Sie sich Zeit nehmen. Ich untersuche, wie zielorientierte Remote-Meetings
+--- insbesondere Formate, in denen entschieden, priorisiert oder ein Problem gelöst werden
+soll --- so moderiert werden, dass die Gruppe am Ziel bleibt und zu einer Entscheidung
+kommt. Aus den Gesprächen mit erfahrenen Moderatorinnen und Moderatoren leite ich ab, welche
+Anforderungen ein KI-gestütztes Unterstützungssystem erfüllen müsste.
+
+Das Gespräch ist als offenes Experteninterview angelegt. Es gibt keine richtigen oder
+falschen Antworten; mich interessiert Ihre berufliche Praxis und Ihre Einschätzung. Das
+Interview dauert etwa 30 Minuten, wird über Zoom geführt und --- mit Ihrem Einverständnis ---
+aufgezeichnet, transkribiert und in anonymisierter Form für die Bachelorarbeit ausgewertet.
+Die Aufnahme wird nicht an Dritte weitergegeben. Sind Sie mit Aufzeichnung und dieser
+Verarbeitung einverstanden?
+
+\medskip
+\textit{Einverständnis dokumentieren, dann aufzeichnen.}
+
+% ---------------------------------------------------------------------------
+\subsection*{Block 1: Beruflicher Kontext}
+\textit{Funktion: Sampling-Validierung und gemeinsame Bezugsebene. Ca.\ 3 Minuten.}
+
+\begin{enumerate}[label=1.\arabic*, leftmargin=*]
+  \item Bitte beschreiben Sie kurz Ihre Rolle und Ihren Erfahrungshintergrund in der
+    Moderation --- insbesondere in Remote-Meetings mit konvergentem Auftrag, also dort,
+    wo entschieden, priorisiert oder ein konkretes Problem gelöst werden soll.
+    \begin{itemize}[label=\textendash]
+      \item \textit{Optional:} Seit wann sind Sie in diesem Feld tätig, und in welchen
+        organisatorischen Kontexten (z.\,B.\ Unternehmen, öffentliche Verwaltung,
+        agiles Coaching, Großgruppen)?
+      \item \textit{Optional:} Wer sind typischerweise die Teilnehmenden (Hierarchie,
+        Fachlichkeit, Gruppengröße, wiederkehrendes Team vs.\ ad hoc)?
+    \end{itemize}
 \end{enumerate}
 
-\subsection*{Facilitation Experience and Context}
-\begin{enumerate}[label=3.\arabic*]
-  \item {Can you describe your facilitation experience in online collaboration settings?}
-  \item {Who were the participants in the sessions you facilitated?}
-  \item {What were the key points you focused on when facilitating this type of event?}
-  \item {What were the main difficulties or challenges you encountered as a facilitator?}
+% ---------------------------------------------------------------------------
+\subsection*{Block 2: Herausforderungen in zielorientierten Remote-Meetings (RQ1)}
+\textit{Funktion: Empirische Verdichtung der in Kapitel~2 identifizierten Herausforderungen;
+  Fokus auf konvergente Prozesse, nicht auf Online-Zusammenarbeit im Allgemeinen.
+Ca.\ 6 Minuten.}
+
+\begin{enumerate}[label=2.\arabic*, leftmargin=*]
+  \item Wenn Sie an typische Remote-Meetings denken, in denen eine Entscheidung getroffen
+    werden soll: Was läuft dort aus Ihrer Erfahrung häufig schief --- und woran merken
+    Sie das im Verlauf des Gesprächs?
+    \begin{itemize}[label=\textendash]
+      \item \textit{Falls nicht von selbst thematisiert:} Zielklarheit und Struktur;
+        Abschweifen vom Thema; ungleiche Beteiligung oder hierarchische Dynamiken;
+        Zeitdruck; Ziele, die sich während des Meetings verschieben.
+    \end{itemize}
+  \item Welche dieser Schwierigkeiten sind für Sie spezifisch für das Remote-Setting ---
+    und welche würden in vergleichbarer Form auch in Präsenz auftreten?
 \end{enumerate}
 
-\subsection*{Platforms and Tools}
-\begin{enumerate}[label=3.\arabic*]
-  \item {What platforms or tools did you use during facilitation?}
-  \item {From a facilitation perspective, how did these platforms help you?}
-  \item {How do you expect platforms or tools could better support you as a facilitator in the future?}
+% ---------------------------------------------------------------------------
+\subsection*{Block 3: Strategien der Ziel- und Entscheidungssicherung (RQ1)}
+\textit{Funktion: Rekonstruktion bewährter Praktiken (Methoden, Strukturen, Gewohnheiten)
+und der Sichtbarmachung des Ziels für die Gruppe. Ca.\ 6 Minuten.}
+
+\begin{enumerate}[label=3.\arabic*, leftmargin=*]
+  \item Wie gehen Sie vor, damit ein solches Meeting am Ziel bleibt und die Gruppe zu einer
+    Entscheidung kommt? Beschreiben Sie gerne ein konkretes Vorgehen anhand einer
+    typischen Situation.
+    \begin{itemize}[label=\textendash]
+      \item \textit{Optional:} Welche Methoden, Strukturen oder Gewohnheiten haben sich
+        für Sie bewährt (z.\,B.\ Timeboxing, Rollen, Visualisierung, Entscheidungsregeln)?
+      \item \textit{Optional:} Was davon legen Sie in der Vorbereitung fest, und was
+        steuern Sie erst in der Situation?
+    \end{itemize}
+  \item Wie stellen Sie sicher, dass den Teilnehmenden während des Meetings klar bleibt,
+    was in diesem Moment ``on track'' bedeutet --- also was das aktuelle Ziel bzw.\ der
+    aktuelle Entscheidungsauftrag ist?
+    \begin{itemize}[label=\textendash]
+      \item \textit{Optional:} Was geschieht, wenn das Ziel selbst unklar ist oder sich
+        im Meeting als unpassend erweist?
+    \end{itemize}
 \end{enumerate}
 
-\subsection*{Facilitation Style}
-\begin{enumerate}[label=3.\arabic*]
-  \item {Wann sollte jemand direkt in der Gruppe angesprochen werden? Wann lieber privat?}
-  \item {Was sind typsiche kritishce Momente in ziel-orienterne Meeting in denen eine entscheidung getroffen
-    werden soll? Was könnte schief gehen?}
-  \item
-    \begin{enumerate}[label=3.\arabic*]
-      \item {Woran erkennst du diese Momente? Kannst du dies quantifizieren?}
-    \end{enumerate}
-  \item {Welche Rolle spielt die Vorbereitung auf das Meeting?}
-  \item
-  \item {Wie stellst du sicher, dass das Meeting on track bleibt?}
-    \begin{enumerate}[label=3.\arabic*]
-      \item {Welche speziellen Methoden / Strukturen / Angewohnheiten, haben sich für dich bewährt?}
-      \item {Wie stellst du sicher, dass den Teilnehmende klar ist was "on Track" bedeutet bzw. was das aktuelle
-        das Ziel ist?}
-    \end{enumerate}
+% ---------------------------------------------------------------------------
+\subsection*{Block 4: Kritische Momente, Erkennung und Intervention (RQ1, Anschluss an RQ2)}
+\textit{Funktion: Explikation impliziten Expertenwissens über Zeitpunkt, Anlass und Form
+  von Interventionen. Die Cues sind zentral für die spätere Spezifikation der
+Erkennungslogik. Ca.\ 7 Minuten.}
+
+\begin{enumerate}[label=4.\arabic*, leftmargin=*]
+  \item Was sind in zielorientierten Meetings mit Entscheidungsauftrag typische kritische
+    Momente? Was kann dort konkret schiefgehen --- für das Ziel, für die Entscheidung
+    und für die Gruppe?
+  \item Woran erkennen Sie diese Momente? Können Sie das möglichst an konkreten
+    Beobachtungen festmachen --- etwa daran, wie gesprochen wird, wer spricht oder
+    schweigt, wie die Zeit vergeht, oder woran Sie im Remote-Setting merken, dass die
+    Gruppe den Faden verliert?
+    \begin{itemize}[label=\textendash]
+      \item \textit{Optional, nicht als Messzwang formulieren:} Gibt es Anzeichen, die
+        sich für Sie vergleichsweise zuverlässig wiederholen, sodass Sie fast schon
+        sagen könnten: Jetzt muss ich eingreifen?
+    \end{itemize}
+  \item Wann sprechen Sie jemanden direkt in der Gruppe an, wann eher auf einem privaten
+    Kanal --- und nach welchen Kriterien treffen Sie diese Wahl?
+    \begin{itemize}[label=\textendash]
+      \item \textit{Optional:} Was riskieren Sie, wenn Sie zu früh, zu spät, zu öffentlich
+        oder zu privat eingreifen?
+    \end{itemize}
 \end{enumerate}
 
-\subsection*{Designen an AI Facilitator}
-\begin{enumerate}[label=3.\arabic*]
-  \item {Wie sollte ein AI Facilitator aussehen??}
-  \item {Was würdest du als essentielle Features beschreiben??}
-  \item {Wo siehst du möglice schwächen eines AI-Systems, welche proactiv in Meetings einschreitet?}
+% ---------------------------------------------------------------------------
+\subsection*{Block 5: Werkzeuge und Unterstützungsbedarf (Brücke RQ1 $\rightarrow$ RQ2)}
+\textit{Funktion: Bestehende sozio-technische Praxis und Lücken, ohne bereits eine
+KI-Lösung nahezulegen. Ca.\ 4 Minuten.}
+
+\begin{enumerate}[label=5.\arabic*, leftmargin=*]
+  \item Welche Plattformen und Werkzeuge nutzen Sie in der Moderation --- und inwiefern
+    helfen oder behindern diese Sie dabei, Zielorientierung und Entscheidungsfortschritt
+    zu sichern?
+    \begin{itemize}[label=\textendash]
+      \item \textit{Optional:} Welche Unterstützung hätten Sie sich in konkreten
+        Situationen gewünscht, die heutige Werkzeuge nicht leisten?
+    \end{itemize}
 \end{enumerate}
+
+% ---------------------------------------------------------------------------
+\subsection*{Block 6: Anforderungen an ein KI-gestütztes Moderationssystem (RQ2)}
+\textit{Funktion: Offene Anforderungserhebung aus Expertensicht. Das System wird als
+  Unterstützung der Teilnehmenden bei Zielbindung und Entscheidungsgeschwindigkeit
+eingeführt, nicht als Ersatz der menschlichen Moderation. Ca.\ 7 Minuten.}
+
+\begin{enumerate}[label=6.\arabic*, leftmargin=*]
+  \item Stellen Sie sich ein KI-System vor, das in Remote-Meetings die Teilnehmenden
+    dabei unterstützt, am vereinbarten Ziel zu bleiben und zügiger zu einer Entscheidung
+    zu kommen. Wie sollte ein solches System aus Ihrer Sicht agieren --- und was sollte
+    es ausdrücklich nicht tun?
+    \begin{itemize}[label=\textendash]
+      \item \textit{Optional:} Eher proaktiv von sich aus, oder nur auf Anfrage?
+      \item \textit{Optional:} Welche Rolle wäre angemessen (z.\,B.\ stiller Spiegel,
+        Zeit- und Zielwächter, Co-Moderatorin, Vorschlagsgeberin)?
+    \end{itemize}
+  \item Welche Funktionen wären für Sie essenziell, damit das System tatsächlich nützt ---
+    bezogen auf das Erkennen von Abweichungen, auf den Zeitpunkt und die Form der
+    Intervention sowie darauf, wen das System anspricht (Gruppe oder einzelne Person)?
+    \begin{itemize}[label=\textendash]
+      \item \textit{Optional:} Wenn das System zwischen öffentlicher Intervention und privater
+        Rückmeldung wählen könnte: Nach welchen Kriterien sollte es das tun?
+    \end{itemize}
+  \item Welche Risiken, Schwächen oder unbeabsichtigten Wirkungen sehen Sie, wenn ein
+    KI-System von sich aus in Meetings einschreitet?
+    \begin{itemize}[label=\textendash]
+      \item \textit{Falls nicht von selbst thematisiert:} Vertrauen und Kontrolle der
+        Gruppe; Fehlalarme; Gesichtswahrung; hierarchische Verzerrung; Datenschutz und
+        Transparenz.
+    \end{itemize}
+\end{enumerate}
+
+% ---------------------------------------------------------------------------
+\subsection*{Abschluss}
+
+\begin{enumerate}[label=7.\arabic*, leftmargin=*]
+  \item Gibt es Aspekte der Zielorientierung, der Entscheidungsfindung oder der
+    KI-Unterstützung, die wir nicht angesprochen haben und die Ihnen wichtig erscheinen?
+\end{enumerate}
+
+\medskip
+Dank, Hinweis auf Anonymisierung und --- falls zugesagt --- auf die Möglichkeit, Ergebnisse
+zurückzuspiegeln. Aufnahme beenden.
