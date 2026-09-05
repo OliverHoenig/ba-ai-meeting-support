@@ -1,21 +1,91 @@
 \section{General Problem and Relevance}
 
-Current tools fall short in three key areas:
-\begin{itemize}
-  \item Passive functionality: Most AI tools (e.g., Zoom AI Companion, Google Meet’s recaps) focus on
-    post-meeting summaries or transcription, not real-time moderation [Zoom, 2024; Google, 2023].
-  \item Generic interventions: Solutions like Miro’s AI facilitator provide template-based guidance but fail
-    to adapt to the meeting’s context or user preferences [Miro, 2024].
-  \item Lack of empirical validation: Few studies evaluate user acceptance of proactive AI moderation,
-    particularly in high-stakes decision-making scenarios [Benbasat and Barki, 2007].
-\end{itemize}
+Schon in den 1980er Jahren identifizierte die Forschung zu Group Support Systems (GSS) zentrale
+Herausforderungen, die bis heute in unproduktiven Meetings wiederzufinden sind: ein unpassendes Tempo,
+mangelhaftes Meeting-Design, fehlender Fokus, ausbleibende Entscheidungen oder ineffiziente Prozesse
+\cite[p. 152]{beranekFacilitationGroupSupport1993}
 
-To address these gaps, this thesis proposes a proactive AI moderation system that:
-\begin{itemize}
-  \item Detects thematic deviations in real time using NLP and meeting goal tracking.
-  \item Intervenes constructively with personalized, non-intrusive prompts (e.g., private messages to
-    individuals or group reminders).
-  \item Validates design choices through user studies focusing on usability (SUS) and acceptance (TAM).
-\end{itemize}
-Such a system could reduce meeting fatigue, improve decision quality, and lower the barrier to effective
-facilitation—but its success hinges on user trust and perceived usefulness, which remain underexplored in literature.
+Trotz des langjährigen Wissens um diese Probleme und der anerkannten Bedeutung von Facilitation-Ansätzen
+scheinen diese Erkenntnisse in der Praxis noch immer nicht ausreichend umgesetzt zu werden.
+Eine mögliche Erklärung liegt in der Kombination aus unzureichender Schulung, mangelnder Erfahrung und einer
+natürlichen Resistenz gegenüber Veränderungen. \cite[p. 153]{hayneFacilitatorsPerspectiveMeetings}
+
+Hinzu kommt, dass die Aufgaben eines Facilitators äußerst umfangreich und komplex sind und vermutlich nicht
+jede Person für eine solche Rolle geeignet ist. [TODO: Quelle ergänzen]
+
+KI-gestüzte Meeting Tools hätten das Potnezial diese Facilitating-Wissen demokratisieren.
+
+Aktuelle Meeting-Tools unterstützen primär die Vorbereitung und Nachbereitung von Meetings. Funktionen
+während des Meetings, die unter Facilitation kategorisiert werden könnten, sind dagegen eher reaktiv oder
+interaktiv designt. Dies lässt sich unteranderem damit begründen, dass ein Großteil der Literatur darauf hin
+deutet, dass KI-Systeme in diesem Kontext vor allem interaktiv gestaltet werden sollten und prokativer
+ansätze deutlich schwieriger umzusetzen sind
+(vgl.~\ref{sec:interaction-paradigms} und~\ref{sec:proactive-ai-interactions}).
+
+Gleichzeitig treten in Meetings Probleme auf, die den Teilnehmenden häufig nicht bewusst sind, etwa
+kognitive Verzerrungen, ein Abdriften vom Thema oder Kommunikationsschwierigkeiten. In solchen Fällen können
+die Beteiligten ein KI-System nicht aktiv um Unterstützung bitten, weil sie sich der Problematik zu diesem
+Zeitpunkt nicht bewusst sind. Auch wenn das System selbst einen Hinweis sendet, etwa über den Chat, kann
+dieser ignoriert oder rationalisiert werden. \cite["4.4.3
+Intervene"]{houttiObserveAskIntervene2025}
+
+In der Human-Computer Interaction (HCI) existieren erste Arbeiten zu KI-Systemen in diesem Kontext. Der
+überwiegende Teil bleibt jedoch theoretisch oder folgt einem interaktiven oder reaktiven Interaktionsmodell.
+Praxisorientierte Systeme, die proaktiv und moderierend über Stimme in Meetings eingreifen, sind in der
+Recherche kaum aufgefallen.
+
+Diese Arbeit konzentriert sich daher auf konvergente Entscheidungsprozesse in Remote-Meetings, also auf
+Gruppenprozesse, in denen vorhandene Informationen und Optionen bewertet und auf ein gemeinsames Ergebnis
+verdichtet werden.
+Diese Eingrenzung folgt dem Stand der bestehenden Meeting-Unterstützung: Vorbereitung und Nachbereitung sind in
+kommerziellen Meeting-Tools bereits teilweise abgedeckt, und für divergente Praktiken (wie z.B. Brainstorming) liegen
+vergleichsweise etablierte KI-Ansätze vor. [TODO:Quellen anführen]
+In der konvergenten Phase bleiben zentrale GSS-Probleme wie fehlender Fokus, ausbleibender Abschluss und
+verzerrter Informationsaustausch bestehen. Da sie den Teilnehmenden oft nicht bewusst sind, greift ein rein
+interaktives Design hier zu kurz. Untersucht wird deshalb, wie ein KI-System in dieser Phase proaktiv moderieren
+kann, um die Teilnehmenden zu unterstützen.
+
+%%%%%%%%%%%%%%
+
+% Die aktullen meetings-tools untersützten primär in der vorberitung und nachberitung des meetings udn Features
+% die unter Facilitatrfunktion bezichnet werden könne ist eher reaktiv oder interactiv.
+
+% viel der litarautr deutet darauf hin KI-System in diesem kontext eher interaktiv zu gestalten. Dies scheint
+% im interesse der Meetingtiel nehmenden zu sein, weil diese der KI eine aktie Meeting untersützung nicht zutraune oder
+% sorge haben in der hirachie übergangen zuwerden. Dem entsprechend gibt es in der Human-Computer-Interaction
+% (HCI) erste ansätze die AI-Systeme in diesem kontext zu untersuchen. allerdings konnte weniger forschung
+% dazugefunden werden die über theoretische Ansätze hinausgeht, wenn es um praxisorientierte KI-gestütze Meeting
+% Support systeme geht, die proactiv in Meetings einschreiten.
+
+% Bereits group support Systems (GSS) Forshcungs aus den 1980er Jahren hat einige probleme, welche zu
+% unproductiven meetings führen identifiziert (z.B. Pace, Poor Meeting desing, Poor focus, Lack of closure,
+% poor process usw.), die sich auch in modernen meetings immernoch wiederfinden.
+
+% Trotz wissen über diese Probleme und der erkenniss über die wichtigkeit von facilitation ansätzen, scheinen
+% dies erkenntnisse in der praxis nicht angekommen zu sein. Was vermutlich weiterhin auf unzreichendes trainung
+% enerfahren heit und eine resisten gegen über veränderung zurückzuführen sein kann.
+% \cite{beranekFacilitationGroupSupport1993}
+
+% Reasearch bereits weitzurückrechende wissenscahftlich paper deuten darauf hin, das bereits minimaler
+% facilitation support eine positiven effet auf die effectivität von gruppen meetings haben kann.
+% \cite{hayneFacilitatorsPerspectiveMeetings}
+
+% Current tools fall short in three key areas:
+% \begin{itemize}
+%   \item Passive functionality: Most AI tools (e.g., Zoom AI Companion, Google Meet’s recaps) focus on
+%     post-meeting summaries or transcription, not real-time moderation [Zoom, 2024; Google, 2023].
+%   \item Generic interventions: Solutions like Miro’s AI facilitator provide template-based guidance but fail
+%     to adapt to the meeting’s context or user preferences [Miro, 2024].
+%   \item Lack of empirical validation: Few studies evaluate user acceptance of proactive AI moderation,
+%     particularly in high-stakes decision-making scenarios [Benbasat and Barki, 2007].
+% \end{itemize}
+
+% To address these gaps, this thesis proposes a proactive AI moderation system that:
+% \begin{itemize}
+%   \item Detects thematic deviations in real time using NLP and meeting goal tracking.
+%   \item Intervenes constructively with personalized, non-intrusive prompts (e.g., private messages to
+%     individuals or group reminders).
+%   \item Validates design choices through user studies focusing on usability (SUS) and acceptance (TAM).
+% \end{itemize}
+% Such a system could reduce meeting fatigue, improve decision quality, and lower the barrier to effective
+% facilitation—but its success hinges on user trust and perceived usefulness, which remain underexplored in literature.
