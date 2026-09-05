@@ -1,6 +1,53 @@
-\chapter{System Design and Implementation (RQ2)}
+\chapter{System Design and Implementation of a Scoped Prototype (RQ2)}
 
-TODO schaubild, welche Tests wann wie durchgeführt wurden
+The preceding chapters established a broad problem space: goal-oriented remote meetings are affected by a
+wide range of facilitation challenges, ranging from off-topic drift and unequal participation to the biased
+exchange of information described by the hidden-profile paradigm (see the theoretical foundations and the
+empirical analysis of facilitating strategies in RQ1). RQ2 asks how an AI-based moderation system can be
+designed to counter such challenges through proactive, context-sensitive interventions.
+
+Translating the requirements derived in RQ1 into a concrete, buildable artifact made this tension explicit.
+It became apparent during the design process that a system attempting to address the full breadth of
+divergent-phase facilitation problems at once would not be evaluable: with many interacting intervention
+mechanisms active simultaneously, any observed effect on meeting quality could no longer be attributed to a
+specific design decision.
+
+A broad, feature-complete system would thus trade scientific rigor for surface
+plausibility. Prioritizing internal validity over coverage, the scope was therefore deliberately narrowed
+from a general-purpose AI facilitator to a focused proof-of-concept that isolates a single, well-defined, and
+theoretically grounded intervention mechanism.
+
+Accordingly, this chapter does not claim to present a system that resolves every problem arising in the
+divergent phase of a meeting. Instead, the prototype targets one specific sub-problem that was identified as
+both high-impact and measurable in the theoretical foundation and the expert interviews: the
+shared-information bias underlying hidden profiles and the closely related issue of unequal participation.
+
+%%%%%%%%%%
+
+Accordingly, this chapter does not claim to present a system that resolves every problem arising in the
+divergent phase of a meeting. Instead, the prototype targets one specific sub-problem that was identified as
+both high-impact and measurable in the theoretical foundation and the expert interviews: the
+shared-information bias underlying hidden profiles and the closely related issue of unequal participation. To
+address it, the prototype implements a single proactive intervention mechanism --- an adapted version of the
+``Inner Thoughts'' framework, extended by an External Stimulus Injection layer --- rather than a comprehensive
+suite of facilitation features. This deliberate reduction is precisely what makes the subsequent evaluation
+(RQ3) feasible: a bounded intervention can be tested against a controlled hidden-profile decision task, so
+that measured differences in meeting quality can be plausibly attributed to the artifact rather than to an
+uncontrolled combination of features.
+
+This scoping decision follows a design-science understanding of prototyping, in which the artifact serves as
+a proof of concept for a specific mechanism and not as a production-ready system. Importantly, the narrowing
+of scope did not precede the design work but emerged from it: the confrontation with concrete requirements,
+implementation constraints, and --- most decisively --- the demands of a valid evaluation revealed which part
+of the broad design goal could be examined responsibly within this thesis. The following sections make this
+boundary explicit. \autoref{sec:requirements-analysis} distinguishes proactive from reactive designs and
+derives the functional and non-functional requirements; the system architecture then details the adapted
+``Inner Thoughts'' framework as the core intervention mechanism; the prototype development reports the
+concrete implementation and its limitations; and the formative evaluation describes how the design was
+assessed iteratively during development. The facilitation challenges that were consciously left out of scope
+are revisited as limitations and as directions for future work.
+
+% TODO schaubild, welche Tests wann wie durchgeführt wurden
 
 \input{chapter/04_system-design-and-implementation/01_requirements-analysis}
 \input{chapter/04_system-design-and-implementation/02_system-architecture}
