@@ -1,0 +1,40 @@
+\section{Formativ Prototype Evaluation during Development}
+
+Während der Entwicklungsphase ist es unpraktisch, für jede Code-Änderung oder Anpassung von Parametern
+Nutzerstudien durchzuführen. Die Autoren von Inner Thoughts schlagen dafür eine Multi-Agenten-Simulation vor.
+\cite["6 Simulative Evaluation"]{liuProactiveConversationalAgents2025}
+Dabei wurden in diesem verschiedene Thoughtful Agents mit den unterschiedklciehn Infromationen und Profilen
+aus dem hidden-Profiles experiment ausgestattet, sodass der Gesprächsverlauf zwischen den KI-Agenten
+simuliert werden kann. Während der Entwicklung wird dabei
+ausschließlich die Moderationsstrategie des AI-Facilitators variiert bzw. optimiert.
+
+Es wirde die Einschätzung von Liu et al. geteilt, dass eine solche Simulation skalierbar ist und sich
+Fehler im Moderationsverhalten (z.B. unpassendes Timing oder Unterbrechungen) über längere Interaktionen
+hinweg akkumulieren und verstärken \cite["6 Simulative Evaluation"]{liuProactiveConversationalAgents2025}.
+Ein schlechtes Systemdesign, ungeeignete Prompts oder Parameter sollten demnach zu einer erkennbar
+schlechteren Gesprächsqualität führen.
+
+Für die Evaluierung der Gesprächs- bzw. Moderationsqualität käme ein menschlicher Bewerter in Form von
+Facilitating-Experten infrage.
+Da das ausgewählte Hidden-Profile-Verfahren jedoch etwa 30 Minuten dauert, ist dies während der
+Entwicklungsphase kaum praktikabel, weil die Aussagekraft der Evaluierung mit jeder weiteren Anpassung des
+Systems abnimmt und die Systemausgaben nach jeder Modifikation erneut aufwändig bewertet werden müssten.
+
+Aus diesem Grund wurde ein LLM-as-a-Judge-Ansatz mit einer G-Eval-Replikation gewählt, der die allgemeine
+Meetingqualität basierend auf dem Fragebogen von XY abgeleitetn Kriteren bewerten sollte.
+
+Zusätzlich evaluierte ein weiteres LLM, ob die Teilnehmer alle relevanten Informationen von den Steckbriefen
+genannt hatten. Diese Klassifizierung wurde anschließend statistisch ausgewertet.
+
+Darüber hinaus wurden mithilfe von LLMs Gesprächsszenarien systematisch generiert, in denen ein Facilitator
+eingreifen würde. Ziel war es, das "External Stimulus Injection Layer" zu überprüfen. Dabei wurde analysiert,
+wie häufig der AI-Facilitator an den erwarteten Stellen aufgrund des gesetzten External Stimulus eingriff.
+Diese automatisierten Tests wurden während des Systemdesigns und der Entwicklung regelmäßig durchgeführt,
+sobald der Autor eine Änderung vorgenommen hatte, von der er sich eine Verbesserung erhoffte.
+
+Somit wurde versucht sich bassierend auf diesen Tests zu qualifizieren ob die Entwicklung eines Moderation
+System in eine Richtung geht, die die Qualität des Meetings in einer hiddenprofile konstelation verbessert.
+
+Um die aussagekraft in realen Bedinung mit Menschen zu evaluieren wurden nach der Entiwkclungsphase
+Usability-Studien durchgeführt.
+(vgl. Section XYZ TODO)

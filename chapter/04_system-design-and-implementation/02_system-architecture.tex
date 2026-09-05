@@ -1,6 +1,69 @@
 \section{System Architecture}
 
 % ---------------------------------------------------------------------------------------------------------------------
+\subsection{Adapted version of the “Inner Thoughts” framework}
+
+Das Inner Thoughts- Freamwork von Liu et al. ist in deren version eher für interaktionen ausgelegt die als
+soziales Plaudern kotegorisertet werden können. Dies ist nicht was ein Faciliator machen würde.
+
+Die Autoren wiesen in der Diskussion der Arbeit \cite["8.2 Apllying Inner Thougs Beyond Casual
+Conversations"]{liuProactiveConversationalAgents2025} selbst darauf hin, dass sich das System durch anpassungen der
+Bewertungskriterien auf aufgabenorietnerte Kontexte anpassen lässt und zielorientiertes praktives Handeln
+ermöglichen kann. Sie schalgen vor für weitere arbieten das system mit domain-specifische heuristiken
+anzupassen, um die interaktionen an real-world tasks zu orientieren.
+
+Im ursprünglichen Modell von Liu et al. werden generierte Gedanken primär danach bewertet, wie stark sie die
+"persönliche Relevanz" die individuellen Interessen oder die einzigartigen persönlichen Kenntnisse des
+Agenten widerspiegeln (TODO: prüfen bzw. konkretisieren wie die heuristik tatsächlich ist). Dies mag für
+generische Conversationen geeigent sein, da dieser Ansatz Authentizität und
+Sympathie in infromellen, sozialen Unterhaltungen erhöht, ist für einen AI-Moderator in zielorientierne
+Meetings die durch Hidden Profile geprägt sind, allerdings ungeeiengt. Wenn die Gedanken des AI-Moderator
+primär danach bewertet würden, wie stark sie seinen "persönlichen Interssen" wiederspieglen, verfällt er in
+dassaelber fehlerhafte Verahltensmuster, das zu verzeruung in hidden profile situationen führen kann. Er
+bringt eingen Meinungen oder Präferzene ein statt die diskussion neutral zu strukturieren. Strukturelle
+prozeduelle Gedanken würde in der aktuellen Heurisik voraussichtlich mit zu niederiger Relevanz bewertet werden.
+
+Bei der Anpassung der Heurisitken und prompts wurden sowohl die Literatur als auch die erkentnisse aus den
+Interviews berücksichtigt. Die Evaluierungs-Heursitik zu bewertung der Gedanken wurde so angepasst, dass sie
+das kognitionspyschologsche Fundament des Innter Thoughts-Modelles (basierend  auf grice, Sacks, Goffman und
+Berly) mit en organisationspsychologischen Prinzipien zur Kompenstation des Shared Information bias (Stasser \&
+Titus; Brodbeck et al.) und den HCI-Richtlinen für inklusive Moderation (Houttie et al; Davison) kombiniert.
+
+In der original Modellering des Inner Thougs-Frameworks wird ide participation in einer kovversation
+ausschlielich basierend der innern gedanken abgeleitet. Die Authoern mekren an, dass exteren Cues nicht im
+ausschleiieß zu ihrer Methode stehen sondern complentär mit exteren cues kombiniert zu einem robustern system
+führen könnten. \cite[8.1 Proactive Agents via Intrinsic Motivation vs. Extrinsic
+Cues]{liuProactiveConversationalAgents2025}
+
+Eine kernproblematik bei hidden profies ist, das private inforamtione nicht getielt werden. Ein indikator
+dafür könnte sein, dass eine person sich an der converstation nicht beteiligt oder ander Teilnehmden die
+Diskussion domieren, so dass andere nicht zu wort kommen können. wie aus den interviews
+hervorging, würde ein facilitator hier typischer weise versuchen diese Person auf höfliche art zu integrieen,
+um deren Perspektive zu hören. Hierfür wäre extern Cues wie die Sprrecheranteile relevant. Um diese
+exteren Cues abzubilden wurde das Inner Thoughs Framework, um die Komponete "External Stimulus Injection" erweitert.
+Ist einer dieser externe Trigger erfüllt wird ein vordefinierter Gedanke in der Gedanken generierung von
+System 2 berügcksichtig und die Evaluations herusitik bewsust in richtung diesen extern Triggers gebaiased,
+um zu erzielen dass diese externe cue im innerthoughs modeel gewichtet wird.
+
+%%%%%%%%%
+Baseirend auf der Literatur und den Intervies wurde versucht dieses System entpsrechend zu adaptieren.
+
+Ein prblem ist die tendenz von KI zu überkompensieren und zu viel zu sagen. Die authoren merken dies auch an
+und sind optimistischen, dasss ihr conversational agent hier besser performt. Alelrdigns handelt es sich um
+eine plausch. Ein facilitator würde nicht so oft in die Diskussion eingreifen. Das risiko für
+overcompensationg mit diesem system ist hoch. mit dem imThreshold kann gesteuert werden wie schwerwwiegend
+ein Gedanke sein muss damit die KI ihn überhaupt aussproche.
+
+In dem Paper wurd ein Selective Participant modeliert, welche foglende Parameter hatte:
+
+- System1 wurde auf 0 gesetzt so das die KI also niemals äußert niemals spontane, ungeplante
+System-1-Floskeln äußert. Jeder Beitrag muss einen teifen, kognitiven Nutzen haben.
+-imThreshold wurde auf 4.3 gesetzt. Ein strategeischer Gedanke muss auf einer Skala von 1-5 einen extrem
+hohe Bewertung erreichen, um die schwelle zu reißen. Ein einfacher Gedanke wie "ICh könnte Bob mal wieder
+fragen" reicht dafür nicht aus. Es bedarf eines
+Phase 1 Trigger:
+
+% ---------------------------------------------------------------------------------------------------------------------
 \subsection{Components: Transcription, Analysis, and Intervention Modules}
 
 % ---------------------------------------------------------------------------------------------------------------------

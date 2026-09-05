@@ -34,8 +34,29 @@ The authors conclude that interactivity could help prevent mistrust.
 
 Acuh ander studien zeigen eine tendenz das wolche systme eher interaktiv gestaltet sein sollten.
 
+\textbf{CoExplorer}
+
+Park et al. \cite{parkCoExplorerTechnologyProbe2024} haben eine adaptiven prototpy entkickler, welcher die
+intetinonalität des meetings verbesserl soll. dieser prototyp bestand aus verscheinden Tools, welche die
+vorbereitung des Meeting betrafen und die druchfphrung. Teilnehmden hatte so die chance beretis vor dem
+meeting mit einem KI-Agenten das Ziel zu sprechen und sich eigen Meinungen abzugene. darauf basierend hat
+CoExplorere phasen abgeleite die wahrscheinclih in dem Meeting vorkommen werden. während ees meetings war
+Coexplore dann in der Lage die verscheinden Phasen zu erknen und hat über ein adaptives User Interface
+relevante ifnroamtionen mit den Teilnehmden live geteilt.
+
+Hierbei fanden fasta lle Teilnehmden an der stuide (24
+von 26) das das teilen der Preferneun und meinung im vorraus des mmetings hilfreich ware mich sich tehmatisch
+zu alingen und eine priorisierung in der discusions puntk vorzunhmen.
+
+Auch das tracken und visulsieren der Meetingdaten wrude als psotiv aufgenommen.
+Einige Teilnehmden außerten sich zu dem system so postiiv, das sie der meinung waren das es keine
+menshclichen mediaotr mehr während des meetigns brauche.
+Gleichzeitig war aber auch ca. die Hälfte der Teilndhmen der meinung das der Meeting organisator weiterhin in
+der verantwortujng bleiben solle und das system nicht proaktiv änderunge vorhenen soll ohne diese mit dem
+organizator abgestimmt zu haben, da diese ein besseres verständis über das meeting habe.
+
 % ---------------------------------------------------------------------------------------------------------------------
-\subsection{Proactive AI-Interactions: Timing and triggers for Human-AI-Interaction-Systems}
+\subsection{Proactive AI-Interactions: From Turn-Taking to instrinsic Motivation with the Inner Thoughts Framework}
 To reduce the need for explicit prompts, an AI agent should be able to proactively recognize when it is its
 turn in an interaction sequence. In dyadic human-AI interactions, pauses or so-called “stop words” are often
 used for this purpose to identify a change in speaker. In multi-party scenarios (e.g., group conversations),
@@ -60,6 +81,15 @@ With these approaches, however, it remains unclear why an agent should interact 
 Due to the design of the ML algorithms, the timing of the interaction is decoupled from its cause or is only
 implicitly included in the model, but cannot be explicitly explained. (Example: We know that it is now the
 time for the agent to interact now -> But why? Whats the reason its like that he should talk? What should he say?)
+
+Ein naiver ansatz für Turn-taking wäre ein LLM so zu prompnten es zu fragen wer als nächstes dran ist. Liu
+et al. \cite{liuProactiveConversationalAgents2025} haben dies überprüft und konnte ihre Hypothese bestätigen,
+dass diese Ansatz bei bei turn-allocation ansätzen gut funktioniert. Dies ist nahligen weil in diesem
+szenarien in dem chat kontext indizene liegen wer als nächstes dran ist. alle getestetn LLM Modelle hatten
+bei turn-acllocation eine besser vorhersagequote als bei selfallocation stellen. die vorhersagen für self
+allocation haben sich im rahnen einer zufälligen chance bewegt. Die Authoren schlussfolgern. Das für
+self-selection szenarien der konversations kontext allene nicht ausricht und noch intenre factoren dafür
+verantwortlich seien.
 
 Die über die leltzten jahre stattgefunden entwicklung bei LLMs ermöglichen neue ansätze um diese Problem zu modellieren.
 Neus Paradgima von LLM-basierten Agentischen Systemen.
