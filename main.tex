@@ -68,6 +68,19 @@
 \usepackage[autostyle]{csquotes}% \enquote, to simplify use of quotation marks
 \usepackage{enumitem}
 
+% Continuous figure numbering across chapters (Figure 1, 2, 3, ...)
+\counterwithout{figure}{chapter}
+
+% Captions are sans-serif in TUDa and look larger than body text at the same size
+\setcapindent{0pt}
+\addtokomafont{caption}{\scriptsize} %\centering
+\addtokomafont{captionlabel}{\scriptsize}
+
+% Source text appended to the caption; also written to the list of figures
+\DeclareRobustCommand{\figsource}[1]{%
+  \unskip\space--\space{\itshape Source: #1}%
+}
+
 %%%%%%%%%%%%%%%%%%%
 % Bibliography
 %%%%%%%%%%%%%%%%%%%
@@ -138,6 +151,7 @@ context-sensitive system to support convergent decision-making processes}
 
 \input{preface/note-on-ai-use}
 \tableofcontents
+\listoffigures
 \input{chapter/01_introduction/00_chapter}
 \input{chapter/02_theoretical-foundations/00_chapter}
 \input{chapter/03_empirical-analysis-of-facilitating-strategies/00_chapter}

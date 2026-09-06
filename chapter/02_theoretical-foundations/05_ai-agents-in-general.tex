@@ -60,13 +60,23 @@ zur Bestimmung der optimalen Kontextzusammensetzung. \cite[p. 51]{meiSurveyConte
 
 Um den späteren AI-Agent zu bauen, war es notwenidg sich zunächst mit den Grundbausteinen der KI-Agenten zu
 beschäftigen. Antrhopic hat dies bezüglich eine Blogpost veröffetnlicht welcher die Grundbauseite aus deren
-Sich zusammenfasst.
+Sich zusammenfasst \cite{anthropicBuildingEffectiveAI}.
 
 \textbf{Prompt chaining}
 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{assets/figures/prompt-chaining.png}
+  \caption{Prompt chaining: A complex task is decomposed into sequential LLM calls
+    \figsource{Own illustration based on "Building Effective AI Agents by
+  Anthropic"\cite{anthropicBuildingEffectiveAI}, created with draw.io.}}
+  \label{fig:prompt-chaining}
+\end{figure}
+
 Beim Prompt Chaning wird eine komplexerer Aufgabe in eine squenzielle Abfolge von Teilschritten zerlegt.
 Jeder Schritt wird durch einen Prompt und LLM-Call beschrieben, der das Ergebnis des vorherigen Schritts als
-Kontext für den nächsten Schritt verwendet. Dazwischen können programatische Prüfungen eingefügt werden.
+Kontext für den nächsten Schritt verwendet. Dazwischen können programatische Prüfungen eingefügt werden
+(see Figure~\ref{fig:prompt-chaining}).
 
 \textbf{Routing}
 
