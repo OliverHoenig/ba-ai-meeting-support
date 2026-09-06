@@ -55,24 +55,25 @@ discussions and unequal participation, which AI could potentially address.
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{RQ2: Design requirements for an AI-based moderation system}
 \begin{quote}
-  \textit{How should an AI-based moderation system be designed that autonomously detects thematic deviations
-    based on a predefined meeting goal and real-time transcript analysis and promotes goal orientation through
-  constructive, context-sensitive interventions?}
+  \textit{Which of the challenges identified in RQ1 can be addressed by an AI-based moderation system during
+    a goal-oriented remote meeting with convergent objectives, and how should such a system be designed to
+  intervene in a context-sensitive way?}
 \end{quote}
-The second research question focuses on developing a proactive AI system that detects thematic deviations in
-real time and intervenes contextually to maintain goal orientation. This objective is addressed by defining
-functional requirements, such as real-time transcript analysis and adaptive interventions, and non-functional
-requirements, including privacy, latency, and scalability. A system architecture is then designed with
-components for transcription, NLP-based analysis, and intervention logic, incorporating mechanisms for
-private nudges or group reminders. A prototype is implemented using NLP libraries like Hugging Face
-Transformers, and its technical feasibility is evaluated.
+The second research question asks which of the challenges identified in RQ1 can be addressed by an
+AI-based moderation system during a goal-oriented remote meeting with convergent objectives, and how such a
+system should be designed. Rather than presupposing a single failure mode, the thesis first maps the
+problem space from the expert interviews and the literature, then assesses which challenges are both
+technically addressable and most promising for delivering added value. From this selection, functional and
+non-functional requirements for a proactive, context-sensitive moderator are derived. Because a system that
+attempts to address every facilitation problem at once would not be evaluable, the subsequent prototype
+isolates one high-impact, measurable sub-problem as a proof of concept for the following evaluation.
 
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{RQ3: Perception of the meeting with a proactive AI moderator}
 \begin{quote}
-  \textit{How do knowledge workers perceive a goal-oriented remote meeting in which a proactive AI
-    moderator intervenes, with regard to communication, quality of discussion, status effects, teamwork,
-  and efficiency, and how do they experience the agent's contributions?}
+  \textit{How do knowledge workers perceive a goal-oriented remote meeting with convergent objectives in
+    which a proactive AI moderator intervenes, with regard to communication, quality of discussion, status
+  effects, teamwork, and efficiency, and how do they experience the agent's contributions?}
 \end{quote}
 The third research question investigates how knowledge workers experience a convergent remote
 meeting that is supported by the prototype. The evaluation uses a hidden-profile hiring simulation
