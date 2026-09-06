@@ -149,9 +149,15 @@ context-sensitive system to support convergent decision-making processes}
 %% \affidavit[signature-image={\includegraphics[width=\width,height=1cm]{example-image}}, <there may be
 % additional options here>]
 
+% Front matter: Roman numerals (i, ii, iii, ...)
+\pagenumbering{roman}
 \input{preface/00_preface}
 \tableofcontents
 \listoffigures
+
+% Main matter: Arabic numerals starting at 1 after the lists
+\cleardoublepage
+\pagenumbering{arabic}
 \input{chapter/01_introduction/00_chapter}
 \input{chapter/02_theoretical-foundations/00_chapter}
 \input{chapter/03_empirical-analysis-of-facilitating-strategies/00_chapter}
