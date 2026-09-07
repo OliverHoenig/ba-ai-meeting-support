@@ -1,0 +1,103 @@
+% Vertical version mark in the right margin, at footer height.
+% For the experimenter; easy to miss for participants.
+\newcommand{\hiddenversion}[1]{%
+  \par\noindent
+  \makebox[0pt][l]{%
+    \hspace*{\dimexpr\paperwidth-1in-\hoffset
+      -\ifodd\value{page}\oddsidemargin\else\evensidemargin\fi
+    -8mm\relax}%
+    \raisebox{-\dimexpr\pagegoal-\pagetotal+22mm\relax}[0pt][0pt]{%
+      \rotatebox{90}{%
+        \fontsize{6}{7}\selectfont\textcolor{black!45}{#1}%
+      }%
+    }%
+  }%
+  \par
+}
+
+\section{Hidden Profile Exercise}
+\label{annex:hidden-profile-exercise}
+
+Diese Dokumente basieren auf der von Baker \cite{bakerEnhancingGroupDecision2010} vorgeschlagenen
+Hidden-Profile-Aufgabe (Personalauswahl unter drei Kandidaten). Für die vorliegende Studie wurden die
+Materialien ins Deutsche übersetzt. Geografische Angaben wurden angepasst.
+
+Die nachfolgenden Seiten sind die Handouts, die den Teilnehmenden in der Sitzung direkt ausgehändigt
+wurden. Damit die Versuchsleitung die unterschiedlich verteilten Informationsstände zuordnen kann,
+ohne dass die Teilnehmenden merken, dass sie unterschiedliche Informationen erhalten, trägt jede Seite
+am rechten unteren Rand eine unscheinbare, vertikal gesetzte Versionskennung
+(z.\,B.\ \texttt{V.2026K01-01/03}).
+Das Präfix \texttt{V.2026} ist absichtlich bedeutungslos und dient nur der Tarnung, damit die Kennung
+nicht wie eine systematische Versuchskodierung wirkt.
+\texttt{K0X} gibt an, an welchen der vier Teilnehmenden das Blatt ausgehändigt wird (\texttt{K01} bis
+\texttt{K04}).
+\texttt{0X/03} bezeichnet die Informationen zum \texttt{X}-ten von insgesamt drei Kandidaten, zwischen
+denen die Gruppe wählen soll.
+Eine offene, blattspezifische Nummer wäre verdächtig gewesen und hätte die für Hidden Profiles
+notwendige Informationsasymmetrie gefährdet. Die Markierung ist daher bewusst klein, hell und
+außerhalb des Lesebereichs platziert; sie dient ausschließlich der internen Zuordnung.
+
+Aus demselben Grund wurden auf diesen Seiten auch die Seitenzahlen im Footer weggelassen. (Zur vermeindung
+  dass während der Interviews es zu absprachen kommt wie: "Auf Seite X steht ja, dass...?" Dies könnte bei
+unterschiedlichen Seitenzahlen den teilnehmden verraten, dass sie unterschiedliche Blätter erhalten haben.)
+
+\clearpage
+
+% ---------------------------------------------------------------------------------------------------------------------
+\subsection*{Aufgabenstellung und Stellenausschreibung}
+\pagestyle{empty}
+\thispagestyle{empty}
+
+\textbf{Aufgabenstellung:}
+
+Sie sind Mitglied des Auswahlgremiums für einen neuen Präsidenten der Higher Education University, einer
+privaten Liberal-Arts-Hochschule in Georgia. Nachstehend finden Sie die wichtigsten Punkte aus der
+Stellenausschreibung. Es haben sich drei Kandidaten beworben; die Informationen, die Sie aus den
+Lebensläufen, Referenzprüfungen, Vorstellungsgesprächen und Präsentationen der Kandidaten gewonnen haben,
+sind auf den folgenden Seiten aufgeführt. Lesen Sie das gesamte Material durch und bestimmen Sie anschließend
+den Kandidaten, dem Ihrer Meinung nach die Stelle angeboten werden sollte. Stellenausschreibung für den
+Präsidenten der Higher Education University.
+Die Higher Education University ist eine kleine (2.500 Studierende) private Liberal-Arts-Hochschule in
+Georgia.
+Der Präsident der Universität trägt die letztendliche Verantwortung für die Verwaltung und den
+Betrieb der Universität. Er beaufsichtigt die strategische Planung, das Fundraising und die Haushaltsplanung,
+stellt sicher, dass die Richtlinien der Universität eingehalten werden, und pflegt die Beziehungen zur
+Gemeinde, zu den Alumni und zu anderen externen Interessengruppen.
+
+\clearpage
+
+\textbf{Gewünsche Qualitfikationen:}
+
+Die Bewerber werden anhand der folgenden Kriterien bewertet:
+\begin{itemize}
+  \item Nachweis akademischer Leistungen und Lehrerfahrung oder einschlägiger, umfassender beruflicher
+    Qualifikationen, die die Fähigkeit zur Führung in einem akademischen Umfeld belegen;
+  \item Nachweis von Führungsqualitäten in einem akademischen oder vergleichbaren Umfeld mit den folgenden Merkmalen:
+    \begin{itemize}
+      \item Integrität und Bekenntnis zu höchsten ethischen Standards;
+      \item Engagement für eine partizipative Leitung und die unfassende Einbindung von Lehrenden,
+        Mitarbeitern und Studierenden;
+      \item Engagement für eine vielfältige Gemeinschaft aus Lehrenden, Mitarbeitern und Studierenden mit
+        Chancengleichheit für alle;
+    \end{itemize}
+  \item Die Fähigkeit, eine Vision für die Universität zu entwickeln und die Führung und Inspiration zu
+    bieten, die erforderlich sind, um diese Vision zu verwirklichen;
+  \item Das Engagement für die Schaffung einer Kultur, die herausragende Leistungen in Forschung, Lehre und
+    Service wertschätzt;
+  \item Die Fähigkeit, die Universität gegenüber externen Interessengruppen zu präsentieren und die
+    Unterstützung für ihren Auftrag und ihre Programme zu stärken;
+  \item Das Engagement für die Verbesserung der Lebensqualität von Studierenden, Lehrenden und Mitarbeitern;
+  \item Die Unterstützung bei der Entwicklung und Nutzung neuer Technologien zur Förderung des Lernens, der
+    wissenschaftlichen Arbeit und des Ideenaustauschs.
+\end{itemize}
+
+\clearpage
+% ---------------------------------------------------------------------------------------------------------------------
+\subsection*{Kandidateninformationen - Kandidat Stevens}
+\hiddenversion{V.2026K01-01/03}
+
+\clearpage
+\pagestyle{TUDa}
+\thispagestyle{TUDa}
+% ---------------------------------------------------------------------------------------------------------------------
+\subsection*{Qualifikationen und Eigenschaften von Kandidaten für das Amt des Präsidenten einer Hochschule}
