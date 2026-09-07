@@ -4,10 +4,12 @@
 \subsection{Adapted version of the “Inner Thoughts” framework}
 
 Das Inner Thoughts- Freamwork von Liu et al. ist in deren version eher für interaktionen ausgelegt die als
-soziales Plaudern kotegorisertet werden können. Dies ist nicht was ein Faciliator machen würde. Die Idee
-einer intrsisichen motivation bevor jemand etwas zu einer Gruppen discussion beiträgt, ist dennoch auch für
-diese ARbeit relevant. Aus den Experten ging hervor ds eine Geanken gänge, welche Facilitatoren haben auf
-abstakter inutionen basieren andere wiederum druchdacht kombiniert mit experten wissen etc. Dies legt nach,
+soziales Plaudern kotegorisertet werden können. Dies ist nicht was ein Faciliator machen würde. Die Idee ein
+KI-System anhand einer intrsisichen motivation zu modellieren, bevor jemand etwas zu einer Gruppen discussion
+beiträgt, ist dennoch auch für diese ARbeit relevant.
+Insbesondere weil dieser Ansatz darauf hindeutet eine erhöhte Genauigkeit bei self-trun-allocation zu erzeugen.
+Aus den Experten ging hervor ds eine Geanken gänge, welche Facilitatoren haben auf abstakter inutionen
+basieren andere wiederum druchdacht kombiniert mit experten wissen etc. Dies legt nach,
 dass legt nahe das sowhl system 1 als auch system 2 bei dem prozess involoviert sind, was eben falls in dem
 Innter Thougs Framewokr berücksichtigt wird.
 
@@ -87,6 +89,63 @@ contextual self-refinement bedient.
 Self-Refinement und Reflexion könnnen bei LLMs zu drastischen ELsitugssteirgunen führen, wenn eine kognitive
 Feedbackschleife druchaufen wird. \cite[p. 18]{meiSurveyContextEngineering2025} Ein Gedanke wird nicht direkt
 ausgesprochen, sondern druch einen Kritiker basierend auf der für diese arbeit entwicklete FIM-Heurisitk geprüft.
+
+\autoref{tab:architecture-design-decisions} maps each architectural choice to a single warrant and to the
+chapters that already establish it, so the implementation can be traced without restating those arguments.
+\clearpage
+\begin{table}[htbp]
+  \centering
+  \caption{Architectural design decisions of the adapted Inner Thoughts prototype, with rationale and
+  pointers to the motivating chapters of this thesis.}
+  \label{tab:architecture-design-decisions}
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabularx}{\textwidth}{@{}
+      >{\raggedright\arraybackslash}p{2.85cm}
+      >{\raggedright\arraybackslash}X
+      >{\raggedright\arraybackslash}p{3.55cm}
+    @{}}
+    \toprule
+    \textbf{Design decision} & \textbf{Rationale} & \textbf{Evidence} \\
+    \midrule
+    Adapt Inner Thoughts from casual talk to facilitation
+    & The original model times utterances by intrinsic motivation, which improves self-turn-allocation
+    in multi-party talk. Liu et~al.\ already invite domain-specific evaluation criteria for
+    goal-directed settings; without that shift, a facilitator would be scored as a social
+    conversationalist.
+    & \autoref{sec:proactive-ai-interactions} \\
+    \addlinespace
+    Replace personal-relevance scoring with a facilitation-oriented FIM heuristic
+    & Ranking thoughts by the agent's own interests would privilege preference talk, undervalue
+    procedural structure, and reproduce the shared-information bias the moderator is meant to
+    counteract.
+    & \autoref{sec:hidden-profiles};
+    \autoref{ch:empirical-analysis-of-facilitating-strategies} \\
+    \addlinespace
+    Inject external participation cues into thought generation
+    & Unique information stays private when speakers remain silent or are crowded out. Observable
+    speaking-time imbalance is a complementary cue, not a rival, to intrinsic motivation; expert
+    facilitators report inviting quiet members rather than waiting for self-selection.
+    & \autoref{sec:hidden-profiles};
+    \autoref{sec:key-challenges-in-meetings};
+    \autoref{ch:empirical-analysis-of-facilitating-strategies} \\
+    \addlinespace
+    Selective-participant policy: no System-1 speech, high \textit{imThreshold}
+    & Facilitation needs sparse, high-utility interventions. Unconstrained generation over-talks;
+    disabling System-1 filler and raising the utterance threshold admits only thoughts with clear
+    process value.
+    & \autoref{sec:facilitation};
+    \autoref{sec:interaction-paradigms} \\
+    \addlinespace
+    Critic-based self-refinement before any utterance
+    & A thought is spoken only after a critic applies the FIM heuristic. Contextual self-refinement
+    implements an evaluator--optimizer loop and is associated with substantial quality gains in
+    LLM pipelines.
+    & \autoref{sec:context-engineering};
+    \autoref{sec:ai-agent-building-blocks} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
 
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{Technology Stack: NLP Libraries, Backend/Frontend Frameworks}
