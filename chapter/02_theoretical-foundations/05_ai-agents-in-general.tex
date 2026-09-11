@@ -23,6 +23,8 @@ maintaining control over how they accomplish tasks.
 Allgemein bezeichte Context engineering das Designen, organiseren und managen von kontexsenstiiver infromatioen,
 so das machienen im einklaing mit der menschlichen intention aggieren. \cite[p. 3]{huaContextEngineering202025}
 
+TODO: Figure: Venn-Diagram: Prompt Engineering ist Teil von Context Engineering
+
 Obwohl das Context Engineering bereits in frühen Frameworks der Mensch-Computer-Interaktion eine Rolle
 spielte \cite[p. 1]{huaContextEngineering202025}, hat die Forschung aufgrund der wachsenden Herausforderungen in der
 Human-Agent-Interaction (HAI) in jüngster Zeit eine verstärkte Fokussierung auf dieses Gebiet erfahren.
@@ -37,7 +39,7 @@ befolgen (sog. Prompt Engineering), zu zentralen Schlussfolgerungsmodulen entwic
 die Gestaltung und Verwaltung von Informationsinhalten zu einer eigenständigen Disziplin weiterentwickelt
 (Context Engineering) \cite{meiSurveyContextEngineering2025}
 
-Bei agentenbasierter Systeme lässt sich Context Engineering wie folgt definieren:
+Bei LLM-basierter Systeme lässt sich Context Engineering wie folgt definieren:
 
 \begin{quote}
   "Context engineering is the practice of deliberately structuring and optimizing the information passed to an
@@ -58,12 +60,12 @@ zur Bestimmung der optimalen Kontextzusammensetzung. \cite[p. 51]{meiSurveyConte
 
 %%%%%%%
 % ---------------------------------------------------------------------------------------------------------------------
-\subsection{Building blocks for AI-Agents}
+\subsection{Building blocks for LLM-based Workflows and Agents}
 \label{sec:ai-agent-building-blocks}
 
 Um den späteren AI-Agent zu bauen, war es notwenidg sich zunächst mit den Grundbausteinen der KI-Agenten zu
-beschäftigen. Antrhopic hat dies bezüglich eine Blogpost veröffetnlicht welcher die Grundbauseite aus deren
-Sich zusammenfasst \cite{anthropicBuildingEffectiveAI}.
+beschäftigen. Antrhopic hat dies bezüglich eine Blogpost \cite{anthropicBuildingEffectiveAI} veröffetnlicht
+welcher die Grundbauseite aus deren Sicht zusammenfasst und als Hauptgrundlage für dieses Kapitel dient.
 
 \textbf{Prompt chaining}
 
@@ -122,3 +124,75 @@ Wrokflos Desing lassen smoit granularer Kontroole zu, während Agents etwas losg
 
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{Evaluating and Testing of AI-Systems}
+
+Auf Grund des propablistischen Charakters von KI-basierten Systmen unterscheidet sich das testen von
+KI-basierten Systmen grundlegend von herkömmlichen Testverfahren.
+
+Das International Software Testing Qualifications Board (ISTQB®) legt daher nahe dass dieser popalibisitsche
+Charakter statistische Testverfahren erfordern würde. \cite[p. 39]{istqbrISTQBCertifiedTester}
+
+Eine zusätzliche Herausforderung besteht darin, dass einige KI-Systeme nicht nur statisch, sondern auch
+adaptiv sind und sich somit kontinuierlich anpassen können \cite[p.~39]{istqbrISTQBCertifiedTester}.
+
+Diese Anpassungen können mindestens auf zwei Ebenen auftreten:
+\begin{itemize}
+  \item \textbf{Kontextbasierte Anpassung::} Innerhalb der Anwendung kann sich das KI-System dynamisch an
+    veränderte Rahmenbedingungen oder die vielfältigen Möglichkeiten des zu diesem Zeitpuntk bereitgestellen
+    Kontexts anpassen.
+  \item \textbf{Modellbasierte Anpassung:} Unabhängig vom konkreten Kontext des Use-Cases können sich die
+    zugrundeliegenden KI-Modelle selbst verändern, etwa durch den Einsatz selbstlernender Algorithmen. Bei
+    der Integration externer Large Language Models (LLMs) kann der Anbieter Modifikationen am Modell
+    vornehmen, die für den Nutzer nicht direkt ersichtlich sind.
+\end{itemize}
+Die Festlegung eines Test-Orakels, also die Definition der erwarteten Ausgaben bei bestimmten Eingabewerten
+für das zu testende System, ist bei komplexen KI-Systemen daher extrem schwierig oder sogar
+unmöglich \cite[p.~39]{istqbrISTQBCertifiedTester}.
+
+Dies gilt auf für LLM-basierte Systeme.
+
+Auch Mohammadi et al \cite[p. 1]{mohammadiEvaluationBenchmarkingLLM2025} weisen darauf hin, dass das evaluieren und
+Testen von LLM-basierte Agenten ein komplexes und noch wenig erforschtes Gebiet sei, insbesondere weil
+Agetnten oft in einem dynamischeren und interactivem Kontext opereieren.
+Sie beschreiben daher das testen von LLM-Agents als zusammenspiel der verscheinen Perspektiven von Naturla
+Langugae Processing (NLP), human.computerinteraction (HCI) und Software engineering.
+
+Codebasierte Methoden (engl. code-based methods) versuchen, die Leistung von KI-Systemen durch expliziten
+Programmcode, definierte Regeln und Testfälle mit Assertions zu überprüfen. Dabei wird geprüft, ob die
+ausgeführten Aktionen exakt vorgegebenen Kriterien entsprechen. \cite[p. 7]{mohammadiEvaluationBenchmarkingLLM2025}
+
+Hierfür können beispielsweise mögliche Zustände, die das System durchläuft, modelliert und anhand von
+Trajektorienvergleichen analysiert werden.
+Bestehende Benchmarking-Verfahren wie AgentBoard \cite{maAgentBoardAnalyticalEvaluation2024} sind jedoch oft
+allgemein gehalten und für domainspezieifsche Use Cases nur bedingt geeignet.
+
+Insbesondere bei offenen oder qualitativen Antworten sowie bei kreativen Problemen, bei denen die Korrektheit
+subjektiv bewertet werden kann, stoßen codebasierte Verfahren an ihre Grenzen
+\cite[p.~7]{mohammadiEvaluationBenchmarkingLLM2025}.
+
+Der LLM-as-a-Judge-Ansatz nutzt die Argumentationsfähigkeiten von LLMs, um die Antworten von Agenten anhand
+qualitativer Kriterien zu bewerten. Dabei werden die Antworten basierend auf
+den in den Anweisungen vorgegebenen Bewertungsmaßstäben analysiert. \cite[p.~7]{mohammadiEvaluationBenchmarkingLLM2025}.
+
+Die Authoren Zheng et al. \cite[p. 4]{zhengJudgingLLMasaJudgeMTBench2023} schalgen drei Varianten des
+LLM-as-a-Judge-Ansatzes vor, die einzeln oder kombiniert angewendet werden können:
+\begin{itemize}
+  \item Pairwise Comparison: Ein LLM vergleicht zwei Antworten auf eine Frage und entscheidet, welche besser
+    ist oder ob ein Unentschieden vorliegt.
+  \item Single Answer Grading: Ein LLM bewertet eine einzelne Antwort direkt anhand einer Skala oder eines
+    Kriterienkatalogs.
+  \item Reference-Guided Grading: Ein LLM bewertet eine Antwort im Vergleich zu einer vorgegebenen
+    Referenzlösung, z. B. bei mathematischen Aufgaben.
+\end{itemize}
+
+Im Anhang des Papers „Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena“ finden sich entsprechende
+Prompts, die für die verschiedenen Varianten des LLM-as-a-Judge-Ansatzes verwendet werden können
+\cite{zhengJudgingLLMasaJudgeMTBench2023}.
+
+Laut Mohammadi et al. gilt jedoch nach wie vor die Human-in-the-Loop-Evaluierung als Goldstandard, bei der
+Menschen (etwa in Nutzerstudien, Expertenaudits oder durch Crowdworker) die Ausgaben annotieren oder
+bewerten \cite[p.~7]{mohammadiEvaluationBenchmarkingLLM2025}. Dieser Ansatz ist jedoch oft schwer skalierbar
+und mit hohem Aufwand sowie Kosten verbunden.
+
+Ein weitverbreiteter Ansatz ist Evaluation-Driven Development (EDD), bei dem KI-basierte Systeme und Agenten
+während der Entwicklungsphase kontinuierlich evaluiert werden, um Abweichungen zu erkennen und neue Use Cases
+zu identifizieren \cite[p.~6]{mohammadiEvaluationBenchmarkingLLM2025}.
