@@ -66,6 +66,7 @@ zur Bestimmung der optimalen Kontextzusammensetzung. \cite[p. 51]{meiSurveyConte
 
 %%%%%%%
 % ---------------------------------------------------------------------------------------------------------------------
+\FloatBarrier
 \subsection{Building blocks for LLM-based Workflows and Agents}
 \label{sec:ai-agent-building-blocks}
 
@@ -73,12 +74,14 @@ Um den späteren AI-Agent zu bauen, war es notwenidg sich zunächst mit den Grun
 beschäftigen. Antrhopic hat dies bezüglich eine Blogpost \cite{anthropicBuildingEffectiveAI} veröffetnlicht
 welcher die Grundbauseite aus deren Sicht zusammenfasst und als Hauptgrundlage für dieses Kapitel dient.
 
+\newpage
+
 \textbf{Prompt chaining}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{assets/figures/02/prompt-chaining.pdf}
-  \caption{Prompt chaining: A complex task is decomposed into sequential LLM calls
+  \caption{AI-Building-Block:Prompt chaining: A complex task is decomposed into sequential LLM calls
     \figsource{Own illustration based on "Building Effective AI Agents by
   Anthropic"\cite{anthropicBuildingEffectiveAI}, created with draw.io.}}
   \label{fig:prompt-chaining}
@@ -90,11 +93,71 @@ Programmatic checks can be inserted in between.
 
 \textbf{Routing}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{assets/figures/02/routing.pdf}
+  \caption{AI-Building-Block:Routing: A complex task is decomposed into subtasks and routed to specialized systems
+    \figsource{Own illustration based on "Building Effective AI Agents by
+  Anthropic"\cite{anthropicBuildingEffectiveAI}, created with draw.io.}}
+  \label{fig:routing}
+\end{figure}
+
+Beim Routing werden aufgaben klassifiziert und an untersysteme welche auf das lösen dieser Kategorie von
+aufgaben spezialisert sind weitergeleitet. Dadruch entsteht eine klare Ternnung von Verantwortlichkeiten, was
+besonder gut geeignet ist wenn komplexe Aufgaben in klar abgrezbare Kategoiren aufgeteilt werden können und
+von spezialsierten LLMs andern KI-Modelen oder Algorithmen bearbeitet werden können.
+
 \textbf{Parallelization}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{assets/figures/02/parallelization.pdf}
+  \caption{AI-Building-Block: Parallelization: Multiple tasks are processed in parallel and the results are
+    aggregated programatically
+    \figsource{Own illustration based on "Building Effective AI Agents by
+  Anthropic"\cite{anthropicBuildingEffectiveAI}, created with draw.io.}}
+  \label{fig:parallelization}
+\end{figure}
+
+Beim Parallelisierungs-Workflow werden mehrere Aufgaben gleichzeitig bearbeitet und die Ergebnisse
+programmatisch aggregiert. Typische Anwendungsfälle liegen vor, wenn Aufgaben in unabhängige Teilaufgaben
+unterteilt werden können (Segmentierung) oder wenn mehrere Perspektiven für ein zuverlässigeres Ergebnis
+erforderlich sind (Voting). Bei komplexen Aufgaben mit mehreren Aspekten erzielen LLMs bessere Ergebnisse,
+wenn jeder Aspekt durch einen separaten Aufruf mit spezialisiertem Prompt fokussiert bearbeitet wird.
 
 \textbf{Orchestrator-workers}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{assets/figures/02/orchestrator-workers.pdf}
+  \caption{AI-Building-Block: Orchestrator-workers: A central LLM decomposes a main task dynamically into
+    subtasks and delegates
+    them to a variable number of worker LLMs
+    \figsource{Own illustration based on "Building Effective AI Agents by
+  Anthropic"\cite{anthropicBuildingEffectiveAI}, created with draw.io.}}
+  \label{fig:orchestrator-workers}
+\end{figure}
+
+Der Orchestrator-Worker-Workflow ähnelt dem Parallelisierungs-Workflow, unterscheidet sich jedoch darin, dass
+er eingesetzt wird, wenn die benötigten Teilaufgaben nicht im Voraus bekannt sind. Ein zentrales LLM zerlegt
+die Hauptaufgabe dynamisch in Teilaufgaben und delegiert diese an eine beliebige Anzahl von Worker-LLMs,
+deren Ergebnisse abschließend aggregiert werden.
+
 \textbf{Evaluator-optimizer}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{assets/figures/02/evaluator-optimizer.pdf}
+  \caption{AI-Building-Block: Evaluator-optimizer: A LLM generates answers, while another evaluates and
+    optimizes them through feedback
+    \figsource{Own illustration based on "Building Effective AI Agents by
+  Anthropic"\cite{anthropicBuildingEffectiveAI}, created with draw.io.}}
+  \label{fig:evaluator-optimizer}
+\end{figure}
+
+Der Evaluator-Optimizer-Workflow nutzt eine Feedbackschleife, in der ein LLM Antworten generiert, während ein
+weiteres diese bewertet und durch Feedback versucht zu optimieren. Dieser Ansatz ist besonders effektiv, wenn
+klare Bewertungskriterien vorliegen und iterative Verbesserungen messbar sind.
 
 \textbf{Augmented LLM}
 
