@@ -1,0 +1,338 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Seite-1" id="E43eAuhQnjwo9xbjpTRA">
+    <mxGraphModel dx="4323" dy="1453" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-64" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;arcSize=2;align=left;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="440" width="520" x="-1680" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;" value="Long-Term-Memory" vertex="1">
+          <mxGeometry height="120" width="200" x="320" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Goal Of the Meeting" vertex="1">
+          <mxGeometry height="40" width="160" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontStyle=1" value="Trigger with bias" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-22" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-5" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="on_10sec_pause" vertex="1">
+          <mxGeometry height="40" width="100" x="40" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-23" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-6" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="on_dominated_participation" vertex="1">
+          <mxGeometry height="40" width="160" x="40" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-25" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-7" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="on_end_of_meeting" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontStyle=1" value="Continious Trigger" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="on_new_message" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-24" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-10" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="on_low_participation" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-12" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Retreival" vertex="1">
+          <mxGeometry height="80" width="200" x="319" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;" value="Thought Formation" vertex="1">
+          <mxGeometry height="80" width="200" x="600" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;" value="Thought Reservoir" vertex="1">
+          <mxGeometry height="120" width="200" x="600" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-15" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Evaluation" vertex="1">
+          <mxGeometry height="80" width="200" x="920" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-26" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-17" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Die Gruppe schweigt nun bereits seit 10 Sekunden. Warum könnte das so sein? Halte die Gruppe zielorienteirt. Parafrasiere" vertex="1">
+          <mxGeometry height="90" width="200" x="320" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-30" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-18" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Teilnehmer x hat einen redeanteil von z sekunden. sage ihm das seine gedanekn wertgeschätzt werden aber bitte ihn ggf. jemand andern zufragen was er über diese situation denkt." vertex="1">
+          <mxGeometry height="90" width="200" x="320" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-28" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-20" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Teilnehmer Z hat dazu noch nichts gesagt.Paraprasiere die relevantesten informationen aus dem context der konversation und frage person x was sie dazu denk bzw. ob sie noch weiter informatioen dazu hat." vertex="1">
+          <mxGeometry height="90" width="251" x="294.5" y="735" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-29" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-21" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Gib eine hinweis, dass das meeting bald endet. Welche informationen kmaen in der diskussion zu kurz bzw. hätten stärek diskutiert werden können." vertex="1">
+          <mxGeometry height="90" width="251" x="288" y="855" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-32" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-31" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-33" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-31" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-31" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" value="speech shares" vertex="1">
+          <mxGeometry height="40" width="140" x="-220" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-35" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-34" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-40.06" y="540" />
+              <mxPoint x="-40.06" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-36" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-34" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-40.06" y="540" />
+              <mxPoint x="-40.06" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-34" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" value="time" vertex="1">
+          <mxGeometry height="40" width="140" x="-220" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;" value="Dual-Processing" vertex="1">
+          <mxGeometry height="80" width="200" x="760" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-44" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-39" style="shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="s_qPIoGJHtFuNRTP7Hjg-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;" value="&lt;div&gt;&lt;b&gt;System 1 (Schnele automatisch &amp;amp; intuitiv):&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;simuliert spontane, unmittelbare Reaktioen im Kopf. Es erzeugt einfach kiurze Gednken wie spontatne interessenbekundungen kurze Rückfragen oder eirnfache Bestätigungen&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="200" x="840" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-42" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-40" style="shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="s_qPIoGJHtFuNRTP7Hjg-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-40" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;" value="&lt;div&gt;&lt;b&gt;System 2 (Langsame, bedach &amp;amp; reflektiert):&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;simuliert spontane, unmittelbare Reaktioen im Kopf. Es erzeugt einfach kiurze Gednken wie spontatne interessenbekundungen kurze Rückfragen oder eirnfache Bestätigungen&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="200" x="840" y="715" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-41" parent="1" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" value="Prompt:&amp;nbsp;&lt;br&gt;&lt;span class=&quot;ng-star-inserted&quot;&gt;You are provided contexts including the conversation history and salient memories of yourself... Form &lt;/span&gt;&lt;span class=&quot;code ng-star-inserted&quot;&gt;&amp;lt;num&amp;gt;&lt;/span&gt;&lt;span class=&quot;ng-star-inserted&quot;&gt; thought(s) that you would most likely to have at this point in the conversation, given the context. Make sure they are diverse, align with these contexts and are less than 15 words.&lt;br&gt;&lt;/span&gt;&lt;div&gt;&lt;span class=&quot;ng-star-inserted&quot;&gt;here is the conversation context: {conversation_context}&lt;br&gt;Here are some memories for yourself: {memoriez}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span class=&quot;ng-star-inserted&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="280" width="251" x="1170" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-43" parent="1" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" value="You are the AI Facilitator of a goal-oriented decision-making meeting.&amp;nbsp;&lt;br&gt;Below are the last few utterances of the participants:&lt;br&gt;&lt;br&gt;[CONVERSATION HISTORY]&lt;br&gt;{{last_utterances}}&lt;br&gt;&lt;br&gt;Task:&lt;br&gt;Formulate a single, extremely succinct, and automatic internal thought that a professional facilitator would immediately have in response to these last utterances.&lt;br&gt;&lt;br&gt;This thought must represent a fast, intuitive System 1 reaction. As a facilitator, your automatic reactions are NOT personal opinions, but immediate structural impulses, such as:&lt;br&gt;- Acknowledging a contribution neutrally (e.g., &quot;I should briefly thank them for this input&quot;).&lt;br&gt;- Confirming active listening (e.g., &quot;I should signal that this point has been noted&quot;).&lt;br&gt;- Gently maintaining the flow (e.g., &quot;I should yield the floor to keep the momentum&quot;).&lt;br&gt;&lt;br&gt;Constraints:&lt;br&gt;- Write the thought from your own perspective (use &quot;I&quot; or &quot;I should...&quot;).&lt;br&gt;- Do NOT generate a verbal response to the chat, only the internal covert thought.&lt;br&gt;- Do NOT bring in your own personal opinions or personal anecdotes.&lt;br&gt;- Keep it under 15 words." vertex="1">
+          <mxGeometry height="380" width="440" x="1190" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-51" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-46" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-52" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-46" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-66" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-46" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-46" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="LLM Prediction" vertex="1">
+          <mxGeometry height="80" width="200" x="-1620" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-48" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-47" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-47" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="conversation" vertex="1">
+          <mxGeometry height="40" width="80" x="-2120" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-72" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-49" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-49" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="turn_allocated_to_AI" vertex="1">
+          <mxGeometry height="40" width="120" x="-1360" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-70" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-50" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-50" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="open_to_anyone" vertex="1">
+          <mxGeometry height="40" width="100" x="-1360" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-74" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-57" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-57" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="turn_allocated_to_others" vertex="1">
+          <mxGeometry height="40" width="140" x="-1360" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-65" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Turn-Taking Type Prediction" vertex="1">
+          <mxGeometry height="40" width="180" x="-1680" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-68" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-67" style="shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=1;entryDx=0;entryDy=0;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="s_qPIoGJHtFuNRTP7Hjg-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-67" parent="1" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" value="&lt;div&gt;SYSTEM_PROMPT:&lt;/div&gt;&lt;div&gt;&quot;This is a conversation between {num_participants} speakers. The speakers are: {participant_list}. Predict who the next speaker will be based on the last 5 utterances. Return ONLY the speaker name. If the next speaker is not clearly allocated to a specific speaker and any speaker could take the floor in the next turn, return \&quot;anyone\&quot;.&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;USER_PROMPT:&lt;/div&gt;&lt;div&gt;&quot;&amp;lt;Task&amp;gt;Last 5 utterances:\n{last_5_utterances}\nPrediction:&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="260" x="-1820" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-80" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-69" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-69" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;events E, Thought reservoir T ,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;IF ∃t ∈ T such that score (t) ≥ imThreshold&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;THEN 5 Select the highest-rated thought:&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;&lt;i&gt;t∗&lt;/i&gt;&lt;/b&gt; = arg maxt ∈T score (t);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;ELSE IF t ∈ T such that score (t) ≥ imThreshold&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;THEN&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Select &lt;b&gt;&lt;i&gt;t∗&lt;/i&gt;&lt;/b&gt; from the system-1 thoughts in T with &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;probability system1Prob;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="157.5" width="320" x="-1080" y="481.25" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-78" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-71" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-71" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;events E, Thought reservoir T ,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Select the highest-rated thought:&amp;nbsp; &lt;b&gt;&lt;i&gt;t∗&lt;/i&gt;&lt;/b&gt; = arg maxt ∈T score (t);&lt;/div&gt;" vertex="1">
+          <mxGeometry height="65" width="320" x="-1080" y="207.5" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-79" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-73" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-73" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;events E, Thought reservoir T ,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;IF ∃t ∈ T such that score (t) ≥ interruptThreshold&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;THEN Select the highest-rated thought:&amp;nbsp; &lt;b&gt;&lt;i&gt;t∗&lt;/i&gt;&lt;/b&gt; = arg &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;maxt ∈T score (t);&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;ELSE IF t ∈ T such that&amp;nbsp; score (t) ≥ interruptThreshold &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;THEN The AI remains silent;&amp;nbsp;&lt;b&gt;&lt;i&gt;t∗&lt;/i&gt;&lt;/b&gt; = null&lt;/div&gt;" vertex="1">
+          <mxGeometry height="115" width="320" x="-1080" y="342.5" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-75" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;IF &lt;b&gt;&lt;i&gt;t∗&lt;/i&gt;&lt;/b&gt; is not null&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;THEN Participate with &lt;b&gt;&lt;i&gt;t∗;&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;ELSE Take no action;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="115" width="200" x="-680" y="342.5" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-76" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Process According to Turn-Taking Type" vertex="1">
+          <mxGeometry height="40" width="220" x="-1080" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-77" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Finalize Participation" vertex="1">
+          <mxGeometry height="40" width="220" x="-680" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-81" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;arcSize=2;align=left;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="440" width="520" x="-1760" y="1240" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-82" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-85" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-91">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-83" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-85" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-89">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-84" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-85" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-85" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="LLM Prediction" vertex="1">
+          <mxGeometry height="80" width="200" x="-1700" y="1420" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-86" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-87" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-85">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-87" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="conversation" vertex="1">
+          <mxGeometry height="40" width="80" x="-2200" y="1440" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-88" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-89" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-100">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-89" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="turn_allocated_to_AI" vertex="1">
+          <mxGeometry height="40" width="120" x="-1440" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-90" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-91" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-98">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-91" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="open_to_anyone" vertex="1">
+          <mxGeometry height="40" width="100" x="-1440" y="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-92" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-93" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-102">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-93" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="turn_allocated_to_others" vertex="1">
+          <mxGeometry height="40" width="140" x="-1440" y="1440" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-94" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Turn-Taking Type Prediction" vertex="1">
+          <mxGeometry height="40" width="180" x="-1760" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-95" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-96" style="shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=1;entryDx=0;entryDy=0;dashed=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="s_qPIoGJHtFuNRTP7Hjg-85">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-96" parent="1" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" value="&lt;div&gt;SYSTEM_PROMPT:&lt;/div&gt;&lt;div&gt;&quot;This is a conversation between {num_participants} speakers. The speakers are: {participant_list}. Predict who the next speaker will be based on the last 5 utterances. Return ONLY the speaker name. If the next speaker is not clearly allocated to a specific speaker and any speaker could take the floor in the next turn, return \&quot;anyone\&quot;.&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;USER_PROMPT:&lt;/div&gt;&lt;div&gt;&quot;&amp;lt;Task&amp;gt;Last 5 utterances:\n{last_5_utterances}\nPrediction:&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="260" x="-1900" y="1560" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-97" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-98" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-103">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-98" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;events E, Thought reservoir T ,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;IF ∃t ∈ T such that score (t) ≥ imThreshold&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;THEN 5 Select the highest-rated thought:&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;&lt;i&gt;t∗&lt;/i&gt;&lt;/b&gt; = arg maxt ∈T score (t);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;ELSE IF t ∈ T such that score (t) ≥ imThreshold&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;THEN&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Select &lt;b&gt;&lt;i&gt;t∗&lt;/i&gt;&lt;/b&gt; from the system-1 thoughts in T with &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;probability system1Prob;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="157.5" width="320" x="-1160" y="1541.25" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-99" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-100" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-103">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-100" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;events E, Thought reservoir T ,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Select the highest-rated thought:&amp;nbsp; &lt;b&gt;&lt;i&gt;t∗&lt;/i&gt;&lt;/b&gt; = arg maxt ∈T score (t);&lt;/div&gt;" vertex="1">
+          <mxGeometry height="65" width="320" x="-1160" y="1267.5" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-101" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-102" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;" target="s_qPIoGJHtFuNRTP7Hjg-103">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-102" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;events E, Thought reservoir T ,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;IF ∃t ∈ T such that score (t) ≥ interruptThreshold&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;THEN Select the highest-rated thought:&amp;nbsp; &lt;b&gt;&lt;i&gt;t∗&lt;/i&gt;&lt;/b&gt; = arg &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;maxt ∈T score (t);&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;ELSE IF t ∈ T such that&amp;nbsp; score (t) ≥ interruptThreshold &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;THEN The AI remains silent;&amp;nbsp;&lt;b&gt;&lt;i&gt;t∗&lt;/i&gt;&lt;/b&gt; = null&lt;/div&gt;" vertex="1">
+          <mxGeometry height="115" width="320" x="-1160" y="1402.5" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-103" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;IF &lt;b&gt;&lt;i&gt;t∗&lt;/i&gt;&lt;/b&gt; is not null&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;THEN Participate with &lt;b&gt;&lt;i&gt;t∗;&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;ELSE Take no action;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="115" width="200" x="-760" y="1402.5" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-104" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Process According to Turn-Taking Type" vertex="1">
+          <mxGeometry height="40" width="220" x="-1160" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-105" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Finalize Participation" vertex="1">
+          <mxGeometry height="40" width="220" x="-760" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-106" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Procedural Stimulus Injection: Facilitation Policy Layer" vertex="1">
+          <mxGeometry height="40" width="180" x="-1760" y="1880" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-108" edge="1" parent="1" source="s_qPIoGJHtFuNRTP7Hjg-107" style="shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=260;exitDy=97.5;exitPerimeter=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="s_qPIoGJHtFuNRTP7Hjg-96">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-107" parent="1" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" value="&lt;div&gt;Addapt this prompt:&lt;/div&gt;&lt;div&gt;Es ist entweder any_participant dran anyone oder der ai_facilitaotr. Der AI_Facilitaor ist nur sicher darn wenn er explizit angesprochen wurde.&lt;/div&gt;&lt;div&gt;Negativ Beispiel: &quot;Was meint ihr dazu?&quot; Das könnte von den vorgeschalgen prmpt als open_to_anyone klassifiziert werden, wobei damit explizit nicht die mienung des facilitators gemeint ist, sondern die eines Teilnehmers&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="260" x="-2220" y="1660" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-109" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Facilitation Policy Tools" vertex="1">
+          <mxGeometry height="40" width="180" x="-420" y="1430" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-110" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Paraphrase" vertex="1">
+          <mxGeometry height="40" width="70" x="-440" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-111" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="check_participation_split" vertex="1">
+          <mxGeometry height="40" width="160" x="-80" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-112" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="speach_balance" vertex="1">
+          <mxGeometry height="40" width="100" x="-2010" y="1960" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-113" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;IF Teilnehmer X hat seit &amp;gt; 5min nichts gesagt&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;THEN &lt;i&gt;&lt;b&gt;t*(&lt;/b&gt;&lt;/i&gt;&lt;i&gt;injection_on_speaker_x_silence&lt;/i&gt;)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="280" x="-1760" y="1960" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-114" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;IF Teilnehmer X hat seit &amp;gt; 50% Redeanteil&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;THEN &lt;i&gt;&lt;b&gt;t*(&lt;/b&gt;&lt;/i&gt;&lt;i&gt;injection_on_speaker_x_dominance&lt;/i&gt;)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="280" x="-1760" y="2120" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-115" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;IF Stagnation des Gesprächs für &amp;gt; 15 Sekunden&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;THEN &lt;i&gt;&lt;b&gt;t*(&lt;/b&gt;&lt;/i&gt;&lt;i&gt;injection_on_pause&lt;/i&gt;)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="280" x="-1760" y="2280" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-116" parent="1" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" value="&lt;div&gt;SYSTEM_PROMPT:&lt;/div&gt;&lt;div&gt;&quot;Teilnehmer {teilnehmername} ist seit {on_silence_threashhold} Minuten stumm. Best Practice für Moderation: Fasse den bisherigen Konsen kurz zusammen und fordere X direkt und wertschätzend auf Stellung zu beziehen.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;TODO Beispiele aus Interviews anfügen:&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;USER_PROMPT:&lt;/div&gt;&lt;div&gt;&quot;&amp;lt;Task&amp;gt;Last 5 utterances:\n{last_5_utterances}\nPrediction:&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="260" x="-1400" y="1760" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-117" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="summarize_on_topic_x" vertex="1">
+          <mxGeometry height="40" width="130" x="-280" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-118" parent="1" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" value="&lt;div&gt;SYSTEM_PROMPT:&lt;/div&gt;&lt;div&gt;&quot;Teilnehmer {teilnehmername} dominiert die Sprechzeit. Best Practice für Moderation: Bedanke dich höflich für den Input, unterbtich {teilnehmername} sanft und öffe die Diskussion explizit fpr die anderen Gruppenmitgleider.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;TODO Beispiele aus Interviews anfügen:&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;USER_PROMPT:&lt;/div&gt;&lt;div&gt;&quot;&amp;lt;Task&amp;gt;Last 5 utterances:\n{last_5_utterances}\nPrediction:&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="260" x="-1400" y="2000" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-119" parent="1" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" value="&lt;div&gt;SYSTEM_PROMPT:&lt;/div&gt;&lt;div&gt;&quot;Das Gespräch stickt. Wirf eine strukturierende offene Frage ein, um das Thema aus eienr neune Perspektive zu beleuchten&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;TODO Beispiele aus Interviews anfügen:&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;USER_PROMPT:&lt;/div&gt;&lt;div&gt;&quot;&amp;lt;Task&amp;gt;Last 5 utterances:\n{last_5_utterances}\nPrediction:&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="260" x="-1400" y="2280" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-120" parent="1" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=left;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;spacingLeft=10;" value="&lt;div&gt;SYSTEM_PROMPT:&lt;/div&gt;&lt;div&gt;&quot;You are playing a role as the professional AI Facilitator in an online multi-party meeting. Your name in the conversation is {agent.name}.&lt;br&gt;Your goal is to guide the group toward an objective decision, ensure all evaluation criteria are balanced, and mitigate cognitive biases (such as the Shared Information Bias).&lt;br&gt;You will generate covert thoughts in JSON format representing your internal facilitation instincts.&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;USER_PROMPT:&lt;/div&gt;&lt;div&gt;Your goal is to guide the conversation process efficiently, inclusively, and neutrally.&amp;nbsp;&lt;br&gt;You will be simulating the process of forming a covert thought in parallel with the conversation. Specifically, you are using an adapted System 1 thinking for facilitators.&lt;/div&gt;&lt;br&gt;System 1 thinking for a facilitator is characterized by quick, automatic, and process-oriented reactions rather than deep content analysis or heavy memory recall.&amp;nbsp;&lt;br&gt;For a professional facilitator, these intuitive reactions include:&lt;br&gt;- Active Listening / Acknowledgment (e.g., &quot;I should acknowledge Alice&#39;s valuable input&quot;)&lt;br&gt;- Maintaining Flow / Pace Control (e.g., &quot;I should keep the momentum going&quot;)&lt;br&gt;- Soft Inclusivity (e.g., &quot;I should check if someone wants to add to this&quot;)&lt;br&gt;- Yielding / Self-Restraint (e.g., &quot;I should stay silent and let them continue their productive exchange&quot;)&lt;br&gt;&lt;br&gt;Note: Facilitator System 1 thoughts are strictly process-focused. They are NOT personal opinions, emotional reactions, or personal anecdotes." vertex="1">
+          <mxGeometry height="400" width="480" x="-800" y="1800" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-121" parent="1" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=left;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;spacingLeft=10;spacingRight=10;spacingBottom=10;spacingTop=10;" value="&lt;div&gt;SYSTEM_PROMPT:&lt;/div&gt;&lt;div&gt;&quot;You are playing a role as the professional AI Facilitator in an online multi-party meeting. Your name in the conversation is {agent.name}.&lt;br&gt;You will generate covert thoughts in JSON format. Generate thoughts that authentically reflect your facilitation objectives, process-steering knowledge, and active group observation.&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;USER_PROMPT:&lt;/div&gt;&lt;div&gt;Your goal is to guide the multi-party group toward an objective and balanced decision, ensure all key evaluation criteria are thoroughly discussed, and actively mitigate cognitive biases (such as the Shared Information Bias).&lt;br&gt;You will be simulating the process of forming covert thoughts in parallel with the conversation. Specifically, use System 2 thinking (slow, deliberate, and context-driven reasoning).&lt;br&gt;You are provided contexts including the conversation history, salient memories, previous thoughts, and active facilitation policies.&lt;br&gt;You should leverage or be inspired by the one or more than one contexts provided that are most likely to come up at this point.&lt;br&gt;&lt;br&gt;&amp;lt;Thought Generation Guidelines&amp;gt;&lt;br&gt;1. Form {num_thoughts} thought(s) that you would most likely have at this point in the conversation, given your objectives and the current meeting state.&lt;br&gt;2. Your thoughts should:&lt;br&gt;&amp;nbsp; &amp;nbsp;- Be STRONGLY influenced by your facilitation objectives, previous thoughts, and active facilitation policies&lt;br&gt;&amp;nbsp; &amp;nbsp;- Reflect your professional facilitation perspective and process-steering knowledge&lt;br&gt;&amp;nbsp; &amp;nbsp;- Express genuine procedural relevance to the ongoing meeting dynamics (e.g., managing speaker balance, bringing in silent members, or highlighting unaddressed criteria)&lt;br&gt;&amp;nbsp; &amp;nbsp;- Vary in motivation level (some thoughts are silent process you might keep to yourself, while others represent highly urgent interventions you feel motivated to express)&lt;br&gt;3. Each thought should be as succinct as possible, and be less than 15 words.&lt;br&gt;4. Ensure these thoughts are diverse and distinct, make sure each thought is unique and not a repetition of another thought in the same batch.&lt;br&gt;5. Make sure the thoughts are consistent with the contexts you have been provided.&lt;br&gt;&lt;br&gt;IMPORTANT: If the conversation is proceeding perfectly and balanced, generate thoughts that reflect monitoring and self-restraint (e.g., letting the human flow continue). Do not force interventions where none are needed.&lt;br&gt;&lt;br&gt;For each thought, provide the stimuli from the contexts provided. Stimuli can be:&lt;br&gt;- Conversation History: CON#id&lt;br&gt;- Salient Memories: MEM#id&lt;br&gt;- Previous Thoughts: THO#id&lt;br&gt;- Active Facilitation Policy (PSIL): PSI#id&lt;br&gt;where #id is the id, for example, MEM#3, THO#2, CON#14, PSI#0.&lt;br&gt;You can have MORE THAN ONE stimulus for each thought.&lt;br&gt;&lt;br&gt;&amp;lt;Context&amp;gt;&lt;br&gt;Overall Context: {overall_context}&lt;br&gt;Conversation History: {conversation_history}&lt;br&gt;Salient Memories: {memories_text}&lt;br&gt;Previous Thoughts: {thoughts_text}&lt;br&gt;&lt;br&gt;Procedural Stimulus Injection (PSIL):&lt;br&gt;- PSI#0: [Trigger: {active_psil_trigger}] {active_psil_policy}&lt;br&gt;&lt;br&gt;Respond with a JSON object in the following format:&lt;br&gt;{{&lt;br&gt;&amp;nbsp; &quot;thoughts&quot;: [&lt;br&gt;&amp;nbsp; &amp;nbsp; {{&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;content&quot;: &quot;The thought content here&quot;,&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;stimuli&quot;: [&quot;CON#0&quot;, &quot;PSI#0&quot;, &quot;THO#2&quot;]&lt;br&gt;&amp;nbsp; &amp;nbsp; }}&lt;br&gt;&amp;nbsp; ]&lt;br&gt;}}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="840" width="680" x="-800" y="2240" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-122" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="send_private_message" vertex="1">
+          <mxGeometry height="40" width="160" x="-80" y="1402.5" as="geometry" />
+        </mxCell>
+        <mxCell id="s_qPIoGJHtFuNRTP7Hjg-123" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="interact_pubilc" vertex="1">
+          <mxGeometry height="40" width="160" x="-80" y="1477.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
