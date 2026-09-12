@@ -1,21 +1,25 @@
-======> Interviewte 00:00
-ok genau
+---
+annotations:
+  - id: a-mtyd9pwa-nqi6
+    code: human-vs-ai
+    start: 5875
+    end: 6346
+    quote: Sondern man hat halt auch einfach, wo man weiß, okay, wir arbeiten zusammen und wir arbeiten in eine Richtung und wir haben die gleiche Zielrichtung und man vertraut einander, dass man den Weg gemeinsam gestaltet, ohne dass alles formell dokumentiert werden muss, als wir haben entschieden das, sondern der Mensch, im Gegensatz dann ja auch vielleicht zur KI, diese Form der schriftlichen Dokumentation oftmals ja gar nicht braucht, was ja einen Unterschied auch ausmacht
+---
 
-
-
-======> Interviewer 00:03
-also ich untersuche in der arbeit wie zielorientierte remote meetings moderiert werden also wo gruppen quasi wie Gruppen bei einem vereinbarten Ziel bleiben und zu einem verbindlichen Ergebnis kommen. Also eine Entscheidung im engeren Sinne. Also dabei kann aber die Entscheidung sehr vielfältig sein. Also es könnte eine Priorisierung sein, zum Beispiel bei Produktteams, wie sie sich entscheiden, welches Feature als nächstes angegangen wird oder welches Vorhaben oder welche Strategie umgesetzt wird. Oder auch Commitment, also wie sich ein Team auf ein Ziel einigt oder auf eine Arbeitsweise oder ihr Zusammenarbeiten abstimmt. Also entscheidend ist eigentlich nur, dass dann am Ende eine gemeinsame Festlegung folgt, nach der sich dann die weitere Arbeit ausrichtet.
+======> Interviewer 00:00
+Also ich untersuche in der Arbeit wie zielorientierte Remote-Meetings moderiert werden. Also wo gruppen quasi... Wie Gruppen bei einem vereinbarten Ziel bleiben und zu einem verbindlichen Ergebnis kommen. Also eine Entscheidung im engeren Sinne. Dabei kann aber die Entscheidung sehr vielfältig sein. Also es könnte eine Priorisierung sein, zum Beispiel bei Produktteams, wie sie sich entscheiden, welches Feature als nächstes angegangen wird oder welches Vorhaben oder welche Strategie umgesetzt wird. Oder auch Commitment, also wie sich ein Team auf ein Ziel einigt oder auf eine Arbeitsweise oder ihr Zusammenarbeiten abstimmen. Also entscheidend ist eigentlich nur, dass dann am Ende eine gemeinsame Festlegung folgt, nach der sich dann die weitere Arbeit ausrichtet.
 
 Und ich nutze diese Interviews, also dieses und weitere Interviews dann, um Anforderungen für ein KI-gestütztes Meeting-System abzuleiten, welches eben Gruppen dabei hilft, während Meetings durch eine proaktive Moderation.
 
-Und wie bereits erwähnt, das ist ein semi-strukturiertes Interview, das heißt... Wir gehen so einen Leitfaden durch und bei Fragen, wo mich mehr Details interessieren, würde ich da noch mal nachfragen. Aber das heißt jetzt nicht, dass irgendwie die Antwort nicht gut genug war, sondern da gibt es kein richtig oder falsch. Also mich interessiert einfach die Einschätzung von dir und basierend auf der beruflichen Erfahrung.
+Und wie bereits erwähnt, das ist ein semi-strukturiertes Interview, das heißt wir gehen so einen Leitfaden durch und bei Fragen, wo mich mehr Details interessieren, würde ich da noch mal nachfragen. Aber das heißt jetzt nicht, dass irgendwie die Antwort nicht gut genug war, sondern da gibt es kein richtig oder falsch. Also mich interessiert einfach die Einschätzung von dir basierend auf der beruflichen Erfahrung.
 
-Es wird etwa 40 Minuten dauern, es wird aufgezeichnet. Zur Aufnahme und zum Transkribieren verwende ich Zoom als Dienstleister. Die Daten werden vertraulich verarbeitet und in anonymisierter bzw. pseudonymisierter Form im Rahmen dieser Arbeit dann ausgewertet. Ist das für dich in Ordnung? Mhm.
+Es wird etwa 40 Minuten dauern, es wird aufgezeichnet. Zur Aufnahme und zum Transkribieren verwende ich Zoom als Dienstleister. Die Daten werden vertraulich verarbeitet und in anonymisierter bzw. pseudonymisierter Form im Rahmen dieser Arbeit dann ausgewertet. Ist das für dich in Ordnung? 
 
 
 
 ======> Interviewte 02:09
-Super, genau. Ja, das Transkript.
+Mhm. Ja, für das Transkript.
 
 
 
@@ -25,28 +29,24 @@ Ja, genau, ich brauche es einmal.
 
 
 ======> Interviewte 02:17
-Ich verstehe das Transkript vielleicht nicht. Ein deutliches
+Ein "Mh" verstehe das Transkript vielleicht nicht. 
 
 
 
 ======> Interviewer 02:22
-Ja, genau. Okay, genau, hast du bis hierhin irgendwelche Fragen?
+Ein deutliches "Ja". Okay, genau, hast du bis hierhin irgendwelche Fragen?
 
 
 
 ======> Interviewte 02:28
-Mich würde nochmal interessieren, aber das können wir auch zum Schluss nochmal, was du mit einem KI-unterstützten Meeting-System meinst. Das wäre so die Frage an dich zurück, dass ich das besser verstehe. Weil ist das ein Agent? Ist das eine Software? Ist das, was du da erzählen möchtest? Das
+Mich würde nochmal interessieren, aber das können wir auch zum Schluss nochmal, was du mit einem KI-unterstützten Meeting-System meinst. Das wäre so die Frage an dich zurück, dass ich das besser verstehe. Weil ist das ein Agent? Ist das eine Software? Ist das, was du da erzählen möchtest?
 
 
 
 ======> Interviewer 02:48
-ist jetzt erst mal noch offen gelassen. Es kommt ein bisschen darauf an, welche Anforderungen quasi dann abgeleitet werden. Für dich erstmal muss dich da nicht irgendwie auf was fokussieren, sondern erstmal kannst du breit antworten. Es geht eher erstmal darum, wie du als Facilitatorin quasi auftrittst und dich verhältst.
+Das ist jetzt erst mal noch offen gelassen. Es kommt ein bisschen darauf an, welche Anforderungen quasi dann abgeleitet werden. Für dich erstmal muss dich da nicht irgendwie auf was fokussieren, sondern erstmal kannst du breit antworten. Es geht eher erstmal darum, wie du als Facilitatorin quasi auftrittst und dich verhältst.
 
-
-
-======> Interviewte 03:14
 Normalerweise, genau. Okay.
-
 
 
 ======> Interviewer 03:17
@@ -55,39 +55,35 @@ Dann starte ich mal mit ein bisschen zum beruflichen Kontext. Könntest du bitte
 
 
 ======> Interviewte 03:39
-Große Frage. Also mein beruflicher Kontext ist, dass ich seit über 20 Jahren in internationalen Entwicklungsprojekten arbeite, seit sieben Jahren selbstständig bin, aktuell Geschäftsführerin von einem Beratungsunternehmen und Facilitation eine meiner Kernleistungen ist im Rahmen meiner Selbstständigkeit. Aber auch schon davor habe ich teils facilitiert, aber Facilitation ist jetzt mein Kerngeschäft eigentlich. Neben Beratung, also Facilitation und Beratung würde ich als meine Kernleistungen bezeichnen und diese Leistungen erbringe ich für Organisationen und deren Teams in den Schwerpunkten Organisationsentwicklung, Prozessgestaltung, Strategieentwicklung und Ja, also ich glaube, das sind eigentlich die drei Schwerpunkte. Organisationsentwicklung und der Organisationsentwicklung würde dann halt auch Teamentwicklung mitgefallen, Strategieentwicklung und Prozessgestaltung für komplexere Entwicklungsprozesse, meistens von technischen Themen. Genau.
+Große Frage. Also mein beruflicher Kontext ist, dass ich seit über 20 Jahren in internationalen Entwicklungsprojekten arbeite, seit sieben Jahren selbstständig bin, aktuell Geschäftsführerin von einem Beratungsunternehmen und Facilitation eine meiner Kernleistungen ist im Rahmen meiner Selbstständigkeit. Aber auch schon davor habe ich teils facilitiert, aber Facilitation ist jetzt mein Kerngeschäft eigentlich. Neben Beratung, also Facilitation und Beratung würde ich als meine Kernleistungen bezeichnen und diese Leistungen erbringe ich für Organisationen und deren Teams in den Schwerpunkten Organisationsentwicklung, Prozessgestaltung, Strategieentwicklung. Ja, also ich glaube, das sind eigentlich die drei Schwerpunkte. Organisationsentwicklung und der Organisationsentwicklung würde dann halt auch Teamentwicklung mitgefallen, Strategieentwicklung und Prozessgestaltung für komplexere Entwicklungsprozesse, meistens von technischen Themen. Genau.
 
-Und dazu gehören unter anderem dann auch Multistakeholder-Prozesse, wo es hier um die Kooperation geht von verschiedenen Akteuren, also nicht nur die Organisation an sich, sondern die Kooperation zwischen verschiedenen Organisationen, um gesellschaftliche Veränderungsprozesse anzustoßen, beziehungsweise immer wieder.
-
-Und das ist natürlich zentral für alle Prozesse, die ich moderiere, dass im Laufe der Prozesse, aber auch zum Ende eines Prozesses klare Ergebnisse und Ergebnisse sind auch Entscheidungen natürlich im Laufe des Prozesses entstehen.
+Und dazu gehören unter anderem dann auch Multistakeholder-Prozesse, wo es hier um die Kooperation geht von verschiedenen Akteuren, also nicht nur die Organisation an sich, sondern die Kooperation zwischen verschiedenen Organisationen, um gesellschaftliche Veränderungsprozesse anzustoßen, beziehungsweise immer wieder und das ist natürlich zentral für alle Prozesse, die ich moderiere, dass im Laufe der Prozesse, aber auch zum Ende eines Prozesses klare Ergebnisse und Ergebnisse sind auch Entscheidungen natürlich im Laufe des Prozesses entstehen.
 
 Und die Frage war noch, kannst du nochmal sagen, was war der zweite Teil der Frage?
 
 
 
 ======> Interviewer 05:44
-Genau, also insbesondere eben, wo Situationen, in denen Gruppen Entscheidungen treffen, beziehungsweise eine klare Zielsetzung. Das ist natürlich im
+Genau, also insbesondere eben Situationen, in denen Gruppen Entscheidungen treffen, beziehungsweise eine klare Zielsetzung...
 
 
 
 ======> Interviewte 05:56
-Rahmen meiner Aufträge immer ein klares Ziel gesetzt, dass irgendein Ergebnis entstehen muss, dass ein Workshop entsteht. Workshops sind dafür da, dass eine Koordination zwischen verschiedenen Menschen stattfindet und entweder klar ausgesprochene, formelle Entscheidungen. da sind, die dokumentiert sind oder auch informelle Entscheidungen miteinander vereinbart werden, wo man jetzt vielleicht keine formelle Ich habe das. wir haben entschieden, dass irgendwo steht, sondern dass dann ja auch einfach informelle Entscheidungen sind, die miteinander entstehen, auch durch den Austausch, in dem man, ich glaube, Teil von Entscheidungen ist ja auch, dass man sich mehr miteinander vertraut in der Zusammenarbeit oftmals.
+Das ist natürlich im Rahmen meiner Aufträge immer ein klares Ziel gesetzt, dass irgendein Ergebnis entstehen muss, dass ein Workshop entsteht. Workshops sind dafür da, dass eine Koordination zwischen verschiedenen Menschen stattfindet und entweder klar ausgesprochene, formelle Entscheidungen da sind, die dokumentiert sind oder auch informelle Entscheidungen miteinander vereinbart werden, wo man jetzt vielleicht keine formelle "Ich habe das...", "Wir haben entschieden, dass..." irgendwo steht, sondern dass dann ja auch einfach informelle Entscheidungen sind, die miteinander entstehen. Auch durch den Austausch, in dem man, ich glaube, Teil von Entscheidungen ist ja auch, dass man sich mehr miteinander vertraut in der Zusammenarbeit oftmals.
 
-Ich glaube, Vertrauen ist eine wichtige Komponente davon, die aufgebaut wird durch Kooperation und wenn Vertrauen da ist. lässt es sich halt auch einfacher miteinander entscheiden. Beziehungsweise muss halt auch nicht alles offiziell dokumentiert werden, sage ich mal. Sondern man hat halt auch einfach, wo man weiß, okay, wir arbeiten zusammen und wir arbeiten in eine Richtung und wir haben die gleiche Zielrichtung und man vertraut einander, dass man den Weg gemeinsam gestaltet, ohne dass alles formell dokumentiert werden muss, als wir haben entschieden das.
-
-der Mensch, im Gegensatz dann ja auch vielleicht zur KI, diese Form der schriftlichen Dokumentation oftmals ja gar nicht braucht, was ja einen Unterschied auch ausmacht. Ich würde da etwas
+Ich glaube, Vertrauen ist eine wichtige Komponente davon, die aufgebaut wird durch Kooperation. Und wenn Vertrauen da ist lässt es sich halt auch einfacher miteinander entscheiden. Beziehungsweise muss halt auch nicht alles offiziell dokumentiert werden, sage ich mal. Sondern man hat halt auch einfach, wo man weiß, okay, wir arbeiten zusammen und wir arbeiten in eine Richtung und wir haben die gleiche Zielrichtung und man vertraut einander, dass man den Weg gemeinsam gestaltet, ohne dass alles formell dokumentiert werden muss, als wir haben entschieden das, sondern der Mensch, im Gegensatz dann ja auch vielleicht zur KI, diese Form der schriftlichen Dokumentation oftmals ja gar nicht braucht, was ja einen Unterschied auch ausmacht.
 
 
 
 ======> Interviewer 07:29
-später nochmal drauf eingehen, weil da waren jetzt ein paar interessante Punkte dabei.
+Ich würde da etwas später nochmal drauf eingehen, weil da waren jetzt ein paar interessante Punkte dabei.
 
 Mich würde jetzt am Anfang nochmal interessieren, wenn du jetzt mal so an klassische Remote Meetings denkst, in denen eben Entscheidungen getroffen werden, was läuft dort deiner Erfahrung noch häufig schief?
 
 
 
 ======> Interviewte 07:49
-Also ich arbeite wesentlich mittlerweile mit meinen Kunden remote zusammen. Und dann sind aber die Schwerpunkte, die inhaltlichen Schwerpunkte sind doch noch oftmals live. Also wenn es wirklich um Inhalte, vertiefte, komplexere Inhalte geht, ist live immer noch der bevorzugte Weg. Das macht auch einen Unterschied, meiner Meinung nach.
+Also ich arbeite wesentlich mittlerweile mit meinen Kunden remote zusammen. Und dann sind aber die inhaltlichen Schwerpunkte sind doch noch oftmals live. Also wenn es wirklich um Inhalte, vertiefte, komplexere Inhalte geht, ist live immer noch der bevorzugte Weg. Das macht auch einen Unterschied, meiner Meinung nach.
 
 Aber du hast jetzt nach remote explizit gefragt. Und bei remote explizit, was dort schiefläuft, ist, also was schwierig ist, wenn die Leute einfach unvorbereitet in Meetings reinkommen. Du hast denen irgendwelche Dokumente geschickt und die Leute sind, ach, oh, ich sollte 20 Seiten lesen, habe ich aber nicht. Hatte ich gerade die Woche wieder so. Also du wartest auf ein Meeting. Wir haben vier Wochen auf ein Meeting gewartet, dass wir uns treffen, dass sich fünf Leute abstimmen und dann kommen drei rein und sagen, ja, oh, ich habe leider das Dokument nicht gelesen. Das heißt, du hast keine Grundlage überhaupt, dich auszutauschen, weil du kannst zu keiner Entscheidung kommen, weil es keine inhaltliche Vorbereitung gab. Ich glaube, das ist das allergrößte Manko wirklich bei Remote-Meetings, dass Leute in die Meetings reinkommen und nicht vorbereitet sind.
 

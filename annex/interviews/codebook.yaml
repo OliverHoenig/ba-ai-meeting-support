@@ -1,0 +1,30 @@
+# Qualda codebook - the predefined set of codes.
+# Only codes listed here can be assigned to passages.
+# `children` are subcodes. `color` is optional (inherited from parent).
+
+codes:
+  - id: human-vs-ai
+    label: Human vs. AI
+    color: "#e11d48"
+  - id: remote-vs-in-person
+    label: Remote vs. In-Person
+    color: "#2563eb"
+    children:
+      - id: pro-remote
+        label: Pro-Remote
+      - id: con-remote
+        label: Con-Remote
+      - id: pro-in-person
+        label: Pro-In-Person
+      - id: con-in-person
+        label: Con-In-Person
+  - id: challanges-in-meetings
+    label: Challanges in Meetings
+    color: "#16a34a"
+    children:
+      - id: pre-meeting
+        label: Pre-Meeting
+      - id: during-meeting
+        label: During-Meeting
+      - id: post-meeting
+        label: Post-Meeting
