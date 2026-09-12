@@ -5,6 +5,96 @@ annotations:
     start: 5875
     end: 6346
     quote: Sondern man hat halt auch einfach, wo man weiß, okay, wir arbeiten zusammen und wir arbeiten in eine Richtung und wir haben die gleiche Zielrichtung und man vertraut einander, dass man den Weg gemeinsam gestaltet, ohne dass alles formell dokumentiert werden muss, als wir haben entschieden das, sondern der Mensch, im Gegensatz dann ja auch vielleicht zur KI, diese Form der schriftlichen Dokumentation oftmals ja gar nicht braucht, was ja einen Unterschied auch ausmacht
+  - id: a-mtygmz1b-2xep
+    code: remote-vs-in-person
+    start: 6721
+    end: 6797
+    quote: "Also ich arbeite wesentlich mittlerweile mit meinen Kunden remote zusammen. "
+  - id: a-mtygngvh-8csb
+    code: remote-vs-in-person/pro-in-person
+    start: 6797
+    end: 7039
+    quote: Und dann sind aber die inhaltlichen Schwerpunkte sind doch noch oftmals live. Also wenn es wirklich um Inhalte, vertiefte, komplexere Inhalte geht, ist live immer noch der bevorzugte Weg. Das macht auch einen Unterschied, meiner Meinung nach.
+  - id: a-mtygnvyt-1y7e
+    code: challanges-in-meetings/pre-meeting
+    start: 7147
+    end: 7226
+    quote: was schwierig ist, wenn die Leute einfach unvorbereitet in Meetings reinkommen.
+  - id: a-mtygqvb4-8xte
+    code: challanges-in-meetings/pre-meeting
+    start: 7426
+    end: 7773
+    quote: 'Wir haben vier Wochen auf ein Meeting gewartet, dass wir uns treffen, dass sich fünf Leute abstimmen und dann kommen drei rein und sagen: "Ja, oh, ich habe leider das Dokument nicht gelesen." Das heißt, du hast keine Grundlage überhaupt, dich auszutauschen, weil du kannst zu keiner Entscheidung kommen, weil es keine inhaltliche Vorbereitung gab.'
+  - id: a-mtygq3q1-ldix
+    code: challanges-in-meetings/pre-meeting
+    start: 7774
+    end: 7911
+    quote: Ich glaube, das ist das allergrößte Manko wirklich bei Remote-Meetings, dass Leute in die Meetings reinkommen und nicht vorbereitet sind.
+  - id: a-mtygtj32-rnrr
+    code: challanges-in-meetings/pre-meeting
+    start: 8176
+    end: 8323
+    quote: Und wenn dann Leute reinkommen und sich nicht inhaltlich vorbereitet haben, ist es ein "Waste of Time, weil wir können keine Entscheidungen treffen
+  - id: a-mtyguf2u-ti8v
+    code: challanges-in-meetings/pre-meeting
+    start: 8770
+    end: 8918
+    quote: Also ich glaube, das ist wirklich der größte Buttleneck in Remote Meetings, dass Leute inhaltlich nicht vorbereitet reinkommen. Das ist Nummer eins.
+  - id: a-mtygvmd9-mk4e
+    code: challanges-in-meetings/pre-meeting
+    start: 9036
+    end: 9127
+    quote: Und Nummer zwei ist, dass Leute dabei sind, die vielleicht auch gar nicht so relevant sind.
+  - id: a-mtygwb3i-fiqc
+    code: challanges-in-meetings/pre-meeting
+    start: 9401
+    end: 9553
+    quote: Wie kriegt man das hin, dass nur die Leute in den Meetings sind, die wirklich auch Entscheidungen treffen können? Das ist eine ganz wichtige Vorauswahl.
+  - id: a-mtygwt9x-tjcn
+    code: challanges-in-meetings/pre-meeting
+    start: 9992
+    end: 10106
+    quote: Also es sind meistens ja schon die richtigen irgendwie dabei, aber halt zu viele Leute dann drin sind in Meetings.
+  - id: a-mtygy74p-jewo
+    code: challanges-in-meetings/during-meeting
+    start: 10411
+    end: 10597
+    quote: wenn du in einer Bilingualität auch drin bist, also eigentlich muttersprachlich zum Beispiel Deutsch und das Meeting aber auf Englisch, also das ist auch immer noch eine Herausforderung.
+  - id: a-mtygyupi-6ym3
+    code: challanges-in-meetings/during-meeting
+    start: 10820
+    end: 10886
+    quote: Auch wenn so gut wie alle Englisch können, es ist nie das Gleiche.
+  - id: a-mtyh0l6s-thhf
+    code: challanges-in-meetings/during-meeting
+    start: 10902
+    end: 11093
+    quote: wenn du dann im internationalen Kontext bist, wo es auch noch kulturelle Unterschiede gibt, wie du Dinge wahrnimmst, was du ansprechen kannst, wie sensibel gegebenenfalls gewisse Themen sind.
+  - id: a-mtyh1g59-uqxm
+    code: challanges-in-meetings/during-meeting
+    start: 11094
+    end: 11250
+    quote: Wenn du analytische Arbeiten miteinander besprichst, gibt es immer auch etwas, was einen persönlichen Aspekt mit betrifft, wo man emotional darauf reagiert.
+  - id: a-mtyh28u0-rm46
+    code: tools
+    start: 11251
+    end: 11400
+    quote: "Und ich glaube, da halt die gemeinsame Sprache zu finden, alle mitzunehmen, dass ein gemeinsames Bild entsteht, um was geht es denn hier eigentlich. "
+  - id: a-mtyh5bfr-g3jp
+    code: remote-vs-in-person/con-remote
+    start: 11712
+    end: 11912
+    quote: Und das ist sehr viel schwieriger zu vermitteln online und die Leute mitzunehmen und auch ein Gefühl für die Leute auch als Fassilitator zu bekommen, als wenn du die mal live getroffen hast in Person.
+  - id: a-mtyh6h71-q3q8
+    code: remote-vs-in-person/pro-in-person
+    start: 11913
+    end: 12072
+    quote: Also ich kriege sehr viel mehr Informationen, auch über den Mensch, wenn ich den Menschen live als Person treffe und Einschätzungen habe und Wahrnehmungen habe
+  - id: a-mtyh7cvt-ob67
+    code: remote-vs-in-person/con-remote
+    start: 12164
+    end: 12449
+    quote: besonders wenn ich da mit 16 Kacheln oder noch mehr Kacheln irgendwo sitze und die fazilitiere, geht mir ein gewisses Gefühl für diese Gruppe und die Menschen als Fazilitatorin verloren, weil ich nicht die gleiche Präsenz mit denen habe, als wenn ich mit denen live in einem Raum wäre.
 ---
 
 ======> Interviewer 00:00
@@ -85,15 +175,15 @@ Mich würde jetzt am Anfang nochmal interessieren, wenn du jetzt mal so an klass
 ======> Interviewte 07:49
 Also ich arbeite wesentlich mittlerweile mit meinen Kunden remote zusammen. Und dann sind aber die inhaltlichen Schwerpunkte sind doch noch oftmals live. Also wenn es wirklich um Inhalte, vertiefte, komplexere Inhalte geht, ist live immer noch der bevorzugte Weg. Das macht auch einen Unterschied, meiner Meinung nach.
 
-Aber du hast jetzt nach remote explizit gefragt. Und bei remote explizit, was dort schiefläuft, ist, also was schwierig ist, wenn die Leute einfach unvorbereitet in Meetings reinkommen. Du hast denen irgendwelche Dokumente geschickt und die Leute sind, ach, oh, ich sollte 20 Seiten lesen, habe ich aber nicht. Hatte ich gerade die Woche wieder so. Also du wartest auf ein Meeting. Wir haben vier Wochen auf ein Meeting gewartet, dass wir uns treffen, dass sich fünf Leute abstimmen und dann kommen drei rein und sagen, ja, oh, ich habe leider das Dokument nicht gelesen. Das heißt, du hast keine Grundlage überhaupt, dich auszutauschen, weil du kannst zu keiner Entscheidung kommen, weil es keine inhaltliche Vorbereitung gab. Ich glaube, das ist das allergrößte Manko wirklich bei Remote-Meetings, dass Leute in die Meetings reinkommen und nicht vorbereitet sind.
+Aber du hast jetzt nach remote explizit gefragt. Und bei remote explizit, was dort schiefläuft, ist, also was schwierig ist, wenn die Leute einfach unvorbereitet in Meetings reinkommen. Du hast denen irgendwelche Dokumente geschickt und die Leute sind:"Ach, oh, ich sollte 20 Seiten lesen... Habe ich aber nicht." Hatte ich gerade die Woche wieder so. Also du wartest auf ein Meeting. Wir haben vier Wochen auf ein Meeting gewartet, dass wir uns treffen, dass sich fünf Leute abstimmen und dann kommen drei rein und sagen: "Ja, oh, ich habe leider das Dokument nicht gelesen." Das heißt, du hast keine Grundlage überhaupt, dich auszutauschen, weil du kannst zu keiner Entscheidung kommen, weil es keine inhaltliche Vorbereitung gab. Ich glaube, das ist das allergrößte Manko wirklich bei Remote-Meetings, dass Leute in die Meetings reinkommen und nicht vorbereitet sind.
 
-Und Meetings sind eine Investition und ich glaube, das verstehen ganz viele nicht. Die hetzen von Meetings zu Meetings und die Leute haben nicht klar genug, dass es eine Investition des Unternehmens ist in einer Absprache, einer Entscheidung, wie du gesagt hast. Und wenn dann Leute reinkommen und sich nicht inhaltlich vorbereitet haben, ist es ein Waste of Time, weil wir können keine Entscheidungen treffen, weil wir postponen das Meeting, weil dann heißt es halt, das war jetzt bei mir die Woche, das ist der Punkt wieder, ja, da müssen wir uns halt nochmal treffen. dann habe ich auch das Dokument gelesen. Wir haben trotzdem eine Dreiviertelstunde uns versucht, irgendwie abzustimmen und die nächsten Schritte zu besprechen. Aber hätten die das gelesen, das Dokument, und dann hätten wir sagen können, okay, das und das und das und so und so und so. Also ich glaube, das ist wirklich der größte Buttleneck in Remote Meetings, dass Leute inhaltlich nicht vorbereitet reinkommen. Das ist Nummer eins.
+Und Meetings sind eine Investition und ich glaube, das verstehen ganz viele nicht. Die hetzen von Meetings zu Meetings und die Leute haben nicht klar genug, dass es eine Investition des Unternehmens ist in einer Absprache, einer Entscheidung, wie du gesagt hast. Und wenn dann Leute reinkommen und sich nicht inhaltlich vorbereitet haben, ist es ein "Waste of Time, weil wir können keine Entscheidungen treffen, weil wir postponen das Meeting, weil dann heißt es halt, das war jetzt bei mir die Woche, das ist der Punkt wieder, ja, da müssen wir uns halt nochmal treffen. dann habe ich auch das Dokument gelesen. Wir haben trotzdem eine Dreiviertelstunde uns versucht, irgendwie abzustimmen und die nächsten Schritte zu besprechen. Aber hätten die das gelesen, das Dokument, und dann hätten wir sagen können, okay, das und das und das und so und so und so. Also ich glaube, das ist wirklich der größte Buttleneck in Remote Meetings, dass Leute inhaltlich nicht vorbereitet reinkommen. Das ist Nummer eins.
 
-Und die Nummer zwei würde ich sagen, dass Eben bei der Gedanke, klar, Nummer zwei ist inhaltlich nicht vorbereitet. Und Nummer zwei ist, dass Leute dabei sind, die vielleicht auch gar nicht so relevant sind. Also einfach mal Standardmeetings hat, weil man halt Standardmeetings hat. Und man bräuchte aber einen Teil der Leute nicht, weil sie eigentlich auch nichts beitragen. Ich glaube, das ist auch so ein... Ist ja auch in der Organisationsentwicklungsdebatte ein großes Thema. Wie kriegt man das hin, dass nur die Leute in den Meetings sind, die wirklich auch Entscheidungen treffen können? Das ist eine ganz wichtige Vorauswahl. Sagen wir mal, wenn du ein regelmäßiges Meeting hast mit dem Team, aber eigentlich die Hälfte des Teams überhaupt gar keine Beiträge leisten kann zu dem Thema des Meetings, warum sollen die dort sitzen? Das ist Waste of Time. Damit sie es gehört haben, dann können sie danach oft das Protokoll in fünf Minuten durchlesen. Also das ist so das Zweite, was ich glaube schief läuft, ist einfach nicht die richtigen Leute oder zu viele Leute. Also es sind meistens ja schon die richtigen irgendwie dabei, aber halt zu viele. viele Leute dann drin sind in Meetings.
+Und die Nummer zwei würde ich sagen, dass Eben bei der Gedanke, klar, Nummer zwei ist inhaltlich nicht vorbereitet. Und Nummer zwei ist, dass Leute dabei sind, die vielleicht auch gar nicht so relevant sind. Also einfach mal Standardmeetings hat, weil man halt Standardmeetings hat. Und man bräuchte aber einen Teil der Leute nicht, weil sie eigentlich auch nichts beitragen. Ich glaube, das ist auch so ein... Ist ja auch in der Organisationsentwicklungsdebatte ein großes Thema. Wie kriegt man das hin, dass nur die Leute in den Meetings sind, die wirklich auch Entscheidungen treffen können? Das ist eine ganz wichtige Vorauswahl. Sagen wir mal, wenn du ein regelmäßiges Meeting hast mit dem Team, aber eigentlich die Hälfte des Teams überhaupt gar keine Beiträge leisten kann zu dem Thema des Meetings, warum sollen die dort sitzen? Das ist Waste of Time. Damit sie es gehört haben, dann können sie danach oft das Protokoll in fünf Minuten durchlesen. Also das ist so das Zweite, was ich glaube schief läuft, ist einfach nicht die richtigen Leute oder zu viele Leute. Also es sind meistens ja schon die richtigen irgendwie dabei, aber halt zu viele Leute dann drin sind in Meetings.
 
-Und dann bei Remote Meetings, was läuft schief? Ich glaube, dass es teils schwer ist. Es kommt immer auf die Komplexität der Themen an. Wenn du komplexe Themen bearbeitest, was ich oftmals mache, die inhaltlich verschiedene Ebenen haben, wo es schwierig ist, das inhaltlich alles gut zu erfassen. Plus, wenn du in einer Bilingualität auch drin bist, also eigentlich muttersprachlich zum Beispiel Deutsch und das Meeting aber auf Englisch, also das ist auch immer noch eine Herausforderung oder sollte auch noch mit anderen Muttersprachen dabei sind, überhaupt die gleiche Sprache. verstehen wir hier alles das Gleiche, wenn wir alle auf einer Sprache miteinander kommunizieren, die nicht die Muttersprache ist. So gut wir alle Englisch können, es ist nie das Gleiche. Und besonders, wenn du dann im internationalen Kontext bist, wo es auch noch kulturelle Unterschiede gibt, wie du Dinge wahrnimmst, was du ansprechen kannst, wie sensibel gegebenenfalls gewisse Themen sind. Wenn du analytische Arbeiten miteinander besprichst, gibt es immer auch etwas, was einen persönlichen Aspekt mit betrifft, wo man emotional darauf reagiert. Und ich glaube, da halt die gemeinsame Sprache zu finden, alle mitzunehmen. dass ein gemeinsames Bild entsteht, um was geht es denn hier eigentlich. Und das ist immer einfach. Wenn du einen einfachen Prozess hast, das ist dann kompliziert, wenn du einen komplexen Prozess zu einem komplexen Thema hast, wo du auf einmal auf verschiedenen Ebenen Themen bearbeitest und diese Themen gemeinsam, dort ein gemeinsames Bild entstehen muss, damit du alle mitnimmst. Und das ist sehr viel schwieriger zu vermitteln online.
+Und dann bei Remote Meetings, was läuft schief? Ich glaube, dass es teils schwer ist. Es kommt immer auf die Komplexität der Themen an. Wenn du komplexe Themen bearbeitest, was ich oftmals mache, die inhaltlich verschiedene Ebenen haben, wo es schwierig ist, das inhaltlich alles gut zu erfassen. Plus, wenn du in einer Bilingualität auch drin bist, also eigentlich muttersprachlich zum Beispiel Deutsch und das Meeting aber auf Englisch, also das ist auch immer noch eine Herausforderung. Oder sollte auch noch mit anderen Muttersprachen dabei sind, überhaupt die gleiche Sprache. Verstehen wir hier alles das Gleiche, wenn wir alle auf einer Sprache miteinander kommunizieren, die nicht die Muttersprache ist. Auch wenn so gut wie alle Englisch können, es ist nie das Gleiche. Und besonders, wenn du dann im internationalen Kontext bist, wo es auch noch kulturelle Unterschiede gibt, wie du Dinge wahrnimmst, was du ansprechen kannst, wie sensibel gegebenenfalls gewisse Themen sind. Wenn du analytische Arbeiten miteinander besprichst, gibt es immer auch etwas, was einen persönlichen Aspekt mit betrifft, wo man emotional darauf reagiert. Und ich glaube, da halt die gemeinsame Sprache zu finden, alle mitzunehmen, dass ein gemeinsames Bild entsteht, um was geht es denn hier eigentlich. Und das ist immer einfach, wenn du einen einfachen Prozess hast, das ist dann kompliziert, wenn du einen komplexen Prozess zu einem komplexen Thema hast, wo du auf einmal auf verschiedenen Ebenen Themen bearbeitest und diese Themen gemeinsam, dort ein gemeinsames Bild entstehen muss, damit du alle mitnimmst. 
 
-Und die Leute mitzunehmen und auch ein Gefühl für die Leute auch als Fassilitatoren zu bekommen, als wenn du die mal live getroffen hast in Person. Also ich kriege sehr viel mehr Informationen, wenn ich auch über den Mensch, wenn ich Menschen live als Person treffe und Einschätzungen habe und Wahrnehmungen habe als dieser ganze Mensch, in Anführungsstrichen. als wenn ich die immer nur in den Kacheln, besonders wenn ich da mit 16 Kacheln oder noch mehr Kacheln irgendwo sitze und die fazilitiere, geht mir ein gewisses Gefühl für diese Gruppe und die Menschen als Fazilitatorin verloren, weil ich nicht die gleiche Präsenz mit denen habe, als wenn ich mit denen live in einem Raum wäre. Und ich dort auch Stimmung, Widerstände. Zustimmung und so weiter halt viel besser wahrnehmen kann. Das sind einfach so feine Unterschiede, aber die machen einen Unterschied.
+Und das ist sehr viel schwieriger zu vermitteln online und die Leute mitzunehmen und auch ein Gefühl für die Leute auch als Fassilitator zu bekommen, als wenn du die mal live getroffen hast in Person. Also ich kriege sehr viel mehr Informationen, auch über den Mensch, wenn ich den Menschen live als Person treffe und Einschätzungen habe und Wahrnehmungen habe als dieser ganze Mensch, in Anführungsstrichen. als wenn ich die immer nur in den Kacheln, besonders wenn ich da mit 16 Kacheln oder noch mehr Kacheln irgendwo sitze und die fazilitiere, geht mir ein gewisses Gefühl für diese Gruppe und die Menschen als Fazilitatorin verloren, weil ich nicht die gleiche Präsenz mit denen habe, als wenn ich mit denen live in einem Raum wäre. Und ich dort auch Stimmung, Widerstände. Zustimmung und so weiter halt viel besser wahrnehmen kann. Das sind einfach so feine Unterschiede, aber die machen einen Unterschied.
 
 
 
