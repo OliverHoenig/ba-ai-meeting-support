@@ -3,6 +3,15 @@
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{Adapted version of the “Inner Thoughts” framework}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{assets/figures/04/system-architcture.pdf}
+  \caption{System Architecture: Adapted version of the “Inner Thoughts” framework
+    \figsource{Own illustration based on "Inner Thoughts" by Liu et
+  al.\cite{liuProactiveConversationalAgents2025}, created with draw.io.}}
+  \label{fig:system-architecture}
+\end{figure}
+
 Das Inner Thoughts- Freamwork von Liu et al. ist in deren version eher für interaktionen ausgelegt die als
 soziales Plaudern kotegorisertet werden können. Dies ist nicht was ein Faciliator machen würde. Die Idee ein
 KI-System anhand einer intrsisichen motivation zu modellieren, bevor jemand etwas zu einer Gruppen discussion
@@ -89,6 +98,16 @@ contextual self-refinement bedient.
 Self-Refinement und Reflexion könnnen bei LLMs zu drastischen ELsitugssteirgunen führen, wenn eine kognitive
 Feedbackschleife druchaufen wird. \cite[p. 18]{meiSurveyContextEngineering2025} Ein Gedanke wird nicht direkt
 ausgesprochen, sondern druch einen Kritiker basierend auf der für diese arbeit entwicklete FIM-Heurisitk geprüft.
+
+In practice every utterance is appended to a shared pending buffer of messages that have not yet
+been thought about. The turn-taking prediction only decides \emph{when} that buffer is flushed
+(immediately if the floor is allocated to the AI; otherwise after $X$ seconds as one batch). Both
+cases continue to the same next step: the flushed pending set is assembled and the thought pipeline
+runs. External Stimulus Injection is not a later stage. Its monitors run continuously, but an ESI
+policy joins the pipeline only at that flush, and only if a trigger is active; otherwise the
+pipeline runs without it. A selected thought $t^{*}$ is not spoken raw. An Utterance Formation
+agent formulates it into a facilitation act, with tools for conversation context, facilitation best
+practices, speaking-time shares, sending a chat message, or speaking aloud.
 
 \autoref{tab:architecture-design-decisions} maps each architectural choice to a single warrant and to the
 chapters that already establish it, so the implementation can be traced without restating those arguments.
