@@ -98,6 +98,9 @@ contextual self-refinement bedient.
 Self-Refinement und Reflexion könnnen bei LLMs zu drastischen ELsitugssteirgunen führen, wenn eine kognitive
 Feedbackschleife druchaufen wird. \cite[p. 18]{meiSurveyContextEngineering2025} Ein Gedanke wird nicht direkt
 ausgesprochen, sondern druch einen Kritiker basierend auf der für diese arbeit entwicklete FIM-Heurisitk geprüft.
+The evaluation protocol follows the G-Eval prompt structure \cite[p. 2512]{liuGEvalNLGEvaluation2023}
+similarly also used for Thoughtful Agents. Probability-weighted scoring as proposed in the original method
+was omitted as a pragmatic decision, because the APIs used here do not return output-token probabilities.
 
 In practice every utterance is appended to a shared pending buffer of messages that have not yet
 been thought about. The turn-taking prediction only decides \emph{when} that buffer is flushed
