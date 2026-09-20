@@ -338,3 +338,15 @@ cannot be repeated. After \(t_{\mathrm{cool}}\) it may become eligible again, bu
 
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{Technology Stack: NLP Libraries, Backend/Frontend Frameworks}
+
+Für die Entwicklung des AI-Facilitators wurden LangChain und LangGraph als zentrale Frameworks ausgewählt.
+LangChain bietet eine modular aufgebaute Toolbox für die effiziente Entwicklung von LLM-basierten
+Anwendungen, während LangGraph die Definition und Steuerung agentenbasierter Workflows ermöglicht.
+
+Für die Durchführung der User Study wurde eine eigens entwickelte Webanwendung eingesetzt, die als einfache
+Videokonferenzlösung fungiert. Diese wurde mit Svelte, SvelteKit und Tailwind CSS implementiert und auf einem
+Hetzner-Server gehostet. Teilnehmer:innen konnten über einen teilbaren Link direkt auf die Anwendung zugreifen.
+Der gewählte Ansatz ermöglichte eine direkte Analyse der Nutzerinteraktionen sowie eine optimierte User
+Experience (UX). Alternativ hätte die Integration über bestehende Videokonferenz-Tools (z. B. als Bot via
+API) in Betracht gezogen werden können. Allerdings wäre dies mit den Limitierungen der jeweiligen APIs
+verbunden gewesen und hätte den Lösungsraum von vornherein eingeschränkt.
