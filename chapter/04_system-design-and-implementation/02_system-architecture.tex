@@ -219,18 +219,18 @@ original FIM score and applies a cheap, deterministic reweighting under two assu
 Let \(S=[1,5]\) be the FIM scale, \(T=[0,\infty)\) elapsed time in seconds, and
 \(T_{\infty}=[0,\infty]\) time since last speech, where \(\infty\) means never spoken.
 To each triple \((s_0,t,t_{\mathrm{spk}})\in S\times T\times T_{\infty}\) the mapping
-\(s_{\mathrm{eff}}\) assigns exactly one effective score. Aging and cooldown address the two
-assumptions, so they multiply:
+\(s_{\mathrm{weighted}}\) assigns one weighted score. Aging and cooldown address the two
+assumptions (see above), so they are modeled as a product:
 
 \begin{equation}
-  s_{\mathrm{eff}} :
+  s_{\mathrm{weighted}} :
   \begin{cases}
     S \times T \times T_{\infty} \to [0,5] \\
     (s_0,\, t,\, t_{\mathrm{spk}})
     \mapsto
     \min\bigl(5,\, \max(0,\, s_{\mathrm{aged}}(s_0,t)\cdot c(t_{\mathrm{spk}}))\bigr).
   \end{cases}
-  \label{eq:im-eff}
+  \label{eq:im-weighted}
 \end{equation}
 
 The session-wide parameters \(\tau\), \((s_{\mathrm{hold}}, t_{\mathrm{hold}})\) and
@@ -249,17 +249,21 @@ Linear decay hits zero at a finite horizon \(H\):
   \label{eq:im-aged}
 \end{equation}
 
-Linear is the simplest kernel that reaches zero in finite time and can be inverted from an
-operational requirement. An exponential never reaches zero, so a residual could later interact with
-cooldown recovery. Linear already lets weaker thoughts expire sooner, because they start closer to
-\(\tau\) (\autoref{fig:im-aging}).
+Linear decay is a practical modelling assumption: it is simple and reaches zero in finite time
+(\autoref{fig:im-aging}). \eqref{eq:im-aged} is the straight line from \((0,s_0)\) to \((H,0)\),
+hence of slope \(-s_0/H\).
 
-\(H\) is inverted, not fitted: a thought of score \(s_{\mathrm{hold}}\) must remain above \(\tau\)
-for exactly \(t_{\mathrm{hold}}\) seconds.
-Substituting \(s_{\mathrm{aged}}(s_{\mathrm{hold}}, t_{\mathrm{hold}})=\tau\) yields
-
+The horizon \(H\) is not chosen directly. A thought of score \(s_{\mathrm{hold}}\) should remain
+above \(\tau\) for \(t_{\mathrm{hold}}\) seconds, so that line must pass through
+\((t_{\mathrm{hold}},\tau)\). Equating the two expressions for the slope and solving for \(H\)
+gives
 \begin{equation}
-  H=\frac{t_{\mathrm{hold}}}{1-\tau/s_{\mathrm{hold}}}.
+  \begin{aligned}
+    -\frac{s_{\mathrm{hold}}}{H}
+    &= \frac{\tau-s_{\mathrm{hold}}}{t_{\mathrm{hold}}}, \\[0.35em]
+    H
+    &= \frac{t_{\mathrm{hold}}}{1-\tau/s_{\mathrm{hold}}}.
+  \end{aligned}
   \label{eq:im-horizon}
 \end{equation}
 
@@ -301,12 +305,9 @@ recover if the group still does not take the process issue up.
 
 For \(t_{\mathrm{spk}}=\infty\) the quotient is \(\infty\), hence \(c(\infty)=1\).
 
-The cubic \(3x^{2}-2x^{3}\) is the Hermite interpolant that is 0 at 0 and 1 at 1, with zero
-derivative at both ends. A linear ramp would start climbing immediately---the same facilitation move
-could reappear within seconds---and would kink at \(t_{\mathrm{cool}}\)
-(\autoref{fig:im-cooldown}). The flat start enforces a true pause; the flat end hands control back
-to aging without a jump in slope. The prototype uses \(t_{\mathrm{cool}}=60\,\mathrm{s}\);
-shorter and longer windows stretch the same shape.
+The cubic \(3x^{2}-2x^{3}\) is the Hermite interpolant on \([0,1]\) with vanishing endpoint
+derivatives, chosen so that recovery pauses after speech and returns to 1 without a knee
+(\autoref{fig:im-cooldown}).
 
 \begin{figure}[H]
   \centering
@@ -319,20 +320,20 @@ shorter and longer windows stretch the same shape.
   \label{fig:im-cooldown}
 \end{figure}
 
-The product in \eqref{eq:im-eff} is the result (\autoref{fig:im-effective}): a just-spoken thought
+The product in \eqref{eq:im-weighted} is the result (\autoref{fig:im-weighted}): a just-spoken thought
 cannot be repeated. After \(t_{\mathrm{cool}}\) it may become eligible again, but only if
 \(s_{\mathrm{aged}}\) is still above \(\tau\).
 
 \begin{figure}[H]
   \centering
-  \input{assets/figures/04/raw/im-effective}
-  \caption{Effective FIM score of a thought with \(s_0=5\), never spoken versus spoken at
+  \input{assets/figures/04/raw/im-weighted}
+  \caption{Weighted FIM score of a thought with \(s_0=5\), never spoken versus spoken at
     \(t=12\,\mathrm{s}\). Aging uses \(t_{\mathrm{hold}}=45\,\mathrm{s}\); cooldown uses
     \(t_{\mathrm{cool}}=60\,\mathrm{s}\). Recovery restores the aged remainder; whether that
     remainder still exceeds \(\tau\) depends on how long the thought has already lived.
     Parameters: \(\tau=4.3\), \(s_{\mathrm{hold}}=5\).
   \figsource{Own illustration.}}
-  \label{fig:im-effective}
+  \label{fig:im-weighted}
 \end{figure}
 
 % ---------------------------------------------------------------------------------------------------------------------
