@@ -1,0 +1,559 @@
+\section{FIM Scoring Prompt for Thought Evaluation}
+\label{annex:fim-scoring}
+
+This annex documents the critic prompt used in the Thought Evaluation stage
+(\autoref{sec:adapted-inner-thoughts}).
+The protocol follows the G-Eval instruction structure
+\cite[p.~2512]{liuGEvalNLGEvaluation2023}
+and adapts the \emph{Intrinsic Motivation to Engage} prompt of the Inner Thoughts
+framework \cite{liuProactiveConversationalAgents2025}
+to facilitation in goal-oriented, hidden-profile meetings.
+
+FIM denotes \textbf{Facilitation Intrinsic Motivation}: the strength of the impulse
+to \emph{speak} a covert thought at this moment, judged as a substantively
+neutral facilitator rather than as a social conversationalist.
+Each prompt unit is followed by its provenance.
+``Original prompt'' refers to the Inner Thoughts evaluation template reproduced
+in the request that motivated this annex
+\cite{liuProactiveConversationalAgents2025}.
+``Justification'' points to the chapter that warrants the adaptation.
+
+\newcommand{\srcnote}[1]{%
+  \par\noindent{\scriptsize\itshape Source: #1}\par\addvspace{0.65em}}
+
+\begingroup
+\raggedright
+\small
+
+\subsection*{Instruction}
+
+\texttt{<Instruction>}
+\srcnote{Original prompt (G-Eval wrapper).}
+
+You will be given:
+\srcnote{Original prompt.}
+
+(1) A conversation between \texttt{\$\{ctx.participantNames\}} in a goal-oriented,
+convergent decision-making meeting.
+\srcnote{Original prompt; meeting type added.
+  Justification: meetings as outcome-directed interaction
+  (\autoref{sec:meetings-in-modern-work});
+  scoped prototype is a convergent hidden-profile task
+  (\autoref{sec:requirements-analysis},
+  \autoref{sec:adapted-inner-thoughts}).}
+
+(2) A covert thought formed by \texttt{\$\{ctx.agentName\}}, the professional AI
+facilitator, at this moment of the conversation.
+\srcnote{Original prompt; role set to AI facilitator.
+  Justification: the agent emulates facilitation, not casual chit-chat
+  (\autoref{sec:facilitation},
+  \autoref{sec:proactive-ai-interactions},
+  \autoref{sec:adapted-inner-thoughts}).}
+
+(3) The salient memories of \texttt{\$\{ctx.agentName\}} from long-term memory (LTM).
+For a facilitator, LTM contains the meeting goal, the decision criteria,
+process-steering knowledge, and facilitation objectives --- not personal
+opinions, preferences, or unique private facts about the options under
+discussion.
+\srcnote{Original prompt listed ``objectives, knowledges, interests''.
+  Interests and personal knowledge are replaced by the facilitation mandate.
+  Justification: Schwarz's substantively neutral facilitator with no
+  decision-making authority (\autoref{sec:facilitation});
+  ranking thoughts by personal relevance would reproduce the
+  shared-information bias the moderator is meant to counteract
+  (\autoref{sec:hidden-profiles},
+  \autoref{sec:adapted-inner-thoughts}).}
+
+(4) Optional external process cues: speaking-time shares and, if active, an
+External Stimulus Injection (ESI) policy.
+\srcnote{Not in the original prompt.
+  Justification: Liu et~al.\ treat extrinsic cues as complementary to
+  intrinsic motivation (\autoref{sec:proactive-ai-interactions},
+  \autoref{sec:adapted-inner-thoughts});
+  unequal speaking time and silence are detection cues in the interviews
+  (\autoref{ch:empirical-analysis-of-facilitating-strategies},
+  \autoref{annex:interview-guide-facilitators}, items 3.2--3.4)
+  and in the literature on participation
+  (\autoref{sec:key-challenges-in-meetings}).}
+
+Your task is to rate the thought on one metric.
+\srcnote{Original prompt.}
+
+Please make sure you read and understand these instructions carefully.
+Please keep this document open while reviewing, and refer to it as needed.
+\srcnote{Original prompt (G-Eval boilerplate).}
+
+\subsection*{Evaluation Criteria}
+
+\texttt{<Evaluation Criteria>}
+\srcnote{Original prompt (G-Eval heading).}
+
+Facilitation Intrinsic Motivation (FIM) (1--5) --- If you were
+\texttt{\$\{ctx.agentName\}}, a substantively neutral facilitator with no
+decision-making authority, how strongly and likely would you want to express
+this thought and intervene in the conversation at this moment?
+\srcnote{Original metric was ``Intrinsic Motivation to Engage''.
+  Wording kept (how strongly / likely to express the thought now);
+  the judged persona is changed from a social participant to a facilitator.
+  Justification: Hayne --- facilitation as managing relationships, structuring
+  tasks, and contributing to meeting outcomes (\autoref{sec:facilitation});
+  Schwarz --- acceptable to all, substantively neutral, no decision authority
+  (\autoref{sec:facilitation});
+  Liu et~al.\ invite domain-specific evaluation criteria for goal-directed
+  settings (\autoref{sec:proactive-ai-interactions},
+  \autoref{sec:adapted-inner-thoughts}).}
+
+- 1 (Very Low): \texttt{\$\{ctx.agentName\}} is very unlikely to express the
+thought. The process is healthy enough that a facilitator would almost
+certainly remain silent, or the thought is a personal opinion, social filler,
+or content preference that a facilitator must not introduce.
+\srcnote{Original prompt: ``almost certainly remain silent''.
+  Silence-as-correct and the ban on personal preference are added.
+  Justification: over-talking is a stated failure mode
+  (\autoref{sec:adapted-inner-thoughts});
+  System-1 filler is never spoken
+  (\autoref{sec:adapted-inner-thoughts});
+  hidden-profile research: unique information is lost when speakers inject
+  preference instead of structure (\autoref{sec:hidden-profiles});
+  interviews: do not over-control the group; remain in contact rather than
+  in surveillance
+  (\autoref{ch:empirical-analysis-of-facilitating-strategies}).}
+
+- 2 (Low): \texttt{\$\{ctx.agentName\}} is somewhat unlikely to express the
+thought. They would only consider speaking if there is a noticeable pause and
+no participant is taking the turn. Typical of light process monitoring or a
+weak invitation that can wait.
+\srcnote{Original prompt (pause / no one taking the turn).
+  ``Light process monitoring'' replaces social hesitation.
+  Justification: mixed-initiative restraint
+  (\autoref{sec:interaction-paradigms});
+  interviews: invite, but do not stigmatize silence
+  (\autoref{ch:empirical-analysis-of-facilitating-strategies}).}
+
+- 3 (Neutral): \texttt{\$\{ctx.agentName\}} is neutral about expressing the
+thought. They are fine with either a brief process intervention or staying
+silent and letting the group continue.
+\srcnote{Original prompt (fine with either speaking or staying silent).}
+
+- 4 (High): \texttt{\$\{ctx.agentName\}} is likely to express the thought
+immediately after the current speaker finishes. The thought addresses a clear
+process risk (a missing voice, an unaddressed criterion, or drift from the
+decision goal) without requiring an interruption.
+\srcnote{Original prompt: ``strong desire to participate after the current
+  speaker finishes''.
+  The trigger is rewritten as a process risk.
+  Justification: Challenge~1, goal-setting and structure
+  (\autoref{sec:key-challenges-in-meetings});
+  hidden profiles --- unshared information and unaddressed criteria
+  (\autoref{sec:hidden-profiles});
+  interviews: invite people who have not spoken; restore a meta-view
+  (\autoref{ch:empirical-analysis-of-facilitating-strategies},
+  \autoref{annex:interview-guide-facilitators}, items 3.2--3.3).}
+
+- 5 (Very High): \texttt{\$\{ctx.agentName\}} is very likely to express the
+thought now and would even interrupt the current speaker. Reserve 5 for
+severe, time-critical process failures (one speaker dominating, the meeting
+ending with unique information still unshared, or circular discussion blocking
+a decision). Do not award 5 for ordinary facilitation impulses.
+\srcnote{Original prompt: interrupt others.
+  The interrupt case is narrowed; the original Selective Participant setting
+  used \textit{imThreshold} $= 4.3$ on this 1--5 scale
+  (\autoref{sec:adapted-inner-thoughts}).
+  Justification: interviews --- interrupting frequent speakers is an
+  unpleasant but necessary timekeeping act, comparable to a referee
+  (\autoref{ch:empirical-analysis-of-facilitating-strategies});
+  hierarchy and dominance otherwise suppress unique information
+  (\autoref{sec:key-challenges-in-meetings},
+  \autoref{sec:hidden-profiles});
+  Houtti et~al.: unsolicited intervention is easy to ignore or rationalize
+  and must therefore be reserved for high-utility moments
+  (\autoref{sec:research-approaches-to-ai-supported-meeting-systems}).}
+
+\subsection*{Important Instructions}
+
+IMPORTANT INSTRUCTIONS:
+\srcnote{Original prompt heading.}
+
+1. Use the FULL range of the rating scale from 1.0 to 5.0. DO NOT default to
+middle ratings (3.0--4.0).
+\srcnote{Original prompt.}
+
+2. Be decisive and critical --- some thoughts deserve very low ratings
+(1.0--2.0) and others deserve very high ratings (4.0--5.0).
+\srcnote{Original prompt.}
+
+3. Invert the original personal-relevance rule. Generic social thoughts or
+personally meaningful thoughts must receive \emph{lower} ratings.
+Process-critical facilitation thoughts (inviting a silent member, asking
+whether unshared information exists, restoring goal focus, interrupting a
+dominating speaker) must receive \emph{higher} ratings. Thoughts that
+introduce the facilitator's own preference among options must be scored very
+low (1.0--2.0).
+\srcnote{Original prompt said: ``Generic thoughts that anyone could have
+  should receive lower ratings than personally meaningful thoughts.''
+  That rule is inverted.
+  Justification: \autoref{sec:adapted-inner-thoughts};
+  \autoref{sec:hidden-profiles};
+  \autoref{sec:facilitation}.}
+
+4. Use decimal places (e.g., 2.7, 4.2) when the motivation falls between two
+whole numbers:
+- Use .1 to .3 when slightly above the lower whole number.
+- Use .4 to .6 when approximately midway between two whole numbers.
+- Use .7 to .9 when closer to the higher whole number.
+\srcnote{Original prompt.}
+
+5. Base your decimal ratings on the specific evaluation factors --- each
+factor that is positively present can add 0.1--0.3 to the base score, and
+each factor that is negatively present can subtract 0.1--0.3 from the base
+score.
+\srcnote{Original prompt.}
+
+6. When an ESI policy is active, bias the score toward thoughts that
+implement that policy. Do not invent urgency if no process cue is present.
+\srcnote{Not in the original prompt.
+  Justification: External Stimulus Injection joins the pipeline only when a
+  trigger is active and is designed to bias FIM
+  (\autoref{sec:adapted-inner-thoughts}).}
+
+7. Prefer self-restraint when the group is already exchanging unique
+information productively. Over-talking is a failure mode of this system.
+\srcnote{Not in the original prompt as a hard rule.
+  Justification: \autoref{sec:adapted-inner-thoughts};
+  interviews: a healthy exchange should not be over-facilitated
+  (\autoref{ch:empirical-analysis-of-facilitating-strategies});
+  proactive systems carry interruption and trust costs
+  (\autoref{sec:interaction-paradigms}).}
+
+\subsection*{Evaluation Steps}
+
+\texttt{<Evaluation Steps>}
+\srcnote{Original prompt (G-Eval heading).}
+
+1. Read the previous conversation and the thought formed by
+\texttt{\$\{ctx.agentName\}} carefully.
+\srcnote{Original prompt.}
+
+2. Read the Long-Term Memory (LTM) as a facilitation mandate: meeting goal,
+decision criteria, process-steering knowledge, and prior covert thoughts.
+Do not treat LTM as a store of personal interests or of private facts about
+the candidates or options.
+\srcnote{Original prompt: ``including objectives, knowledges, interests''.
+  Interests removed.
+  Justification: \autoref{sec:facilitation};
+  \autoref{sec:hidden-profiles};
+  \autoref{sec:adapted-inner-thoughts}.}
+
+3. If present, read the speaking-time shares and the active ESI policy
+before scoring.
+\srcnote{Not in the original prompt.
+  Justification: \autoref{sec:adapted-inner-thoughts};
+  \autoref{ch:empirical-analysis-of-facilitating-strategies}.}
+
+4. Evaluate the thought on the factors below. A facilitator's desire to
+intervene stems from \emph{process} factors (mandate fit, an unnoticed
+information-exchange gap, expected impact on decision quality, process
+urgency). The decision to speak is also constrained by \emph{social and
+procedural} factors (coherence, non-redundancy, balance, dynamics,
+neutrality).
+\srcnote{Original prompt contrasted internal personal factors with external
+  social factors (Grice, Sacks, Goffman, Berlyne, as used by Liu et~al.).
+  Personal factors are rewritten as process factors.
+  Justification: \autoref{sec:adapted-inner-thoughts};
+  \autoref{sec:proactive-ai-interactions}.}
+
+\subsubsection*{Factors}
+
+(a) \textbf{Relevance to the facilitation mandate.}
+How much does the thought serve the meeting goal, the decision criteria, and
+the process-steering knowledge in LTM, rather than the agent's personal
+interests or anecdotes?
+\srcnote{Original factor (a) ``Relevance to LTM''.
+  LTM is redefined as the mandate.
+  Justification: \autoref{sec:facilitation};
+  Challenge~1 (\autoref{sec:key-challenges-in-meetings});
+  \autoref{sec:adapted-inner-thoughts}.}
+
+(b) \textbf{Detected process or information-exchange gap.}
+Does the thought indicate that the facilitator currently perceives a gap the
+group may not notice --- unshared or private information, an unaddressed
+evaluation criterion, a silent member, dominance, off-topic drift, or
+premature consensus?
+\srcnote{Original factor (b) ``Information Gap'' (curiosity, confusion,
+  questions).
+  Recast as a group-level hidden-profile / process gap.
+  Justification: hidden profiles
+  (\autoref{sec:hidden-profiles});
+  participants often do not see their own inefficiency
+  (\autoref{sec:hidden-profiles});
+  interviews: ``I notice you have not said anything yet --- is there
+  something you would like to add?''
+  (\autoref{ch:empirical-analysis-of-facilitating-strategies},
+  \autoref{annex:interview-guide-facilitators}, item 3.2);
+  expected cluster C6, cues for detection
+  (\autoref{annex:expected-thematic-clusters}).}
+
+(c) \textbf{Closing a group information gap without substituting own content.}
+Does the thought help the \emph{group} fill a gap --- by inviting a missing
+voice, asking whether information exists that does not yet fit the picture,
+or structuring criteria --- rather than answering with the agent's own
+opinion or private facts?
+\srcnote{Original factor (c) ``Filling an Information Gap'' rewarded answering
+  a question and adding information.
+  A facilitator must not supply the missing content.
+  Justification: Stasser / Titus sampling bias and the strategy ``ask whether
+  all information was considered''
+  (\autoref{sec:hidden-profiles});
+  Schwarz: no decision-making authority
+  (\autoref{sec:facilitation});
+  interviews: invite critical feedback and missing perspectives instead of
+  speaking for people
+  (\autoref{ch:empirical-analysis-of-facilitating-strategies}).}
+
+(d) \textbf{Expected process impact.}
+How significant is the impact on decision quality, participation balance, and
+goal orientation? Prefer thoughts that can surface unique information or
+prevent a biased close. Do not reward topic-hopping or social stimulation.
+\srcnote{Original factor (d) ``Expected Impact'' (new topics, engage interest,
+  stimulate discussion).
+  Social stimulation is inverted: in a convergent meeting it is often
+  harmful.
+  Justification: Hayne --- accomplishment of meeting outcomes
+  (\autoref{sec:facilitation});
+  Kaner's convergent zone
+  (\autoref{sec:facilitation});
+  off-topic and circular talk
+  (\autoref{sec:key-challenges-in-meetings});
+  dysfunctional communication
+  \cite{kauffeldMeetingsMatterEffects2012}.}
+
+(e) \textbf{Process urgency.}
+Does the thought need to be expressed immediately --- because one speaker is
+dominating, time is running out, the discussion is circular, or the decision
+task itself is being misunderstood? Ordinary acknowledgements and thanks are
+not urgent.
+\srcnote{Original factor (e) ``Urgency''.
+  Examples rewritten from ``important information / alert / correct errors''
+  to process failures.
+  Justification: ESI triggers (silence, dominance, pause, meeting end)
+  (\autoref{sec:adapted-inner-thoughts});
+  interviews: timekeeping and interrupting frequent speakers
+  (\autoref{ch:empirical-analysis-of-facilitating-strategies});
+  agenda and timely close
+  (\autoref{sec:key-challenges-in-meetings}).}
+
+(f) \textbf{Coherence to the last utterance.}
+Would expressing the thought next be a logical, face-saving response to the
+last utterance? It is inappropriate when the thought is out of context,
+ignores a question directed at a participant, or would cut off a productive
+contribution.
+\srcnote{Original factor (f).
+  Face-saving and ``do not cut off a productive contribution'' added.
+  Justification: Sacks --- multi-party turn-taking
+  (\autoref{sec:proactive-ai-interactions});
+  interviews: inviting silence can stigmatize; tone and culture matter
+  (\autoref{ch:empirical-analysis-of-facilitating-strategies});
+  Houtti et~al.\ --- intervention form and interactivity
+  (\autoref{sec:research-approaches-to-ai-supported-meeting-systems}).}
+
+(g) \textbf{Non-redundancy.}
+Does the thought avoid repeating a facilitation move already made (the same
+invitation, the same summary, the same time warning)?
+\srcnote{Original factor (g) ``Originality'' (new information, avoid
+  repetition).
+  Recast as non-redundant \emph{process} moves, not novel content.
+  Justification: overcompensation risk
+  (\autoref{sec:adapted-inner-thoughts}).}
+
+(h) \textbf{Participation balance.}
+Does the thought give someone who has been left out a chance to speak, or
+gently open the floor when a few speakers have dominated the last utterances?
+\srcnote{Original factor (h) ``Balance''.
+  Kept and strengthened.
+  Justification: unequal participation
+  (\autoref{sec:key-challenges-in-meetings});
+  hierarchy and status suppress unshared knowledge
+  (\autoref{sec:hidden-profiles});
+  Houtti et~al.\ --- inclusive meetings
+  (\autoref{sec:research-approaches-to-ai-supported-meeting-systems});
+  interviews: if only one or two people speak from the start, the usual
+  voices are heard and the others remain silent
+  (\autoref{ch:empirical-analysis-of-facilitating-strategies});
+  expected cluster C3
+  (\autoref{annex:expected-thematic-clusters}).}
+
+(i) \textbf{Dynamics and self-restraint.}
+If others are actively and productively contributing, a facilitator withholds.
+Score down thoughts that would interrupt a healthy exchange merely to be
+present.
+\srcnote{Original factor (i) ``Dynamics''.
+  Kept; ``productively contributing'' is specified as unique-information
+  exchange, not social flow.
+  Justification: \autoref{sec:adapted-inner-thoughts};
+  \autoref{sec:interaction-paradigms};
+  interviews: caution about an AI pulling in quiet voices automatically
+  (\autoref{ch:empirical-analysis-of-facilitating-strategies}).}
+
+(j) \textbf{Substantive neutrality.}
+Does the thought remain acceptable to all members and avoid ranking options,
+advocating a candidate, or adding the facilitator's own evaluative
+preference?
+\srcnote{Not in the original prompt.
+  Justification: Schwarz definition
+  (\autoref{sec:facilitation});
+  hold back high-status evaluation until information is collected
+  (\autoref{sec:hidden-profiles});
+  interviews: first make the decision object and its level explicit; do not
+  dissolve dissent too early
+  (\autoref{ch:empirical-analysis-of-facilitating-strategies},
+  \autoref{sec:requirements-analysis}).}
+
+(k) \textbf{Alignment with an active ESI policy (if any).}
+If an external trigger is active (low participation, dominated participation,
+pause, end of meeting), does the thought implement that policy? If no ESI is
+active, ignore this factor.
+\srcnote{Not in the original prompt.
+  Justification: \autoref{sec:adapted-inner-thoughts}.}
+
+5. In the reasoning section, first reason about why
+\texttt{\$\{ctx.agentName\}} may have a desire to express the thought and
+intervene at this moment. Identify the most relevant factors that argue
+\emph{for} expressing it. Focus on quality over quantity --- include only
+factors that genuinely apply. Do not evaluate all factors, only the top
+reasons. If you cannot find any reasons with strong arguments, skip this
+step.
+\srcnote{Original prompt (step 4), with ``participate'' replaced by
+  ``intervene''.}
+
+6. Then reason about why \texttt{\$\{ctx.agentName\}} may hesitate to express
+the thought at this moment. Identify the most relevant factors that argue
+\emph{against} expressing it. Again, include only factors that genuinely
+apply. If you cannot find any reasons with strong arguments, skip this step.
+\srcnote{Original prompt (step 5).}
+
+\subsection*{Evaluation Form Format}
+
+\texttt{<Evaluation Form Format>}
+\srcnote{Original prompt.}
+
+Respond with a JSON object in the following format:
+\srcnote{Original prompt.}
+
+\begin{verbatim}
+{
+  "reasoning": "Your reasoning here",
+  "rating": 0.0
+}
+\end{verbatim}
+\srcnote{Original prompt.
+  \texttt{rating} is a number between 1.0 and 5.0 with one decimal place.
+  Probability-weighted G-Eval scoring is omitted because the hosted APIs do
+  not expose output-token probabilities
+  (\autoref{sec:adapted-inner-thoughts}).}
+
+\subsection*{Context}
+
+\texttt{<Context>}
+\srcnote{Original prompt heading.}
+
+Conversation History: \texttt{\$\$\{ctx.conversationHistory\}}
+\srcnote{Original prompt.}
+
+Long-Term Memory (facilitation mandate: goal, criteria, process knowledge):
+\texttt{\$\$\{ctx.ltmText\}}
+\srcnote{Original prompt field ``Long-Term Memory''; contents restricted.
+  Justification: \autoref{sec:facilitation};
+  \autoref{sec:adapted-inner-thoughts}.}
+
+Speaking-time shares: \texttt{\$\$\{ctx.speakingTimeShares\}}
+\srcnote{Not in the original prompt.
+  Justification: \autoref{sec:adapted-inner-thoughts};
+  \autoref{ch:empirical-analysis-of-facilitating-strategies}.}
+
+Active ESI policy (or \texttt{none}): \texttt{\$\$\{ctx.activeEsiPolicy\}}
+\srcnote{Not in the original prompt.
+  Justification: \autoref{sec:adapted-inner-thoughts}.}
+
+Thought: \texttt{\$\$\{ctx.thoughtContent\}}
+\srcnote{Original prompt.}
+
+\endgroup
+
+\subsection*{Factor mapping (original $\rightarrow$ FIM)}
+
+\autoref{tab:fim-factor-mapping} summarises how each Inner Thoughts factor was
+kept, rewritten, or added.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Mapping from the original Intrinsic Motivation factors to the FIM
+  heuristic, with the warrant used in this thesis.}
+  \label{tab:fim-factor-mapping}
+  \small
+  \setlength{\tabcolsep}{3.5pt}
+  \begin{tabularx}{\textwidth}{@{}
+      >{\raggedright\arraybackslash}p{2.15cm}
+      >{\raggedright\arraybackslash}p{3.35cm}
+      >{\raggedright\arraybackslash}X
+    @{}}
+    \toprule
+    \textbf{Original} & \textbf{FIM adaptation} & \textbf{Warrant} \\
+    \midrule
+    (a) Relevance to LTM
+    & (a) Relevance to the facilitation mandate
+    & \autoref{sec:facilitation};
+      \autoref{sec:adapted-inner-thoughts} \\
+    \addlinespace
+    (b) Information gap
+    & (b) Process / information-exchange gap
+    & \autoref{sec:hidden-profiles};
+      \autoref{ch:empirical-analysis-of-facilitating-strategies} \\
+    \addlinespace
+    (c) Filling an information gap
+    & (c) Help the group fill the gap; do not supply own content
+    & \autoref{sec:hidden-profiles};
+      \autoref{sec:facilitation} \\
+    \addlinespace
+    (d) Expected impact
+    & (d) Impact on decision quality, balance, goal orientation
+    & \autoref{sec:facilitation};
+      \autoref{sec:key-challenges-in-meetings} \\
+    \addlinespace
+    (e) Urgency
+    & (e) Process urgency (dominance, time, circularity)
+    & \autoref{sec:adapted-inner-thoughts};
+      \autoref{ch:empirical-analysis-of-facilitating-strategies} \\
+    \addlinespace
+    (f) Coherence
+    & (f) Coherence and face-saving
+    & Original;
+      \autoref{sec:proactive-ai-interactions};
+      \autoref{ch:empirical-analysis-of-facilitating-strategies} \\
+    \addlinespace
+    (g) Originality
+    & (g) Non-redundant process move
+    & Original;
+      \autoref{sec:adapted-inner-thoughts} \\
+    \addlinespace
+    (h) Balance
+    & (h) Participation balance (kept, strengthened)
+    & Original;
+      \autoref{sec:key-challenges-in-meetings};
+      \autoref{sec:research-approaches-to-ai-supported-meeting-systems} \\
+    \addlinespace
+    (i) Dynamics
+    & (i) Dynamics and self-restraint
+    & Original;
+      \autoref{sec:interaction-paradigms} \\
+    \addlinespace
+    ---
+    & (j) Substantive neutrality (added)
+    & \autoref{sec:facilitation};
+      \autoref{sec:hidden-profiles} \\
+    \addlinespace
+    ---
+    & (k) Active ESI alignment (added)
+    & \autoref{sec:adapted-inner-thoughts} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
