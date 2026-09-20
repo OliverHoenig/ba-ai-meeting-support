@@ -196,9 +196,9 @@ chapters that already establish it, so the implementation can be traced without 
 \label{sec:dynamic-im}
 
 In the original Inner Thoughts model, intrinsic motivation is static: a thought is scored once at
-generation and that score never changes. Early tests showed the consequence: the agent spoke thoughts
-that the subsequent discussion had already made obsolete, and that would no longer have received a
-high FIM score given how the meeting had evolved.
+generation and that score never changes. Early tests during development showed that the system spoke thoughts
+that the subsequent discussion had already made obsolete, and that would, if they would have been evaluated
+again, probably no longer would have received a high FIM score given how the meeting had evolved.
 
 % TODO: beispielhafter Chatverlauf, in dem ein statischer FIM-Score zu spät geäußert wird.
 
@@ -208,11 +208,11 @@ original FIM score and applies a cheap, deterministic reweighting under two assu
 \begin{itemize}
   \item A facilitation thought becomes a poorer description of the current state and process need as the
     conversation moves on, because later information was not available when it was scored.
-    As the meeting continues, the group may already have closed that gap: a quiet participant may have
+    As the meeting continues, the group may already have closed that gap, a quiet participant may have
     spoken, unique information may have surfaced, or the discussion may have moved on.
     Therefore its priority should fall with age.
-  \item Once a facilitation intervention has been spoken, repeating it immediately would over-talk and
-    crowd the floor. The motivation to raise the same process issue is therefore initially very low, but
+  \item Once a facilitation intervention has been spoken, repeating it immediately could result in over-talking and
+    crowd the discussion. The motivation to raise the same process issue is therefore initially very low, but
     may recover if the group still does not take it up.
 \end{itemize}
 
@@ -306,7 +306,7 @@ recover if the group still does not take the process issue up.
 For \(t_{\mathrm{spk}}=\infty\) the quotient is \(\infty\), hence \(c(\infty)=1\).
 
 The cubic \(3x^{2}-2x^{3}\) is the Hermite interpolant on \([0,1]\) with vanishing endpoint
-derivatives, chosen so that recovery pauses after speech and returns to 1 without a knee
+derivatives, chosen so that recovery pauses after speech and returns to 1 without a hard knee
 (\autoref{fig:im-cooldown}).
 
 \begin{figure}[H]
@@ -320,7 +320,7 @@ derivatives, chosen so that recovery pauses after speech and returns to 1 withou
   \label{fig:im-cooldown}
 \end{figure}
 
-The product in \eqref{eq:im-weighted} is the result (\autoref{fig:im-weighted}): a just-spoken thought
+The product in \eqref{eq:im-weighted} is the result (\autoref{fig:im-weighted}). A just-spoken thought
 cannot be repeated. After \(t_{\mathrm{cool}}\) it may become eligible again, but only if
 \(s_{\mathrm{aged}}\) is still above \(\tau\).
 
