@@ -204,49 +204,64 @@ high FIM score given how the meeting had evolved.
 
 Re-scoring every pending thought with an LLM after each event would restore recency, but the added
 latency and cost would make the system unusable in a live meeting. The prototype therefore keeps the
-original FIM score and applies a cheap, deterministic reweighting under two assumptions.
+original FIM score and applies a cheap, deterministic reweighting under two assumptions:
 \begin{itemize}
   \item A thought becomes a poorer description of the current state as the conversation moves on, because later
     information was not available when it was scored; its priority should fall with age.
   \item Once a thought has been spoken, the motivation to say it again is initially very low, but may recover if the
     group does not take it up.
 \end{itemize}
-These two effects address different failure modes, so they multiply.
-With \(s_0\) the base FIM score, \(t\) the age in seconds, and \(c\) a cooldown factor,
+
+Let \(S=[1,5]\) be the FIM scale, \(T=[0,\infty)\) elapsed time in seconds, and
+\(T_{\infty}=[0,\infty]\) time since last speech, where \(\infty\) means never spoken.
+To each triple \((s_0,t,t_{\mathrm{spk}})\in S\times T\times T_{\infty}\) the mapping
+\(s_{\mathrm{eff}}\) assigns exactly one effective score. Aging and cooldown address the two
+assumptions, so they multiply:
 
 \begin{equation}
-  s_{\mathrm{aged}}(t)
-  =\max\bigl(0,\, s_0(1-t/H)\bigr),
-  \qquad
-  s_{\mathrm{eff}}
-  =\min\bigl(5,\, \max(0,\, s_{\mathrm{aged}}\cdot c)\bigr).
-  \label{eq:im-aged-eff}
+  s_{\mathrm{eff}} :
+  \begin{cases}
+    S \times T \times T_{\infty} \to [0,5] \\
+    (s_0,\, t,\, t_{\mathrm{spk}})
+    \mapsto
+    \min\bigl(5,\, \max(0,\, s_{\mathrm{aged}}(s_0,t)\cdot c(t_{\mathrm{spk}}))\bigr).
+  \end{cases}
+  \label{eq:im-eff}
 \end{equation}
 
-\paragraph{Why linear.}
-A linear kernel is the simplest decay that hits zero in finite time and can be inverted from an
-operational requirement: choose how long a thought of score \(s_{\mathrm{hold}}\) must stay above
-\(\tau\). That fixes the slope. An exponential never reaches zero, so a residual could later
-interact with cooldown recovery. A downward parabola with a flat start would delay the first loss of
-score, then drop faster; that grace period is a modelling preference, not a property measured in the
-meetings. Linear already lets weaker thoughts expire sooner, because they start closer to \(\tau\)
-(\autoref{fig:im-aging}).
+The session-wide parameters \(\tau\), \((s_{\mathrm{hold}}, t_{\mathrm{hold}})\) and
+\(t_{\mathrm{cool}}\) determine the kernels \(s_{\mathrm{aged}}\) and \(c\) below.
 
-\paragraph{Why this horizon.}
-\(H\) is not a fitted half-life. It is inverted from an operational requirement: a thought with score
-\(s_{\mathrm{hold}}\) must remain above \(\tau\) for exactly \(t_{\mathrm{hold}}\) seconds.
-Substituting \(s_{\mathrm{aged}}(t_{\mathrm{hold}})=\tau\) yields
+\paragraph{Aging \(s_{\mathrm{aged}}\).}
+Later information was not available when the thought was scored, so priority falls with age.
+Linear decay hits zero at a finite horizon \(H\):
+
+\begin{equation}
+  s_{\mathrm{aged}} :
+  \begin{cases}
+    S \times T \to [0,5] \\
+    (s_0,\, t) \mapsto \max\bigl(0,\, s_0(1-t/H)\bigr).
+  \end{cases}
+  \label{eq:im-aged}
+\end{equation}
+
+Linear is the simplest kernel that reaches zero in finite time and can be inverted from an
+operational requirement. An exponential never reaches zero, so a residual could later interact with
+cooldown recovery. Linear already lets weaker thoughts expire sooner, because they start closer to
+\(\tau\) (\autoref{fig:im-aging}).
+
+\(H\) is inverted, not fitted: a thought of score \(s_{\mathrm{hold}}\) must remain above \(\tau\)
+for exactly \(t_{\mathrm{hold}}\) seconds.
+Substituting \(s_{\mathrm{aged}}(s_{\mathrm{hold}}, t_{\mathrm{hold}})=\tau\) yields
 
 \begin{equation}
   H=\frac{t_{\mathrm{hold}}}{1-\tau/s_{\mathrm{hold}}}.
   \label{eq:im-horizon}
 \end{equation}
 
-All thoughts share this \(H\). A weaker thought, already closer to \(\tau\), therefore drops below
-the threshold sooner than a stronger one. The pair \((s_{\mathrm{hold}}, t_{\mathrm{hold}})\) is the
-only design knob for temporal sensitivity. Read left to right in
-\autoref{fig:im-aging}: a shorter \(t_{\mathrm{hold}}\) steepens every line and pulls
-every crossing to the left, including weaker thoughts.
+All thoughts share this \(H\). A weaker thought therefore crosses \(\tau\) sooner. The pair
+\((s_{\mathrm{hold}}, t_{\mathrm{hold}})\) is the only design knob for temporal sensitivity: a
+shorter \(t_{\mathrm{hold}}\) steepens every line (\autoref{fig:im-aging}).
 
 \begin{figure}[H]
   \centering
@@ -260,12 +275,16 @@ every crossing to the left, including weaker thoughts.
   \label{fig:im-aging}
 \end{figure}
 
-\paragraph{Why a smoothstep after speech.}
-If a thought has never been spoken, \(c=1\). After it has been spoken, with \(t_{\mathrm{spk}}\) the
-seconds since articulation and \(t_{\mathrm{cool}}\) the recovery window,
+\paragraph{Cooldown \(c\).}
+Once spoken, the motivation to repeat a thought is initially very low, but may recover if the group
+does not take it up.
 
 \begin{equation}
-  c=\mathrm{smoothstep}(t_{\mathrm{spk}}/t_{\mathrm{cool}}),
+  c :
+  \begin{cases}
+    T_{\infty} \to [0,1] \\
+    t_{\mathrm{spk}} \mapsto \mathrm{smoothstep}(t_{\mathrm{spk}}/t_{\mathrm{cool}}),
+  \end{cases}
   \qquad
   \mathrm{smoothstep}(x)=
   \begin{cases}
@@ -275,6 +294,8 @@ seconds since articulation and \(t_{\mathrm{cool}}\) the recovery window,
   \end{cases}
   \label{eq:im-smoothstep}
 \end{equation}
+
+For \(t_{\mathrm{spk}}=\infty\) the quotient is \(\infty\), hence \(c(\infty)=1\).
 
 The cubic \(3x^{2}-2x^{3}\) is the Hermite interpolant that is 0 at 0 and 1 at 1, with zero
 derivative at both ends. A linear ramp would start climbing immediately---the same facilitation move
@@ -294,8 +315,8 @@ shorter and longer windows stretch the same shape.
   \label{fig:im-cooldown}
 \end{figure}
 
-Combined with aging, a just-spoken thought cannot be repeated
-(\autoref{fig:im-effective}). After \(t_{\mathrm{cool}}\) it may become eligible again, but only if
+The product in \eqref{eq:im-eff} is the result (\autoref{fig:im-effective}): a just-spoken thought
+cannot be repeated. After \(t_{\mathrm{cool}}\) it may become eligible again, but only if
 \(s_{\mathrm{aged}}\) is still above \(\tau\).
 
 \begin{figure}[H]
