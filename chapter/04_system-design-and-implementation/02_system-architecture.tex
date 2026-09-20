@@ -230,7 +230,7 @@ operational requirement: choose how long a thought of score \(s_{\mathrm{hold}}\
 interact with cooldown recovery. A downward parabola with a flat start would delay the first loss of
 score, then drop faster; that grace period is a modelling preference, not a property measured in the
 meetings. Linear already lets weaker thoughts expire sooner, because they start closer to \(\tau\)
-(\autoref{fig:im-dynamics}, panel~a).
+(\autoref{fig:im-aging}).
 
 \paragraph{Why this horizon.}
 \(H\) is not a fitted half-life. It is inverted from an operational requirement: a thought with score
@@ -245,15 +245,27 @@ Substituting \(s_{\mathrm{aged}}(t_{\mathrm{hold}})=\tau\) yields
 All thoughts share this \(H\). A weaker thought, already closer to \(\tau\), therefore drops below
 the threshold sooner than a stronger one. The pair \((s_{\mathrm{hold}}, t_{\mathrm{hold}})\) is the
 only design knob for temporal sensitivity. Read left to right in
-\autoref{fig:im-dynamics}, panel~a: a shorter \(t_{\mathrm{hold}}\) steepens every line and pulls
+\autoref{fig:im-aging}: a shorter \(t_{\mathrm{hold}}\) steepens every line and pulls
 every crossing to the left, including weaker thoughts.
+
+\begin{figure}[H]
+  \centering
+  \input{assets/figures/04/raw/im-aging}
+  \caption{Linear aging of the FIM score at three hold-times. Each panel shows the same
+    scores \(s_0\in\{4.5,4.7,5.0\}\); the vertical line is \(t_{\mathrm{hold}}\), where a
+    score-5 thought crosses \(\tau\). Within a panel, weaker thoughts expire sooner. Left to
+    right, a shorter \(t_{\mathrm{hold}}\) steepens every line.
+    Parameters: \(\tau=4.3\), \(s_{\mathrm{hold}}=5\).
+  \figsource{Own illustration.}}
+  \label{fig:im-aging}
+\end{figure}
 
 \paragraph{Why a smoothstep after speech.}
 If a thought has never been spoken, \(c=1\). After it has been spoken, with \(t_{\mathrm{spk}}\) the
-seconds since articulation,
+seconds since articulation and \(t_{\mathrm{cool}}\) the recovery window,
 
 \begin{equation}
-  c=\mathrm{smoothstep}(t_{\mathrm{spk}}/60),
+  c=\mathrm{smoothstep}(t_{\mathrm{spk}}/t_{\mathrm{cool}}),
   \qquad
   \mathrm{smoothstep}(x)=
   \begin{cases}
@@ -266,27 +278,36 @@ seconds since articulation,
 
 The cubic \(3x^{2}-2x^{3}\) is the Hermite interpolant that is 0 at 0 and 1 at 1, with zero
 derivative at both ends. A linear ramp would start climbing immediately---the same facilitation move
-could reappear within seconds---and would kink at 60\,s (\autoref{fig:im-dynamics}, panel~b). The
-flat start enforces a true pause; the flat end hands control back to aging without a jump in slope.
+could reappear within seconds---and would kink at \(t_{\mathrm{cool}}\)
+(\autoref{fig:im-cooldown}). The flat start enforces a true pause; the flat end hands control back
+to aging without a jump in slope. The prototype uses \(t_{\mathrm{cool}}=60\,\mathrm{s}\);
+shorter and longer windows stretch the same shape.
+
+\begin{figure}[H]
+  \centering
+  \input{assets/figures/04/raw/im-cooldown}
+  \caption{Cooldown factor after a thought is spoken, for \(t_{\mathrm{cool}}\in\{30,60,90\}\,\mathrm{s}\).
+    Each panel compares the Hermite smoothstep with a linear ramp; the vertical line is
+    \(t_{\mathrm{cool}}\), where recovery completes. The smoothstep stays flat at both ends;
+    the linear ramp starts immediately and kinks at \(t_{\mathrm{cool}}\).
+  \figsource{Own illustration.}}
+  \label{fig:im-cooldown}
+\end{figure}
+
 Combined with aging, a just-spoken thought cannot be repeated
-(\autoref{fig:im-dynamics}, panel~c). After about a minute it may become eligible again, but only if
+(\autoref{fig:im-effective}). After \(t_{\mathrm{cool}}\) it may become eligible again, but only if
 \(s_{\mathrm{aged}}\) is still above \(\tau\).
 
 \begin{figure}[H]
   \centering
-  \input{assets/figures/04/raw/im-dynamics}
-  \caption{Dynamics of the effective FIM score. (a)~Linear aging at three hold-times. Each
-    panel shows the same scores \(s_0\in\{4.5,4.7,5.0\}\); the vertical line is
-    \(t_{\mathrm{hold}}\), where a score-5 thought crosses \(\tau\). Within a panel, weaker
-    thoughts expire sooner. Left to right, a shorter \(t_{\mathrm{hold}}\) steepens every line.
-    (b)~Cooldown factor after a thought is spoken, compared with a linear ramp.
-    (c)~Effective score of a thought with \(s_0=5\), never spoken versus spoken at
-    \(t=12\,\mathrm{s}\). Recovery restores the aged remainder; whether that remainder still exceeds
-    \(\tau\) depends on how long the thought has already lived.
-    Parameters: \(\tau=4.3\), \(s_{\mathrm{hold}}=5\); (b) and (c) use
-    \(t_{\mathrm{hold}}=45\,\mathrm{s}\).
+  \input{assets/figures/04/raw/im-effective}
+  \caption{Effective FIM score of a thought with \(s_0=5\), never spoken versus spoken at
+    \(t=12\,\mathrm{s}\). Aging uses \(t_{\mathrm{hold}}=45\,\mathrm{s}\); cooldown uses
+    \(t_{\mathrm{cool}}=60\,\mathrm{s}\). Recovery restores the aged remainder; whether that
+    remainder still exceeds \(\tau\) depends on how long the thought has already lived.
+    Parameters: \(\tau=4.3\), \(s_{\mathrm{hold}}=5\).
   \figsource{Own illustration.}}
-  \label{fig:im-dynamics}
+  \label{fig:im-effective}
 \end{figure}
 
 % ---------------------------------------------------------------------------------------------------------------------

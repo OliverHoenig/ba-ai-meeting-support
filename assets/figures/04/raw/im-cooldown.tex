@@ -1,0 +1,72 @@
+% Cooldown factor after speech. Small multiples for t_cool in {30, 60, 90} s.
+\input{assets/figures/04/raw/im-dynamics-styles}
+
+\noindent
+\begin{minipage}[t]{0.32\textwidth}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        IMcool,
+        title={$t_{\mathrm{cool}}{=}30\,\mathrm{s}$},
+        ylabel={Cool factor $c$},
+      ]
+      \addplot[TUDa-0c, densely dashed, thick] {linH(x,30)};
+      \addplot[TUDa-1b, solid, very thick] {coolH(x,30)};
+      \addplot[TUDa-0d, dashed] coordinates {(30,0) (30,1.05)}
+      node[pos=0.22, anchor=west, font=\scriptsize, inner sep=1.5pt, black]
+      {$t_{\mathrm{cool}}$};
+    \end{axis}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        IMcool,
+        title={$t_{\mathrm{cool}}{=}60\,\mathrm{s}$},
+        ylabel={},
+        yticklabels={},
+      ]
+      \addplot[TUDa-0c, densely dashed, thick] {linH(x,60)};
+      \addplot[TUDa-1b, solid, very thick] {coolH(x,60)};
+      \addplot[TUDa-0d, dashed] coordinates {(60,0) (60,1.05)}
+      node[pos=0.22, anchor=west, font=\scriptsize, inner sep=1.5pt, black]
+      {$t_{\mathrm{cool}}$};
+    \end{axis}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        IMcool,
+        title={$t_{\mathrm{cool}}{=}90\,\mathrm{s}$},
+        ylabel={},
+        yticklabels={},
+      ]
+      \addplot[TUDa-0c, densely dashed, thick] {linH(x,90)};
+      \addplot[TUDa-1b, solid, very thick] {coolH(x,90)};
+      \addplot[TUDa-0d, dashed] coordinates {(90,0) (90,1.05)}
+      node[pos=0.22, anchor=east, font=\scriptsize, inner sep=1.5pt, black]
+      {$t_{\mathrm{cool}}$};
+    \end{axis}
+  \end{tikzpicture}
+\end{minipage}
+
+\vspace{0.2em}
+{\centering
+  \scriptsize
+  \begin{tikzpicture}[baseline=-0.4ex]
+    \draw[TUDa-0c, densely dashed, thick] (0,0) -- (0.55,0);
+  \end{tikzpicture}~linear ramp
+  \hspace{0.9em}
+  \begin{tikzpicture}[baseline=-0.4ex]
+    \draw[TUDa-1b, very thick] (0,0) -- (0.55,0);
+  \end{tikzpicture}~smoothstep
+  \hspace{0.9em}
+  \begin{tikzpicture}[baseline=-0.4ex]
+    \draw[TUDa-0d, dashed] (0,0) -- (0.55,0);
+  \end{tikzpicture}~$t_{\mathrm{cool}}$\par
+}

@@ -1,0 +1,76 @@
+% Shared pgfplots styles and IM kernels for the dynamic-FIM figures.
+% Illustrative calibration: tau=4.3, s_hold=5, t_hold=45 s, t_cool=60 s, spoken at 12 s.
+\ifdefined\IMdynamicsStylesLoaded\else
+\newcommand{\IMdynamicsStylesLoaded}{}
+\pgfplotsset{
+  IM functions/.style={
+    declare function={
+      tau=4.3;
+      shold=5.0;
+      thold=45.0;
+      tcool=60.0;
+      tspk=12.0;
+      Hor=thold/(1-tau/shold);
+      aged(\s,\t)=max(0,\s*(1-\t/Hor));
+      agedH(\s,\t,\th)=max(0,\s*(1-\t*(1-tau/shold)/\th));
+      smstep(\x)=ifthenelse(\x<0,0,ifthenelse(\x>1,1,3*\x*\x-2*\x*\x*\x));
+      cool(\ts)=smstep(\ts/tcool);
+      coolH(\ts,\tc)=smstep(\ts/\tc);
+      linH(\ts,\tc)=min(1,\ts/\tc);
+      spoken(\t)=aged(5,\t)*ifthenelse(\t<tspk,1,cool(\t-tspk));
+    }
+  },
+  IMcore/.style={
+    IM functions,
+    font=\footnotesize,
+    tick label style={font=\scriptsize},
+    label style={font=\footnotesize},
+    title style={font=\footnotesize, at={(0.0,1.0)}, anchor=south west, yshift=4pt},
+    axis lines=left,
+    axis line style={{}-{}},
+    tick align=outside,
+    clip=true,
+    grid=major,
+    grid style={TUDa-0a, thin},
+    every axis plot/.append style={line cap=round, line join=round},
+  },
+  IMaxis/.style={
+    IMcore,
+    legend cell align=left,
+    legend style={
+      font=\scriptsize,
+      draw=none,
+      fill=none,
+      inner sep=1.5pt,
+      row sep=-0.5pt,
+      cells={anchor=west},
+    },
+  },
+  IMhold/.style={
+    IMcore,
+    width=\linewidth,
+    height=4.45cm,
+    xlabel={Age $t$ (s)},
+    xmin=0, xmax=100,
+    ymin=0, ymax=5.55,
+    xtick={0,20,40,60,80,100},
+    extra y ticks={4.3},
+    extra y tick labels={$\tau$},
+    extra y tick style={grid=none, tick label style={font=\scriptsize}},
+    domain=0:100,
+    samples=80,
+  },
+  IMcool/.style={
+    IMcore,
+    width=\linewidth,
+    height=4.45cm,
+    xlabel={Seconds since spoken $t_{\mathrm{spk}}$},
+    xmin=0, xmax=120,
+    ymin=0, ymax=1.15,
+    xtick={0,30,60,90,120},
+    ytick={0,0.25,0.5,0.75,1},
+    domain=0:120,
+    samples=100,
+  },
+}
+\fi

@@ -1,0 +1,39 @@
+% Combined aging and cooldown: effective FIM score.
+% Default calibration: t_hold=45 s, t_cool=60 s, spoken at 12 s.
+\input{assets/figures/04/raw/im-dynamics-styles}
+
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+      IMaxis,
+      width=0.92\textwidth,
+      height=6.1cm,
+      xlabel={Age $t$ (s)},
+      ylabel={Effective IM $s_{\mathrm{eff}}$},
+      xmin=0, xmax=130,
+      ymin=0, ymax=5.55,
+      xtick={0,30,60,90,120},
+      extra y ticks={4.3},
+      extra y tick labels={$\tau$},
+      extra y tick style={grid=none, tick label style={font=\scriptsize}},
+      legend style={
+        at={(0.98,0.98)},
+        anchor=north east,
+        legend columns=1,
+      },
+      samples=120,
+    ]
+    \addplot[TUDa-9b, dashdotted, thick, domain=0:130, samples=2] {tau};
+    \addlegendentry{$\tau{=}4.3$}
+    \addplot[TUDa-1b, solid, very thick, domain=0:130] {aged(5,x)};
+    \addlegendentry{never spoken}
+    \addplot[TUDa-8b, solid, very thick, domain=0:12, samples=40, forget plot]
+    {aged(5,x)};
+    \addplot[TUDa-8b, solid, very thick, domain=12:130, samples=100] {spoken(x)};
+    \addlegendentry{spoken at $12\,\mathrm{s}$}
+    \pgfmathsetmacro{\agedAtSpeak}{aged(5,12)}
+    \addplot[TUDa-8b, solid, very thick, forget plot]
+    coordinates {(12,\agedAtSpeak) (12,0)};
+    \addplot[TUDa-0d, dashed] coordinates {(12,0) (12,5.15)};
+  \end{axis}
+\end{tikzpicture}
