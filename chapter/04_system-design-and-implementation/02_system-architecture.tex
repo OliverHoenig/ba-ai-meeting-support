@@ -204,11 +204,14 @@ high FIM score given how the meeting had evolved.
 
 Re-scoring every pending thought with an LLM after each event would restore recency, but the added
 latency and cost would make the system unusable in a live meeting. The prototype therefore keeps the
-original FIM score and applies a cheap, deterministic reweighting under two assumptions. First, a
-thought becomes a poorer description of the current state as the conversation moves on, because later
-information was not available when it was scored; its priority should fall with age. Second, once a
-thought has been spoken, the motivation to say it again is initially very low, but may recover if the
-group does not take it up. These two effects address different failure modes, so they multiply.
+original FIM score and applies a cheap, deterministic reweighting under two assumptions.
+\begin{itemize}
+  \item A thought becomes a poorer description of the current state as the conversation moves on, because later
+    information was not available when it was scored; its priority should fall with age.
+  \item Once a thought has been spoken, the motivation to say it again is initially very low, but may recover if the
+    group does not take it up.
+\end{itemize}
+These two effects address different failure modes, so they multiply.
 With \(s_0\) the base FIM score, \(t\) the age in seconds, and \(c\) a cooldown factor,
 
 \begin{equation}
@@ -279,7 +282,7 @@ Combined with aging, a just-spoken thought cannot be repeated
     \(t=12\,\mathrm{s}\). Recovery restores the aged remainder; whether that remainder still exceeds
     \(\tau\) depends on how long the thought has already lived.
     Parameters: \(\tau=4.3\), \(s_{\mathrm{hold}}=5\), \(t_{\mathrm{hold}}=45\,\mathrm{s}\).
-    \figsource{Own illustration.}}
+  \figsource{Own illustration.}}
   \label{fig:im-dynamics}
 \end{figure}
 
