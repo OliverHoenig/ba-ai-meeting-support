@@ -184,7 +184,7 @@ chapters that already establish it, so the implementation can be traced without 
     \addlinespace
     Cheap temporal reweighting instead of LLM re-scoring
     & Static IM speaks stale thoughts. Re-prompting every thought after each event is too slow and
-    costly for a live meeting. Quadratic aging and a post-speech smoothstep keep the original score
+    costly for a live meeting. Linear aging and a post-speech smoothstep keep the original score
     but discount age and repetition.
     & \autoref{sec:adapted-inner-thoughts} \\
     \bottomrule
@@ -216,22 +216,21 @@ With \(s_0\) the base FIM score, \(t\) the age in seconds, and \(c\) a cooldown 
 
 \begin{equation}
   s_{\mathrm{aged}}(t)
-  =\max\bigl(0,\, s_0\bigl(1-(t/H)^{2}\bigr)\bigr),
+  =\max\bigl(0,\, s_0(1-t/H)\bigr),
   \qquad
   s_{\mathrm{eff}}
   =\min\bigl(5,\, \max(0,\, s_{\mathrm{aged}}\cdot c)\bigr).
   \label{eq:im-aged-eff}
 \end{equation}
 
-\paragraph{Why a quadratic.}
-A linear decay \(s_0(1-t/H)\) starts eroding the score immediately. An exponential decay discounts
-most steeply in the first seconds, i.e.\ while the thought is still most likely to be valid. The
-downward parabola is the unique quadratic that starts at \(s_0\) with a horizontal tangent and hits
-zero at a finite horizon \(H\): a fresh thought keeps nearly its full score for a short window, then
-relevance falls at an increasing rate as new information accumulates
-(\autoref{fig:im-dynamics}, panel~a). Once the score is below the utterance threshold \(\tau\), the finite
-root also clears the thought from the buffer, rather than leaving a residual that could later
-interact with cooldown recovery.
+\paragraph{Why linear.}
+A linear kernel is the simplest decay that hits zero in finite time and can be inverted from an
+operational requirement: choose how long a thought of score \(s_{\mathrm{hold}}\) must stay above
+\(\tau\). That fixes the slope. An exponential never reaches zero, so a residual could later
+interact with cooldown recovery. A downward parabola with a flat start would delay the first loss of
+score, then drop faster; that grace period is a modelling preference, not a property measured in the
+meetings. Linear already lets weaker thoughts expire sooner, because they start closer to \(\tau\)
+(\autoref{fig:im-dynamics}, panel~a).
 
 \paragraph{Why this horizon.}
 \(H\) is not a fitted half-life. It is inverted from an operational requirement: a thought with score
@@ -239,13 +238,15 @@ interact with cooldown recovery.
 Substituting \(s_{\mathrm{aged}}(t_{\mathrm{hold}})=\tau\) yields
 
 \begin{equation}
-  H=\frac{t_{\mathrm{hold}}}{\sqrt{1-\tau/s_{\mathrm{hold}}}}.
+  H=\frac{t_{\mathrm{hold}}}{1-\tau/s_{\mathrm{hold}}}.
   \label{eq:im-horizon}
 \end{equation}
 
 All thoughts share this \(H\). A weaker thought, already closer to \(\tau\), therefore drops below
 the threshold sooner than a stronger one. The pair \((s_{\mathrm{hold}}, t_{\mathrm{hold}})\) is the
-only design knob for temporal sensitivity.
+only design knob for temporal sensitivity. Read left to right in
+\autoref{fig:im-dynamics}, panel~a: a shorter \(t_{\mathrm{hold}}\) steepens every line and pulls
+every crossing to the left, including weaker thoughts.
 
 \paragraph{Why a smoothstep after speech.}
 If a thought has never been spoken, \(c=1\). After it has been spoken, with \(t_{\mathrm{spk}}\) the
@@ -274,14 +275,16 @@ Combined with aging, a just-spoken thought cannot be repeated
 \begin{figure}[H]
   \centering
   \input{assets/figures/04/raw/im-dynamics}
-  \caption{Dynamics of the effective FIM score. (a)~Quadratic aging for three base scores, with
-    linear and exponential kernels that share the same hold-time constraint for \(s_0=5\). The
-    vertical line marks \(t_{\mathrm{hold}}\), where a score-5 thought crosses \(\tau\).
+  \caption{Dynamics of the effective FIM score. (a)~Linear aging at three hold-times. Each
+    panel shows the same scores \(s_0\in\{4.5,4.7,5.0\}\); the vertical line is
+    \(t_{\mathrm{hold}}\), where a score-5 thought crosses \(\tau\). Within a panel, weaker
+    thoughts expire sooner. Left to right, a shorter \(t_{\mathrm{hold}}\) steepens every line.
     (b)~Cooldown factor after a thought is spoken, compared with a linear ramp.
     (c)~Effective score of a thought with \(s_0=5\), never spoken versus spoken at
     \(t=12\,\mathrm{s}\). Recovery restores the aged remainder; whether that remainder still exceeds
     \(\tau\) depends on how long the thought has already lived.
-    Parameters: \(\tau=4.3\), \(s_{\mathrm{hold}}=5\), \(t_{\mathrm{hold}}=45\,\mathrm{s}\).
+    Parameters: \(\tau=4.3\), \(s_{\mathrm{hold}}=5\); (b) and (c) use
+    \(t_{\mathrm{hold}}=45\,\mathrm{s}\).
   \figsource{Own illustration.}}
   \label{fig:im-dynamics}
 \end{figure}

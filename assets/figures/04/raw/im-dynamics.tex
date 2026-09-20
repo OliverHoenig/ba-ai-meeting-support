@@ -1,5 +1,6 @@
 % Dynamic FIM reweighting (aging + cooldown). Input from the architecture chapter.
 % Illustrative calibration: tau=4.3, s_hold=5, t_hold=45 s, t_cool=60 s, spoken at 12 s.
+% Panel (a) compares t_hold in {20, 45, 90} s as small multiples.
 \pgfplotsset{
   IM functions/.style={
     declare function={
@@ -8,18 +9,15 @@
       thold=45.0;
       tcool=60.0;
       tspk=12.0;
-      Hor=thold/(sqrt(1-tau/shold));
-      aged(\s,\t)=max(0,\s*(1-(\t/Hor)*(\t/Hor)));
-      Tlin=thold/(1-tau/shold);
-      lin5(\t)=max(0,5*(1-\t/Tlin));
-      lam=-(ln(tau/shold))/thold;
-      exp5(\t)=5*exp(-lam*\t);
+      Hor=thold/(1-tau/shold);
+      aged(\s,\t)=max(0,\s*(1-\t/Hor));
+      agedH(\s,\t,\th)=max(0,\s*(1-\t*(1-tau/shold)/\th));
       smstep(\x)=ifthenelse(\x<0,0,ifthenelse(\x>1,1,3*\x*\x-2*\x*\x*\x));
       cool(\ts)=smstep(\ts/tcool);
       spoken(\t)=aged(5,\t)*ifthenelse(\t<tspk,1,cool(\t-tspk));
     }
   },
-  IMaxis/.style={
+  IMcore/.style={
     IM functions,
     font=\footnotesize,
     tick label style={font=\scriptsize},
@@ -32,6 +30,9 @@
     grid=major,
     grid style={TUDa-0a, thin},
     every axis plot/.append style={line cap=round, line join=round},
+  },
+  IMaxis/.style={
+    IMcore,
     legend cell align=left,
     legend style={
       font=\scriptsize,
@@ -41,131 +42,193 @@
       row sep=-0.5pt,
       cells={anchor=west},
     },
+  },
+  IMhold/.style={
+    IMcore,
+    width=\linewidth,
+    height=4.45cm,
+    xlabel={Age $t$ (s)},
+    xmin=0, xmax=100,
+    ymin=0, ymax=5.55,
+    xtick={0,20,40,60,80,100},
+    extra y ticks={4.3},
+    extra y tick labels={$\tau$},
+    extra y tick style={grid=none, tick label style={font=\scriptsize}},
+    domain=0:100,
+    samples=80,
   }
 }
 
 \noindent
-\begin{tikzpicture}
-  \begin{axis}[
-      IMaxis,
-      width=\linewidth,
-      height=5.1cm,
-      title={(a) Quadratic aging versus linear and exponential kernels},
-      xlabel={Age $t$ (s)},
-      ylabel={Aged score $s_{\mathrm{aged}}$},
-      xmin=0, xmax=130,
-      ymin=0, ymax=5.55,
-      xtick={0,20,40,60,80,100,120},
-      extra y ticks={4.3},
-      extra y tick labels={$\tau$},
-      extra y tick style={grid=none, tick label style={font=\scriptsize}},
-      legend columns=3,
-      legend style={
-        at={(0.5,-0.32)},
-        anchor=north,
-        /tikz/every even column/.append style={column sep=0.85em},
-        font=\scriptsize,
-        draw=none,
-        fill=none,
-      },
-      domain=0:130,
-      samples=120,
-    ]
-    \addplot[TUDa-0c, densely dashed, thick] {lin5(x)};
-    \addlegendentry{linear ($s_0{=}5$)}
-    \addplot[TUDa-0d, dotted, thick] {exp5(x)};
-    \addlegendentry{exponential ($s_0{=}5$)}
-    \addplot[TUDa-8b, solid, very thick] {aged(4.5,x)};
-    \addlegendentry{$s_0{=}4.5$}
-    \addplot[TUDa-3b, solid, very thick] {aged(4.7,x)};
-    \addlegendentry{$s_0{=}4.7$}
-    \addplot[TUDa-1b, solid, very thick] {aged(5,x)};
-    \addlegendentry{$s_0{=}5.0$}
-    \addplot[TUDa-9b, dashdotted, thick, domain=0:130, samples=2] {tau};
-    \addlegendentry{threshold $\tau{=}4.3$}
-    \addplot[TUDa-8b, only marks, mark=*, mark size=1.7pt, forget plot]
-      coordinates {(25.36,4.3)};
-    \addplot[TUDa-3b, only marks, mark=*, mark size=1.7pt, forget plot]
-      coordinates {(35.09,4.3)};
-    \addplot[TUDa-1b, only marks, mark=*, mark size=1.7pt, forget plot]
-      coordinates {(45.00,4.3)};
-    \draw[TUDa-0d, dashed] (45,0) -- (45,5.15);
-    \node[font=\scriptsize, anchor=west, inner sep=2pt] at (47,1.35)
+{\footnotesize (a) Linear aging: effect of \(t_{\mathrm{hold}}\)}\\[0.25em]
+\begin{minipage}[t]{0.32\textwidth}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        IMhold,
+        title={$t_{\mathrm{hold}}{=}20\,\mathrm{s}$},
+        ylabel={Aged score $s_{\mathrm{aged}}$},
+      ]
+      \addplot[TUDa-8b, solid, very thick] {agedH(4.5,x,20)};
+      \addplot[TUDa-3b, solid, very thick] {agedH(4.7,x,20)};
+      \addplot[TUDa-1b, solid, very thick] {agedH(5,x,20)};
+      \addplot[TUDa-9b, dashdotted, thick, domain=0:100, samples=2] {tau};
+      \addplot[TUDa-8b, only marks, mark=*, mark size=1.5pt]
+      coordinates {(6.35,4.3)};
+      \addplot[TUDa-3b, only marks, mark=*, mark size=1.5pt]
+      coordinates {(12.16,4.3)};
+      \addplot[TUDa-1b, only marks, mark=*, mark size=1.5pt]
+      coordinates {(20.00,4.3)};
+      \addplot[TUDa-0d, dashed] coordinates {(20,0) (20,5.15)}
+      node[pos=0.24, anchor=west, font=\scriptsize, inner sep=1.5pt, black]
       {$t_{\mathrm{hold}}$};
-  \end{axis}
-\end{tikzpicture}
+    \end{axis}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        IMhold,
+        title={$t_{\mathrm{hold}}{=}45\,\mathrm{s}$},
+        ylabel={},
+        yticklabels={},
+      ]
+      \addplot[TUDa-8b, solid, very thick] {agedH(4.5,x,45)};
+      \addplot[TUDa-3b, solid, very thick] {agedH(4.7,x,45)};
+      \addplot[TUDa-1b, solid, very thick] {agedH(5,x,45)};
+      \addplot[TUDa-9b, dashdotted, thick, domain=0:100, samples=2] {tau};
+      \addplot[TUDa-8b, only marks, mark=*, mark size=1.5pt]
+      coordinates {(14.29,4.3)};
+      \addplot[TUDa-3b, only marks, mark=*, mark size=1.5pt]
+      coordinates {(27.36,4.3)};
+      \addplot[TUDa-1b, only marks, mark=*, mark size=1.5pt]
+      coordinates {(45.00,4.3)};
+      \addplot[TUDa-0d, dashed] coordinates {(45,0) (45,5.15)}
+      node[pos=0.24, anchor=west, font=\scriptsize, inner sep=1.5pt, black]
+      {$t_{\mathrm{hold}}$};
+    \end{axis}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        IMhold,
+        title={$t_{\mathrm{hold}}{=}90\,\mathrm{s}$},
+        ylabel={},
+        yticklabels={},
+      ]
+      \addplot[TUDa-8b, solid, very thick] {agedH(4.5,x,90)};
+      \addplot[TUDa-3b, solid, very thick] {agedH(4.7,x,90)};
+      \addplot[TUDa-1b, solid, very thick] {agedH(5,x,90)};
+      \addplot[TUDa-9b, dashdotted, thick, domain=0:100, samples=2] {tau};
+      \addplot[TUDa-8b, only marks, mark=*, mark size=1.5pt]
+      coordinates {(28.57,4.3)};
+      \addplot[TUDa-3b, only marks, mark=*, mark size=1.5pt]
+      coordinates {(54.71,4.3)};
+      \addplot[TUDa-1b, only marks, mark=*, mark size=1.5pt]
+      coordinates {(90.00,4.3)};
+      \addplot[TUDa-0d, dashed] coordinates {(90,0) (90,5.15)}
+      node[pos=0.24, anchor=east, font=\scriptsize, inner sep=1.5pt, black]
+      {$t_{\mathrm{hold}}$};
+    \end{axis}
+  \end{tikzpicture}
+\end{minipage}
 
-\vspace{0.35em}
+\vspace{0.2em}
+{\centering
+  \scriptsize
+  \begin{tikzpicture}[baseline=-0.4ex]
+    \draw[TUDa-8b, very thick] (0,0) -- (0.55,0);
+  \end{tikzpicture}~$s_0{=}4.5$
+  \hspace{0.9em}
+  \begin{tikzpicture}[baseline=-0.4ex]
+    \draw[TUDa-3b, very thick] (0,0) -- (0.55,0);
+  \end{tikzpicture}~$s_0{=}4.7$
+  \hspace{0.9em}
+  \begin{tikzpicture}[baseline=-0.4ex]
+    \draw[TUDa-1b, very thick] (0,0) -- (0.55,0);
+  \end{tikzpicture}~$s_0{=}5.0$
+  \hspace{0.9em}
+  \begin{tikzpicture}[baseline=-0.4ex]
+    \draw[TUDa-9b, dashdotted, thick] (0,0) -- (0.55,0);
+  \end{tikzpicture}~$\tau{=}4.3$\par
+}
+
+\vspace{0.45em}
 
 \noindent
 \begin{minipage}[t]{0.495\textwidth}
-\centering
-\begin{tikzpicture}
-  \begin{axis}[
-      IMaxis,
-      width=\linewidth,
-      height=5.15cm,
-      title={(b) Cooldown after speech},
-      xlabel={Seconds since spoken $t_{\mathrm{spk}}$},
-      ylabel={Cool factor $c$},
-      xmin=0, xmax=90,
-      ymin=0, ymax=1.15,
-      xtick={0,20,40,60,80},
-      ytick={0,0.25,0.5,0.75,1},
-      legend style={
-        at={(0.5,-0.34)},
-        anchor=north,
-        legend columns=2,
-        /tikz/every even column/.append style={column sep=0.9em},
-      },
-      domain=0:90,
-      samples=100,
-    ]
-    \addplot[TUDa-0c, densely dashed, thick] {min(1,x/60)};
-    \addlegendentry{linear ramp}
-    \addplot[TUDa-1b, solid, very thick] {cool(x)};
-    \addlegendentry{smoothstep}
-    \draw[TUDa-0d, dashed] (60,0) -- (60,1.05);
-  \end{axis}
-\end{tikzpicture}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        IMaxis,
+        width=\linewidth,
+        height=5.15cm,
+        title={(b) Cooldown after speech},
+        xlabel={Seconds since spoken $t_{\mathrm{spk}}$},
+        ylabel={Cool factor $c$},
+        xmin=0, xmax=90,
+        ymin=0, ymax=1.15,
+        xtick={0,20,40,60,80},
+        ytick={0,0.25,0.5,0.75,1},
+        legend style={
+          at={(0.5,-0.34)},
+          anchor=north,
+          legend columns=2,
+          /tikz/every even column/.append style={column sep=0.9em},
+        },
+        domain=0:90,
+        samples=100,
+      ]
+      \addplot[TUDa-0c, densely dashed, thick] {min(1,x/60)};
+      \addlegendentry{linear ramp}
+      \addplot[TUDa-1b, solid, very thick] {cool(x)};
+      \addlegendentry{smoothstep}
+      \addplot[TUDa-0d, dashed] coordinates {(60,0) (60,1.05)};
+    \end{axis}
+  \end{tikzpicture}
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{0.495\textwidth}
-\centering
-\begin{tikzpicture}
-  \begin{axis}[
-      IMaxis,
-      width=\linewidth,
-      height=5.15cm,
-      title={(c) Effective score},
-      xlabel={Age $t$ (s)},
-      ylabel={Effective IM $s_{\mathrm{eff}}$},
-      xmin=0, xmax=130,
-      ymin=0, ymax=5.55,
-      xtick={0,30,60,90,120},
-      extra y ticks={4.3},
-      extra y tick labels={$\tau$},
-      extra y tick style={grid=none, tick label style={font=\scriptsize}},
-      legend style={
-        at={(0.5,-0.34)},
-        anchor=north,
-        legend columns=2,
-        /tikz/every even column/.append style={column sep=0.55em},
-      },
-      samples=120,
-    ]
-    \addplot[TUDa-9b, dashdotted, thick, domain=0:130, samples=2] {tau};
-    \addlegendentry{$\tau{=}4.3$}
-    \addplot[TUDa-1b, solid, very thick, domain=0:130] {aged(5,x)};
-    \addlegendentry{never spoken}
-    \addplot[TUDa-8b, solid, very thick, domain=0:12, samples=40, forget plot]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        IMaxis,
+        width=\linewidth,
+        height=5.15cm,
+        title={(c) Effective score},
+        xlabel={Age $t$ (s)},
+        ylabel={Effective IM $s_{\mathrm{eff}}$},
+        xmin=0, xmax=130,
+        ymin=0, ymax=5.55,
+        xtick={0,30,60,90,120},
+        extra y ticks={4.3},
+        extra y tick labels={$\tau$},
+        extra y tick style={grid=none, tick label style={font=\scriptsize}},
+        legend style={
+          at={(0.5,-0.34)},
+          anchor=north,
+          legend columns=2,
+          /tikz/every even column/.append style={column sep=0.55em},
+        },
+        samples=120,
+      ]
+      \addplot[TUDa-9b, dashdotted, thick, domain=0:130, samples=2] {tau};
+      \addlegendentry{$\tau{=}4.3$}
+      \addplot[TUDa-1b, solid, very thick, domain=0:130] {aged(5,x)};
+      \addlegendentry{never spoken}
+      \addplot[TUDa-8b, solid, very thick, domain=0:12, samples=40, forget plot]
       {aged(5,x)};
-    \addplot[TUDa-8b, solid, very thick, domain=12:130, samples=100] {spoken(x)};
-    \addlegendentry{spoken at $12\,\mathrm{s}$}
-    \pgfmathsetmacro{\agedAtSpeak}{aged(5,12)}
-    \addplot[TUDa-8b, solid, very thick, forget plot]
+      \addplot[TUDa-8b, solid, very thick, domain=12:130, samples=100] {spoken(x)};
+      \addlegendentry{spoken at $12\,\mathrm{s}$}
+      \pgfmathsetmacro{\agedAtSpeak}{aged(5,12)}
+      \addplot[TUDa-8b, solid, very thick, forget plot]
       coordinates {(12,\agedAtSpeak) (12,0)};
-    \draw[TUDa-0d, dashed] (12,0) -- (12,5.15);
-  \end{axis}
-\end{tikzpicture}
+      \addplot[TUDa-0d, dashed] coordinates {(12,0) (12,5.15)};
+    \end{axis}
+  \end{tikzpicture}
 \end{minipage}
