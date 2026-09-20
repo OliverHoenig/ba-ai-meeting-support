@@ -206,10 +206,14 @@ Re-scoring every pending thought with an LLM after each event would restore rece
 latency and cost would make the system unusable in a live meeting. The prototype therefore keeps the
 original FIM score and applies a cheap, deterministic reweighting under two assumptions:
 \begin{itemize}
-  \item A thought becomes a poorer description of the current state as the conversation moves on, because later
-    information was not available when it was scored; its priority should fall with age.
-  \item Once a thought has been spoken, the motivation to say it again is initially very low, but may recover if the
-    group does not take it up.
+  \item A facilitation thought becomes a poorer description of the current state and process need as the
+    conversation moves on, because later information was not available when it was scored.
+    As the meeting continues, the group may already have closed that gap: a quiet participant may have
+    spoken, unique information may have surfaced, or the discussion may have moved on.
+    Therefore its priority should fall with age.
+  \item Once a facilitation intervention has been spoken, repeating it immediately would over-talk and
+    crowd the floor. The motivation to raise the same process issue is therefore initially very low, but
+    may recover if the group still does not take it up.
 \end{itemize}
 
 Let \(S=[1,5]\) be the FIM scale, \(T=[0,\infty)\) elapsed time in seconds, and
@@ -276,8 +280,8 @@ shorter \(t_{\mathrm{hold}}\) steepens every line (\autoref{fig:im-aging}).
 \end{figure}
 
 \paragraph{Cooldown \(c\).}
-Once spoken, the motivation to repeat a thought is initially very low, but may recover if the group
-does not take it up.
+Once spoken, the motivation to repeat a facilitation intervention is initially very low, but may
+recover if the group still does not take the process issue up.
 
 \begin{equation}
   c :
