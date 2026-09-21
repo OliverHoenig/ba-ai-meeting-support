@@ -26,7 +26,7 @@
 Der Agent sollt enicht zu schnell versuchen meinungsverscheindeheiten aufzulösen. (vgl hidden profile problem)
 
 % ---------------------------------------------------------------------------------------------------------------------s
-\subsection{Scoped Requirements for the Prototype}
+\subsection{Scoped Requirements Catalog for the Prototype (User Stories)}
 
 % Die bewusste Priorisierung/Reduktion auf das konkret umgesetzte Teilproblem (Hidden Profiles /
 % Shared-Information-Bias, ungleiche Beteiligung).
@@ -34,3 +34,119 @@ Der Agent sollt enicht zu schnell versuchen meinungsverscheindeheiten aufzulöse
 % Was bewusst nicht umgesetzt wird → Verweis auf Limitations/Future Work.
 % Alternative Titel für 4.1.2, falls dir „Scoped" zu wiederholt ist: Prioritized and Specified Requirements
 % oder Derived Prototype Requirements and Delimitation.
+
+Die Anforderungen werden in Form von User Stories festgehalten. Laut Ott können diese
+einen in Alltagssprache formulierten Software-Anforderungskatalog darstellen
+\cite[p.~18]{ottAppsEffektivManagen2019}. Die Formulierungen orientieren sich an diesem Muster:
+\begin{quote}
+  \enquote{Als <Rolle>, ich möchte <Ziel/Wunsch>, um <Nutzen>.}
+  \cite[p.~18]{ottAppsEffektivManagen2019}
+\end{quote}
+
+Da die Anforderungen aus der Literatur und den Experteninterviews extrahiert wurden, sind die User Stories
+aus der Perspektive eines AI-Facilitators geschrieben, der zu einem möglichst guten Meeting beitragen möchte.
+\autoref{tab:ai-facilitator-user-stories} bündelt acht zentrale Stories. Sie beschreiben das wünschenswerte
+Verhaltensrepertoire, nicht bereits den implementierten Umfang des Prototyps.
+
+\begin{table}[H]
+  \centering
+  \caption{User stories for an AI facilitator, derived from the facilitation literature and the expert
+  interviews.}
+  \label{tab:ai-facilitator-user-stories}
+  \footnotesize
+  \setlength{\tabcolsep}{3.5pt}
+  \begin{tabularx}{\textwidth}{@{}
+      >{\raggedright\arraybackslash}X
+      >{\raggedright\arraybackslash}p{3.35cm}
+      >{\raggedright\arraybackslash}p{3.45cm}
+    @{}}
+    \toprule
+    \textbf{User Story} & \textbf{Reasoning} & \textbf{Source} \\
+    \midrule
+    Als AI-Facilitator möchte ich Ablauf und Ziel des Meetings klar machen können, damit die Gruppe
+    einen gemeinsamen Bezugsrahmen hat und zu einer tragfähigen Entscheidung kommt.
+    & Kernaufgabe der Facilitation ist das Strukturieren von Aufgaben und das Erreichen der
+    Meeting-Outcomes. Ohne kommuniziertes Ziel und Prozess verliert die Diskussion den Fokus.
+    & Hayne \cite[p.~73]{hayneFacilitatorsPerspectiveMeetings};
+    Schwarz \cite{schwarzSkilledFacilitatorComprehensive2016};
+    Doodle \cite[p.~11]{DoodleStateMeetings2019};
+    Chen et~al.\ \cite{chenAreWeTrack2025};
+    Interviews
+    (\autoref{ch:empirical-analysis-of-facilitating-strategies}) \\
+    \addlinespace
+    Als AI-Facilitator möchte ich Personen, die noch wenig gesagt haben, auf rücksichtsvolle Weise in
+    die Diskussion einladen, damit alle relevanten Stimmen gehört werden, ohne Schweigen zu
+    stigmatisieren.
+    & Ungleiche Beteiligung ist ein zentrales Meeting-Problem. Expert:innen laden stille Personen
+    aktiv ein, warnen im Remote-Setting aber vor Bloßstellung und einem Kontrollgefühl.
+    & Atlassian \cite{atlassianWorkplaceWoesMeetings};
+    Chen et~al.\ \cite{chenAreWeTrack2025};
+    Doodle \cite[p.~6]{DoodleStateMeetings2019};
+    Interviews
+    (\autoref{ch:empirical-analysis-of-facilitating-strategies}) \\
+    \addlinespace
+    Als AI-Facilitator möchte ich gezielt nach noch nicht genannten oder nicht ins Bild passenden
+    Informationen fragen, damit ungeteiltes Wissen in die Entscheidung einfließen kann.
+    & Hidden Profiles entstehen, weil Gruppen vorwiegend geteilte Informationen diskutieren.
+    Nachhaken nach abweichenden Informationen ist eine belegte Gegenstrategie.
+    & Stasser und Titus \cite{stasserExpertRolesInformation1995};
+    Baker \cite{bakerEnhancingGroupDecision2010};
+    Arkes et~al.\ \cite{arkesInformationExchangeGroup2009};
+    Interviews
+    (\autoref{ch:empirical-analysis-of-facilitating-strategies}) \\
+    \addlinespace
+    Als AI-Facilitator möchte ich Meinungsverschiedenheiten nicht vorschnell auflösen, damit Dissent
+    den Informationsaustausch vertieft und bessere Alternativen sichtbar bleiben.
+    & Dissent erhöht die Diskussionsintensität und die Lösungsrate von Hidden Profiles. Ein zu
+    frühes Glätten würde genau diesen Effekt unterbinden (Kaners Groan Zone).
+    & Schulz-Hardt et~al.\ \cite{schulz-hardtGroupDecisionMaking2006};
+    Kaner \cite{kanerFacilitatorsGuideParticipatory2014};
+    Interviews
+    (\autoref{ch:empirical-analysis-of-facilitating-strategies}) \\
+    \addlinespace
+    Als AI-Facilitator möchte ich nur sparsam und mit klarem Prozessnutzen eingreifen, damit die
+    menschliche Diskussion nicht übersteuert wird.
+    & Facilitation ist substantiell neutral und führt die Gruppe, ohne sie zu dominieren. Zu häufige
+    Eingriffe erzeugen Misstrauen; Expert:innen warnen vor Over-Facilitation und fehlender Präsenz.
+    & Schwarz \cite{schwarzSkilledFacilitatorComprehensive2016};
+    Houtti et~al.\ \cite{houttiObserveAskIntervene2025};
+    Interviews
+    (\autoref{ch:empirical-analysis-of-facilitating-strategies}) \\
+    \addlinespace
+    Als AI-Facilitator möchte ich thematische Abweichungen und Zeitdruck erkennen und die Gruppe
+    zurück zur Agenda führen, damit das Meeting rechtzeitig zu einem Abschluss kommt.
+    & Fehlender Fokus, Abschweifen und ausbleibende Entscheidungen sind klassische GSS-Probleme.
+    Timekeeping und Agenda-Führung wurden in den Interviews als besonders geeigneter KI-Beitrag genannt.
+    & Beranek et~al.\ \cite[p.~152]{beranekFacilitationGroupSupport1993};
+    Kauffeld und Lehmann-Willenbrock \cite{kauffeldMeetingsMatterEffects2012};
+    Chen et~al.\ \cite{chenAreWeTrack2025};
+    Interviews
+    (\autoref{ch:empirical-analysis-of-facilitating-strategies}) \\
+    \addlinespace
+    Als AI-Facilitator möchte ich den Diskussionsstand zusammenfassen und Entscheidungsoptionen
+    sichtbar machen, damit die Gruppe aus der entstehenden Komplexität nächste Schritte ableiten kann.
+    & Zusammenführen, Clustern und ein Metablick in der konvergenten Phase sind Kernpraktiken.
+    Expert:innen sehen in schnellem Sensemaking den stärksten konkreten Mehrwert von KI.
+    & Ackermann \cite[p.~629]{ackermannGroupSupportSystems2021};
+    Kaner \cite{kanerFacilitatorsGuideParticipatory2014};
+    Park et~al.\ \cite{parkCoExplorerTechnologyProbe2024};
+    Interviews
+    (\autoref{ch:empirical-analysis-of-facilitating-strategies}) \\
+    \addlinespace
+    Als AI-Facilitator möchte ich inhaltlich neutral bleiben und selbst keine Entscheidung treffen,
+    damit die Gruppe die Verantwortung für das Ergebnis behält.
+    & Der Facilitator ist akzeptiert, substantiell neutral und ohne Entscheidungsautorität. Die
+    Expert:innen laden Leadership zur Einordnung ein, entscheiden aber nicht an Stelle der Gruppe.
+    & Schwarz \cite{schwarzSkilledFacilitatorComprehensive2016};
+    Hayne \cite[p.~73]{hayneFacilitatorsPerspectiveMeetings};
+    Interviews
+    (\autoref{ch:empirical-analysis-of-facilitating-strategies}) \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+\FloatBarrier
+
+Für den Prototyp werden daraus bewusst nur die Stories priorisiert, die Hidden Profiles und ungleiche
+Beteiligung betreffen: das Einladen stiller Stimmen, das Heben ungeteilter Informationen, das Aushalten von
+Dissent, sparsame Interventionen und inhaltliche Neutralität. Agenda-Führung und ausführliches Sensemaking
+bleiben wünschenswert, liegen aber außerhalb des evaluierten Interventionsmechanismus.
