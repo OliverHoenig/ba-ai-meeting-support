@@ -58,19 +58,34 @@ erfüllt gilt.
 \textbf{US\theus}\label{#1}}
 \newcommand{\usref}[1]{US\ref{#1}}
 \newcommand{\acrow}[1]{%
-  \multicolumn{3}{@{}p{\linewidth}@{}}{%
-    \footnotesize
-    \textbf{\textit{Acceptance criteria.}}
-    \begin{itemize}[nosep, leftmargin=1.2em, itemsep=0.12em, label=\textendash]
+  & \multicolumn{2}{@{}>{\raggedright\arraybackslash}p{\dimexpr\linewidth-1.15cm-2\tabcolsep\relax}@{}}{%
+    \begin{minipage}[t]{\linewidth}
+      \footnotesize
+      \textit{Acceptance criteria}\par\vspace{0.3em}%
+      \begin{itemize}[
+          nosep,
+          leftmargin=1.15em,
+          itemsep=0.32em,
+          topsep=0pt,
+          parsep=0pt,
+          label=\textendash]
         #1
-\end{itemize}}}
+      \end{itemize}%
+    \end{minipage}%
+  }%
+}
+\newcommand{\usblocksep}{%
+  \addlinespace[0.25em]
+  \midrule
+\addlinespace[0.55em]}
 
 \setcounter{us}{0}
-\setlength{\tabcolsep}{5pt}
+\setlength{\tabcolsep}{6pt}
 \setlength{\LTpre}{0.6em}
 \setlength{\LTpost}{0.8em}
+\renewcommand{\arraystretch}{1.12}
 \begin{xltabular}{\textwidth}{@{}
-    >{\small\raggedright\arraybackslash}p{1.05cm}
+    >{\small\raggedright\arraybackslash}p{1.15cm}
     >{\small\raggedright\arraybackslash}X
     >{\small\raggedright\arraybackslash}X
   @{}}
@@ -99,6 +114,7 @@ erfüllt gilt.
   (see \autoref{sec:facilitation}; \autoref{sec:key-challenges-in-meetings}).
   The expert interviews confirm that unclear purpose undermines facilitation quality
   (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\*
+  \addlinespace[0.45em]
   \acrow{
   \item The agent can retrieve the stated meeting goal and intended process from its facilitation
     mandate and paraphrase them in one or two sentences.
@@ -107,7 +123,7 @@ erfüllt gilt.
   \item If the goal is missing or internally contradictory, it flags the ambiguity instead of
     deciding a purpose on its own.
   } \\
-  \midrule
+  \usblocksep
   \usid{us:quiet-voices}
   & Als AI-Facilitator möchte ich Personen, die noch wenig gesagt haben, auf rücksichtsvolle Weise in
   die Diskussion einladen, damit alle relevanten Stimmen gehört werden, ohne Schweigen zu
@@ -117,6 +133,7 @@ erfüllt gilt.
   Expert facilitators invite quiet members, but warn that doing so online can stigmatize or feel like
   control
   (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\*
+  \addlinespace[0.45em]
   \acrow{
   \item Speaking-time shares are available as an external cue, so prolonged silence of a relevant
     participant can be detected.
@@ -125,7 +142,7 @@ erfüllt gilt.
   \item The same person is not re-invited in a short window after a declined or unanswered
     invitation.
   } \\
-  \midrule
+  \usblocksep
   \usid{us:unshared-information}
   & Als AI-Facilitator möchte ich gezielt nach noch nicht genannten oder nicht ins Bild passenden
   Informationen fragen, damit ungeteiltes Wissen in die Entscheidung einfließen kann.
@@ -135,6 +152,7 @@ erfüllt gilt.
   The interviews describe the same practice of checking whether all relevant voices and facts are on
   the table
   (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\*
+  \addlinespace[0.45em]
   \acrow{
   \item When the discussion recycles already shared points, the agent may ask whether information
     has not yet been mentioned or does not fit the emerging picture.
@@ -142,7 +160,7 @@ erfüllt gilt.
   \item The prompt is directed at the group or at a named holder of potentially unique information,
     not at pushing a preferred option.
   } \\
-  \midrule
+  \usblocksep
   \usid{us:hold-dissent}
   & Als AI-Facilitator möchte ich Meinungsverschiedenheiten nicht vorschnell auflösen, damit Dissent
   den Informationsaustausch vertieft und bessere Alternativen sichtbar bleiben.
@@ -151,13 +169,14 @@ erfüllt gilt.
   (see \autoref{sec:hidden-profiles}; \autoref{sec:divergent-convergent}).
   Interviewed facilitators likewise open first, then converge
   (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\*
+  \addlinespace[0.45em]
   \acrow{
   \item While two or more positions are still being explored, the agent does not propose a
     premature consensus, vote, or majority close.
   \item It may invite a missing or dissenting view, but it does not evaluate which side is correct.
   \item Disagreement is treated as process information, not as a conflict to be extinguished.
   } \\
-  \midrule
+  \usblocksep
   \usid{us:sparse-intervention}
   & Als AI-Facilitator möchte ich nur sparsam und mit klarem Prozessnutzen eingreifen, damit die
   menschliche Diskussion nicht übersteuert wird.
@@ -168,6 +187,7 @@ erfüllt gilt.
   \autoref{sec:interaction-paradigms}).
   Experts warn against over-facilitation and a missing sense of presence
   (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\*
+  \addlinespace[0.45em]
   \acrow{
   \item An utterance is spoken only if a thought passes a facilitation-motivation threshold; casual
     filler is not spoken.
@@ -175,7 +195,7 @@ erfüllt gilt.
   \item Immediately after speaking, repetition of the same move is suppressed for a cooldown
     period.
   } \\
-  \midrule
+  \usblocksep
   \usid{us:agenda-time}
   & Als AI-Facilitator möchte ich thematische Abweichungen und Zeitdruck erkennen und die Gruppe
   zurück zur Agenda führen, damit das Meeting rechtzeitig zu einem Abschluss kommt.
@@ -183,13 +203,14 @@ erfüllt gilt.
   (see \autoref{sec:key-challenges-in-meetings}).
   Timekeeping and agenda-keeping were named in the interviews as a particularly useful AI contribution
   (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\*
+  \addlinespace[0.45em]
   \acrow{
   \item The agent can compare the current topic and elapsed time against the stated agenda.
   \item When the group drifts or overruns, it offers a brief process check
     (\enquote{shall we return to \ldots?}), rather than cutting speakers off as a referee.
   \item It does not skip remaining agenda items on its own authority.
   } \\
-  \midrule
+  \usblocksep
   \usid{us:sensemaking}
   & Als AI-Facilitator möchte ich den Diskussionsstand zusammenfassen und Entscheidungsoptionen
   sichtbar machen, damit die Gruppe aus der entstehenden Komplexität nächste Schritte ableiten kann.
@@ -200,6 +221,7 @@ erfüllt gilt.
   (see \autoref{sec:research-approaches-to-ai-supported-meeting-systems}).
   Experts see fast summarization as the strongest concrete AI benefit
   (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\*
+  \addlinespace[0.45em]
   \acrow{
   \item At a convergent moment, or when asked, the agent can restate the options and candidate next
     steps in a short summary.
@@ -208,7 +230,7 @@ erfüllt gilt.
   \item The agent does not add new options of its own unless the group asks for a process
     suggestion.
   } \\
-  \midrule
+  \usblocksep
   \usid{us:neutrality}
   & Als AI-Facilitator möchte ich inhaltlich neutral bleiben und selbst keine Entscheidung treffen,
   damit die Gruppe die Verantwortung für das Ergebnis behält.
@@ -217,6 +239,7 @@ erfüllt gilt.
   (see \autoref{sec:facilitation}).
   Interviewed facilitators invite leadership to interpret, but do not decide in the group's place
   (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\*
+  \addlinespace[0.45em]
   \acrow{
   \item The agent never ranks, scores, or recommends a decision alternative.
   \item It may invite a designated decision-owner to interpret what was heard; it never casts a
@@ -225,6 +248,7 @@ erfüllt gilt.
     preferences about the options under discussion.
   } \\
 \end{xltabular}
+\renewcommand{\arraystretch}{1}
 
 Für den Prototyp werden daraus bewusst nur die Stories priorisiert, die Hidden Profiles und ungleiche
 Beteiligung betreffen: \usref{us:quiet-voices}, \usref{us:unshared-information}, \usref{us:hold-dissent},
