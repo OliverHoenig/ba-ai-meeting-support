@@ -1,0 +1,14 @@
+% Shared standalone preamble for the dynamic-FIM PGFPlots figures.
+% Compiled from the repository root via scripts/build-tikz-figures.sh.
+\documentclass[11pt,border=0pt]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\tikzset{hide legend/.code={}}
+\usepackage[accentcolor=TUDa-2c]{tudacolors}
+\usepackage{tudafonts}
+
+% Match the thesis typearea \textwidth so 0.32\textwidth panels stay the same.
+\newlength{\imfigwidth}
+\setlength{\imfigwidth}{418.25555pt}
+
+\input{assets/figures/04/raw/im-dynamics-styles}

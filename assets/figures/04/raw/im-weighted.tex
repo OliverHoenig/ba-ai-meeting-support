@@ -1,7 +1,9 @@
 % Combined aging and cooldown: weighted FIM score.
 % Default calibration: t_hold=45 s, t_cool=60 s, spoken at 12 s.
-\input{assets/figures/04/raw/im-dynamics-styles}
+\input{assets/figures/04/raw/im-standalone-preamble}
 
+\begin{document}
+\begin{minipage}{\imfigwidth}
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -37,3 +39,5 @@
     \addplot[TUDa-0d, dashed] coordinates {(12,0) (12,5.15)};
   \end{axis}
 \end{tikzpicture}
+\end{minipage}
+\end{document}
