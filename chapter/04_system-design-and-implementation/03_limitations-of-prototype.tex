@@ -1,1 +1,40 @@
 \section{Limitations of the Prototype}
+\label{sec:limitations-of-prototype}
+
+\minisec{Unimodale Wahrnehmung}
+Das System arbeitet ausschließlich auf dem Transkript.
+Transkriptionsfehler, etwa bei undeutlicher Aussprache oder schlechter Mikrofonqualität, gehen direkt
+in den Kontext der LLM-Pipeline ein und können Gedanken und Interventionen verzerren.
+Prosodie, Betonung und visuelle Signale wie Mimik, Blick und sichtbare Aufmerksamkeit fehlen.
+Facilitatoren nutzen genau diese Signale, um zu lesen, wie eine Aussage gemeint ist und ob jemand
+präsent ist (vgl.\ \autoref{ch:empirical-analysis-of-facilitating-strategies}).
+Eine Sentimentanalyse auf dem Audiostream wurde nicht implementiert.
+Das ist eine interpretative Lücke. Sie steht aber im Einklang mit den in den Interviews geäußerten
+Bedenken gegenüber Kontrolle und Überwachung.
+
+\minisec{Enger Funktionsumfang}
+Mit dem Fortschritt allgemein verfügbarer KI-Systeme sind Menschen daran gewöhnt, frei mit
+Sprachmodellen zu sprechen und Antworten auf beliebige Anliegen zu erwarten.
+Diese Erwartungshaltung kann das enge Repertoire des Prototyps übersteigen: Teilnehmende
+setzen Antwort- und Interaktionsmöglichkeiten voraus, die das System noch nicht bereitstellt.
+
+\minisec{Laufzeitmechanik}
+Die Thought-Pipeline ist mehrstufig und probabilistisch. Interventionen können deshalb verzögert
+eintreffen, und dieselbe Gesprächslage kann unterschiedlich ausfallen.
+FIM-Scores werden einmal vergeben und nur deterministisch gealtert. Sie werden nicht semantisch neu
+bewertet (vgl.\ \autoref{sec:dynamic-im}).
+
+\minisec{Eigene Meetingplattform}
+Das Meeting läuft in einer eigens gebauten Webanwendung und nicht in etablierten Meetingplattformen wie z.B.
+Zoom oder Teams. Das sichert Kontrolle über Interaktion und UX. Jedoch sind Teilnehmende diese neue
+Anwendung im Gegensatz zu den bekannten Tools nicht gewohnt.
+Die Vergleichbarkeit mit der bekannten Nutzungssituation ist deshalb ggf. eingeschränkt.
+
+\minisec{Modifizierte Turn-Allocation-Prediction}
+Die Vorhersage, wer als Nächstes spricht, stützt sich auf Liu et al.\
+\cite{liuProactiveConversationalAgents2025}.
+Der Prompt musste jedoch von Alltagsdialogen auf den Facilitationskontext angepasst werden.
+Deshalb kann nicht davon ausgegangen werden, dass sich die Ergebnisse aus dem Paper 1 zu 1 auf diesen Kontext
+übertragen lassen.
+Eine genauere statistische Validierung wäre empfehlens wert, war aber mangels eines geeignene
+domänenspezifisches Korpus aus Facilitationssettings mit Turn-allocation Notation, nicht möglich.
