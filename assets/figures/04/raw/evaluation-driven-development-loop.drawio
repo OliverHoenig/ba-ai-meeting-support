@@ -1,0 +1,46 @@
+<mxfile host="65bd71144e">
+    <diagram id="edd-loop" name="EDD Loop">
+        <mxGraphModel dx="1031" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="240" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="s1" value="&lt;b&gt;1&amp;nbsp;&amp;nbsp;Exploratory testing&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Probe the system components&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000;fontFamily=Helvetica;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" parent="1" vertex="1">
+                    <mxGeometry x="24" y="16" width="234" height="62" as="geometry"/>
+                </mxCell>
+                <mxCell id="s2" value="&lt;b&gt;2&amp;nbsp;&amp;nbsp;If undesired: isolate&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Reconstruct the scenario and bound it&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000;fontFamily=Helvetica;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" parent="1" vertex="1">
+                    <mxGeometry x="296" y="16" width="234" height="62" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3" value="&lt;b&gt;3&amp;nbsp;&amp;nbsp;Extract defining features&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Constitutive traits of the scenario&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000;fontFamily=Helvetica;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" parent="1" vertex="1">
+                    <mxGeometry x="568" y="16" width="234" height="62" as="geometry"/>
+                </mxCell>
+                <mxCell id="s4" value="&lt;b&gt;4&amp;nbsp;&amp;nbsp;Generate test data&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Typically a dialogue createt by a LLM&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000;fontFamily=Helvetica;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" parent="1" vertex="1">
+                    <mxGeometry x="568" y="122" width="234" height="62" as="geometry"/>
+                </mxCell>
+                <mxCell id="s5" value="&lt;b&gt;5&amp;nbsp;&amp;nbsp;Check against the oracle&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Set the expected response and verify&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000;fontFamily=Helvetica;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" parent="1" vertex="1">
+                    <mxGeometry x="296" y="122" width="234" height="62" as="geometry"/>
+                </mxCell>
+                <mxCell id="s6" value="&lt;b&gt;6&amp;nbsp;&amp;nbsp;Adapt the system&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Until it holds, without breaking tests&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000;fontFamily=Helvetica;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" parent="1" vertex="1">
+                    <mxGeometry x="24" y="122" width="234" height="62" as="geometry"/>
+                </mxCell>
+                <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;" parent="1" source="s1" target="s2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;" parent="1" source="s2" target="s3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;" parent="1" source="s3" target="s4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;" parent="1" source="s4" target="s5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;" parent="1" source="s5" target="s6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e61" value="repeat" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=10;fontColor=#000000;labelBackgroundColor=#FFFFFF;" parent="1" source="s6" target="s1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

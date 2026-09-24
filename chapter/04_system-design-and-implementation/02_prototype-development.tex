@@ -43,16 +43,14 @@ sollten offensichtliche Fehler sowie kritische Schwachstellen, an denen das Syst
 Verhalten abweicht, frühzeitig erkannt werden, um das System anzupassen.
 
 Dieses Vorgehen kann in einem Loop wie folgt dargestellt werden:
-\begin{enumerate}[nosep,leftmargin=1.4em,itemsep=0.25em]
-  \item exploratives Testen der system komponeten;
-  \item Falls es unerwünschte Verhalten gibt, das auslösende Szenario rekonstruieren und das unerwünschte
-    Verhalten eingrenzen;
-  \item die tragenden Merkmale des Szenarios extrahieren;
-  \item Testdaten erzeugen, typischerweise einen Dialogausschnitt;
-  \item die erwartete Reaktion festlegen und gegen das Orakel prüfen;
-  \item System anpassen (z.B. Architektur oder Prompts), bis das neue Verhalten eintritt, ohne bestehende
-    Tests zu verletzen.
-\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{assets/figures/04/evaluation-driven-development-loop.pdf}
+  \caption{Evaluation-driven development loop: From exploratory testing to system adaptation
+  \figsource{Own illustration, created with draw.io.}}
+  \label{fig:evaluation-driven-development-loop}
+\end{figure}
 
 Somit wurde nach und nach das Testorakel immergrößer, welches dann gleichzeitgt für regressionstest genutzt
 werden konnte, um zu erkennen ob eine Systemänderung bereits getestete Szenarien negativ beeinflusst.
