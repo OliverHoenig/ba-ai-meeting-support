@@ -472,8 +472,7 @@ Each participant's fair slot is
 Let \(r_i\ge 0\) be the speaking time participant \(i\) has accumulated, and let
 \(i_{\star}\in P\cup\{\bot\}\) be the participant who currently holds the floor, or \(\bot\) if
 nobody is speaking. Let \(\Delta_i\ge 0\) be the time since \(i\) last spoke, counted from the
-start of the meeting if \(i\) has not spoken. The factor \(p>0\) and the thresholds
-\(\theta_r>0\) and \(\theta_{\Delta}>0\) are configured.
+start of the meeting if \(i\) has not spoken. The factor \(p>0\) is configured.
 
 The current speaker is curtailed once their speaking time reaches \(p\) fair slots and at least
 one other participant is still below half a fair slot:
@@ -488,8 +487,11 @@ one other participant is still below half a fair slot:
   \label{eq:balancer-curtail}
 \end{equation}
 
-A participant is invited in when their own speaking time is still below \(\theta_r\), they have
-been silent for at least \(\theta_{\Delta}\), and they do not hold the floor:
+Invitation uses two configured thresholds. \(\theta_r>0\) is the speaking time below which a
+participant still counts as low-participation, and \(\theta_{\Delta}>0\) is the minimum time they
+must have been silent since they last spoke. A participant is invited in when their own
+speaking time is still below \(\theta_r\), they have been silent for at least \(\theta_{\Delta}\),
+and they do not hold the floor:
 \begin{equation}
   \mathrm{integrate}(i)
   \iff
