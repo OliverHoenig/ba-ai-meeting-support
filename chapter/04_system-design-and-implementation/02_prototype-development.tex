@@ -448,6 +448,59 @@ cannot be repeated. After \(t_{\mathrm{cool}}\) it may become eligible again, bu
   \label{fig:im-weighted}
 \end{figure}
 
+\minisec{Participation Balancer}
+\label{sec:participation-balancer}
+
+The Participation Balancer operationalizes \usref{us:quiet-voices} as two
+speaking-time cues: curtailment of a dominant speaker and invitation of a
+low-participation participant.
+Unshared information in a hidden profile is introduced only by the participant who
+holds it, and speaking turns are unequally distributed by status, with
+higher-status participants intervening more frequently
+(\autoref{sec:hidden-profiles}; \autoref{sec:key-challenges-in-meetings};
+\cite{stasserExpertRolesInformation1995,bakerEnhancingGroupDecision2010,chenAreWeTrack2025,DoodleStateMeetings2019}).
+Curtailment is therefore conditioned on a high individual share together with
+another participant below half a fair slot, whereas invitation depends only on low
+share and prolonged silence.
+
+Let \(L>0\) be the planned meeting length and \(P\) the set of participants, with \(n=\lvert P\rvert\ge 1\).
+Each participant's fair slot is
+\begin{equation}
+  F = L / n.
+  \label{eq:fair-slot}
+\end{equation}
+Let \(r_i\ge 0\) be the speaking time participant \(i\) has accumulated, and let
+\(i_{\star}\in P\cup\{\bot\}\) be the participant who currently holds the floor, or \(\bot\) if
+nobody is speaking. Let \(\Delta_i\ge 0\) be the time since \(i\) last spoke, counted from the
+start of the meeting if \(i\) has not spoken. The factor \(p>0\) and the thresholds
+\(\theta_r>0\) and \(\theta_{\Delta}>0\) are configured.
+
+The current speaker is curtailed once their speaking time reaches \(p\) fair slots and at least
+one other participant is still below half a fair slot:
+\begin{equation}
+  \mathrm{curtail}(i)
+  \iff
+  i = i_{\star}
+  \;\land\;
+  r_i \ge p \cdot F
+  \;\land\;
+  \exists\, j \in P\setminus\{i\}:\ r_j < F/2.
+  \label{eq:balancer-curtail}
+\end{equation}
+
+A participant is invited in when their own speaking time is still below \(\theta_r\), they have
+been silent for at least \(\theta_{\Delta}\), and they do not hold the floor:
+\begin{equation}
+  \mathrm{integrate}(i)
+  \iff
+  r_i < \theta_r
+  \;\land\;
+  \Delta_i \ge \theta_{\Delta}
+  \;\land\;
+  i \neq i_{\star}.
+  \label{eq:balancer-integrate}
+\end{equation}
+
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{Technology Stack: Facilitation Agent Runtime and Meeting Client}
 
