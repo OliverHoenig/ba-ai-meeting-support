@@ -512,8 +512,23 @@ Anwendungen, während LangGraph die Definition und Steuerung agentenbasierter Wo
 
 Für die Durchführung der User Study wurde eine eigens entwickelte Webanwendung eingesetzt, die als einfache
 Videokonferenzlösung fungiert. Diese wurde mit Svelte, SvelteKit und Tailwind CSS implementiert und auf einem
-Hetzner-Server gehostet. Teilnehmer:innen konnten über einen teilbaren Link direkt auf die Anwendung zugreifen.
+Hetzner-Server gehostet. Es wurde mediasoup als WebRTC-Server und als SFU eingesetzt.
+
+Teilnehmer:innen konnten über einen teilbaren Link direkt auf die Anwendung zugreifen.
 Der gewählte Ansatz ermöglichte eine direkte Analyse der Nutzerinteraktionen sowie eine optimierte User
 Experience (UX). Alternativ hätte die Integration über bestehende Videokonferenz-Tools (z. B. als Bot via
 API) in Betracht gezogen werden können. Allerdings wäre dies mit den Limitierungen der jeweiligen APIs
 verbunden gewesen und hätte den Lösungsraum von vornherein eingeschränkt.
+
+% ---------------------------------------------------------------------------------------------------------------------
+\subsection{UX und UI of Meeting Client}
+
+Dies ist nciht der Fokus dieser Arbiet, weshlab sich bei dem MeetingClinet auf bestehdne UI von bewährten
+Meeting Tools orienterit wrude. Es wurde ledglich deutlicher hervorgehoben, wenn die KI spricht. Hier bei
+wurde der gesamt hintergrund der anwedung Blau. Ein Singalto kündigte an, wenn die KI psrechen wollte oder
+fertig war. So gab es klare visuelle cues für den Nutzer, wann die KI spricht.
+Die LLM pipeline hat tielweise eine latzen von bis zu 5 Sekunden. Druch die Visuellen Cues konnte den User
+bereits führer singalisert werden, dass die KI bereit ist zu sprechen.
+
+Außerdem gab wurd ein KI-Switch für sämtliche KI-Features für jeden Teilnehmende, falls es aus irgendweinem
+grund schnell notwendi gwar, die verbidnung zu jeglichen exteren Dienst zu kappen.
