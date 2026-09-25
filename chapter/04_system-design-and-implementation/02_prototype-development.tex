@@ -4,8 +4,6 @@
 \subsection{Evaluation-Driven Development: Formative Prototype Evaluation during Development}
 \label{sec:evaluation-driven-development}
 
-% --> neue Version hier:
-
 Die Entwicklung des Prototyps folgte dem Evaluation-Driven Development (EDD) Ansatz (vgl.
 \autoref{sec:evaluation-driven-development}). Dabei kamen bereits während der Implementierung automatisierte
 Prüfverfahren zum Einsatz, um das System kontinuierlich zu evaluieren.
@@ -52,10 +50,23 @@ Dieses Vorgehen kann in einem Loop wie folgt dargestellt werden:
   \label{fig:evaluation-driven-development-loop}
 \end{figure}
 
-Somit wurde nach und nach das Testorakel immergrößer, welches dann gleichzeitgt für regressionstest genutzt
-werden konnte, um zu erkennen ob eine Systemänderung bereits getestete Szenarien negativ beeinflusst.
-Die bestehenden Fälle fungierten damit als Regressionstests: Eine lokale Verbesserung durfte zuvor
-gesichertes Verhalten nicht beeinträchtigen.
+Das sukzessive erweiterte Testorakel diente zugleich als Regressionstest, um zu erkennen ob eine Systemänderung
+zuvor gesichertes Verhalten nicht beeinträchtigt.
+
+\label{sec:langfuse}
+Zum genaueren monitoren des Systems wurde zusätzlich zu den automatisierten Tests Langfuse genutzt.
+Langfuse ist eine Open-Source-Plattform zur Observability und Evaluation von LLM-Anwendungen, die
+Trace-Level-Daten zu Modellaufrufen, Prompts und Nutzerinteraktionen erfasst und deren Analyse, Bewertung
+sowie kontinuierliche Optimierung ermöglicht. \cite{LangfuseOpenSource}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.99\textwidth]{assets/figures/04/langfuse-traceview-screenshot.png}
+  \caption{Langfuse: Screenshot of the Traceviewer in Langfuse that shows the trace of the AI-Facilitator
+    processing a new conversation event.
+  \figsource{Own screenshot, created with Langfuse.}}
+  \label{fig:langfuse}
+\end{figure}
 
 \minisec{Limitierungen des Vorgehens}
 \label{sec:edd-limitations}
