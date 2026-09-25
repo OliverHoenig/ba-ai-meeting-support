@@ -1,17 +1,29 @@
 \section{Limitations of the Prototype}
 \label{sec:limitations-of-prototype}
 
+\minisec{Eingegrenzter Funktionsumfang}
+Der Prototyp ist im Funktionsumfang bewusst begrenzt und als Minimum Viable Product primär auf
+Hidden Profiles zugeschnitten, damit Fokus und anschließende Validierung zurechenbar bleiben
+(vgl.\ \autoref{sec:hidden-profiles}).
+Diese Eingrenzung setzt voraus, dass sich das Phänomen isoliert betrachten lässt. Diese Voraussetzung
+ist unterkomplex: In realen Meetings überlagert sich der Shared-Information-Bias mit Status- und
+Hierarchieeffekten, Confirmation Bias und Groupthink sowie Zeitdruck, thematischer Abweichung und
+unklarer Zielsetzung (vgl.\ \autoref{sec:key-challenges-in-meetings}).
+Dieses Zusammenwirken deckt die vorliegende Version nicht ab.
+
 \minisec{Unimodale Wahrnehmung}
 Das System arbeitet ausschließlich auf dem Transkript.
 Transkriptionsfehler, etwa bei undeutlicher Aussprache oder schlechter Mikrofonqualität, gehen direkt
 in den Kontext der LLM-Pipeline ein und können Gedanken und Interventionen verzerren.
-Prosodie, Betonung und visuelle Signale wie Mimik, Blick und sichtbare Aufmerksamkeit fehlen.
-Facilitatoren nutzen genau diese Signale, um zu lesen, wie eine Aussage gemeint ist und ob jemand
+Prosodie (Betonung, Aussrpache Tonfall) und visuelle Signale wie Mimik, Blick und sichtbare Aufmerksamkeit
+oder Desinteresse fehlen.
+Facilitatoren nutzen jedoch genau diese Signale, um zu lesen, wie eine Aussage gemeint ist und ob jemand
 präsent ist (vgl.\ \autoref{ch:empirical-analysis-of-facilitating-strategies}).
 Eine Sentimentanalyse auf dem Audiostream wurde nicht implementiert.
 Das ist eine interpretative Lücke. Sie steht aber im Einklang mit den in den Interviews geäußerten
 Bedenken gegenüber Kontrolle und Überwachung.
 
+% TODO: ggf. löschen
 \minisec{Enger Funktionsumfang}
 Mit dem Fortschritt allgemein verfügbarer KI-Systeme sind Menschen daran gewöhnt, frei mit
 Sprachmodellen zu sprechen und Antworten auf beliebige Anliegen zu erwarten.
