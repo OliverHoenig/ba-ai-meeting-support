@@ -1,88 +1,75 @@
 #!/usr/bin/env bash
-# Compile standalone PGFPlots figures to assets/figures/<chapter>/*.pdf
-# when their sources are newer than the existing PDF.
+# Compile standalone figure sources under assets/figures.
+# A figure is built only when its PDF is missing. Delete that PDF to rebuild it.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 BUILD_DIR="build/tikz"
+FIGURES="assets/figures"
 mkdir -p "$BUILD_DIR"
 
-needs_rebuild() {
-  local pdf="$1"
-  shift
-  [[ ! -f "$pdf" ]] && return 0
-  local src
-  for src in "$@"; do
-    [[ "$src" -nt "$pdf" ]] && return 0
-  done
-  return 1
+is_document() {
+  grep -q '\\begin{document}' "$1"
 }
 
-# src pdf [dependency...]
+# assets/figures/04/raw/foo.tex and assets/figures/02/00_raw/foo.tex
+# both publish assets/figures/<chapter>/foo.pdf
+pdf_path_for() {
+  local src="$1"
+  local dir base out
+  dir="$(dirname "$src")"
+  base="$(basename "$src" .tex)"
+  out="$dir"
+  if [[ "$dir" == *"/00_raw" || "$dir" == *"/00_raw/"* ]]; then
+    out="${dir%%/00_raw*}"
+  elif [[ "$dir" == *"/raw" || "$dir" == *"/raw/"* ]]; then
+    out="${dir%%/raw*}"
+  fi
+  printf '%s/%s.pdf' "$out" "$base"
+}
+
 build_figure() {
   local src="$1"
-  local pdf="$2"
-  shift 2
-  local fig
+  local pdf fig
+  pdf="$(pdf_path_for "$src")"
   fig="$(basename "$src" .tex)"
-  if [[ ! -f "$src" ]]; then
-    echo "Missing TikZ source: $src" >&2
-    exit 1
+  if [[ -f "$pdf" ]]; then
+    echo "Exists, skip: $pdf"
+    return 0
   fi
-  if needs_rebuild "$pdf" "$src" "$@"; then
-    echo "Building $fig..."
-    lualatex -interaction=nonstopmode -halt-on-error \
-      -file-line-error \
-      -output-directory="$BUILD_DIR" \
-      -jobname="$fig" \
-      "$src"
-    mkdir -p "$(dirname "$pdf")"
-    cp "$BUILD_DIR/${fig}.pdf" "$pdf"
-  else
-    echo "Up to date: $fig"
-  fi
+  echo "Building $fig..."
+  lualatex -interaction=nonstopmode -halt-on-error \
+    -file-line-error \
+    -output-directory="$BUILD_DIR" \
+    -jobname="$fig" \
+    "$src"
+  mkdir -p "$(dirname "$pdf")"
+  cp "$BUILD_DIR/${fig}.pdf" "$pdf"
 }
 
-RAW04="assets/figures/04/raw"
-OUT04="assets/figures/04"
-STYLES04="$RAW04/im-dynamics-styles.tex"
-PREAMBLE04="$RAW04/im-standalone-preamble.tex"
-RAW05="assets/figures/05/raw"
-OUT05="assets/figures/05"
+found=0
+while IFS= read -r src; do
+  base="$(basename "$src" .tex)"
+  if [[ $# -gt 0 ]]; then
+    match=0
+    for name in "$@"; do
+      if [[ "$name" == "$base" || "$name" == "$base.tex" ]]; then
+        match=1
+        break
+      fi
+    done
+    [[ "$match" -eq 1 ]] || continue
+  fi
+  if ! is_document "$src"; then
+    continue
+  fi
+  found=1
+  build_figure "$src"
+done < <(find "$FIGURES" \( -type d -name build -prune \) -o \( -type f -name '*.tex' -print \) | sort)
 
-figures04=(im-aging im-cooldown im-weighted)
-# Every standalone .tex directly in the chapter 05 raw folder.
-figures05=()
-for src in "$RAW05"/*.tex; do
-  [[ -f "$src" ]] || continue
-  figures05+=("$(basename "$src" .tex)")
-done
-
-if [[ $# -gt 0 ]]; then
-  figures04=()
-  figures05=()
-  for fig in "$@"; do
-    if [[ -f "$RAW04/${fig}.tex" ]]; then
-      figures04+=("$fig")
-    elif [[ -f "$RAW05/${fig}.tex" ]]; then
-      figures05+=("$fig")
-    else
-      echo "Missing TikZ source: $fig (looked in $RAW04 and $RAW05)" >&2
-      exit 1
-    fi
-  done
-fi
-
-if ((${#figures04[@]})); then
-  for fig in "${figures04[@]}"; do
-    build_figure "$RAW04/${fig}.tex" "$OUT04/${fig}.pdf" "$STYLES04" "$PREAMBLE04"
-  done
-fi
-
-if ((${#figures05[@]})); then
-  for fig in "${figures05[@]}"; do
-    build_figure "$RAW05/${fig}.tex" "$OUT05/${fig}.pdf"
-  done
+if [[ $# -gt 0 && "$found" -eq 0 ]]; then
+  echo "No figure source named: $*" >&2
+  exit 1
 fi

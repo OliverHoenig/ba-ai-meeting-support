@@ -8,3 +8,5 @@
 # LaTeX build output (aux, log, pdf, bibliography intermediates)
 build/*
 !build/*.pdf
+# Standalone figure files compiled from the editor, not by the thesis build
+assets/figures/**/build/
