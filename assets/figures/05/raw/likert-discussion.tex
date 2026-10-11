@@ -1,0 +1,143 @@
+% Example diverging stacked bar chart for a five-point semantic differential.
+% The table holds response counts. Bar widths are the row percentages.
+% Counts are illustrative placeholders, not study results.
+% Compiled from the repository root via scripts/build-tikz-figures.sh.
+\documentclass[11pt,border=0pt]{standalone}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+\usepackage[accentcolor=TUDa-2c]{tudacolors}
+\usepackage{tudafonts}
+
+% ColorBrewer RdBu. The middle category sits on the zero line.
+% Red is the unfavorable pole, blue the favorable pole.
+\definecolor{likertNeg2}{RGB}{178,24,43}
+\definecolor{likertNeg1}{RGB}{239,138,98}
+\definecolor{likertNeu}{RGB}{190,190,190}
+\definecolor{likertPos1}{RGB}{103,169,207}
+\definecolor{likertPos2}{RGB}{33,102,172}
+
+% Match the thesis typearea text width.
+\newlength{\likertwidth}
+\setlength{\likertwidth}{418.25555pt}
+
+% y = 0 is the bottom row. Columns run from the unfavorable pole to the
+% favorable pole: u2, u1, mid, f1, f2.
+\pgfplotstableread[col sep=comma]{
+  y,u2,u1,mid,f1,f2
+  0,0,3,1,3,5
+  1,0,1,4,5,2
+  2,0,1,4,1,6
+  3,0,0,2,1,9
+}\likert
+
+\pgfplotstablecreatecol[
+  create col/expr={\thisrow{u2}+\thisrow{u1}+\thisrow{mid}+\thisrow{f1}+\thisrow{f2}}
+]{total}{\likert}
+\pgfplotstablecreatecol[create col/expr={100*\thisrow{u2}/\thisrow{total}}]{pu2}{\likert}
+\pgfplotstablecreatecol[create col/expr={100*\thisrow{u1}/\thisrow{total}}]{pu1}{\likert}
+\pgfplotstablecreatecol[create col/expr={100*\thisrow{mid}/\thisrow{total}}]{pmid}{\likert}
+\pgfplotstablecreatecol[create col/expr={100*\thisrow{f1}/\thisrow{total}}]{pf1}{\likert}
+\pgfplotstablecreatecol[create col/expr={100*\thisrow{f2}/\thisrow{total}}]{pf2}{\likert}
+\pgfplotstablecreatecol[
+  create col/expr={-(\thisrow{pu2}+\thisrow{pu1}+0.5*\thisrow{pmid})}
+]{offset}{\likert}
+
+% Empty label when the count is zero, so no digit is drawn on an absent segment.
+\pgfplotstableset{
+  likert label/.style={
+    create col/assign/.code={
+      \getthisrow{#1}\likertcnt
+      \pgfmathtruncatemacro{\likertcnt}{\likertcnt}
+      \ifnum\likertcnt=0
+      \def\entry{}%
+      \else
+      \edef\entry{\likertcnt}%
+      \fi
+      \pgfkeyslet{/pgfplots/table/create col/next content}\entry
+    },
+  },
+}
+\pgfplotstablecreatecol[likert label=u2]{lu2}{\likert}
+\pgfplotstablecreatecol[likert label=u1]{lu1}{\likert}
+\pgfplotstablecreatecol[likert label=mid]{lmid}{\likert}
+\pgfplotstablecreatecol[likert label=f1]{lf1}{\likert}
+\pgfplotstablecreatecol[likert label=f2]{lf2}{\likert}
+
+% xbar stacked places nodes near coords at the segment midpoint.
+\pgfplotsset{
+  likert count/.style={
+    nodes near coords,
+    point meta=explicit symbolic,
+    every node near coord/.append style={
+      font=\tiny,
+      inner sep=0pt,
+      text=#1,
+    },
+  },
+}
+
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[
+      xbar stacked,
+      stack negative=on previous,
+      bar width=11pt,
+      width=\likertwidth,
+      height=6.4cm,
+      xmin=-100, xmax=100,
+      enlarge y limits=0.18,
+      ytick={0,1,2,3},
+      yticklabels={
+        {D1 Meaningless $\rightarrow$ Meaningful},
+        {D4 Unimaginative $\rightarrow$ Imaginative},
+        {D2 Inappropriate $\rightarrow$ Appropriate},
+        {D3 Closed $\rightarrow$ Open},
+      },
+      yticklabel style={font=\scriptsize, align=right},
+      xlabel={Percent of respondents},
+      xlabel style={font=\scriptsize},
+      xtick={-100,-50,0,50,100},
+      xticklabels={100,50,0,50,100},
+      xticklabel style={font=\scriptsize},
+      xmajorgrids,
+      major grid style={black!12},
+      extra x ticks={0},
+      extra x tick labels={},
+      extra x tick style={
+        grid=major,
+        major grid style={black, line width=0.5pt},
+        tick style={draw=none},
+      },
+      axis y line*=none,
+      axis x line*=bottom,
+      tick style={draw=none},
+      legend cell align=left,
+      legend style={
+        at={(0.5,-0.22)},
+        anchor=north,
+        legend columns=-1,
+        font=\scriptsize,
+        /tikz/every even column/.append style={column sep=0.7em},
+      },
+      clip=false,
+    ]
+    \addplot[draw=none, fill=none, forget plot] table[x=offset, y=y] {\likert};
+    \addplot[draw=none, fill=likertNeg2, likert count=white] table[x=pu2, y=y, meta=lu2] {\likert};
+    \addplot[draw=none, fill=likertNeg1, likert count=black] table[x=pu1, y=y, meta=lu1] {\likert};
+    \addplot[draw=none, fill=likertNeu, likert count=black] table[x=pmid, y=y, meta=lmid] {\likert};
+    \addplot[draw=none, fill=likertPos1, likert count=black] table[x=pf1, y=y, meta=lf1] {\likert};
+    \addplot[draw=none, fill=likertPos2, likert count=white] table[x=pf2, y=y, meta=lf2] {\likert};
+    \legend{Far unfavorable, Unfavorable, Middle, Favorable, Far favorable}
+  \end{axis}
+  \node[
+    anchor=south west,
+    inner sep=0pt,
+    align=left,
+    font=\footnotesize,
+    text width=\likertwidth,
+  ] at ([yshift=2.2ex] current bounding box.north west)
+  {With regard to all the meeting members as a whole, how would you rate
+  the discussions in the meeting in terms of the following scales?};
+\end{tikzpicture}
+\end{document}
