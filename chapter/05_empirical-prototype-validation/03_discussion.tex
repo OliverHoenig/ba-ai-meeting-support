@@ -30,6 +30,118 @@ inner thougs komplett wegzulassen.
 dafür hätte es noch die notwendigkeit gegeben, den ki agenent zu unterbrechen.
 
 % ---------------------------------------------------------------------------------------------------------------------
+\subsection{Identified Key Challenges and Potentials}
+
+The sessions show both facilitative effects and a predominant experience of disruption.
+In isolated moments the agent introduced a perspective the group had not taken up, helped to
+distribute speaking time more evenly, or drew attention to a point that would otherwise have
+dropped out of the discussion.
+Nearly all participants nevertheless experienced the agent as disruptive, or judged that it
+took the floor too often.
+These small positive effects on the meeting were outweighed by that cost.
+Whether proactive facilitation is worthwhile beyond this design remains open.
+The sessions identify a specific set of challenges in this prototype, and a smaller set of
+potentials that the same meetings made visible.
+Design consequences are taken up in the next subsection.
+
+\paragraph{Key challenges}\mbox{}\\*[0.75ex]
+\noindent
+\begin{itemize}
+  \item \textbf{Participation outruns its usefulness.}
+    The agent spoke often enough that disruption dominated the meeting.
+    A stricter \textit{imThreshold} and a more reluctant interrupt policy would lower that
+    rate, and would leave most generated thoughts unspoken.
+    What the sessions call for is a setting at which a thought is voiced only when it is
+    relevant in the current moment.
+
+  \item \textbf{Generic scoring produces a generic move.}
+    Having the model rate its own thoughts with a generic evaluation logic yielded
+    utterances of a stable shape: thank the previous speaker, then paraphrase.
+    The pattern was modeled on the expert interviews.
+    At the frequency observed here, participants experienced that repetition as a drawback.
+
+  \item \textbf{Continuous thought generation adds little distinct content.}
+    A proactive facilitator needs substantially higher precision than this prototype reached.
+    Punctual intervention would have fitted the meetings better than the permanent formation
+    and evaluation of new thoughts.
+    The thoughts that were formed were highly similar to one another, which limits the
+    additional value of that stream in the facilitator setting.
+
+  \item \textbf{Aging is too weak against overtalking.}
+    The design already treated overtalking as a risk, and aging was meant to discourage
+    repetition of the same thought.
+    That mechanism was not sufficient.
+    A cooldown on speech in general would likely have raised the perceived quality.
+    The agent might then miss a relevant moment.
+    That trade-off is acceptable if the lower rate raises acceptance.
+
+  \item \textbf{Live speech exposes latency that chat tolerates.}
+    The Inner Thoughts framework was conceived for chat.
+    There, a message that fits the current context only approximately is ordinary, because
+    typing takes time and the exchange is asynchronous.
+    In a live meeting the same delay is conspicuous.
+    Participants notice when a contribution does not arrive with the moment it refers to.
+
+  \item \textbf{Turn allocation seriously jeopardizes the meaningfulness of the intervention.}
+    Predicting the correct allocation of speaking turns is difficult even in normal group situations.
+    However, a facilitator is not a normal group member who participates in the discussion on an equal
+    footing. The facilitator holds a special position. Some participants have described the AI—a separate
+    entity—as giving them the impression that it wants to push through its own agenda. This is an
+    inappropriate intervention.
+    If the AI facilitator speaks at the wrong times or speaks excessively, this can erode trust in it to such
+    an extent that participants begin to ignore it within a very short time.
+
+  \item \textbf{The thought trace is expensive to interpret.}
+    Spoken thoughts were consistently similar, and monitoring that many traces is laborious.
+    A platform such as Langfuse was highly useful during development, because it supported
+    an intuitive understanding of the running system.
+    A later analysis needs the logging scheme to be set up for that analysis from the start.
+\end{itemize}
+
+\paragraph{Identified potentials}\mbox{}\\*[0.75ex]
+\noindent
+\begin{itemize}
+  \item \textbf{The intended facilitative functions are reachable.}
+    In individual cases the agent opened a new perspective, supported a fairer distribution
+    of speaking time, and brought up a topic that would otherwise have been passed over.
+    These effects were too rare to offset the disruption.
+    They show that the functions the prototype was built for can occur in a live discussion.
+
+  \item \textbf{Thresholds can fit the agent to the meeting.}
+    The interaction rate is a parameter of the policy, and it can be adapted to the situation
+    of a given meeting.
+    The useful operating point is the one that keeps the rare, relevant contribution and
+    withholds the rest.
+
+  \item \textbf{A narrower pipeline is a plausible next step.}
+    Running only the context workflow, and omitting the continuous inner-thought loop, is a
+    simpler arrangement and, on the present evidence, a more promising one.
+    That design needs a way to interrupt the agent, so that a contribution can be stopped
+    once the discussion has moved on.
+
+  \item \textbf{Agenda and phase make relevance decidable.}
+    Contributions improve when a concrete agenda is available and the current item states
+    what is particularly relevant.
+    A finer division into phases makes the same constraint operational.
+    In the hiring task, the facilitator could have proposed a procedure at the outset:
+    collect advantages and disadvantages of the candidates in turn, then decide which
+    candidate fits best.
+    An agent bound to such a structure can be judged by whether it stayed with the
+    characteristics of the current phase.
+    The task of the facilitator then reduces to a few explicit points, which is likely to
+    produce a larger effect than a generic reaction to any situation.
+    The heuristics of the inner-thought model can be adapted to those phases, and the
+    transitions between phases become the moments that matter most.
+
+  \item \textbf{The live setup is a usable test bed.}
+    The study arrangement was well suited to observing the system under live conditions.
+    It would have been stronger if individual functions had first been tested in isolation,
+    and if the weaknesses visible after the first group had been corrected before the next
+    group used the system.
+    Shorter iteration phases fit this kind of prototype evaluation.
+\end{itemize}
+
+% ---------------------------------------------------------------------------------------------------------------------
 \subsection{Lessons Learned: Implications for similar System Designs}
 
 Im druchschnitt hat die KI alle x minuten interveniwert. man könnte dies ggf. darduch reduzieren, dass der
