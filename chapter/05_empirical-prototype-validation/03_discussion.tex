@@ -1,10 +1,86 @@
 \section{Discussion}
 
-% ---------------------------------------------------------------------------------------------------------------------
-\subsection{Implications for System Design}
+Obwohl eine prokaitve KI vereinzelt zu neuen Perspektiven innerhlab des Meeting führt und tatsächlic in
+eingen fälle den Teilnehmden geholfen hat die Redeantiele fairer zu verteielte und auf Themen aufmerksam
+gemacht hat die sonst untergegagen wären, überweigt in diesem System entwurf der Negative impakt. Nahe zu
+alle Teilnehmden empfanden die KI als störend oder sahen, dass die KI sich zu oft beteiligt.
+
+diese nachteiel überweigen den geringen positiven effekten, welche das system auf das meeting hatte.
+
+Die shclussfolgernung, dass ein proaktiver KI-Faciliatoar generell nicht sinnvoll ist, wäre allerdings zuverführt.
+
+Druch anpassen der Therholds könnte die interaktions rate der KI veringert werden und auf die meeting
+situation angepast werden.
+
+Der reltiv navier Ansatz die KI selbst ihre gendaen mit einer genreischen Bewertunglogik zu bewerten, fürhte
+zu generischen Antworten mit immer ähnlichen pattern. (Erst bedanekn, dann paraphrasieren) dies ist zwar aus
+den schilderunge der experten interviews modleiert, wruden dann dennoch in der erhöhte frequenz als nachteil empfunden.
+
+Ein PRoaktiver ansazt benötigt deutlich mehr genauigkeit. im zeifel wäre es vermutlich besser gewsen, wenn
+die KI nur punktuell eingegirffen hätte. anstatt permant neue Gedanken zu formen udn zu evaluieren.
+Ein die geformten gednekn hatten ohnehin eine hohe ähnlichkeit, weshalb der merhwert im faciliatoatr zenario
+infrage gestellt werden kann.
+
+Aus den beobachtungen diese Prototypen udn der user studies leitet der Autor folgende empfheungen ab:
+
+DEr versuchsaubgau war gut geeiengt um ein solches system unter live bedinugnen zu testen.
+allerdings hätten davor erstmal einzelen funktionen isoliert geteste werden sollen.
+Ein navierer ansatz und vermutlich zielf+hrender wäre z.B. nur den context workflow laufen zulassen. und die
+inner thougs komplett wegzulassen.
+dafür hätte es noch die notwendigkeit gegeben, den ki agenent zu unterbrechen.
 
 % ---------------------------------------------------------------------------------------------------------------------
-\subsection{Theoretical Contributions}
+\subsection{Lessons Learned: Implications for similar System Designs}
 
-% ---------------------------------------------------------------------------------------------------------------------
-\subsection{Practical Impact for Organizations}
+Im druchschnitt hat die KI alle x minuten interveniwert. man könnte dies ggf. darduch reduzieren, dass der
+interrupt und der imThreshold heruntergesetzt werden. Allerdings würde dies dazuführen, dass die meisten
+gedanekn unausgesprochen bleiben. Dies wirk erstmal verschwenderisch. es müsste eine gleichgewicht gefunden
+werden dass wirklich relevante gedanekn in dem aktuellen moment angepsrochen werden. andere wiederum
+
+Besser kontext, wenn eien genaua agend vorliegt und facilitatorin anweiseungen was in diesm agenda puntk
+besonders relevant ist. das könnten die antworten verbesseren. Hinzukommt auch eine grnularere ein teilung in
+phasen. in diesem beipsiel hätte z.B. der Facilitator am anfang ein vorgehen vorschalgen können. "Wir sammeln
+Reihum die vor und nachteile der kandidaten und entscheiden dann welcher kandidat am besten passt."
+
+Zukünfige arbeiten sollten nicht versuchen einen generischen Facilaitor zu entwciklen, welche passend
+reagiert, sondern sich bewährte strukturen nutzen diesn ablauf festlegen, dann die eingschaften und wichtigen
+Punkte für die Phasen dieser strukur ableiten und klar formulieren. ein KI-Facilitator würde sich dann auf.
+somit kann dann besser evaluiert werden, ob der facilitator sich an die merkamle dieser phasen gehalten hat.
+die reduziert die aufgaben des fecilaitoas auf wenige haupt punkt und würde vermutlich einen größern impakt erzeugen.
+
+Es wäre dann möglihc die heurisiken desinner thoughs models an diese granualren phasen anzupassen.
+
+[TODO: Abbildung mit phasen, wie ein weiteres System design aussehen könnte.]
+
+Im Zuge dessen wäre es dann entscheident das logging der LLM-Traces zu verbessern, um das system besser
+evaluieren zu können.
+
+entscheidender währe dann die übergänge zwischnen den phasen.
+
+Es gibt neben effekte die das evaluaieren des systems erschweren: die trun allocation könnten
+fälschlicherweise den faciliatoatr zu weisen, dann reicht der imThreshoad um einen gedanken zu äußern. da
+sich die gedanekn aber warhshcienlcih eh, um ein relevantes theam drehen führt das nicht zwangsläufig zu
+eienr falschen intervention. Sei kann trotzdem passend sein. (ggf. Beispiele ergänzen)
+
+gedanken die geäußert wurden , waren immer sehr ähnlich. und die auswertung udn das monitoring von sovielen
+traces ist sehr aufwendig. vereinfachen und gesagtes buffern udn dann in einem
+batch verarbieten.
+
+Obwohl das problem des overtalking im system design erkennt wurde und druch dei ageing funktion veruscht
+wrude das äußer des selben gendekn zu ferindern, war dies nicht aussreichend. Vermutlich hätte eine cooldown
+auf die sprache generell die qualität verbessert. Zwar hätte die ki hier relevante informatione verpassen
+könenn, allerdings wäre dies ein tradeoff welche hinnehmbar wäre, wenn dadruch die akzeptanz steigen würde
+
+Live interaktion utnerleigen einen höhren anspruch als chat interaktionen. das inner thogs framewokr wurde
+als chat framework konzipiert. in chats ist es ünlich das eine nachricht auchmal nicht ganz genau auf den
+aktuelln kontext passt. (user sind es geäht, dass das tippen dauert und es sit eien asyncrone interaktione).
+bei live interaktione ist die ander. teilenhmden fallen latzen auf. wenn nicht direkt informationen
+
+Tracebility ist aufwändig und schwer zu interpretieren. eine platform wie langfuse hat während der
+Entwikclung enorm geholfen ein intuitives verständniss für das system zu entwikclen.
+Jedoch sollte sich gut gedanken gemacht werden wie die
+traces in einer solch platform gelogget werden, um sie später zu analysieren.
+
+bereits nach der ersten interation des Systems wruden deutlich schwachstellen ersichtlich. der besser ansatz
+wäre gewesen das system direkt zu verbessern und dann die nächste user gruppe drauf zu setzen. für diese
+prototpy evaluierung wären kleiner phasen ggf besser gewesen.
