@@ -1,0 +1,498 @@
+\section{Codebook for the Open Questionnaire Items}
+\label{annex:qualitative-codebook}
+
+This annex documents the codebook used to analyze the free-text answers to
+items F1 and F2 (\autoref{annex:davison-questionnaire}).
+F1 asks for a situation in which the agent intervened and for its effect on the
+discussion.
+F2 asks what was helpful, what was disruptive, and what was missing.
+\autoref{tab:qualitative-codebook} lists the codes.
+
+Each coding has three levels: a main category, a subcategory, and a polarity
+(negative, positive, or neutral).
+Polarity is an attribute of the coding, not a code of its own.
+Anchor examples keep the original German wording, including the formulations as
+written.
+Names stay anonymized as \texttt{\{Name von Gx-Px\}}.
+One passage may anchor more than one code.
+D1 and D2 belong to context understanding.
+D3 is filed with the E~codes under acceptance and group dynamics, because it
+describes the group's reaction rather than a failure of context tracking.
+W1 is a meta-code: every explicit suggestion receives W1 together with the
+topical code named in that row.
+
+\subsection*{General coding rules}
+
+\begin{itemize}
+  \item \textbf{Multiple coding.}
+    One segment can receive several codes.
+    The marker \enquote{\ldots} separates related sub-statements within an answer;
+    each sub-statement is coded on its own.
+    Every explicit improvement suggestion additionally receives W1.
+    Valence is recorded as polarity, not as a separate code.
+  \item \textbf{Explicitness.}
+    Code only what is stated explicitly or by a clear implication.
+    Do not interpret unclear statements.
+    Passages flagged \texttt{[!sic]} in the material are not coded.
+  \item \textbf{Duplicates and anonymization.}
+    Duplicate quotes are coded as separate units.
+    Names in curly brackets remain anonymized.
+  \item \textbf{Attributes recorded with each coding.}
+    Group (G1--G3), person (P1--P4), and intensity (strong, medium, or weak).
+    Intensity is assigned only when the wording states it explicitly.
+\end{itemize}
+
+\begingroup
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \setlength{\extrarowheight}{0.4pt}
+  \renewcommand{\arraystretch}{1.05}
+  \setlength{\LTpre}{0.4em}
+  \setlength{\LTpost}{0.6em}
+  \setlength{\emergencystretch}{2em}
+  \newcommand{\anon}[1]{\{#1\}}
+  \newcommand{\cbgap}{\addlinespace[0.5em]}
+  \newcommand{\cbcatbreak}{%
+    \addlinespace[0.15em]\midrule\addlinespace[0.4em]}
+  \newcommand{\cbcat}[1]{%
+    \multicolumn{3}{@{}l@{}}{\textbf{#1}} \\*[0.2em]}
+  \newcommand{\cbrow}[6]{%
+    \textbf{#1}\par\vspace{0.12em}#2\par\vspace{0.1em}{\itshape #3}
+    & #4\par\vspace{0.32em}\textit{Coding rule:} #5
+    & \enquote{#6} \\
+  }
+  \begin{xltabular}{\textwidth}{@{}
+      >{\RaggedRight\arraybackslash}p{3.55cm}
+      >{\RaggedRight\arraybackslash}X
+      >{\RaggedRight\arraybackslash}X
+    @{}}
+    \caption{Codebook for the free-text answers to questionnaire items F1 and F2.
+      Anchor examples are quoted in the original German.}
+    \label{tab:qualitative-codebook}\\[0.7em]
+    \toprule
+    \textbf{Code and subcategory} & \textbf{Definition} & \textbf{Anchor example} \\
+    \midrule
+    \endfirsthead
+    \caption[]{Codebook for the free-text answers to questionnaire items F1 and F2
+      (continued).}\\[0.7em]
+    \toprule
+    \textbf{Code and subcategory} & \textbf{Definition} & \textbf{Anchor example} \\
+    \midrule
+    \endhead
+    \bottomrule
+    \endfoot
+    \bottomrule
+    \endlastfoot
+    \cbcat{Intervention Behavior}
+    \cbrow
+      {A1}
+      {Interruption of conversation flow}
+      {negative}
+      {The AI interjects during a human contribution, interrupts a speaker, or its
+      behavior is perceived as disrupting the conversation flow.}
+      {Code if interruption or flow disruption is explicitly addressed; disruption
+      without interruption is included; multiple coding with A3 is possible.}
+      {Sie ist nach jedem Redebeitrag angesprungen… … und hat den Redefluss dann
+      sehr stark eingeschränkt.}
+    \cbgap
+    \cbrow
+      {A1}
+      {Interruption of conversation flow}
+      {positive}
+      {The AI interrupts in order to create space for others (helpful interruption).}
+      {Code when the interruption serves a valued purpose, even if it is still
+      experienced as disturbing.}
+      {Positiv: In meinen Augen war hilfreich das sie mich unterbrochen hat um
+      \anon{Name von G3-P1} und \anon{Name von G3-P4} mehr raum zu geben, das war
+      gut, auch wenn es mich gestört hat :D}
+    \cbgap
+    \cbrow
+      {A2}
+      {Intervention frequency too high}
+      {negative}
+      {Statement that the AI intervenes or interrupts too often.}
+      {Focus on frequency, not timing; \enquote{should only intervene selectively}
+      is also coded here.}
+      {Negativ: Die KI hat viel zu oft unterbrocheniner Meinung nach sollte die KI
+      nur punktuell eingreifen wenn das Gespräch wirklich abdriftet oder wenn nur
+      wenige Personen den ganzen Redeanteil haben.}
+    \cbgap
+    \cbrow
+      {A2}
+      {Intervention frequency too low}
+      {negative}
+      {Statement that the AI intervenes too rarely (for example, when nobody knows
+      how to proceed).}
+      {Only code if a lack of intervention at needed moments is explicit.}
+      {Auf der anderen Seite habe ich auch zwei Situationen im Kopf, indem die
+      Diskussion gestoppt hat wer nicht mehr genau wussten, wer jetzt etwas sagen
+      soll, wie es weitergeht und an diesen Stellen hat sie nicht eingegriffen.}
+    \cbgap
+    \cbrow
+      {A3}
+      {Timing / delay}
+      {negative}
+      {The AI reacts with a delay, too late, or lags behind the group's thinking
+      process.}
+      {Focus on delay, not interruption; combination with A1 is possible; slow
+      speech tempo is also coded here, in addition to C2.}
+      {Inhaltlich waren die Beiträge gut,… … allerdings verzögert, oder hinter
+      unserem Denkprozess hinterher,…}
+    \cbgap
+    \cbrow
+      {A4}
+      {Inappropriate moment / disregard of context}
+      {negative}
+      {The AI intervenes at substantively inappropriate moments (for example, after
+      consensus was reached) or re-addresses settled points.}
+      {Distinguish from A3 (purely temporal): here the substantive fit of the moment
+      matters; re-addressing settled content also receives D2.}
+      {Man ist mitten in einem Diskurs, und wird von einem Einwand der KI
+      unterbrochen, … … wo man bereits zu einem Konsens sich geeinigt hat.}
+    \cbcatbreak
+    \cbcat{Moderation Behavior}
+    \cbrow
+      {B1}
+      {Summarizing the last contribution}
+      {negative}
+      {The AI summarizes the previous contribution before its own statement;
+      experienced as disrupting the meeting flow.}
+      {For short meetings mostly negative; split the polarity if both evaluations
+      appear.}
+      {Negativ: Die KI hat nach dem Bedanken… … oft das zuletzt gesagte
+      zusammengefasst, das hat den Meetingfluss negativ beeinflusst.}
+    \cbgap
+    \cbrow
+      {B1}
+      {Summarizing the last contribution}
+      {positive}
+      {Summarizing is experienced as helpful, for example when earlier content is
+      recalled in a long meeting.}
+      {Code when usefulness is explicitly stated.}
+      {… Das könnte hilfreich sein, wenn man längere Meetings hat und nochmal
+      Inhalte vom Anfang zusammengefasst bekommt.}
+    \cbgap
+    \cbrow
+      {B2}
+      {Standardized phrases (thanks, formulas)}
+      {negative}
+      {The AI repeatedly uses identical rhetorical patterns
+      (\enquote{thank you xy}), experienced as unnecessary or time-consuming.}
+      {Code only if repetition or standardization is explicitly addressed.}
+      {Negativ: Die KI hat jedes Mal \enquote{Danke xy} gesagt, was nach dem zweiten
+      Mal nicht mehr nötig war.}
+    \cbgap
+    \cbrow
+      {B3}
+      {Including quiet participants / balancing speaking time}
+      {positive}
+      {The AI explicitly addresses participants who have said little, in order to
+      balance speaking time and hear all perspectives.}
+      {Often positive; cases in which the goal fails (a person is asked although
+      already speaking) are also coded here, but as negative; combine with A1 if
+      the turn is felt as an interruption.}
+      {Positiv: \anon{Name von G1-P4} ist eher stiller bei der Diskussion gewesen
+      und wurde durch die KI gezielt angesprochen, sodass auch seine Meinung in
+      Ruhe angehört werden konnte.}
+    \cbgap
+    \cbrow
+      {B3}
+      {Including quiet participants / balancing speaking time}
+      {negative}
+      {The inclusion attempt misfires (for example, a person is asked although
+      already saying exactly that, or not all members are asked).}
+      {Code when the mechanism fails or is experienced as disruptive despite the
+      positive goal.}
+      {Die KI wollte, dass \anon{Name von G3-P4} ihren Beitrag sagt, obwohl sie
+      schon angefangen hatte genau das zu sagen, was die KI gefragt hat.}
+    \cbgap
+    \cbrow
+      {B4}
+      {Content-related impulses / steering}
+      {positive}
+      {The AI provides helpful impulses, steers the direction of the conversation,
+      or gives recognition.}
+      {Distinguish from steering toward an own agenda; keep polarity separate per
+      segment.}
+      {Positiv: Hilfreich war das ab und an Impulse gesetzt wurden, um den
+      Gesprächsfluss weiter in die richtige Richtung zu lenken und… … auch um
+      Anerkennung zu zollen}
+    \cbgap
+    \cbrow
+      {B4}
+      {Structuring / common thread}
+      {negative}
+      {A lack of a guiding structure or framing for the meeting is criticized.}
+      {Only code when the missing common thread is explicit.}
+      {Negativ: Gefehlt hat ein besserer inhaltlicher Bezug mit sinnvollem Timing,..
+      … sowie eine rote Linie, die dem Meeting einen Ramen gibt.}
+    \cbgap
+    \cbrow
+      {B4}
+      {Own agenda / external steering}
+      {negative}
+      {The AI pursues its own agenda or steers against the approach the group has
+      agreed.}
+      {Code when the AI acts against the group consensus or goal.}
+      {Negativ: Störend war, dass die KI gefühlt versucht hat eine eigene Agenda zu
+      verfolgen bzw. … … sich nicht genug dem in der Gruppe abgestimmten Vorgehen
+      angepasst hat.}
+    \cbgap
+    \cbrow
+      {B5}
+      {Resolving misunderstandings / added value}
+      {positive}
+      {The AI recognizes and resolves content-related misunderstandings or divergent
+      states of information.}
+      {Only explicit examples of a substantively helpful intervention.}
+      {Positiv: Die Situation, wo die KI aufgelöst hat, dass wir unterschiedliche
+      Informationen hatten, war wahrscheinlich das meist hilfreichste.}
+    \cbcatbreak
+    \cbcat{Delivery}
+    \cbrow
+      {C1}
+      {Contribution length / precision}
+      {negative}
+      {Statements about the length or precision of AI contributions (too long,
+      talked too much, a shorter contribution was desired).}
+      {Combine with A3 when speed is also criticized.}
+      {Die Antworten könnten noch etwas kürzer, präziser und schneller sein, weil
+      die KI hat schon sehr viel geredet.}
+    \cbgap
+    \cbrow
+      {C2}
+      {Speech/output characteristics (tempo, animation, sound)}
+      {negative}
+      {Articulation and speech tempo are perceived as too slow or disruptive.}
+      {Slow speech tempo that disrupts the flow also receives A1.}
+      {Negativ: Das Sprachtempo der KI war zu langsam. Hat den Gesprächsfluss
+      gestört.}
+    \cbgap
+    \cbrow
+      {C2}
+      {Speech/output characteristics (tempo, animation, sound)}
+      {positive}
+      {Animation and sound at the onset of speech are experienced as appealing.}
+      {Code when the audiovisual presentation is explicitly praised.}
+      {Die Animation und der sound waren cool, wenn sie [die KI] angefangen hat zu
+      sprechen.}
+    \cbgap
+    \cbrow
+      {C3}
+      {Aborted/restarted utterances}
+      {negative}
+      {The AI aborts utterances mid-sentence and starts anew; multiple restarts.}
+      {Only the AI's own behavior, not a human interrupting the AI.}
+      {Außerdem hat die KI oft angefangen zu reden und mehrfach im Satz noch einmal
+      erneut angefangen zu reden mit einem neuen Satz.}
+    \cbgap
+    \cbrow
+      {C4}
+      {Parallel speech / intelligibility}
+      {negative}
+      {The AI keeps talking while humans continue speaking, so that the actual
+      speaker is hard to understand.}
+      {Combine with A1, since the flow is also disturbed.}
+      {Und durch das penetrante weiterreden der KI,… … während andere Leute dann
+      auch nicht aufgehört haben zu reden, war es super schwer die eigentliche
+      Person zu verstehen.}
+    \cbcatbreak
+    \cbcat{Context Understanding}
+    \cbrow
+      {D1}
+      {Confusion of persons/candidates}
+      {negative}
+      {The AI confuses candidates or participants.}
+      {Factual errors are also coded here; combination with D2 is possible.}
+      {Oft hat sie die Kandidaten verwechselt und… … war nicht präzise auf dem
+      aktuellen Stand der Diskussion, worüber wir gerade geredet haben.}
+    \cbgap
+    \cbrow
+      {D1}
+      {Factually false statement}
+      {negative}
+      {The AI makes factually wrong statements about the content.}
+      {Code only concrete false statements about the case content.}
+      {Negativ: Die KI hat einmal eine Falschaussage getroffen (Kandidat 3 trinkt
+      war ihre aussage)}
+    \cbgap
+    \cbrow
+      {D2}
+      {Discussion state not tracked / redundancy}
+      {negative}
+      {The AI is not up to date; it asks again about things already said or
+      processes contributions incorrectly.}
+      {Distinguish from D1: here, failing to process content that was already stated
+      is the focus.}
+      {Negativ: Bestimmte Aspekte wurden mehrfach gefragt oder nicht richtig von der
+      KI verstanden/verarbeitet.}
+    \cbgap
+    \cbrow
+      {D2}
+      {Turn-taking not recognized}
+      {negative}
+      {The AI does not register whose turn it is or whether someone has finished.}
+      {Code when a failure to track speakers is explicit.}
+      {Negativ: Hat nicht gecheckt, wer dran ist und wann er fertig war…}
+    \cbgap
+    \cbrow
+      {D2}
+      {Traceability missing (no written contribution)}
+      {negative}
+      {No written chat contribution exists from which the AI's objection can be
+      re-read.}
+      {Code the missing traceability of AI statements.}
+      {Gefehlt hat außerdem ein schriftlicher Beitrag im Chat, sodass man den
+      Einwand nachlesen kann.}
+    \cbcatbreak
+    \cbcat{Acceptance \& Group Dynamics}
+    \cbrow
+      {D3}
+      {Group reaction: ignoring the AI}
+      {negative}
+      {The group ignores the AI in reaction to its errors or disruptions.}
+      {Code the group's coping strategy, not the triggering error itself.}
+      {Dadurch kam es dazu, dass wir als menschliche Meeting Teilnehmer eher dazu
+      genannt haben, die ki zu ignorieren, und nicht darauf zu hören, was sie
+      sagt.}
+    \cbgap
+    \cbrow
+      {E1}
+      {AI as an additional \enquote{party} / disruptive factor}
+      {negative}
+      {The AI is perceived as an independent party meddling in the social setting of
+      the meeting.}
+      {Social-perception statements about the AI's role, not single incidents.}
+      {Ich denke der Einfluss in einem Teammeeting mit unterschiedlichen Parteien
+      und da dann noch die KI ist, was das ganze störend wirken lässt, weil es wie
+      noch eine Partei wirkt, die sich einmischt}
+    \cbgap
+    \cbrow
+      {E2}
+      {Security and motivation through presence}
+      {positive}
+      {The mere presence of the AI creates security or motivation to progress
+      faster.}
+      {Presence effect, not the AI's contributions themselves.}
+      {Positiv: … die Anwesenheit von ihr jedoch etwas Sicherheit und Motivation
+      gegeben hat, schnell voran zu schreiten.}
+    \cbgap
+    \cbrow
+      {E2}
+      {Acceleration through observation pressure}
+      {neutral}
+      {The meeting accelerates because participants want to avoid the AI stepping in
+      again.}
+      {Code when the effect is attributed to awareness of the AI, not to its
+      suggestions.}
+      {Das Meeting hat sich schon sehr schnell und effizient angefüllt, wobei ich
+      eher sagen würde das lag nicht an den KI Vorschlägen, sondern an dem
+      Bewusstsein, dass wir immer weiter und Progress machen müssen, weil sonst
+      sich die ki wieder einmischt und zum weitermachen anregt.}
+    \cbgap
+    \cbrow
+      {E3}
+      {Habituation over time}
+      {neutral}
+      {Initially confusing or disruptive; over time, habituation and better
+      collaboration.}
+      {Code a temporal change in the experience of the AI.}
+      {am Anfang war es erst sehr verwirrend und hat gestört. Man musste erst mal
+      reinkommen und mit der KI als Meeting Partner klarkommen. Mit der Zeit wurde
+      es dann besser und hat sich dran gewöhnt.}
+    \cbgap
+    \cbrow
+      {E4}
+      {Prototype status / maturity}
+      {negative}
+      {General assessment of technical maturity: a commendable goal, but not yet
+      useful.}
+      {Overall verdicts on the system's readiness, not single incidents.}
+      {Ich sehe was die KI erreichen wollte, lobenswertes Ziel alle zur Sprache
+      kommen zu lassen und alle Informationen einzubeziehen, … … aber noch zu sehr
+      im Prototypenstatus als dass es aktuell nützlich ist.}
+    \cbcatbreak
+    \cbcat{Improvement Suggestion}
+    \cbrow
+      {W1}
+      {Control / stop button}
+      {neutral}
+      {Feature idea: a control to abort or stop the AI.}
+      {Meta-code: every explicit suggestion receives W1 plus the matching topical
+      subcode; here additionally A1.}
+      {Eventuell würde ein \enquote{stopp} button, der einfach die KI unterbricht
+      helfen das zu verhindern}
+    \cbgap
+    \cbrow
+      {W1}
+      {More subtle input / visual hints}
+      {neutral}
+      {Feature idea: proactive hints shown only visually to the current speaker.}
+      {Additionally A1 and B4.}
+      {Ein subtilerer Ansatz mit hinweisen, die proaktiv aber vielleicht nur visuell
+      als ein Art \enquote{Hints} nur dem Sprecher angezeigt werden, wäre vielleicht
+      mal interessant zu probieren.}
+    \cbgap
+    \cbrow
+      {W1}
+      {Written chat contribution}
+      {neutral}
+      {Feature idea: written AI contributions for traceability.}
+      {Additionally D2.}
+      {Gefehlt hat außerdem ein schriftlicher Beitrag im Chat, sodass man den
+      Einwand nachlesen kann.}
+    \cbgap
+    \cbrow
+      {W1}
+      {Introduction / framing at the start}
+      {neutral}
+      {Feature idea: an AI introduction that sets the framing at the beginning of
+      the meeting.}
+      {Additionally B4.}
+      {Und zuletzt hätte eine Introduction, der ki noch gefehlt vielleicht der ein
+      bisschen das Framing der Diskussion am Anfang setzt und man wird nicht
+      einfach blind reingeschmissen wird und muss plötzlich anfangen zu
+      diskutieren und zu reden.}
+    \cbgap
+    \cbrow
+      {W1}
+      {Time / progress cues}
+      {neutral}
+      {Feature idea: time or progress hints, especially toward the end of the
+      meeting.}
+      {Additionally A2 and B4.}
+      {Es hat für mich ein Hinweis auf die Ablaufende Zeit als Moderator gefehlt,
+      hier hatte ich erwartet dass sie gegen Ende mehr eingreift.}
+    \cbgap
+    \cbrow
+      {W1}
+      {Individual assistant instead of group AI}
+      {neutral}
+      {Feature idea: a personal assistant for each participant instead of one group
+      AI.}
+      {Additionally E1.}
+      {… ich denke, wenn da jeder seinen ganz persönlichen Assistenten hätte, wäre
+      das viel schneller akzeptiert, weil es weniger aufbringt sondern als support
+      auch wahrgenommen werden kann.}
+    \cbgap
+    \cbrow
+      {W1}
+      {Selective intervention}
+      {neutral}
+      {Recommendation: the AI should intervene only selectively (the conversation
+      drifts, or speaking time is unbalanced).}
+      {Additionally A2.}
+      {Meiner Meinung nach sollte die KI nur punktuell eingreifen wenn das Gespräch
+      wirklich abdriftet oder wenn nur wenige Personen den ganzen Redeanteil
+      haben.}
+    \cbgap
+    \cbrow
+      {W1}
+      {Content accuracy / up-to-dateness}
+      {neutral}
+      {Recommendation: correct references to candidates and up-to-date tracking of
+      the context.}
+      {Additionally D1 and D2.}
+      {Negativ: Gefehlt hat ein besserer inhaltlicher Bezug mit sinnvollem Timing,..}
+  \end{xltabular}
+\endgroup
