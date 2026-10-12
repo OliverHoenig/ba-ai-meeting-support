@@ -140,6 +140,11 @@
     \addplot[draw=none, fill=likertPos1, likert count=black] table[x=pa, y=y, meta=la] {\likert};
     \addplot[draw=none, fill=likertPos2, likert count=white] table[x=psa, y=y, meta=lsa] {\likert};
     \legend{Strongly disagree, Disagree, Neutral, Agree, Strongly agree}
+    % Positively worded items: disagreement is the unfavorable end.
+    \node[anchor=south west, font=\scriptsize, text=likertNeg2, inner sep=0pt]
+      at ([yshift=1.4ex] rel axis cs:0,1) {$\leftarrow$ Unfavorable};
+    \node[anchor=south east, font=\scriptsize, text=likertPos2, inner sep=0pt]
+      at ([yshift=1.4ex] rel axis cs:1,1) {Favorable $\rightarrow$};
   \end{axis}
 \end{tikzpicture}
 \end{document}

@@ -131,6 +131,11 @@
     \addplot[draw=none, fill=likertPos1, likert count=black] table[x=pf1, y=y, meta=lf1] {\likert};
     \addplot[draw=none, fill=likertPos2, likert count=white] table[x=pf2, y=y, meta=lf2] {\likert};
     \legend{Far unfavorable, Unfavorable, Middle, Favorable, Far favorable}
+    % Direction of the diverging scale. Red is the left, unfavorable end.
+    \node[anchor=south west, font=\scriptsize, text=likertNeg2, inner sep=0pt]
+      at ([yshift=1.4ex] rel axis cs:0,1) {$\leftarrow$ Unfavorable};
+    \node[anchor=south east, font=\scriptsize, text=likertPos2, inner sep=0pt]
+      at ([yshift=1.4ex] rel axis cs:1,1) {Favorable $\rightarrow$};
   \end{axis}
   \node[
     anchor=south west,
