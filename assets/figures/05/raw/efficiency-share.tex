@@ -13,6 +13,10 @@
 \usepackage[accentcolor=TUDa-2c]{tudacolors}
 \usepackage{tudafonts}
 
+% Same pole colors as the Likert charts.
+\definecolor{likertNeg2}{RGB}{178,24,43}
+\definecolor{likertPos2}{RGB}{33,102,172}
+
 % Match the thesis typearea text width.
 \newlength{\efficiencywidth}
 \setlength{\efficiencywidth}{418.25555pt}
@@ -99,6 +103,11 @@
       TUDa-8b,
     ] table[x=mean, y=ymean] {\summary};
     \legend{Individual estimate, Group median, Group mean}
+    % A higher share of time in serious discussion is the favorable end.
+    \node[anchor=south west, font=\scriptsize, text=likertNeg2, inner sep=0pt]
+      at ([yshift=1.4ex] rel axis cs:0,1) {$\leftarrow$ Unfavorable};
+    \node[anchor=south east, font=\scriptsize, text=likertPos2, inner sep=0pt]
+      at ([yshift=1.4ex] rel axis cs:1,1) {Favorable $\rightarrow$};
   \end{axis}
 \end{tikzpicture}
 \end{document}

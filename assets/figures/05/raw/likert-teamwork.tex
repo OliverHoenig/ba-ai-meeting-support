@@ -81,7 +81,7 @@
       stack negative=on previous,
       bar width=11pt,
       width=\likertwidth,
-      height=6.4cm,
+      height=4.6cm,
       xmin=-100, xmax=100,
       enlarge y limits=0.18,
       ytick={0,1,2},
@@ -112,7 +112,7 @@
       legend style={
         draw=none,
         fill=none,
-        at={(0.5,-0.22)},
+        at={(0.5,-0.35)},
         anchor=north,
         legend columns=-1,
         font=\scriptsize,
@@ -127,6 +127,11 @@
     \addplot[draw=none, fill=likertPos1, likert count=black] table[x=pa, y=y, meta=la] {\likert};
     \addplot[draw=none, fill=likertPos2, likert count=white] table[x=psa, y=y, meta=lsa] {\likert};
     \legend{Strongly disagree, Disagree, Neutral, Agree, Strongly agree}
+    % Positively worded items: disagreement is the unfavorable end.
+    \node[anchor=south west, font=\scriptsize, text=likertNeg2, inner sep=0pt]
+      at ([yshift=1.4ex] rel axis cs:0,1) {$\leftarrow$ Unfavorable};
+    \node[anchor=south east, font=\scriptsize, text=likertPos2, inner sep=0pt]
+      at ([yshift=1.4ex] rel axis cs:1,1) {Favorable $\rightarrow$};
   \end{axis}
 \end{tikzpicture}
 \end{document}
