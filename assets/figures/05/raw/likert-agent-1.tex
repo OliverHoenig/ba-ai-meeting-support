@@ -1,0 +1,145 @@
+% Diverging stacked bar chart for the added AI-agent Likert items.
+% The table holds response counts. Bar widths are the row percentages.
+% Counts are illustrative placeholders for 12 participants, not study results.
+% Compiled from the repository root via scripts/build-tikz-figures.sh.
+\documentclass[11pt,border=0pt]{standalone}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+\usepackage[accentcolor=TUDa-2c]{tudacolors}
+\usepackage{tudafonts}
+
+% ColorBrewer RdBu. Neutral sits on the zero line.
+\definecolor{likertNeg2}{RGB}{178,24,43}
+\definecolor{likertNeg1}{RGB}{239,138,98}
+\definecolor{likertNeu}{RGB}{190,190,190}
+\definecolor{likertPos1}{RGB}{103,169,207}
+\definecolor{likertPos2}{RGB}{33,102,172}
+
+% Match the thesis typearea text width.
+\newlength{\likertwidth}
+\setlength{\likertwidth}{418.25555pt}
+
+% y is the row index, 0 = bottom. Item codes belong in the labels only:
+% using them as y places bars by the gaps between those numbers.
+% sd = strongly disagree, d = disagree, n = neutral, a = agree, sa = strongly agree.
+\pgfplotstableread[col sep=comma]{
+  y,sd,d,n,a,sa
+  0,10,2,0,0,0
+  1,8,4,0,0,0
+  2,4,4,3,1,0
+  3,3,3,3,2,1
+  4,0,0,2,2,8
+}\likert
+
+\pgfplotstablecreatecol[
+  create col/expr={\thisrow{sd}+\thisrow{d}+\thisrow{n}+\thisrow{a}+\thisrow{sa}}
+]{total}{\likert}
+\pgfplotstablecreatecol[create col/expr={100*\thisrow{sd}/\thisrow{total}}]{psd}{\likert}
+\pgfplotstablecreatecol[create col/expr={100*\thisrow{d}/\thisrow{total}}]{pd}{\likert}
+\pgfplotstablecreatecol[create col/expr={100*\thisrow{n}/\thisrow{total}}]{pn}{\likert}
+\pgfplotstablecreatecol[create col/expr={100*\thisrow{a}/\thisrow{total}}]{pa}{\likert}
+\pgfplotstablecreatecol[create col/expr={100*\thisrow{sa}/\thisrow{total}}]{psa}{\likert}
+\pgfplotstablecreatecol[
+  create col/expr={-(\thisrow{psd}+\thisrow{pd}+0.5*\thisrow{pn})}
+]{offset}{\likert}
+
+% Empty label when the count is zero, so no digit is drawn on an absent segment.
+\pgfplotstableset{
+  likert label/.style={
+    create col/assign/.code={
+      \getthisrow{#1}\likertcnt
+      \pgfmathtruncatemacro{\likertcnt}{\likertcnt}
+      \ifnum\likertcnt=0
+      \def\entry{}%
+      \else
+      \edef\entry{\likertcnt}%
+      \fi
+      \pgfkeyslet{/pgfplots/table/create col/next content}\entry
+    },
+  },
+}
+\pgfplotstablecreatecol[likert label=sd]{lsd}{\likert}
+\pgfplotstablecreatecol[likert label=d]{ld}{\likert}
+\pgfplotstablecreatecol[likert label=n]{ln}{\likert}
+\pgfplotstablecreatecol[likert label=a]{la}{\likert}
+\pgfplotstablecreatecol[likert label=sa]{lsa}{\likert}
+
+% xbar stacked places nodes near coords at the segment midpoint.
+\pgfplotsset{
+  likert count/.style={
+    nodes near coords,
+    point meta=explicit symbolic,
+    every node near coord/.append style={
+      font=\tiny,
+      inner sep=0pt,
+      text=#1,
+    },
+  },
+}
+
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[
+      xbar stacked,
+      stack negative=on previous,
+      bar width=11pt,
+      width=\likertwidth,
+      height=8.6cm,
+      xmin=-100, xmax=100,
+      enlarge y limits=0.12,
+      ytick={0,1,2,3,4},
+      yticklabels={
+        {A6 The AI agent helped bring to light \\
+          information that otherwise \\
+        would have gone unmentioned.},
+        {A1 The AI agent's contributions came \\
+        at just the right times.},
+        {A3 The AI agent responded appropriately \\
+        given the current state of the discussion},
+        {A5 It was fine that the AI agent spoke \\
+        on its own, without being asked.},
+        {A7 The AI agent's instructions were \\
+          worded in such a way that no one was \\
+        embarrassed.},
+      },
+      yticklabel style={font=\scriptsize, align=right},
+      xlabel={Percent of respondents},
+      xlabel style={font=\scriptsize},
+      xtick={-100,-50,0,50,100},
+      xticklabels={100,50,0,50,100},
+      xticklabel style={font=\scriptsize},
+      xmajorgrids,
+      major grid style={black!12},
+      extra x ticks={0},
+      extra x tick labels={},
+      extra x tick style={
+        grid=major,
+        major grid style={black, line width=0.5pt},
+        tick style={draw=none},
+      },
+      axis y line*=none,
+      axis x line*=bottom,
+      tick style={draw=none},
+      legend cell align=left,
+      legend style={
+        draw=none,
+        fill=none,
+        at={(0.5,-0.22)},
+        anchor=north,
+        legend columns=-1,
+        font=\scriptsize,
+        /tikz/every even column/.append style={column sep=0.7em},
+      },
+      clip=false,
+    ]
+    \addplot[draw=none, fill=none, forget plot] table[x=offset, y=y] {\likert};
+    \addplot[draw=none, fill=likertNeg2, likert count=white] table[x=psd, y=y, meta=lsd] {\likert};
+    \addplot[draw=none, fill=likertNeg1, likert count=black] table[x=pd, y=y, meta=ld] {\likert};
+    \addplot[draw=none, fill=likertNeu, likert count=black] table[x=pn, y=y, meta=ln] {\likert};
+    \addplot[draw=none, fill=likertPos1, likert count=black] table[x=pa, y=y, meta=la] {\likert};
+    \addplot[draw=none, fill=likertPos2, likert count=white] table[x=psa, y=y, meta=lsa] {\likert};
+    \legend{Strongly disagree, Disagree, Neutral, Agree, Strongly agree}
+  \end{axis}
+\end{tikzpicture}
+\end{document}
