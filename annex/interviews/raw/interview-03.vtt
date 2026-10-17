@@ -1,0 +1,1522 @@
+WEBVTT
+
+1
+00:00:03.360 --> 00:00:05.630
+Oliver Hönig: Okay, so
+
+2
+00:00:11.260 --> 00:00:12.130
+Oliver Hönig: so
+
+3
+00:00:13.110 --> 00:00:26.610
+Oliver Hönig: genau. Also nochmal. Vielen Dank, dass du dir die Zeit nimmst. Also in der Arbeit, untersuche ich hauptsächlich wie zielorientierte Remote-meetings moderiert werden, also sodass eine Gruppe quasi
+
+4
+00:00:26.610 --> 00:00:34.869
+Oliver Hönig: zu einem vereinbarten Ziel kommt bzw. Bei einem Ziel bleibt und eine Entscheidung trifft also mit Entscheidungen im engeren Sinne.
+
+5
+00:00:35.260 --> 00:00:52.440
+Oliver Hönig: Die Entscheidung kann da sehr vielfältig sein. Also typische Beispiele wären z. B. Priorisierung bei einem Produktteam, dass sie ihre Features priorisieren, aber auch Entscheidungen, wie das weitere Zusammenarbeiten aussehen soll. Welche Strategie man verfolgt
+
+6
+00:00:53.650 --> 00:00:58.760
+Oliver Hönig: commitment, ob man sich auf ein Ziel, wie man sich auf ein Teamziel einigt.
+
+7
+00:01:16.490 --> 00:01:21.929
+Oliver Hönig: und genau ich nutze dieses Interview dann auch noch weitere Experteninterviews, um
+
+8
+00:01:22.360 --> 00:01:34.740
+Oliver Hönig: quasi Anforderungen für ein Ki gestütztes Meeting-system abzuleiten, dass eben Teams dabei helfen soll, durch proaktive Moderation zielorientiert zu bleiben.
+
+9
+00:01:34.740 --> 00:01:44.109
+Oliver Hönig: Genau wie schon erwähnt, es ist ein semisch strukturiertes Interview. Es gibt keine richtig oder falschen Antworten. Es interessiert mich einfach allgemein
+
+10
+00:01:44.110 --> 00:01:58.049
+Oliver Hönig: deine Einschätzung und deine Expertise, basierend auf deinen beruflichen Erfahrungen Es wird circa 90 min gehen und über 90 min 40 min gehen und über
+
+11
+00:01:58.490 --> 00:02:05.980
+Oliver Hönig: als Dienstleister aufgezeichnet und transkribiert ist diese Aufzeichnung für dich in Ordnung.
+
+12
+00:02:05.980 --> 00:02:06.500
+Simon Bergmoser: Ja.
+
+13
+00:02:07.620 --> 00:02:08.759
+Oliver Hönig: und es wird dann
+
+14
+00:02:09.210 --> 00:02:18.180
+Oliver Hönig: im Rahmen der Arbeit verwendet und in anonymisierter bzw. pseudonymisierter Form verarbeitet, ist das auch völlig in Ordnung.
+
+15
+00:02:18.180 --> 00:02:18.730
+Simon Bergmoser: Ja.
+
+16
+00:02:19.990 --> 00:02:25.740
+Oliver Hönig: Okay, Super, genau, hast du vorweg. Jetzt Dazu nochmal eine Frage.
+
+17
+00:02:26.420 --> 00:02:27.190
+Oliver Hönig: Okay.
+
+18
+00:02:27.830 --> 00:02:37.080
+Oliver Hönig: Oder würde ich direkt starten. Also kannst du mal kurz, quasi deine einfach offen deine Erfahrungen
+
+19
+00:02:37.820 --> 00:02:48.950
+Oliver Hönig: im Bereich Moderation bzw. facilitating beschreiben, insbesondere in Situationen, in denen Gruppen eben das Ziel hatten, zu einer Entscheidung zu kommen oder eine Entscheidung zu treffen.
+
+20
+00:02:49.590 --> 00:03:00.069
+Simon Bergmoser: Ich habe alles von Großprojekten bis hin zu einzelnen Führungskräften Teams. Alles ist online und offline schon moderiert.
+
+21
+00:03:00.340 --> 00:03:19.679
+Simon Bergmoser: und gerade Online habe ich auch schon Erfahrungen mit verschiedenen Whiteboard-tools z. B. gesammelt, wie Miro und Mirror. Ich habe verschiedene, Ich habe auch verschiedene Offline-formate online angewandt und dafür angepasst, z. B. aus dem Liberating Structures, Baukasten.
+
+22
+00:03:21.580 --> 00:03:35.450
+Simon Bergmoser: und genau habe auch, sag ich mal mit eigentlich fast eigentlich allen gängigen Online Videokonferenz-tools Teams zoomen Webex
+
+23
+00:03:35.840 --> 00:03:46.370
+Simon Bergmoser: gearbeitet. Afrikas gibt es noch Team, zu genau Also.
+
+24
+00:03:46.380 --> 00:03:52.579
+Oliver Hönig: Was begleitest du dann da die Teams eher so? Was sind das für Teams, und was für Entscheidungen stehen da so an.
+
+25
+00:03:53.170 --> 00:04:01.239
+Simon Bergmoser: Also, das sind meistens Also, es ist sehr unterschiedlich. Meistens sind es Entscheidungen, die damit zu tun haben.
+
+26
+00:04:01.450 --> 00:04:09.620
+Simon Bergmoser: wie mit irgendeiner Art und Weise der Veränderung umgegangen werden soll. Also nehmen wir an, z. B. ein
+
+27
+00:04:09.740 --> 00:04:20.920
+Simon Bergmoser: ein Projektleitungsteam wurde beauftragt, von ihrer Firma von meinen Kunden z. B. eine Cloud-migration durchzuführen.
+
+28
+00:04:21.040 --> 00:04:28.039
+Simon Bergmoser: wollen sich dann eben einigen. Okay, wie kommunizieren wir das? Wie
+
+29
+00:04:28.320 --> 00:04:37.570
+Simon Bergmoser: Wie ist sozusagen die Kaskade? Der Kommunikation. Also weil das meistens in Großprojekten, dann eben.
+
+30
+00:04:37.750 --> 00:04:49.330
+Simon Bergmoser: wo das Projekt dann mehrere 100 Leute auch teilweise umfasst, dann erst mal die Frage ist: Wie kommunizieren wir das an das Projektteam? Oder wie kommunizieren wir das auch an die breite Belegschaft?
+
+31
+00:04:49.560 --> 00:04:59.619
+Simon Bergmoser: Die sammeln wir von den Sponsoren, in der vom Unternehmen, die die Veränderungen sozusagen sponsert.
+
+32
+00:04:59.730 --> 00:05:02.640
+Simon Bergmoser: Wie holen wir da deren
+
+33
+00:05:02.910 --> 00:05:15.100
+Simon Bergmoser: Bayern ein Hauptnach-messages da geht, es dann auch um sowas. Wie Wie formuliert man etwas, welche
+
+34
+00:05:15.470 --> 00:05:23.370
+Simon Bergmoser: welche Herangehensweise ist für welche Stakeholder-gruppe am besten Wo stehen gewisse Stakeholder In
+
+35
+00:05:23.620 --> 00:05:30.820
+Simon Bergmoser: und eben auch wie arbeiten wir innerhalb der Projektteams zusammen.
+
+36
+00:05:31.000 --> 00:05:31.570
+Oliver Hönig: Ja.
+
+37
+00:05:31.960 --> 00:05:34.180
+Simon Bergmoser: Genau das wäre so ein Beispiel.
+
+38
+00:05:34.420 --> 00:05:51.720
+Oliver Hönig: Ja. Super. Ja, Also, da waren ein paar Punkte dabei. Ich gehe später wahrscheinlich nochmal auf ein paar genauer ein. Jetzt würde ich ein bisschen mehr wieder zu dem klassischen Remote-setting, quasi Switchen. Wenn du dir da mal so ein Remote-meeting vorstellst, in so einem Team.
+
+39
+00:05:51.790 --> 00:05:55.210
+Oliver Hönig: Die haben die Aufgabe, eine Entscheidung zu treffen.
+
+40
+00:05:55.500 --> 00:05:58.630
+Oliver Hönig: Was sind dort Sachen, die dort Deiner Meinung
+
+41
+00:05:59.070 --> 00:06:02.229
+Oliver Hönig: oder deiner Erfahrung nach oft schieflaufen.
+
+42
+00:06:03.600 --> 00:06:08.509
+Simon Bergmoser: Also sag ich mal, meinst du das eher technisch oder insgesamt?
+
+43
+00:06:08.980 --> 00:06:23.350
+Oliver Hönig: Die haben, müssen diese Entscheidung treffen. Was geht da schief?
+
+44
+00:06:23.680 --> 00:06:25.360
+Oliver Hönig: und das Schiefgehen.
+
+45
+00:06:25.840 --> 00:06:32.149
+Simon Bergmoser: Also ich meine, es gibt natürlich die klassischen Sachen. Die können auch offline schiefgehen, wie
+
+46
+00:06:32.480 --> 00:06:41.139
+Simon Bergmoser: die Leute haben gar nicht den richtigen Input, um eine Entscheidung zu treffen. Also, die Entscheidung wurde nicht gut vorbereitet, oder
+
+47
+00:06:41.320 --> 00:06:50.820
+Simon Bergmoser: die Menschen sind sich nicht einig. Das Format trägt, dass dann nicht diese kontroverse Entscheidungen zu treffen.
+
+48
+00:06:51.410 --> 00:07:02.950
+Simon Bergmoser: bis hin zu so stumpfen. Sachen. Es gibt nicht genug Pausen, und da ist vielleicht online auch nochmal vor einer besonderen Herausforderung, Weil in einem Offline-setting
+
+49
+00:07:02.950 --> 00:07:12.179
+Simon Bergmoser: können die Leute in der Pause trotzdem noch mal ein bisschen informell sprechen. Online geht das nicht. Wenn ich online eine Pause mache, sind die Leute erst mal Disconnected
+
+50
+00:07:13.640 --> 00:07:15.390
+Simon Bergmoser: und
+
+51
+00:07:15.780 --> 00:07:28.089
+Simon Bergmoser: da können sich vielleicht so kleinere Punkte dann nicht noch klären. Wenn Leute sich uneins sind, oder Hey, wie hast du das vorhin gemeint? Solche Sachen kommen dann nicht zum Tragen.
+
+52
+00:07:29.660 --> 00:07:35.010
+Simon Bergmoser: Natürlich können es auch technische Schwierigkeiten geben, gerade wenn es, sag ich mal so
+
+53
+00:07:35.520 --> 00:07:51.629
+Simon Bergmoser: zwischen verschiedenen Firmen. Eine Kollap Zusammenarbeit ist, da sage ich mal, Ich habe z. B. Dienstleister, 2 Dienstleister, die ein gemeinsames Angebot für ihren Kunden vorbereiten. Dann hast du 3 Firmen, die vielleicht in einem Workshop sind.
+
+54
+00:07:52.230 --> 00:08:00.739
+Simon Bergmoser: und dann gibt es vielleicht noch Leute, die kennen sich mit der Technik nicht aus. Also die beliebten Sachen sind. Mikrofon entspricht.
+
+55
+00:08:00.740 --> 00:08:01.200
+Oliver Hönig: Ja.
+
+56
+00:08:01.200 --> 00:08:02.280
+Simon Bergmoser: Die
+
+57
+00:08:02.510 --> 00:08:13.760
+Simon Bergmoser: es gibt auch manche Leute. Die haben noch nicht so viel Erfahrung mit digitalen Whiteboard Tools, die meiner Meinung nach aber existenziell wichtig sind für gerade so komplexe Sachen wie Entscheidungsfindung.
+
+58
+00:08:14.520 --> 00:08:15.250
+Oliver Hönig: Ja.
+
+59
+00:08:16.270 --> 00:08:25.450
+Simon Bergmoser: oder so Ideen sammeln. Also je nachdem, in welchem Stadium die Entscheidung ist und wie offen der Prozess ist.
+
+60
+00:08:25.770 --> 00:08:31.760
+Simon Bergmoser: braucht man da eben ganz bestimmte Werkzeuge. Das kann gut funktionieren, online, aber dafür brauchen die Leute eben
+
+61
+00:08:31.900 --> 00:08:44.589
+Simon Bergmoser: mal zumindest mal die Bereitschaft, sich da einzuklinken. und wenn man das plant, dann muss man auch Zeit dafür einplanen. Ich habe auch dann Workshops gehabt, wo sozusagen explizit in der Einladung steht.
+
+62
+00:08:44.920 --> 00:08:53.349
+Simon Bergmoser: wer mit diesen Tools nicht vertraut ist, kommt bitte eine Viertelstunde vorher, damit wir einmal die Tools durchgehen können.
+
+63
+00:08:53.550 --> 00:09:06.469
+Simon Bergmoser: oder bis hin zu also, dass man wirklich am Anfang vom Training noch mal eine kurze Einleitung gibt, so benutzen wir diese Tools im Training oder in dem Workshop jetzt.
+
+64
+00:09:06.810 --> 00:09:11.179
+Simon Bergmoser: Wenn es ein festes Setting ist, wo sich Leute regulär immer wieder treffen.
+
+65
+00:09:11.290 --> 00:09:18.299
+Simon Bergmoser: wie in einem Projekt, wo man vielleicht Entscheidungen trifft, dann muss man das vielleicht nicht so oft machen, aber dann sollte man zumindest mal am Anfang
+
+66
+00:09:18.440 --> 00:09:19.510
+Simon Bergmoser: das machen.
+
+67
+00:09:19.820 --> 00:09:22.569
+Simon Bergmoser: Was auch noch schiefgehen kann, ist eben.
+
+68
+00:09:22.710 --> 00:09:27.099
+Simon Bergmoser: dass man eben nur in diesem einen Workshop denkt.
+
+69
+00:09:27.200 --> 00:09:41.710
+Simon Bergmoser: Wenn ich als Team eine Entscheidung treffe, dann muss davor was passieren, nämlich die Entscheidung muss vorbereitet werden. Verschiedene Optionen müssen abgeklärt werden. Was bedeuten die und dann was passiert danach? Wer setzt die um, bis wann.
+
+70
+00:09:41.710 --> 00:09:49.960
+Simon Bergmoser: und deswegen muss man eigentlich, Gerade wenn es um wichtige Entscheidungen geht, kann man nicht nur diesen einen Termin betrachten.
+
+71
+00:09:50.010 --> 00:10:08.169
+Simon Bergmoser: Für online Tools bedeutet das ganz konkret: habe ich ein System oder einen Prozess, in dem das durchdeklariert wird. Also z. B. in der It hat man ja häufig so Ticketsysteme, wo dann, User-storys und Epics abgebildet werden. d. h., wenn ich in einem Meeting eine Entscheidung bespreche
+
+72
+00:10:08.240 --> 00:10:12.380
+Simon Bergmoser: und die entscheidenden Fälle, dann wird die sofort in dem System
+
+73
+00:10:12.610 --> 00:10:29.349
+Simon Bergmoser: hinterlegt, und alle, die auch die, die nicht dabei waren, können das nachvollziehen, und das dann auch danach handeln. Also, das ist total wichtig, dass man eben nicht einfach nur das Meeting als solches sieht, gerade wenn es eben sowas ist wie ein größeres Projekt.
+
+74
+00:10:30.470 --> 00:10:49.870
+Oliver Hönig: In so einer konvergenten Zone, um zu dieser Entscheidung zu kommen.
+
+75
+00:10:51.270 --> 00:10:54.880
+Oliver Hönig: Was sind da kritische Momente?
+
+76
+00:10:55.270 --> 00:11:03.420
+Oliver Hönig: und wie erkennst du die Momente, in denen die Gruppe den Faden verliert oder Faden verlieren könnte.
+
+77
+00:11:04.590 --> 00:11:06.190
+Simon Bergmoser: Ja.
+
+78
+00:11:06.680 --> 00:11:18.139
+Simon Bergmoser: Also, Also was natürlich passieren kann ist, dass ständig, so sag ich, mal, Nebenschauplätze aufgemacht werden.
+
+79
+00:11:19.920 --> 00:11:25.379
+Simon Bergmoser: Vielleicht weil die Entscheidung einfach noch nicht reif ist, selbst wenn sie vorbereitet wurde.
+
+80
+00:11:27.080 --> 00:11:39.329
+Simon Bergmoser: Was auch passieren kann, ist, sag ich mal, wenn man einfach ohne Struktur. In einer, sagen wir, 10, 12 Leute in einem Meeting sind und jeder einfach frei rausquatschen kann, dann
+
+81
+00:11:39.470 --> 00:11:44.480
+Simon Bergmoser: verliert man sehr viel Zeit, und viele Leute schalten ab, gerade
+
+82
+00:11:44.630 --> 00:11:54.239
+Simon Bergmoser: gerade in so stressigen Situationen wie Projekten. Dann wird erst die Hälfte die E-mails schreibt oder Nachrichten beantwortet und gar nicht zuhört.
+
+83
+00:11:54.800 --> 00:11:57.629
+Simon Bergmoser: Was ist eigentlich ein Hauptproblem? und d. h.,
+
+84
+00:11:57.910 --> 00:12:02.669
+Simon Bergmoser: das Managen von der Aufmerksamkeit der Teilnehmenden ist, sag ich mal essenziell.
+
+85
+00:12:02.910 --> 00:12:07.059
+Simon Bergmoser: und d. h. gerade, wo du auch sagst du über Ki-tools?
+
+86
+00:12:07.560 --> 00:12:12.349
+Simon Bergmoser: Da ist es auch wichtig. Sag Ich mal nicht nur zu hören, was gesagt wird, sondern zu gucken
+
+87
+00:12:13.070 --> 00:12:24.390
+Simon Bergmoser: ist die Person gerade bei mir. Also z. B., wenn ich Facilitator bin, und ich habe das im Vorfeld geklärt. Okay, das hier sind die Stakeholder, und die Person muss auf jeden Fall. Was dazu sagen.
+
+88
+00:12:25.460 --> 00:12:30.770
+Simon Bergmoser: dann werde ich, wenn die Person nichts sagt, irgendwann auch explizit die Person fragen.
+
+89
+00:12:31.130 --> 00:12:33.589
+Simon Bergmoser: d. h., ich muss im Endeffekt
+
+90
+00:12:33.860 --> 00:12:37.430
+Simon Bergmoser: auch wissen: Wo fehlt noch ein Wortbeitrag?
+
+91
+00:12:37.570 --> 00:12:44.400
+Simon Bergmoser: Wo ist vielleicht jemand abgelenkt und dass ich die wieder reinhole
+
+92
+00:12:45.140 --> 00:12:46.999
+Oliver Hönig: Wie holst du die wieder rein.
+
+93
+00:12:47.290 --> 00:12:49.120
+Simon Bergmoser: Ich spreche die an mit Namen.
+
+94
+00:12:49.160 --> 00:12:54.369
+Simon Bergmoser: und wenn ich merke, dass ganz viele abgelenkt sind, dann
+
+95
+00:12:54.380 --> 00:13:09.800
+Simon Bergmoser: dann mache ich auch mal eine Pause oder so, je nachdem, was für ein Setting das jetzt ist, ob das irgendwie so ein längerer Workshop ist oder ob das irgendwie nur so eine halbe Stunde Meeting ist, ist ja klar, anderes.
+
+96
+00:13:10.270 --> 00:13:16.510
+Simon Bergmoser: Genau. Ich spreche die an mit Namen, ich wiederhole noch mal das, was bisher gesagt wurde. Versuche, das sozusagen
+
+97
+00:13:16.690 --> 00:13:18.890
+Simon Bergmoser: zu kondensieren,
+
+98
+00:13:19.430 --> 00:13:30.050
+Simon Bergmoser: Ganz kurz prägnant. Wenn jemand 5 min Vortrag gehalten hat, versuche ich das noch mal, in 2, 3 Sätzen zusammenzufassen und dann die Person zu fragen: Was sagst du dazu.
+
+99
+00:13:31.890 --> 00:13:38.029
+Simon Bergmoser: Aber dafür muss ich wissen, welche Rolle diese Person innehat, die ich da frage und warum ist die wichtig?
+
+100
+00:13:38.300 --> 00:13:50.720
+Simon Bergmoser: Die Praktikantin, die nichts sagt, die ganze Zeit, Die werde ich nicht ansprechen, aber den Co-founder, der länger nichts gesagt hat, obwohl ich weiß, dass ihm das Thema wichtig ist, den werde ich schon mal fragen.
+
+101
+00:13:51.150 --> 00:13:56.360
+Oliver Hönig: Ja, ja, und kannst du noch andere
+
+102
+00:13:56.530 --> 00:14:03.259
+Oliver Hönig: Merkmale oder vielleicht Eigenschaften benennen, woran du erkennst.
+
+103
+00:14:03.790 --> 00:14:13.119
+Oliver Hönig: dass du quasi eingreifen müsstest oder die Aufgabe als Facilitator jetzt gefragt ist. Also gibt es konkrete?
+
+104
+00:14:13.480 --> 00:14:14.610
+Oliver Hönig: Ja.
+
+105
+00:14:14.750 --> 00:14:22.159
+Oliver Hönig: Wenn das und das passiert, dann müsste ich irgendwas machen.
+
+106
+00:14:23.480 --> 00:14:30.330
+Simon Bergmoser: Also, ich meine, ein Workshop, gerade wenn es so ein komplexes Thema ist, ist ja relativ
+
+107
+00:14:30.560 --> 00:14:44.310
+Simon Bergmoser: strikt. Sag ich mal strukturiert. Also, d. h., ich sitze da nicht einfach und höre nur zu, wie die Reden, sondern ich schaue, was braucht die Diskussion gerade? Sind wir gerade hier in einer kontroversen Diskussion.
+
+108
+00:14:44.730 --> 00:14:50.799
+Simon Bergmoser: oder kommen die von Hölzchen auf Stöckchen? Oder sag ich mal
+
+109
+00:14:51.530 --> 00:15:00.730
+Simon Bergmoser: reden, die gar nicht übers Thema. d. h., wenn Sie nicht übers Thema reden, muss ich gucken, dass ich sie immer wieder zurückbringe. Ja, was ist denn damit? Was ist denn damit? Was ist denn damit
+
+110
+00:15:00.890 --> 00:15:04.710
+Simon Bergmoser: Also, wenn es kontrovers ist, dann braucht es vielleicht auch mal
+
+111
+00:15:05.140 --> 00:15:14.079
+Simon Bergmoser: break outs, oder? Dann braucht es Mal sage ich mal, eine wirklich ganz klare Gegenüberstellung, wo die Leute auch vielleicht abstimmen können
+
+112
+00:15:14.170 --> 00:15:26.449
+Simon Bergmoser: oder wo die Leute ihre Bedenken äußern können. Also da? Gibt es dann verschiedene Methoden, die man, sag ich mal, auch im virtuellen Raum online nutzen kann.
+
+113
+00:15:27.150 --> 00:15:30.429
+Simon Bergmoser: Ganz banal, z. B., wenn ich den Eindruck habe, dass
+
+114
+00:15:30.640 --> 00:15:39.139
+Simon Bergmoser: dass es da unterschiedliche Meinungen im Raum gibt, dann mache ich eine Abfrage. und dann sage ich: Okay.
+
+115
+00:15:39.790 --> 00:15:58.779
+Simon Bergmoser: sag mal, wie sehr stimmst du hier zu, Oder auch wie viel Nerven hast du jetzt, um an dieser Diskussion Zeit zu nehmen, dann frage ich Sie zeig mal an, in der Kamera hier oben ist ganz viel oder viel Zustimmung oder viel Energie. und hier unten ist eher wenig. Dann lasse ich die alle das einschätzen, in Ihrer Kamera. Dann sieht man das auf einen Blick. Alle sehen.
+
+116
+00:15:58.780 --> 00:15:59.100
+Oliver Hönig: Das.
+
+117
+00:15:59.100 --> 00:16:13.870
+Simon Bergmoser: Das
+
+118
+00:16:13.950 --> 00:16:31.450
+Simon Bergmoser: Boat of Confidence. Das funktioniert im Offlinebereich auch gut. Also nicht, ob du das kennst. So, mit Fingerhochhalten. Sag ich mal 5 heißt. Ich finde das richtig toll und bin dafür und dann halt runter in so Mittel, so okay? und dann, 0 ist halt aktiver Widerstand. Ich will.
+
+119
+00:16:31.510 --> 00:16:47.810
+Simon Bergmoser: will, dass wir das nicht machen, und wenn das gemacht wird, dann wehre ich mich, dann gehe ich in den Widerstand. Das ist ein Veto. Das sehen auch alle sofort. Ich mache im Endeffekt Sachen transparent. Ich habe ein Bauchgefühl. Hier gibt es unterschiedliche Meinungen. Dann mache ich das transparent.
+
+120
+00:16:49.530 --> 00:16:56.449
+Oliver Hönig: Wenn es jetzt das Bauchgefühl bestätigt hat, und die Meinungen sind unterschiedlich. Wie gehst du dann weiter? Vor.
+
+121
+00:16:58.120 --> 00:16:59.400
+Simon Bergmoser: Genau. Also.
+
+122
+00:16:59.460 --> 00:17:14.060
+Simon Bergmoser: es kommt ein bisschen darauf an, wann das im Workshop Sletting. Also, es ist eher am Anfang, Mitte Ende genau. Wenn es Anfang oder Mitte ist, würde ich vielleicht gucken, dass ich das dann nochmal in Breakouts diskutieren lasse.
+
+123
+00:17:14.079 --> 00:17:27.229
+Simon Bergmoser: Die beiden Lager explizit in die Breakouts schicke, um noch mal ihre eigene Position zu schärfen, zu klären. Was verstehen Sie bei den anderen nicht? Wenn S gegen Ende ist, würde ich gucken, wie krieg ich das jetzt?
+
+124
+00:17:27.390 --> 00:17:39.959
+Simon Bergmoser: Was braucht es eigentlich, um zu einer Entscheidung zu kommen, Wenn es im letzten Drittel des Workshops ist, würde ich eher jetzt so eine große Entscheidung, wo ich merke. Die ist super, kontrovers, nicht mehr komplett aufmachen, sondern dann würde ich eher sagen.
+
+125
+00:17:40.080 --> 00:17:51.039
+Simon Bergmoser: dann lass uns nicht die Entscheidung weiter besprechen, sondern lass uns nur noch besprechen, wie wir zu einer Entscheidung kommen, dann wechsle ich auf eine Metaebene.
+
+126
+00:17:51.230 --> 00:18:03.140
+Simon Bergmoser: welche Termine, welche abfragen, wer macht was, wer holt welche Informationen bis wann ein
+
+127
+00:18:03.310 --> 00:18:11.049
+Simon Bergmoser: und dann setzt ihr euch wieder zusammen. Also weil gerade so gegen Ende ist es gefährlich. Wenn man sowas nochmal komplett aufmacht.
+
+128
+00:18:12.040 --> 00:18:22.090
+Oliver Hönig: Ja, das schließt jetzt daran vielleicht ein bisschen an. Wie stellst du sicher, dass das dann zielorientiert bleibt und das am Ende dann auch zu einer Entscheidung kommt.
+
+129
+00:18:22.490 --> 00:18:23.420
+Oliver Hönig: Genau.
+
+130
+00:18:23.420 --> 00:18:35.590
+Simon Bergmoser: Also, das beginnt ehrlicherweise schon davor, in der Auftragsklärung. Also was sind überhaupt die Ziele und nicht Ziele für diesen Workshop oder dieses Meeting.
+
+131
+00:18:35.720 --> 00:18:54.499
+Simon Bergmoser: je nachdem, wie das Setting ist. Ich habe in so großen Projekten, gerade wenn es dann auf hohen Führungsebenen ist, habe ich dann auch Entscheidungsvorlagen, die ich vorbereite, mit. Hier ist das Dilemma. Hier sind Optionen A, B und C, inklusive einer Option, Was passiert, wenn wir nichts tun.
+
+132
+00:18:54.740 --> 00:19:09.239
+Simon Bergmoser: so und mit Kosten und Vorteilen von jeden Optionen. Da habe ich eine Folie, Die werfe ich rein. und dann also, das ist dann vorbereitend. Das ist auch total wichtig, weil diese Entscheider innen. Die haben vielleicht
+
+133
+00:19:09.670 --> 00:19:26.299
+Simon Bergmoser: eine Viertelstunde Zeit, um da eine Entscheidung zu treffen, und die brauchen dann halt diese Vorbereitung, wenn es eher am anderen Ende des Spektrums ist. Ich habe ein Team mit der Führungskraft, die wollen eher das gemeinsam entscheiden. Dann würde ich eben eher sagen: Okay.
+
+134
+00:19:27.140 --> 00:19:37.770
+Simon Bergmoser: wir beleuchten erst mal verschiedene Aspekte. Wir machen eine Aufstellung. Wir machen verschiedene Ideen, ohne die erst mal zu bewerten. und dann gucken wir, wie läuft das so?
+
+135
+00:19:37.880 --> 00:19:41.190
+Simon Bergmoser: Es kommt auch sehr darauf an, was für eine Entscheidung das ist.
+
+136
+00:19:41.400 --> 00:19:56.930
+Simon Bergmoser: und vor allem auch, wie sehr die Führungskraft das ist auch dann Teil der Auftragsklärung. Wie sehr möchte die Führungskraft das Team einbinden bei dieser Entscheidung. Was ist überhaupt der Entscheidungsspielraum? Manchmal wollen Führungskräfte nämlich
+
+137
+00:19:56.970 --> 00:20:06.529
+Simon Bergmoser: es passiert tatsächlich häufig, dass sie behaupten, sie würden dem Team eine Entscheidung geben, aber eigentlich haben Sie die Entscheidung für sich schon getroffen und wollen nur, dass das Team das da mitzieht.
+
+138
+00:20:06.730 --> 00:20:22.479
+Simon Bergmoser: und da muss ich Sie dann halt so ein bisschen sagen: Ja, das führt beim Team halt eher zu Missstimmungen, weil die merken das ganz schnell, dass sie da eigentlich gar nicht mitreden sollen, sondern nur das abnicken sollen, dann sei lieber von vorneweg klar. d. h.,
+
+139
+00:20:22.840 --> 00:20:39.649
+Simon Bergmoser: damit eine Entscheidung gut getroffen werden kann, musst du im Vorfeld extrem viel abklären, mit der Person, die vor dieser Entscheidung steht. Das ist auch eine Frage der Hierarchie. Wer hat diese Entscheidung zu treffen? Wer hat die Befugnis, Budget mäßig? Was auch immer die zu treffen.
+
+140
+00:20:40.170 --> 00:20:41.750
+Oliver Hönig: Ja verstehe, ja.
+
+141
+00:20:41.750 --> 00:20:50.259
+Simon Bergmoser: Auch wenn die Frage, wenn in dem Termin niemand eine klare Entscheidung trifft und sich Leute uneins sind.
+
+142
+00:20:50.370 --> 00:20:55.320
+Simon Bergmoser: wer hat die Verantwortung dafür, dass nicht keine Entscheidung getroffen wird.
+
+143
+00:20:55.630 --> 00:20:57.120
+Simon Bergmoser: Das ist total wichtig.
+
+144
+00:20:57.290 --> 00:21:03.559
+Simon Bergmoser: d. h., die Führungskraft. Wenn dein Team sich nicht einigt, dann musst du alleine eine Entscheidung treffen.
+
+145
+00:21:05.310 --> 00:21:06.469
+Oliver Hönig: Ja, okay.
+
+146
+00:21:06.770 --> 00:21:23.039
+Oliver Hönig: und ich würde jetzt nochmal den Fokus. Also mir ist klar, dass das Thema halt sehr breit und komplex ist, und natürlich auch über Organisationen und psychologische Themen, da alles in den Meetings quasi dann zusammenkommt. Wenn man sich jetzt mal aber auf diese
+
+147
+00:21:23.100 --> 00:21:32.000
+Oliver Hönig: diese konvergente Phase in den Meetings. Du hattest das jetzt wahrscheinlich als Ende des Workshops beschrieben. Wo Jetzt, man ist, aus dieser Ideenfindung raus.
+
+148
+00:21:32.000 --> 00:21:43.470
+Oliver Hönig: und jetzt hat man quasi seine Daten oder die Informationen auf dem Tisch und möchte jetzt die Entscheidung finden, welche Methoden oder Strukturen oder Gewohnheiten haben sich da
+
+149
+00:21:43.570 --> 00:21:44.940
+Oliver Hönig: etabliert.
+
+150
+00:21:46.060 --> 00:21:46.880
+Simon Bergmoser: Also
+
+151
+00:21:47.130 --> 00:21:58.899
+Simon Bergmoser: z. B. aus dem Design Thinking, gibt es die Priorisierung Drid. Dann lass ich zweimal abstimmen. Da haben wir viele Ideen, dann gibt es einige, bewertet einmal nach.
+
+152
+00:21:58.910 --> 00:22:09.079
+Simon Bergmoser: Wie leicht ist es umzusetzen, und die andere Bewertung ist, wie viel. Mehrwert stiftet das? Wenn wir das machen, dann hast du eine Matrix. Die Sachen, die leicht und viel wert sind, die machen wir.
+
+153
+00:22:09.340 --> 00:22:20.749
+Simon Bergmoser: oder eben diese Vote of Confidence, so das, was ich mit den Faust fis to five nennt man das auch. Manchmal es gibt da Gerade für It-projekte gibt es da
+
+154
+00:22:21.090 --> 00:22:27.199
+Simon Bergmoser: relativ viele Methoden, die man anwenden kann.
+
+155
+00:22:27.470 --> 00:22:32.750
+Simon Bergmoser: Ich mag das auch eben immer, wenn man wirklich entweder mit dem Video arbeitet
+
+156
+00:22:33.160 --> 00:22:37.079
+Simon Bergmoser: oder mit einem Whiteboard. Also mein Ziel ist, sag ich mal
+
+157
+00:22:37.350 --> 00:22:50.560
+Simon Bergmoser: immer das zu parallelisieren, dass man sieht, wie Leute zu einer Entscheidung stehen, was ich absolutes. No go ist einmal zu sagen: Jetzt sagen noch mal alle, was Sie dazu denken.
+
+158
+00:22:50.740 --> 00:22:55.959
+Simon Bergmoser: Das funktioniert meistens nicht, weil gerade bei größeren Runden, weil die Leute dann einfach abschalten.
+
+159
+00:22:56.130 --> 00:23:13.270
+Simon Bergmoser: Ich will, dass die Leute auf einen Blick sehen, wie alle anderen dazu stehen. Das ist eigentlich mein Ziel. und da gibt es alle möglichen Methoden dafür: Skalierung mit twist to Five Voting auf Whiteboards Wheater schlage mich tot. Man kann ja in Zoom auch Polls machen in Teams
+
+160
+00:23:13.540 --> 00:23:14.770
+Simon Bergmoser: alles Mögliche.
+
+161
+00:23:15.410 --> 00:23:16.300
+Oliver Hönig: Ja.
+
+162
+00:23:16.300 --> 00:23:18.270
+Simon Bergmoser: Wo steht.
+
+163
+00:23:19.120 --> 00:23:26.029
+Oliver Hönig: Wie viel davon ist quasi Vorbereitung und wie viel entscheidest du dann während der Situation, in dem Meeting.
+
+164
+00:23:26.260 --> 00:23:28.880
+Oliver Hönig: gerade auch was Struktur angeht.
+
+165
+00:23:28.880 --> 00:23:38.590
+Simon Bergmoser: Ich.
+
+166
+00:23:38.630 --> 00:23:49.699
+Simon Bergmoser: Im Idealfall habe ich meinen Plan, und den ziehe ich dann so durch. Aber es ist wichtig, trotzdem auch flexibel zu bleiben, eben weil es dann manchmal unerwarteterweise kontrovers wird.
+
+167
+00:23:49.870 --> 00:23:50.570
+Simon Bergmoser: Ja.
+
+168
+00:23:51.180 --> 00:24:00.800
+Oliver Hönig: Ein.
+
+169
+00:24:02.850 --> 00:24:10.250
+Simon Bergmoser: Man kann mit den Reaktionen arbeiten. Das gibt es auch in allen gängigen Tools
+
+170
+00:24:10.810 --> 00:24:20.870
+Simon Bergmoser: Also, man kann Abstimmungen machen, Man kann auch sowas sagen, wie gib mir irgendwie keine Ahnung.
+
+171
+00:24:21.520 --> 00:24:26.169
+Simon Bergmoser: eine Metapher oder so z. B. Man kann auch irgendwie.
+
+172
+00:24:26.660 --> 00:24:32.309
+Simon Bergmoser: wenn man nur ein Stimmungsbarometer machen will, kann man auch die Leute auf dem Whitebook
+
+173
+00:24:32.460 --> 00:24:41.440
+Simon Bergmoser: Whiteboard ein Gif zu erstellen, oder was auch immer, je nachdem, wie das Team funktioniert und wie gewohnt die sind.
+
+174
+00:24:41.820 --> 00:24:52.419
+Simon Bergmoser: Kann man da verschiedenes machen. und für spezielle Situationen würde ich dann auch noch mal in solchen Repertoires gucken, was es alles für Möglichkeiten gibt.
+
+175
+00:24:52.630 --> 00:25:00.980
+Simon Bergmoser: Da kann ich auch nochmal gerne dir kann ich dir auch gerne Empfehlungen geben oder mal sagen, welche Libraries ich da benutze?
+
+176
+00:25:01.160 --> 00:25:02.130
+Simon Bergmoser: Ja.
+
+177
+00:25:02.570 --> 00:25:03.960
+Oliver Hönig: Das können wir gerne machen.
+
+178
+00:25:04.220 --> 00:25:05.040
+Oliver Hönig: Mal klären, oder?
+
+179
+00:25:05.390 --> 00:25:10.769
+Oliver Hönig: Wenn du mir dann da die Ressourcen schickst oder ein paar links wäre gut.
+
+180
+00:25:10.970 --> 00:25:20.190
+Simon Bergmoser: Practice Library z. B. wäre ein So ein Beispiel. Da gibt es explizit auch eine Kategorie, Entscheidungen treffen, und da sind
+
+181
+00:25:20.420 --> 00:25:21.460
+Simon Bergmoser: keine Ahnung.
+
+182
+00:25:22.270 --> 00:25:32.440
+Simon Bergmoser: ein Dutzend Methoden zum Entscheidung treffen explizit auch für virtuelle Teams drin. und da würde ich mir im Vorfeld dann Halt immer einen raussuchen, die gerade passt.
+
+183
+00:25:33.180 --> 00:25:34.240
+Oliver Hönig: Ja.
+
+184
+00:25:35.040 --> 00:25:49.560
+Oliver Hönig: Okay, genau das habentest du vorhin auch schon ein bisschen mit beantwortet. Ich wollte aber nochmal genauer drauf reingehen, darauf eingehen. Woran erkennst du denn, ob alle relevanten Informationen jetzt quasi
+
+185
+00:25:51.170 --> 00:26:06.379
+Oliver Hönig: geäußert wurden, die für die Entscheidung notwendig sind, gerade wenn es halt auch vielleicht fachliche Sachen sind. Also, du hattest jetzt an den Rollen versucht es abzuschätzen. Wie gehst du da generell vor? und wie wichtig Ist es denn auch, dass alle zu Wort kommen.
+
+186
+00:26:07.660 --> 00:26:14.200
+Simon Bergmoser: Also, ich sag mir immer, es sollten die zu Wort kommen, die.
+
+187
+00:26:15.200 --> 00:26:18.669
+Simon Bergmoser: wenn Sie eine Kritik haben, an der Entscheidung
+
+188
+00:26:18.810 --> 00:26:25.030
+Simon Bergmoser: diese dann glaubwürdig anzweifeln können an dieser Entscheidung. Also alle Leute, die.
+
+189
+00:26:25.160 --> 00:26:39.659
+Simon Bergmoser: von denen ich vermute, dass sie wenn jetzt eine Entscheidung getroffen wird, die ihnen nicht passt, im Nachgang sagen würden, ja, mache ich doch anders, selbst wenn sie das nicht offen tun. Aber Alle, die Leute sollten eigentlich zumindest mal Ihr
+
+190
+00:26:39.880 --> 00:26:47.630
+Simon Bergmoser: Ihr Vote of confidence geben. Ja, finde ich gut, wir müssen nicht was sagen, aber Sie sollten schon sagen, ja bin ich auch dafür.
+
+191
+00:26:48.030 --> 00:26:53.039
+Simon Bergmoser: Weil gerade online hat man eben das Problem, dass es sehr schwierig ist, abzuschätzen.
+
+192
+00:26:53.650 --> 00:27:05.450
+Simon Bergmoser: Sind die Leute wirklich dafür? Also so Anzeichen, an denen ich das merke, ist, gerade, je näher man der Entscheidung kommt, wenn die Leute dann so ruhiger werden oder vielleicht
+
+193
+00:27:06.010 --> 00:27:10.360
+Simon Bergmoser: immer weniger enthusiastisch werden, dann ist das für mich ein Zeichen.
+
+194
+00:27:10.600 --> 00:27:16.619
+Simon Bergmoser: vielleicht nochmal eine Schleife zu drehen. Mit solchen sag ich mal.
+
+195
+00:27:17.390 --> 00:27:23.609
+Simon Bergmoser: die das eben transparent machen. Oder dann, da würde ich dann auch gucken. Gibt es wirklich schon alle Entscheidungen?
+
+196
+00:27:24.480 --> 00:27:36.190
+Simon Bergmoser: Ich frage dann auch manchmal: stumpf ja, wie würdet ihr das denn euren Teammitgliedern erklären, wenn das Führungskräfte sind? Da kann ich dann an den Antworten so abschätzen, ob die das wirklich ernst meinen.
+
+197
+00:27:36.880 --> 00:27:41.000
+Simon Bergmoser: oder? Also, und das ist jetzt wirklich sehr subtil. Aber
+
+198
+00:27:41.170 --> 00:27:46.959
+Simon Bergmoser: wenn Leute, wenn ich frage, ja, bist du dafür und die sagen: sowas wie ja.
+
+199
+00:27:48.390 --> 00:27:52.800
+Simon Bergmoser: dann weiß ich schon, die sind nicht so 100% überzeugt.
+
+200
+00:27:53.550 --> 00:27:59.340
+Simon Bergmoser: und dann kann es sein, weil sie vielleicht abgelenkt sind, oder weil sie.
+
+201
+00:27:59.540 --> 00:28:12.900
+Simon Bergmoser: weil sie auch eigentlich gar keine Lust haben, diese Entscheidung zu treffen. Aber ich weiß, da fehlt noch irgendwas Informationen. Vielleicht ist es auch nicht der richtige Zeitpunkt Vielleicht, es kann ja auch sein, dass man die richtigen Informationen gar nicht haben kann
+
+202
+00:28:13.190 --> 00:28:15.920
+Simon Bergmoser: oder dass einfach der Zeitpunkt falsch ist.
+
+203
+00:28:16.080 --> 00:28:17.570
+Simon Bergmoser: und
+
+204
+00:28:17.940 --> 00:28:31.999
+Simon Bergmoser: genau ich finde das auch immer ganz gut. Den Leuten zu vertrauen. Wenn eine Entscheidung wirklich kritisch ist, dann wird die schon auch getroffen. Dann haben die Leute auch eine eigene Motivation, die zu treffen
+
+205
+00:28:33.810 --> 00:28:48.779
+Simon Bergmoser: Aber trotzdem versuche ich auch immer so auf diese Zwischentöne zu hören. Also das ist dann halt wirklich schwierig, so diese Tonlage auch zu verstehen. Also ein Yor und ein Ja ist, was sehr unterschiedliches.
+
+206
+00:28:49.480 --> 00:28:50.330
+Oliver Hönig: Ja.
+
+207
+00:28:50.790 --> 00:29:06.810
+Oliver Hönig: Okay, dann kannst du diese subtilen Merkmale vielleicht mal nur die durchgehst aus so vergangenen Situationen, vielleicht aus der näheren Vergangenheit, was waren denn dann? So kannst du es konkretisieren?
+
+208
+00:29:08.260 --> 00:29:10.280
+Simon Bergmoser: Also,
+
+209
+00:29:10.560 --> 00:29:19.450
+Simon Bergmoser: Also, ich glaube, das kann man nicht verallgemeinern. Das hängt auch sehr stark vom Setting und der Person ab, gerade wenn ich die Person gut kenne.
+
+210
+00:29:20.390 --> 00:29:25.549
+Simon Bergmoser: genau das Gleiche sagen wie eine andere Person und was ganz anderes meinen.
+
+211
+00:29:25.680 --> 00:29:31.149
+Simon Bergmoser: Ich will das nicht verallgemeinern. Ich glaube, da Jagst du dich ins Bockshorn mit.
+
+212
+00:29:31.480 --> 00:29:33.210
+Simon Bergmoser: Das ist
+
+213
+00:29:33.560 --> 00:29:49.500
+Simon Bergmoser: also, wie gesagt, so, Der Hinweis ist eben, wie enthusiastisch ist ein Jahr. Also ein. Ja, Okay, Alles klar. Machen wir. Ich mache das bis übermorgen und schick euch allen. Dann eine Info, da weiß ich, okay, das ist solide
+
+214
+00:29:51.510 --> 00:29:59.309
+Simon Bergmoser: Aber ein Ja würde ich sagen, okay, ist vielleicht eher nicht so solide. Das würde ich dann auch ansprechen und transparent machen.
+
+215
+00:29:59.450 --> 00:30:12.890
+Simon Bergmoser: Kulturelle Hintergründe kommen auch dazu. Es kann auch sein, dass vielleicht jemand oder Persönlichkeitsgründe persönlich verschiedene Persönlichkeitsmerkmale für manche Leute ist ein Yor schon eine große Zustimmung.
+
+216
+00:30:13.220 --> 00:30:18.649
+Simon Bergmoser: Aber oder so. und Also, das ist
+
+217
+00:30:19.210 --> 00:30:28.770
+Simon Bergmoser: in manchen Kulturkreisen kriegst du von niedrigeren Hierarchie eben gar keine Zustimmung, bis die oberste Person sagt, Ja.
+
+218
+00:30:29.600 --> 00:30:30.580
+Oliver Hönig: Ja.
+
+219
+00:30:31.280 --> 00:30:47.749
+Simon Bergmoser: In anderen Kulturkreisen wiederum wird die oberste Person nichtssagend, bis alle gesprochen haben. So, Also, das ist so unabhängig, Das kannst du gar nicht. Ich glaube, jeder, wenn du da versuchst, das irgendwie einmal klar zu definieren, dann tust du dir eher keinen Gefallen damit.
+
+220
+00:30:48.260 --> 00:31:06.450
+Oliver Hönig: Oder
+
+221
+00:31:07.560 --> 00:31:19.730
+Oliver Hönig: Stimmungsbild einholen. Wie gehst du da genau vor und welche Risiken gibt es quasi, wenn du in so eine Diskussion eingreifst. und wie versuchst du, diese Risiken quasi zu minimieren?
+
+222
+00:31:20.970 --> 00:31:25.830
+Simon Bergmoser: Also wenn ich merke, es geht jetzt auf die Schlussphase von einer Entscheidung zu.
+
+223
+00:31:25.960 --> 00:31:31.200
+Simon Bergmoser: und ich merke, das ist noch nicht ganz klar. Dann versuche ich eben zu paraphrasieren.
+
+224
+00:31:31.420 --> 00:31:36.320
+Simon Bergmoser: Also, es eben nochmal in meinen eigenen Worten wiederzugeben.
+
+225
+00:31:37.660 --> 00:31:45.019
+Simon Bergmoser: Wenn ich vermute, da hat jemand noch da ist noch was im Busch. Da hat jemand noch was was er sagen will. Dann
+
+226
+00:31:45.290 --> 00:31:48.060
+Simon Bergmoser: was meinst du dazu?
+
+227
+00:31:48.390 --> 00:31:53.600
+Simon Bergmoser: genau, und
+
+228
+00:31:54.110 --> 00:32:00.079
+Simon Bergmoser: manchmal überspitze ich auch ein bisschen leicht. Um so ein bisschen zu testen, kommt da noch was?
+
+229
+00:32:00.330 --> 00:32:04.170
+Simon Bergmoser: Manchmal schweige ich auch einfach und warte, was da kommt.
+
+230
+00:32:04.560 --> 00:32:08.740
+Simon Bergmoser: Also manchmal warte ich auch einfach ab. und wenn dann keiner reingeht.
+
+231
+00:32:09.120 --> 00:32:20.259
+Simon Bergmoser: Also, ich hab da so immer so eine 7 s. Regel, wenn nach 7 s keiner also, ich zähle dann innerlich langsam bis 7, Wenn sich immer noch keiner meldet, dann
+
+232
+00:32:20.630 --> 00:32:23.230
+Simon Bergmoser: Meistens meldet sich da schon jemand, aber
+
+233
+00:32:23.680 --> 00:32:31.729
+Simon Bergmoser: dann weiß ich: Okay, da muss ich jetzt nochmal, weil ich die mal anders fragen oder vielleicht nochmal wiederholen, was ich gerade gesagt habe.
+
+234
+00:32:32.090 --> 00:32:33.240
+Simon Bergmoser: Ja.
+
+235
+00:32:35.040 --> 00:32:35.850
+Oliver Hönig: Okay, aber
+
+236
+00:32:38.390 --> 00:32:48.879
+Oliver Hönig: genau, Wenn du jetzt quasi eine facilicating unerfahrenen Person, die hat jetzt die Aufgabe bekommen, so ein Meeting, wo eine Entscheidung ansteht.
+
+237
+00:32:48.980 --> 00:33:06.629
+Oliver Hönig: zu moderieren oder zu begleiten und sicherzustellen, dass das zielorientiert bleibt, welche konkreten Fähigkeiten oder Methoden würdest du denn dieser Person mitgeben, oder vielleicht auch tipps, dass sie jetzt nicht kläglich scheitert, sondern.
+
+238
+00:33:06.630 --> 00:33:14.549
+Simon Bergmoser: Das Allerwichtigste ist nicht, was man in der Meeting selber tut. Das Allerwichtigste ist, was man im Vorfeld mit der Führungskraft abklärt.
+
+239
+00:33:15.150 --> 00:33:15.700
+Oliver Hönig: Die.
+
+240
+00:33:15.700 --> 00:33:21.139
+Simon Bergmoser: Was ist das Ziel? und Führungskräften fällt das nicht immer leicht. Ihr Ziel klar zu formulieren.
+
+241
+00:33:21.550 --> 00:33:21.990
+Oliver Hönig: und.
+
+242
+00:33:21.990 --> 00:33:29.590
+Simon Bergmoser: Haben, was im Kopf und sagen
+
+243
+00:33:30.230 --> 00:33:47.240
+Simon Bergmoser: von dem Meeting dann ihr Ziel klar formulieren. und wenn das Ziel ist, ich möchte, dass wir eine gemeinsame Entscheidung treffen, dann sollen die das halt so sagen. Aber das muss in der Auftragsklärung vorher passieren, d. h., der Person, die gerade damit anfängt, würde ich sagen.
+
+244
+00:33:47.840 --> 00:33:52.140
+Simon Bergmoser: in deiner Auftragsklärung, Was soll in diesem Meeting passieren?
+
+245
+00:33:52.240 --> 00:34:11.320
+Simon Bergmoser: Musst du ganz sicher gehen, dass Die Führungskraft weiß, was sie will, auch weiß, was sie machen will, wenn sie nicht kriegt, was sie bekommt, was sie will. und was sind die Alternativen und dann auch so ein bisschen klare Grenzen setzen. Es gibt immer wieder Führungskräfte, die erwarten dann, dass
+
+246
+00:34:11.380 --> 00:34:18.050
+Simon Bergmoser: der Facilitator die Person ist, die eine Entscheidung herbeiführt und durchsetzt. Das funktioniert nicht
+
+247
+00:34:18.159 --> 00:34:31.670
+Simon Bergmoser: der Facilitate. Die Aufgabe ist es, das Gespräch so zu strukturieren, dass die Entscheidung am Ende, dass es gute Optionen gibt und die Leute hinter der Entscheidung stehen, weil das Gespräch verlaufen ist, aber die Entscheidung wirklich zu treffen
+
+248
+00:34:31.670 --> 00:34:39.099
+Simon Bergmoser: und die Leute dazu zu bringen, zu sagen: ja oder nein. Das ist nicht die Aufgabe von Facilitator, sondern die Aufgabe der Führungskraft letztlich.
+
+249
+00:34:39.139 --> 00:34:43.440
+Simon Bergmoser: Die muss dazu bereit sein. Manche Führungskräfte versuchen das aber zu delegieren.
+
+250
+00:34:44.120 --> 00:34:49.029
+Simon Bergmoser: und da würde ich der Person raten, sei sehr vorsichtig.
+
+251
+00:34:49.170 --> 00:34:55.479
+Simon Bergmoser: Das ist die Aufgabe der Führungskraft, und du kannst das nicht machen, weil du nicht in ihrer Rolle bist.
+
+252
+00:34:56.230 --> 00:34:57.090
+Oliver Hönig: Ja.
+
+253
+00:34:57.390 --> 00:35:07.439
+Oliver Hönig: wenn man jetzt aus dieser Vorbereitungsphase rausgeht und dann quasi während des Meetings. Was sind da die quasi die quick fix oder die Tipps, wo du sagen würdest, Das ist essenziell.
+
+254
+00:35:09.030 --> 00:35:15.909
+Simon Bergmoser: Naja, also erst mal also, dann nehmen wir an, diese Vorbereitungsphase ist gut gelaufen, so.
+
+255
+00:35:15.910 --> 00:35:16.420
+Oliver Hönig: Ja.
+
+256
+00:35:16.420 --> 00:35:24.659
+Simon Bergmoser: und das ist wirklich alles klar. Dann ist quick fix. Man braucht
+
+257
+00:35:25.640 --> 00:35:30.340
+Simon Bergmoser: ja. Also das, was ich letztlich gesagt habe, Methoden, um transparent zu machen.
+
+258
+00:35:30.480 --> 00:35:36.369
+Simon Bergmoser: Also, ich würde der Person wahrscheinlich auch im Vorfeld mal auf diese
+
+259
+00:35:36.870 --> 00:35:50.299
+Simon Bergmoser: Ressourcen verweisen, die ich da nutze, um sich dann das Passende zurechtzulegen und ansonsten so typische Techniken wie Paraphrasieren
+
+260
+00:35:50.420 --> 00:36:01.510
+Simon Bergmoser: gezielt Leute ansprechen, ebenso Visualisierungsmethoden, weil ich gesagt habe, mit dem Transparenzmachen Aber letztlich, also
+
+261
+00:36:01.710 --> 00:36:07.449
+Simon Bergmoser: muss man aufpassen, dass man so jemanden, der neu ist, nicht mit Methoden überfrachtet oder überwirft.
+
+262
+00:36:07.580 --> 00:36:22.919
+Simon Bergmoser: Es kommt dann so ein bisschen auf das Einzelgespräch an. Was ist die Situation? Ich würde die Person dann schon auch ein bisschen was zu Ihrem Workshop und Ihrem setting fragen und dann halt ganz gezielte Hinweise geben, was man machen könnte, was sie mal ausprobieren kann.
+
+263
+00:36:23.140 --> 00:36:24.640
+Simon Bergmoser: genau.
+
+264
+00:36:25.640 --> 00:36:42.050
+Oliver Hönig: So aktuelle Ki-tools in Meetings sind ja eher so begleitend als Co-facilitator oder fassen die Inhalte zusammen. Man kann da nochmal: nachfragen oder helfen beim Clustern z. B. auf Whiteboards usw.,
+
+265
+00:36:42.050 --> 00:36:52.329
+Oliver Hönig: sind essenziell. Also nicht.
+
+266
+00:36:52.630 --> 00:37:00.340
+Oliver Hönig: Jetzt muss ich mit dem Gedanken den Facilitate dazu ersetzen. Aber es gibt ja einfach Meetings. Da lohnt es sich nicht, einen Facilitator dabei zu haben.
+
+267
+00:37:01.050 --> 00:37:08.889
+Oliver Hönig: Für das Team hätte es trotzdem einen Mehrwert. Wenn da quasi eine strukturierte Moderation stattfindet.
+
+268
+00:37:09.040 --> 00:37:14.120
+Oliver Hönig: gibt es da Sachen, die dir jetzt direkt einfallen würden, wo du sagst, Okay, das müsste dieses System können.
+
+269
+00:37:17.010 --> 00:37:21.819
+Simon Bergmoser: Ich find. S mir wirklich schwer vorzustellen. Was sag ich mal.
+
+270
+00:37:21.970 --> 00:37:27.360
+Simon Bergmoser: wie man irgendwie den Mehrwert von einem echten Facilitator in der Ki bringen könnte.
+
+271
+00:37:32.020 --> 00:37:41.650
+Simon Bergmoser: Also ich finde so transkribieren und sag ich mal, oder so ein Ergebnisprotokoll zu erstellen. Es ist sicherlich gut.
+
+272
+00:37:42.360 --> 00:37:57.519
+Simon Bergmoser: vielleicht, wenn man es mit Microsoft Teams integriert, auch direkt schon mit dem Fast-managementsystem, integriert, also jegliche Integrationen mit bestehenden Tools sind gut. Also, wenn man sagt, ja, ich mache das, dass man dann, wenn man keine Ahnung Trello oder
+
+273
+00:37:57.900 --> 00:38:08.060
+Simon Bergmoser: andere Kanbanban Boards oder andere Sachen nutzt für die Aufgabenplanung im Team, dass man das dann integriert hat. Das wäre gut.
+
+274
+00:38:08.860 --> 00:38:19.370
+Simon Bergmoser: und vielleicht könnte ich mir auch sowas vorstellen, dass man so eine Art ja so eine Art Entscheidungsfindungsmodus hat.
+
+275
+00:38:19.530 --> 00:38:29.280
+Simon Bergmoser: Wenn die Ki Stichworte hört, dass sie dann sagt: Okay, wir sammeln jetzt für das. Wir sammeln jetzt erst mal die Entscheidungsfrage.
+
+276
+00:38:29.590 --> 00:38:45.430
+Simon Bergmoser: dass wir die klar haben. Wenn wir uns darauf geeinigt haben, sammeln wir Option A bitte nur Input für Option A besprechen, dann fasst sie das zusammen. und das präsentiert das noch mal visuell. Das könnte ich mir schon vorstellen, Gerade wenn es um Entscheidungen geht, sagt man sagt: okay.
+
+277
+00:38:45.810 --> 00:38:48.490
+Simon Bergmoser: die K macht nicht nur ein Transkript, sondern
+
+278
+00:38:48.800 --> 00:39:07.600
+Simon Bergmoser: leitet durch diesen Prozess durch, nämlich erst mal: Was ist konkret die Entscheidung? Was passiert, wenn nichts gemacht wird? Was sind die verschiedenen Optionen, und was sind Vorteile und Nachteile, dass die Kaida Schritt für Schritt durchgeht und das dann immer jeweils visuell darstellt, das könnte ich mir vorstellen, wäre vielleicht schon ein bisschen hilfreich. Aber
+
+279
+00:39:08.140 --> 00:39:18.930
+Simon Bergmoser: auch da wäre dann eben immer noch dass die Leute in dem Termin, das selber antriggern, sage ich mal, ich glaube, das wäre nicht so sinnvoll, wenn die Ki von sich aus entscheidet, dass sie das jetzt macht.
+
+280
+00:39:19.090 --> 00:39:21.320
+Simon Bergmoser: sondern
+
+281
+00:39:21.530 --> 00:39:29.730
+Simon Bergmoser: oder was vielleicht auch was ich mir vorstellen könnte, ist in so einem Transkript, dass eine Ki dann vielleicht in dem Transkript überlegt. Okay.
+
+282
+00:39:29.940 --> 00:39:35.950
+Simon Bergmoser: wo ist vielleicht eine Entscheidung notwendig, die die Teilnehmer aber gar nicht
+
+283
+00:39:36.370 --> 00:39:44.909
+Simon Bergmoser: gar nicht entdeckt haben oder gar nicht besprochen haben, wo die Ki zwischen den Zeilen merkt. Okay, hier, da habt ihr vielleicht
+
+284
+00:39:45.090 --> 00:39:49.249
+Simon Bergmoser: da bräuchte es vielleicht eine Entscheidung, weil ihr euch gar nicht so einig seid wie ihr denkt.
+
+285
+00:39:49.640 --> 00:39:55.450
+Simon Bergmoser: bespreche das noch mal. Also da so praktisch den Hinweis darauf zu machen, Guckt noch mal genau da hin.
+
+286
+00:39:55.820 --> 00:40:03.279
+Simon Bergmoser: Also genau Überschrift wäre sozusagen das Aufmerksamkeitslenken der Teilnehmenden.
+
+287
+00:40:03.280 --> 00:40:08.350
+Oliver Hönig: Oder.
+
+288
+00:40:08.350 --> 00:40:08.990
+Simon Bergmoser: Ist.
+
+289
+00:40:09.400 --> 00:40:12.969
+Simon Bergmoser: Ja. Also, wo ich glaube, die Ki
+
+290
+00:40:13.460 --> 00:40:16.180
+Simon Bergmoser: am krassesten scheitern, wird es halt.
+
+291
+00:40:16.290 --> 00:40:19.219
+Simon Bergmoser: die Leute zu unterbrechen. und da.
+
+292
+00:40:19.220 --> 00:40:19.660
+Oliver Hönig: Rein.
+
+293
+00:40:19.660 --> 00:40:28.910
+Simon Bergmoser: Die Ki ist eine Maschine. Wenn die Leute reden wollen, dann werden die sich nicht unterbrechen lassen von der Ki. Das ist anders, als wenn ich als Mensch da bin.
+
+294
+00:40:28.910 --> 00:40:39.859
+Simon Bergmoser: Da ist schon mal die Hemmschwelle viel höher. Selbst wenn es eine Anfänger oder Anfängerin ist, die dann komplett wegzubügeln und über die drüber zu reden, als wenn das eine Maschine ist.
+
+295
+00:40:40.060 --> 00:40:46.149
+Simon Bergmoser: Das ist ein Mensch. Faktor: Mensch, Den kann eine Ki nicht nachhaben. Selbst wenn du Gesicht und Mimik und.
+
+296
+00:40:46.150 --> 00:40:46.560
+Oliver Hönig: Generieren.
+
+297
+00:40:46.560 --> 00:40:47.270
+Simon Bergmoser: Ist.
+
+298
+00:40:47.460 --> 00:40:51.210
+Simon Bergmoser: und sage ich mal, Deswegen braucht es eben
+
+299
+00:40:51.920 --> 00:40:54.949
+Simon Bergmoser: ist einmal der springende Punkt bei solchen Tools, eben
+
+300
+00:40:55.120 --> 00:41:04.159
+Simon Bergmoser: dass die Menschen wissen, was für Tools haben Sie zur Verfügung, die die Ki gibt und die selber dann antriggern. Aha, Wir merken gerade.
+
+301
+00:41:04.320 --> 00:41:15.379
+Simon Bergmoser: wir kommen ja in Entscheidungsprozess Ki leitet uns da mal durch oder im Nachhinein, eben der Trigger. Wenn alle fertig sind, dass dann die Ki das nicht unterbricht.
+
+302
+00:41:15.890 --> 00:41:20.849
+Simon Bergmoser: Also maximal könnte ich mir sowas vorstellen, wie dass die Ki vielleicht so ein.
+
+303
+00:41:21.050 --> 00:41:33.009
+Simon Bergmoser: Selbst wenn man so ein System hätte, wo die Ki dann irgendwann aufleuchtet mit so einem Button, der sagt: Vorsicht hier ist eine Entscheidung, die noch nicht getroffen wurde. und die Leute dann sagen: Ja, klicken wir so.
+
+304
+00:41:33.840 --> 00:41:40.090
+Simon Bergmoser: Das kann halt auch eine Gesprächskultur komplett zerstören. Ich weiß nicht.
+
+305
+00:41:40.090 --> 00:41:40.490
+Oliver Hönig: Dass.
+
+306
+00:41:42.370 --> 00:41:47.460
+Simon Bergmoser: Ob das so sinnvoll wäre. Deswegen dann eben eher.
+
+307
+00:41:47.610 --> 00:41:51.979
+Simon Bergmoser: also entweder auf Initiative der teilnehmenden oder eben im Nachgang.
+
+308
+00:41:52.440 --> 00:42:03.299
+Simon Bergmoser: Aber sowas eine Ki, die selbstständig da eingrätscht, so reingrätscht, sozusagen und eine Struktur durchsetzt, die die teilnehmenden Teilnehmenden nicht bestellt haben.
+
+309
+00:42:03.590 --> 00:42:07.790
+Simon Bergmoser: Ohne das stelle ich mir ganz schwer vor.
+
+310
+00:42:08.600 --> 00:42:18.870
+Oliver Hönig: Ist.
+
+311
+00:42:18.870 --> 00:42:19.300
+Simon Bergmoser: Genau.
+
+312
+00:42:19.300 --> 00:42:24.769
+Oliver Hönig: Aber du.
+
+313
+00:42:31.040 --> 00:42:34.820
+Simon Bergmoser: Klar geworden ist, dass es das jetzt braucht. Also, d. h.,
+
+314
+00:42:34.980 --> 00:42:40.649
+Simon Bergmoser: die Entscheidungsgrundlage muss ich jetzt. Eingreifen, ist nicht nur das, was in dem Meeting passiert, sondern
+
+315
+00:42:40.760 --> 00:42:46.949
+Simon Bergmoser: auch, was davor passiert ist, in der Auftragsklärung oder in den 5 Meetings davor.
+
+316
+00:42:48.080 --> 00:42:49.100
+Oliver Hönig: Ja. Okay.
+
+317
+00:42:49.420 --> 00:42:50.090
+Oliver Hönig: Also.
+
+318
+00:43:02.760 --> 00:43:07.800
+Simon Bergmoser: Das könnte man vielleicht einbauen. Also dass man sagt, die ersten 10 min von dem Meeting
+
+319
+00:43:08.100 --> 00:43:15.730
+Simon Bergmoser: müssen erst mal. Dann hilft, die Ki dann zu sondieren? Was ist eigentlich das Ziel für die Entscheidung heute.
+
+320
+00:43:16.140 --> 00:43:16.850
+Oliver Hönig: Ja.
+
+321
+00:43:17.770 --> 00:43:26.739
+Oliver Hönig: ich stelle jetzt mal bewusst eine etwas gebeiasste Frage auf, eine konkrete Situation, die ich jetzt so aus dem gehörten ableite.
+
+322
+00:43:28.480 --> 00:43:57.780
+Oliver Hönig: Also angenommen, es findet jetzt eine Diskussion statt. Es sind die, wie du es erwähnt hast.
+
+323
+00:43:57.780 --> 00:44:00.350
+Oliver Hönig: geht dann halt auf eine
+
+324
+00:44:01.280 --> 00:44:14.010
+Oliver Hönig: höfliche Art darauf ein. Mich würde noch die Perspektive von Person x interessieren könntest du dazu.
+
+325
+00:44:16.060 --> 00:44:19.239
+Simon Bergmoser: Es kommt sehr auf den Zusammenhang an.
+
+326
+00:44:19.950 --> 00:44:30.240
+Simon Bergmoser: Meistens. Also wenn jemand irgendwas zu einer Entscheidung nicht sagt, das ist ja oft kein Persönlichkeitsmerkmal von der Person.
+
+327
+00:44:30.370 --> 00:44:33.190
+Simon Bergmoser: sondern da gibt es andere Gründe, warum die, was nicht sagt.
+
+328
+00:44:33.310 --> 00:44:36.779
+Simon Bergmoser: und dann wird auch das Nachfragen der Ki da nicht helfen.
+
+329
+00:44:39.080 --> 00:44:50.370
+Simon Bergmoser: und wenn ich dann als Facilitator trotzdem Nachfrage dann ich frage auch nicht immer nach, Aber
+
+330
+00:44:51.910 --> 00:45:03.780
+Simon Bergmoser: ich muss mich dann auch mit einer Nichtantwort zufrieden geben, sozusagen und dann auch erkennen, wann, bohre ich da nicht weiter, weil das manchmal auch eine heikle Situation sein kann.
+
+331
+00:45:03.930 --> 00:45:10.970
+Simon Bergmoser: oder? Also ich meine, wenn 3 Leute angeregt diskutieren.
+
+332
+00:45:11.040 --> 00:45:21.349
+Simon Bergmoser: dann glaube ich auch nicht, dass die sich von der Ki unterbrochen werden wollen, Dazu hast du dann noch so Themen fragen wie Scham, Also, wenn die Person.
+
+333
+00:45:21.350 --> 00:45:31.690
+Simon Bergmoser: wenn man doch mal auf die Person guckt die Person, die nichts gesagt hat, die wird von der Ki angetriggert. Kann es auch sein, dass sie sich dafür schämt, dass sie nicht hat dazwischen quatschen können.
+
+334
+00:45:31.870 --> 00:45:39.330
+Simon Bergmoser: Also klar. Die Themen hat man auch als Facilitator so ein bisschen.
+
+335
+00:45:39.590 --> 00:45:51.220
+Simon Bergmoser: Aber die Frage ist, dann kann eine Ki. Damit, so sag ich mal, so wohlwollend umgehen bzw.
+
+336
+00:45:51.620 --> 00:46:01.460
+Simon Bergmoser: können die anderen dann damit auch umgehen. Also, es ist im Endeffekt, dass diese Moderationsrolle, von der man den Teilnehmenden akzeptiert wird.
+
+337
+00:46:02.380 --> 00:46:09.849
+Simon Bergmoser: Das hängt sehr stark davon ab, wie lange, wenn die das regelmäßig machen.
+
+338
+00:46:10.050 --> 00:46:14.710
+Simon Bergmoser: Das hängt so ein bisschen davon auch ab, von der allgemeinen Kultur ab in dem Setting.
+
+339
+00:46:14.870 --> 00:46:25.970
+Simon Bergmoser: Also ich würde es jetzt nicht per se ausschließen, aber Ich glaube, das ist einfach. Da braucht es sehr, sehr viele Voraussetzungen, damit das gut funktionieren kann, die ich gerade eher für
+
+340
+00:46:26.260 --> 00:46:32.580
+Simon Bergmoser: unwahrscheinlich halte, auch, weil es eben sehr viele Zwischentöne gibt. Die
+
+341
+00:46:33.210 --> 00:46:37.029
+Simon Bergmoser: eine Ki. Die müsste dann nicht nur das Transkript kriegen, sondern auch
+
+342
+00:46:37.200 --> 00:46:44.229
+Simon Bergmoser: Mimik, Gestik, Tonlage und so alles mitschneiden können und bewerten können, von allen Beteiligten.
+
+343
+00:46:45.340 --> 00:46:49.789
+Simon Bergmoser: vielleicht 10 Jahren, vielleicht in 5 Jahren. Wer weiß, keine Ahnung.
+
+344
+00:46:51.020 --> 00:46:56.580
+Oliver Hönig: Siehst du da generell? Also, abgesehen davon, ob es funktioniert oder nicht funktioniert, Andere Risiken.
+
+345
+00:47:00.100 --> 00:47:08.250
+Simon Bergmoser: Also, naja, also, die
+
+346
+00:47:09.570 --> 00:47:18.000
+Simon Bergmoser: also z. B. auch ein Risiko ist. Es kann auch total gut sein, dass die Person gerade nichts sagt. Vielleicht hört die einfach gespannt zu. Weißt du
+
+347
+00:47:18.330 --> 00:47:25.629
+Simon Bergmoser: bei den anderen dreien? Vielleicht ist sie gerade kurz davor überzeugt zu werden von den anderen, Wenn die Ki dann reingrätscht.
+
+348
+00:47:25.810 --> 00:47:26.760
+Oliver Hönig: Ja.
+
+349
+00:47:27.050 --> 00:47:32.890
+Simon Bergmoser: Dann so, dann bleibt die Person doch bei Ihrer Meinung. Weißt du und also.
+
+350
+00:47:32.890 --> 00:47:39.999
+Oliver Hönig: Wäre das ein Risiko, dass du sagst, Das ist bei Ki höher als bei einem menschlichen Facilitäter. und wenn ja, warum.
+
+351
+00:47:41.480 --> 00:47:47.380
+Simon Bergmoser: Das kommt dann auch wieder auf diese Zwischentöne an.
+
+352
+00:47:47.520 --> 00:47:54.140
+Simon Bergmoser: sehe ich, dass die Person gespannt zuhört oder guckt die Weg.
+
+353
+00:47:54.140 --> 00:47:54.600
+Oliver Hönig: Ja.
+
+354
+00:47:54.600 --> 00:48:02.979
+Simon Bergmoser: Wenn die Kameras an sind macht die Person so oder schweigt die einfach
+
+355
+00:48:03.400 --> 00:48:14.900
+Simon Bergmoser: oder versucht sie immer wieder dazwischen zu. Also das sind ja alles so nonverbale Signale, die man ja einordnen kann und muss.
+
+356
+00:48:15.080 --> 00:48:23.279
+Simon Bergmoser: Genau. und Ja, Also, ich halte es nicht für ausgeschlossen, aber aktuell noch für sehr unwahrscheinlich.
+
+357
+00:48:23.560 --> 00:48:24.920
+Simon Bergmoser: dass das funktioniert.
+
+358
+00:48:27.310 --> 00:48:28.920
+Oliver Hönig: Weil also
+
+359
+00:48:30.920 --> 00:48:38.010
+Oliver Hönig: kannst du nochmal, vielleicht in einem Satz begründen, warum du es für unwahrscheinlich hältst, oder wo du da das größte Problem siehst.
+
+360
+00:48:38.600 --> 00:48:51.770
+Simon Bergmoser: Weil es sehr voraussetzungsvoll ist. Also, Auftragsklärung habe ich gesagt: Video, Ton, Mimik, Gestik, All das muss mitbewertet werden, vielleicht auch die Geschichte, die, die zusammen haben.
+
+361
+00:48:51.940 --> 00:49:02.150
+Simon Bergmoser: alle Termine davor, alle Termine danach die kommen könnten, müssten bekannt sein. Also, da muss einfach sehr viel klar sein als mehr einfach nur das Meeting Transkript.
+
+362
+00:49:03.960 --> 00:49:05.269
+Oliver Hönig: Okay, super.
+
+363
+00:49:05.270 --> 00:49:09.670
+Simon Bergmoser: Das erfordert ja alles Rechenleistung und ist teuer.
+
+364
+00:49:10.010 --> 00:49:11.030
+Oliver Hönig: Also.
+
+365
+00:49:11.030 --> 00:49:12.110
+Simon Bergmoser: Also, ich meine.
+
+366
+00:49:12.430 --> 00:49:18.920
+Simon Bergmoser: ich glaube, ich glaube, da gibt es auch einen Punkt, wo dann menschliche Faszinität auch gleich günstiger wäre als eine
+
+367
+00:49:19.610 --> 00:49:21.660
+Simon Bergmoser: er weiß.
+
+368
+00:49:22.010 --> 00:49:37.940
+Oliver Hönig: Ja, wir sind am Ende jetzt nochmal die offene Frage: Gibt es irgendwelche Aspekte zur Zielorientierung, Entscheidungsfindung oder Ki-unterstützung, die wir nicht angesprochen haben oder die dir zu kurz kamen, die du jetzt noch erwähnen wollen, würdest.
+
+369
+00:49:38.390 --> 00:49:42.159
+Simon Bergmoser: Also was mir vielleicht noch einfällt, ist eben das Thema
+
+370
+00:49:42.310 --> 00:49:59.720
+Simon Bergmoser: Raumkonfiguration, also gerade wenn es so ein längerer Entscheidungsprozess ist, der gemeinsam mit einem Team passieren soll, dann arbeite ich auch viel mit Breakouts und Whiteboard. und beides musste eine Ki auch bedienen können.
+
+371
+00:49:59.930 --> 00:50:06.089
+Simon Bergmoser: Die Ki muss gucken, wenn die Leute nicht in ihre Breakouts können, oder wenn es da durcheinander geht.
+
+372
+00:50:06.090 --> 00:50:22.819
+Simon Bergmoser: muss sich überlegen: wer geht am besten in einen Breakout? Oder mach ich es zufällig? Die muss das Whiteboard lesen können. Die muss die ganzen kleinen Zettelchen gucken. Wie sind die arrangiert Passen die so kleine, subtile Sachen. Das müsste eine Ki auch alles bedienen können, wenn das ein größerer Prozess ist.
+
+373
+00:50:23.350 --> 00:50:25.820
+Simon Bergmoser: Ich schick euch jetzt in Breakouts
+
+374
+00:50:25.950 --> 00:50:30.049
+Simon Bergmoser: und zu gucken ist da noch eine Frage, oder kann ich die jetzt losschicken.
+
+375
+00:50:30.310 --> 00:50:31.510
+Oliver Hönig: Ja, also ein.
+
+376
+00:50:31.580 --> 00:50:36.670
+Simon Bergmoser: Also ja, das ist, glaube ich, auch noch eine Herausforderung.
+
+377
+00:50:38.050 --> 00:50:44.369
+Oliver Hönig: Okay, ja, super, dann würde ich die Aufnahme an dem Punkt stoppen.
+
+378
+00:50:44.490 --> 00:50:47.540
+Oliver Hönig: sind so weit durch, dann vielen Dank Schon mal.
+
+379
+00:50:48.400 --> 00:50:49.120
+Simon Bergmoser: Gerne.
+
+380
+00:50:49.580 --> 00:50:51.300
+Oliver Hönig: Stoppen.
+
