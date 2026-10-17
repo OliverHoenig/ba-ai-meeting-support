@@ -75,6 +75,15 @@ Design consequences are taken up in the next subsection.
     The agent might then miss a relevant moment.
     That trade-off is acceptable if the lower rate raises acceptance.
 
+  \item \textbf{aging reicht nicht aus um aktualität zu bewahren}
+    die annahme dass ein gedanke an reelvanz verliert je länge er zurückliegt ist vermutlich zu vereinfacht.
+    ein gedanke kann beresits wenige sekunden später komplett an relevanz verloren haben. z.B. weil die
+    gruppe von selbst genau das macht, was der gedanke versucht hat zu bezwekcen.
+    Aging alleine reich tnicht aus. einzusätzlicher mechanismus, der vor der aussprache bewertet ob der
+    gedanke immernoch relevant ist wäre von vorteil. allerdigns müsste diese evaluierung zeimlich schnell
+    gehen. ggf. könnte ein binäre evaluierung mit klassivieren wie Jev oder der desission api von open ai
+    hier ausreichen um eienn gedanken schnell als immer noch relevant bzw. nciht mehr relevant zu klassifizeiren.
+
   \item \textbf{Live speech exposes latency that chat tolerates.}
     The Inner Thoughts framework was conceived for chat.
     There, a message that fits the current context only approximately is ordinary, because
