@@ -10,16 +10,14 @@
 This thesis investigates support during a goal-oriented remote meeting, and it narrows that investigation
 to the convergent phase: when a group must evaluate existing options, remain aligned with a
 stated objective, and move toward a joint decision.
-Within that scope, the work asks how a proactive, context-sensitive AI moderator can intervene
+Within that scope, the work asks how a proactive, context-sensitive AI System can intervene
 while the meeting is still running, especially where participants may not necessarily be aware that
 something is not going ideally or is even counterproductive.
 
 The research problem gets addressed with a structured approach that integrates three complementary research
 objectives. This bridges the gap between theoretical facilitation techniques and a practically applicable
 AI-supported prototype. This prototype integrates a system proposal that builds upon existing HCI research
-and concretizes it through features derived from domain-specific knowledge in the field of facilitation. The
-result is a functional system that can be further evaluated and is intended to serve as a basis for further
-iterations or as a source of inspiration for similar systems.
+and concretizes it through features derived from domain-specific knowledge in the field of facilitation.
 
 \begin{figure}[htbp]
   \centering
@@ -45,15 +43,13 @@ iterations or as a source of inspiration for similar systems.
 \end{quote}
 The first research question aims to identify effective strategies for managing convergent remote meetings,
 such as decision-making, prioritization, and problem-solving, while also analyzing the specific challenges
-that arise. To achieve this, the thesis conducts expert interviews with certified facilitators, agile
-coaches, and team leads to gather empirical insights.
-It also analyzes literature on facilitation techniques,
-including timeboxing and role assignment, as well as the dynamics of remote collaboration. The findings are
-compared with existing research to derive best practices and identify pain points, such as off-topic
-discussions and unequal participation, which AI could potentially address.
+that arise.
+To achieve this the thesis conducts expert interviews. As preparation, a preliminary literature review was
+conducted on the topics of remote meetings and facilitation. Additionally, the literature review aims to
+identify existing findings and enrich them with insights from the expert interviews.
 
 % ---------------------------------------------------------------------------------------------------------------------
-\subsection{RQ2: Design requirements for an AI-based moderation system}
+\subsection{RQ2: Design requirements for an AI-based facilitation system}
 \begin{quote}
   \textit{Which of the challenges identified in RQ1 can be addressed by an AI-based moderation system during
     a goal-oriented remote meeting with convergent objectives, and how should such a system be designed to
@@ -63,25 +59,17 @@ The second research question asks which of the challenges identified in RQ1 can 
 AI-based moderation system during a goal-oriented remote meeting with convergent objectives, and how such a
 system should be designed. Rather than presupposing a single failure mode, the thesis first maps the
 problem space from the expert interviews and the literature, then assesses which challenges are both
-technically addressable and most promising for delivering added value. From this selection, functional and
-non-functional requirements for a proactive, context-sensitive moderator are derived. Because a system that
-attempts to address every facilitation problem at once would not be evaluable, the subsequent prototype
-isolates one high-impact, measurable sub-problem as a proof of concept for the following evaluation.
+technically addressable and most promising for delivering added value.
 
 % ---------------------------------------------------------------------------------------------------------------------
-\subsection{RQ3: Perception of the meeting with a proactive AI moderator}
+\subsection{RQ3: Perception of the meeting with a proactive AI system}
 \begin{quote}
   \textit{How do knowledge workers perceive a goal-oriented remote meeting with convergent objectives in
-    which a proactive AI moderator intervenes, with regard to communication, quality of discussion, status
-  effects, teamwork, and efficiency, and how do they experience the agent's contributions?}
+    which a proactive AI system intervenes, with regard to communication, quality of discussion, status
+  effects, teamwork, and efficiency, and how do they experience the AI system's contributions?}
 \end{quote}
 The third research question investigates how knowledge workers experience a convergent remote
 meeting that is supported by the prototype. The evaluation uses a hidden-profile hiring simulation
 in which relevant information is distributed asymmetrically, so that a well-founded group decision
-depends on sharing unique information. Meeting outcomes are measured with the questionnaire
-instrument revalidated by Davison, covering communication, quality of discussion, status effects,
-teamwork, and efficiency. Because that instrument was developed for earlier group support systems,
-additional items address how participants experience the agent's interventions, including timing,
-disruption, context-appropriateness, frequency, acceptance of unsolicited speech,
-whether unique information was brought into the discussion, and whether the remarks
-were face-saving.
+depends on sharing unique information. Meeting outcomes are measured with an adapted version of the questionnaire
+instrument by Davison \cite{davisonInstrumentMeasuringMeeting1999}.
