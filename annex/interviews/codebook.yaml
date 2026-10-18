@@ -1,33 +1,52 @@
-# Qualda codebook - the predefined set of codes.
-# Only codes listed here can be assigned to passages.
-# `children` are subcodes. `color` is optional (inherited from parent).
+# Codebook for the expert interviews.
+# Only the child codes are applied to passages. Parents are groups.
+# Definitions, rules, and anchors: annex/08_expert-interview-codebook.tex
+# Interview CSVs are not coded yet.
 
 codes:
-  - id: human-vs-ai
-    label: Human vs. AI
-    color: "#e11d48"
-  - id: remote-vs-in-person
-    label: Remote vs. In-Person
-    color: "#2563eb"
+  - id: decision-conditions
+    label: Decision conditions
+    color: "#0f766e"
     children:
-      - id: pro-remote
-        label: Pro-Remote
-      - id: con-remote
-        label: Con-Remote
-      - id: pro-in-person
-        label: Pro-In-Person
-      - id: con-in-person
-        label: Con-In-Person
-  - id: challanges-in-meetings
-    label: Challanges in Meetings
-    color: "#16a34a"
+      - id: d1-mandate-and-rights
+        label: "D1 Mandate and decision rights"
+      - id: d2-before-and-after
+        label: "D2 Before and after the meeting"
+      - id: d3-structural-limits
+        label: "D3 Structural limits of the meeting"
+  - id: meeting-dynamics
+    label: Meeting dynamics
+    color: "#b45309"
     children:
-      - id: pre-meeting
-        label: Pre-Meeting
-      - id: during-meeting
-        label: During-Meeting
-      - id: post-meeting
-        label: Post-Meeting
-  - id: tools
-    label: Tools
-    color: "#d97706"
+      - id: m1-focus-time-groan
+        label: "M1 Focus, time, and the groan zone"
+      - id: m2-voices-hierarchy-dissent
+        label: "M2 Voices, hierarchy, and dissent"
+      - id: m3-remote-signals
+        label: "M3 Remote conditions and ambiguous signals"
+  - id: facilitation-practice
+    label: Facilitation practice
+    color: "#1d4ed8"
+    children:
+      - id: f1-process-structure
+        label: "F1 Process structure"
+      - id: f2-sensemaking
+        label: "F2 Sensemaking and a visible state"
+      - id: f3-voices-and-information
+        label: "F3 Bringing in voices and information"
+      - id: f4-intervention-judgment
+        label: "F4 Intervention judgment"
+      - id: f5-neutrality-ownership
+        label: "F5 Neutrality and ownership"
+  - id: ai-cofacilitator
+    label: AI co-facilitator
+    color: "#be123c"
+    children:
+      - id: a1-promising-functions
+        label: "A1 Promising functions"
+      - id: a2-role-and-acceptance
+        label: "A2 Role, trigger, and acceptance"
+      - id: a3-risks-and-nongoals
+        label: "A3 Risks and non-goals"
+      - id: a4-missing-context
+        label: "A4 Context the system does not have"

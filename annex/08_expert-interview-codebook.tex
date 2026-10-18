@@ -1,0 +1,251 @@
+\section{Codebook for the Expert Interviews}
+\label{annex:expert-interview-codebook}
+
+This annex is the codebook for the three expert interviews. The guide is documented in
+\autoref{annex:interview-guide-facilitators}. The interviews do two kinds of work in this thesis.
+They describe how a remote group stays with a joint decision, and they are the practical basis
+for requirements and for several user stories of the AI moderator. The codebook is built for that
+use. It keeps what is needed to justify a design choice, and it leaves out biography, small talk,
+and named methods as names.
+
+The scheme has two levels: four categories and fifteen codes.
+A passage is always coded with a code, never with a category alone.
+The categories only group the codes for the write-up.
+
+\begin{itemize}
+  \item \textbf{Decision conditions (D)} describe what has to be true around a decision, including
+    work before and after the meeting. They mark what an in-meeting system cannot repair.
+  \item \textbf{Meeting dynamics (M)} describe what puts goal orientation or decision quality at
+    risk while the group is together, including what is specific to the remote setting.
+  \item \textbf{Facilitation practice (F)} describes what the experts do about that. Requirements
+    are taken from these practices.
+  \item \textbf{AI co-facilitator (A)} records where a system would help, how it should enter the
+    meeting, and what it should not take over.
+\end{itemize}
+
+The clusters in \autoref{annex:expected-thematic-clusters} were a sensitizing frame for the guide.
+They are not this coding scheme.
+
+\subsection*{Coding rules}
+
+\begin{itemize}
+  \item \textbf{Unit.}
+    Code a coherent claim by the interviewee. A claim may run across consecutive rows of the same
+    speaker. Interviewer turns, consent, and scheduling are not coded.
+  \item \textbf{Multiple coding.}
+    One claim can take more than one code when it states both a problem and a response, or both a
+    useful function and a limit.
+  \item \textbf{Explicitness.}
+    Code what is said or clearly implied. Do not invent a motive.
+    A method name is not a code. Code the job the method does, such as structuring the process,
+    making the state visible, or bringing in a voice.
+  \item \textbf{Grain.}
+    Do not open a code for a single technique. Check-in, breakouts, fist-to-five, and a
+    prioritization matrix stay under the code for their function.
+  \item \textbf{No separate polarity.}
+    Problem, practice, valued function, and refusal are carried by the code itself.
+\end{itemize}
+
+\begingroup
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \setlength{\extrarowheight}{0.4pt}
+  \renewcommand{\arraystretch}{1.05}
+  \setlength{\LTpre}{0.4em}
+  \setlength{\LTpost}{0.6em}
+  \setlength{\emergencystretch}{2em}
+  \newcommand{\cbgap}{\addlinespace[0.45em]}
+  \newcommand{\cbcatbreak}{%
+    \addlinespace[0.15em]\midrule\addlinespace[0.4em]}
+  \newcommand{\cbcat}[1]{%
+    \multicolumn{3}{@{}l@{}}{\textbf{#1}} \\*[0.2em]}
+  \newcommand{\cbrow}[5]{%
+    \textbf{#1}\par\vspace{0.1em}#2
+    & #3\par\vspace{0.25em}\textit{Rule:} #4
+    & \enquote{#5} \\
+  }
+  \begin{xltabular}{\textwidth}{@{}
+      >{\RaggedRight\arraybackslash}p{3.3cm}
+      >{\RaggedRight\arraybackslash}X
+      >{\RaggedRight\arraybackslash}X
+    @{}}
+    \caption{Codebook for the expert interviews.
+      Anchors are shortened from the transcript and keep the original German wording.}
+    \label{tab:expert-interview-codebook}\\[0.7em]
+    \toprule
+    \textbf{Code} & \textbf{Definition} & \textbf{Anchor example} \\
+    \midrule
+    \endfirsthead
+    \caption[]{Codebook for the expert interviews (continued).}\\[0.7em]
+    \toprule
+    \textbf{Code} & \textbf{Definition} & \textbf{Anchor example} \\
+    \midrule
+    \endhead
+    \bottomrule
+    \endfoot
+    \bottomrule
+    \endlastfoot
+    \cbcat{Decision conditions}
+    \cbrow
+      {D1}
+      {Mandate and decision rights}
+      {What is being decided, who may decide, and by which procedure. Includes authority,
+      majority, consensus, and a consultative single decision, and whether participation is real
+      or only a formal nod. Also the difference between a reversible and an irreversible decision,
+      and that not deciding is itself a decision.}
+      {The object, the rights, or the procedure of the decision. Running a method inside the
+      meeting is F, not D1.}
+      {Die meisten kennen in Unternehmen 2 Arten von Entscheidungsverfahren, Chef entscheidet
+      [\ldots] und das andere Entscheidungsverfahren ist Mehrheit.}
+    \cbgap
+    \cbrow
+      {D2}
+      {Before and after the meeting}
+      {Work outside the live discussion: preparation, a shared information base, unprepared
+      participants, documentation, and the handoff into next steps. Includes who does what by
+      when, and whether the result is checked afterwards.}
+      {Conditions outside the session. A summary of the current discussion is F2.}
+      {das allergrößte Manko wirklich bei Remote-Meetings, dass Leute in die Meetings reinkommen
+      und nicht vorbereitet sind.}
+    \cbgap
+    \cbrow
+      {D3}
+      {Structural limits of the meeting}
+      {The meeting as a symptom of something the meeting itself cannot fix: missing autonomy,
+      the wrong people or too many people, a meeting used only to broadcast information, or a
+      decision postponed until the next regular slot.}
+      {The speaker says that better moderation, or an AI, would not remove the underlying
+      problem.}
+      {du kriegst diese strukturellen Probleme nicht durch besseres Meeting.}
+    \cbcatbreak
+    \cbcat{Meeting dynamics}
+    \cbrow
+      {M1}
+      {Focus, time, and the groan zone}
+      {The group leaves the decision: side tracks, circular talk, a decision that is not ripe,
+      or time pressure that rushes or avoids the uncomfortable middle. Also discovering late that
+      the group has been working on the wrong problem.}
+      {The problem or the critical moment. The remedy is an F code.}
+      {ständig [\ldots] Nebenschauplätze aufgemacht werden. Vielleicht weil die Entscheidung
+      einfach noch nicht reif ist.}
+    \cbgap
+    \cbrow
+      {M2}
+      {Voices, hierarchy, and dissent}
+      {Unequal speaking, dominance, hierarchy, and whether criticism can be said. Includes trust
+      and fear culture as conditions for dissent, and silence of someone whose stake matters.
+      Silence of someone with nothing to add is not this code.}
+      {The social dynamic. A concrete invitation is F3.}
+      {Diese Kultur, dass Widersprüche immer etwas Positives sind [\ldots], leben ganz wenige
+      Organisationen.}
+    \cbgap
+    \cbrow
+      {M3}
+      {Remote conditions and ambiguous signals}
+      {What changes because the meeting is remote: cameras off, parallel work, missing nonverbal
+      and cultural cues, no informal clarification in a break, and a reluctant yes that is hard
+      to tell from agreement. Also tools and a shared visual surface as a condition of a complex
+      decision online.}
+      {The remote setting or an unreliable cue. Use A4 as well when the point is that an AI would
+      lack that cue.}
+      {Wenn ich online eine Pause mache, sind die Leute erst mal Disconnected und da können sich
+      vielleicht so kleinere Punkte dann nicht noch klären.}
+    \cbcatbreak
+    \cbcat{Facilitation practice}
+    \cbrow
+      {F1}
+      {Process structure}
+      {A deliberate shape for the meeting: agenda, check-in, small groups, opening before
+      closing, separating clarification from debate, and switching to the meta level near the end
+      (how the group will decide, instead of reopening the content).}
+      {The process design. A single paraphrase is F2.}
+      {Du machst ein Check-in, dass du am Anfang schon mal alle Stimmen im Raum hast.}
+    \cbgap
+    \cbrow
+      {F2}
+      {Sensemaking and a visible state}
+      {Condensing or externalizing where the group stands: summary, clustering, paraphrase,
+      options with consequences, and a display of positions that everyone can see at once, such
+      as a scale, a poll, or a matrix.}
+      {An act that makes the discussion state visible. A pure time warning is A1 when it is
+      proposed for the AI, and F4 when it is a judgment about intervening.}
+      {Sensemaking miteinander zu machen [\ldots] diese Ergebnisse nochmal in eine Clusterung
+      bringst [\ldots] das und das und das die Cluster sind.}
+    \cbgap
+    \cbrow
+      {F3}
+      {Bringing in voices and information}
+      {A move that gets a missing person or a missing fact into the discussion: a named
+      invitation, hearing lower hierarchy before leadership, writing as well as speaking, and
+      holding back evaluation while positions are still being collected. Includes asking what an
+      absent role would say.}
+      {The move, not the mere fact that voices are unequal (M2). Role matters: inviting everyone
+      equally is not required by this code.}
+      {Die Praktikantin, die nichts sagt [\ldots], die werde ich nicht ansprechen, aber den
+      Co-founder, der länger nichts gesagt hat [\ldots], den werde ich schon mal fragen.}
+    \cbgap
+    \cbrow
+      {F4}
+      {Intervention judgment}
+      {When to step in, when to wait, and whom to address. Includes holding silence, the risk of
+      being too early or too late, and stopping when a non-answer is itself information. Also
+      face and tone: an invitation that would expose someone.}
+      {The judgment about timing, addressee, or restraint. The content of the move may also
+      receive F1, F2, or F3.}
+      {manchmal schweige ich auch einfach und warte [\ldots]. wenn nach 7~s keiner [\ldots], dann
+      weiß ich [\ldots], da muss ich jetzt nochmal [\ldots] anders fragen.}
+    \cbgap
+    \cbrow
+      {F5}
+      {Neutrality and ownership}
+      {The facilitator structures the conversation and does not make the decision. The group, or
+      a named decision owner, has to take the result as their own. A decision cannot be delegated
+      to the facilitator.}
+      {The human role. The same boundary stated for an AI is A3.}
+      {die Entscheidung wirklich zu treffen [\ldots] ist nicht die Aufgabe von Facilitator,
+      sondern die Aufgabe der Führungskraft.}
+    \cbcatbreak
+    \cbcat{AI co-facilitator}
+    \cbrow
+      {A1}
+      {Promising functions}
+      {A concrete use the speaker treats as helpful: timekeeping and agenda signals, fast
+      summaries and clustering, walking a group through a decision (question, options, doing
+      nothing, pros and cons), pointing at a decision the group has not noticed, a bias cue,
+      documentation into existing tools, or a persona for a missing stakeholder.}
+      {A valued function. If the same claim limits when it may happen, add A2 or A3.}
+      {wenn sie es schafft, schneller diese Zusammenfassungen zu machen [\ldots] aus komplexen
+      Daten schneller Sinn zu machen.}
+    \cbgap
+    \cbrow
+      {A2}
+      {Role, trigger, and acceptance}
+      {How the system should enter the meeting and whether people would accept it. Includes
+      on-demand versus proactive speech, a prior agreement of the group, a human who triggers
+      the system, and presence: a chat is talked over, and people may not yield the floor to a
+      machine.}
+      {The interaction role, not the function itself (A1).}
+      {Muss aber eingeführt werden. Und muss ein Agreement der ganzen Gruppe haben, dass die das
+      machen kann.}
+    \cbgap
+    \cbrow
+      {A3}
+      {Risks and non-goals}
+      {Harm, refusal, or a boundary: surveillance and sentiment analysis, data protection,
+      exposing quiet people, a false read, the system deciding or imposing a structure nobody
+      asked for, and efficiency that crowds out human talk.}
+      {A limit or a harm. A function that is useful under a condition is A1 plus A2 or A3.}
+      {das kann ganz schnell in Kontrolle übergehen. [\ldots] die letzten zehn Meetings hast du
+      dich kein einziges Mal gemeldet.}
+    \cbgap
+    \cbrow
+      {A4}
+      {Context the system does not have}
+      {Knowledge a facilitator uses that sits outside the transcript: roles and stakes, the
+      mandate and earlier meetings, private circumstances, nonverbal cues, and the culture of
+      the group.}
+      {A missing context as a design constraint. The human difficulty of reading the remote room
+      stays M3 unless the AI is the point.}
+      {hier bei jemandem ist gerade die Tochter krank. [\ldots] das weiß die KI aber nicht.}
+  \end{xltabular}
+\endgroup
