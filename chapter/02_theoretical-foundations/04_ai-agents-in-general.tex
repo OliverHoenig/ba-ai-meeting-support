@@ -1,35 +1,34 @@
 \section{LLM-based AI-Systems and Agents in General (RQ2)}
 \label{sec:ai-agents}
 
-Um das später KI system besser klassifizieren zu können sowie relevante Pattern zu erkennen wird hier in
-diesem kaptiel ein kurzer exkurs zu LLM-basierten systemn und agten geben. Diese kaptiel hat alledrdings
-nicht den anspruch auf vollständigkeit sondern dient primär dazu verständlich zu machen wo rauf der author
-sich fokusiert hat.
+The previous chapters examined remote meetings, facilitation, and existing GSS primarily from an application
+perspective. In the case of the last, technical approaches were also described. To address RQ2,
+typical patterns to llm based AI systems are also relevant, as well as the possibility of testing these
+assumptions. However, this chapter does not claim to be exhaustive but serves primarily to clarify what the
+author has focused on.
 
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{Agentic Systems vs. Programmatic Automation / Workflows}
 \label{sec:agentic-systems-vs-programmatic-automation-workflows}
 
-Huang beschreibt es ist schwer ein korrekte und vollständige definition von dem Begriff AI-Agent zu
-geben, weil sich das Verständis darüber und die technologien  dahinter schnell ändern. \cite[p.
+Huang explains that it is difficult to provide a correct and complete definition of the term “AI agent”
+because our understanding of it and the technologies behind it are changing rapidly. \cite[p.
 2]{huangAgenticAITheories2025}
 
-Zusätzlich bestehet der subjektive eindruck das der Begriff AI-Agent inflationär und inkosisten benutzt wird,
-was zu einen difusen Verständnis führt. Um den begriff einzugrene wird sich in dieser Thesis versucht über
-die abgrenzung zu programmatischen Automatiserungmethoden anzunähern.
+In addition, there is a subjective impression that the term “AI agent” is used excessively and inconsistently
+in the literature, which leads to a diffuse understanding of the concept. To narrow down the definition of
+the term, this thesis attempts to approach the concept by distinguishing it from programmatic automation methods.
 
-Unter Programmatische Prozessautomatisierung wird in dieser Thesis die regelbasierte Automatisierung von
-Abläufen, bei der
-festgelegte Bedingungen und strukturierte Entscheidungslogiken genutzt werden, um Prozesse effizient,
-zuverlässig und wiederholbar auszuführen.
+In this thesis, “programmatic process automation” refers to the rule-based automation of
+workflows, in which defined conditions and structured decision-making logic are used to execute processes efficiently,
+reliably, and reproducibly.
 
-während klassische software vordeinfierte instruktionen ausführt, würden "AI Agents possess the capcitiy to
-initiate actions, make decision, and pursue
-goald without constant human intervention" \cite[p. 2]{huangAgenticAITheories2025}
+While traditional software executes predefined instructions, “AI agents possess the capacity to initiate
+actions, make decisions, and pursue goals without constant human intervention” \cite[p. 2]{huangAgenticAITheories2025}
 
-Somit haben AI-Agenten hierbei einen höheren Grad an autonomität.
+Thus, AI agents have a higher degree of autonomy in this context.
 
-Antrhopic wählt folgende Definition für LLM-basierte Workflows und Agenten:
+Anthropic uses the following definition for LLM-based workflows and agents:
 
 \begin{quote}
   "Workflows are systems where LLMs and tools are orchestrated through predefined code paths.
@@ -37,18 +36,20 @@ Antrhopic wählt folgende Definition für LLM-basierte Workflows und Agenten:
   maintaining control over how they accomplish tasks." \cite{anthropicBuildingEffectiveAI}
 \end{quote}
 
-Bestehende Paper wie die Studie von Houtti et al. oder von Liu et al.
-\cite{liuProactiveConversationalAgents2025} sprechen beispielweise ebenfalls von einem KI-Agent, obwohl es
-fraglich ist ob diese der definition von Antroplic als KI-Agent klassifiziert werden können oder eher llm
-basierte Workflows sind.
-Bei dem System von Houtti et al. kommen keine LLMs zum einsatz. Die authoren selbst sagen, dasss sie einen
-regelbasites Prototyp-System einsetzten zum besseren testen. \cite{houttiObserveAskIntervene2025}
-Für diese Thesis soll es daher zunöchst genügt eine grobe Einordnung, ob das entwickelte System eher agentisch oder
-workflowbasiert ist. Der autor nutz daher meisten für einge schlussfolgerungen oder sytem beschreibungen den
-allgmeien begriff KI-System. werden andere system zietert und die autoren nutezn den begriff "KI-Agent" wurde
-dieser übernommen.
+Existing papers, such as the study by Houtti et al. or by Liu et al.
+\cite{liuProactiveConversationalAgents2025}, also refer to an AI agent, for example, although it is
+questionable whether these can be classified as AI agents according to Antroplic’s definition or whether they
+are rather LLM-based workflows.
+The system developed by Houtti et al. does not use any LLMs. The authors themselves state that they used a
+rule-based prototype system to perform better testing. \cite{houttiObserveAskIntervene2025} Nevertheless,
+they refer to it as an AI agent.
 
-Eine einordnung des tatsächlichen system ergibt sich aus der Systemarchitectur im entsprechenden Kaptiel.
+For the purposes of this thesis, it should therefore suffice for now to provide a rough classification of
+whether the developed system is more agent-based or workflow-based. The author therefore mostly uses the
+general term “AI system” for certain conclusions or system descriptions. When other systems are cited and the
+authors use the term “AI agent,” this term has been adopted.
+
+A description of the actual system can be found in the section on system architecture.
 
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{Prompt Engineering and Context Engineering}
