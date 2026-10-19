@@ -113,8 +113,11 @@ It should also be noted that the system is a rule-based prototype that does not 
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{Proactive AI-Interactions: From Turn-Taking to intrinsic Motivation with the Inner Thoughts Framework}
 \label{sec:proactive-ai-interactions}
-To reduce the need for explicit prompts, an AI agent should be able to proactively recognize when it is its
-turn in an interaction sequence. In dyadic human-AI interactions, pauses or so-called “stop words” are often
+
+So an AI-System can proactivly interact and therefor reduese the need for explicit prompts by the meeting participants
+it should be able to proactively recognize when it is its turn in an interaction sequence.
+
+In dyadic human-AIinteractions, pauses or so-called “stop words” are often
 used for this purpose to identify a change in speaker. In multi-party scenarios (e.g., group conversations),
 however, this becomes significantly more complex and leads to the “multi-party turn-taking
 problem”. \cite{sacksSimplestSystematicsOrganization1974}
@@ -124,37 +127,39 @@ on previous speaker changes.
 \cite{bayserLearningMultiPartyTurnTaking2019}
 Bayer et al. employ traditional algorithms such as Maximum Likelihood Estimation (MLE) and Support Vector
 Machines (SVMs), as well as deep learning architectures including Convolutional Neural Networks (CNN) and
-Long Short-Term Memory (LSTM) networks. They distinguish two primary paradigms: agent-only
-models, which rely solely on speaker history, and agent-and-content models, which additionally incorporate
-conversational context. Both paradigms have been trained and evaluated across diverse, topic-oriented and
-chit-chat corpora using these varied algorithms.
-The empirical findings indicate that while simple agent-only models are sufficient for small, highly focused
-dialogues, incorporating conversational content becomes crucial in goal- and topic-oriented interactions
-characterized by complex, irregular turn-taking patterns.
-\cite[p. 2]{bayserLearningMultiPartyTurnTaking2019}
+Long Short-Term Memory (LSTM) networks.
 
 With these approaches, however, it remains unclear why an agent should interact at a specific point in time.
 Due to the design of the ML algorithms, the timing of the interaction is decoupled from its cause or is only
-implicitly included in the model, but cannot be explicitly explained. (Example: We know that it is now the
-time for the agent to interact now -> But why? Whats the reason its like that he should talk? What should he say?)
+implicitly included in the model, but cannot be explicitly explained.
 
-Ein naiver ansatz für Turn-taking wäre ein LLM so zu prompnten es zu fragen wer als nächstes dran ist. Liu
-et al. \cite{liuProactiveConversationalAgents2025} haben dies überprüft und konnte ihre Hypothese bestätigen,
-dass diese Ansatz bei bei turn-allocation ansätzen gut funktioniert. Dies ist nahligen weil in diesem
-szenarien in dem chat kontext indizene liegen wer als nächstes dran ist. alle getestetn LLM Modelle hatten
-bei turn-acllocation eine besser vorhersagequote als bei selfallocation stellen. die vorhersagen für self
-allocation haben sich im rahnen einer zufälligen chance bewegt. Die Authoren schlussfolgern. Das für
-self-selection szenarien der konversations kontext allene nicht ausricht und noch intenre factoren dafür
-verantwortlich seien.
+A naive approach to turn-taking prediction would be to prompt an LLM to ask who is next.
 
-Die über die leltzten jahre stattgefunden entwicklung bei LLMs ermöglichen neue ansätze um diese Problem zu modellieren.
-Neus Paradgima von LLM-basierten Agentischen Systemen.
-Was ist das? -> Hier berscheiben was KI-Agenten sind (Anthopic definition finden und verwenden)
-LLM basierte AI-Agenten mit einer LLM pipelie welche intrisische gedanken simmuliert, könnte ein viel
-versprechender ansatz sein.
+Liu et al. investigated various language models (including GPT-3.5, GPT-4o, and fine-tuned variants) with
+regard to their ability to predict the next speaker (next-speaker prediction). They showed that these
+approaches work well when speaker identification (turn allocation) is explicit.
+\cite[p.4]{liuProactiveConversationalAgents2025}
 
-Liu et al. verfolgenden diesen Ansatz um einen procativen conversationa Agent mit inner Thoughts zu
-modellieren. \cite{liuProactiveConversationalAgents2025}
+This makes sense, since the current speaker explicitly assigns the next turn to a specific person, and the
+conversational context thus contains clear semantic cues, such as direct mentions of names—that an LLM should
+be able to process well.
 
-Y verfolgen diesen ansatz um eine proaktiven Chatbot zu modellieren und
-schlussfolgern, dass
+However, in self-selection scenarios, where a participant chose themselves as the next speaker without being
+asked to do so, all models performed no better than chance.
+\cite[p.4]{liuProactiveConversationalAgents2025}
+
+The authors conclude from this that the conversational context alone is insufficient for self-selection*
+scenarios, and that hidden, internal factors (such as interest, relevance, or motivation to engage) play a
+decisive role. \cite[p.4]{liuProactiveConversationalAgents2025} Based on a
+thinking-aloud study with 24 participants, they concluded that people are driven by intrinsic motivation to
+voice their thoughts. \cite[p.2]{liuProactiveConversationalAgents2025}
+
+Building on this, they modeled a framework for chatbots that they call “Inner Thoughts.” An LLM-based agent
+continuously generates internal thoughts in parallel with the conversation and evaluates them based on a
+defined heuristic (a fixed prompt in the LLM call). If the intrinsic motivation (i.e., the evaluation of a
+thought) exceeds a configurable threshold, the agent decides whether to participate, taking into account the
+turn-taking type. \cite{liuProactiveConversationalAgents2025}
+
+In chat evaluations, this system achieved significantly higher performance in self-selection scenarios
+than conventional baselines, and human evaluators perceived the conversations as significantly
+more natural, intelligent, and coherent. \cite[p.2]{liuProactiveConversationalAgents2025}
