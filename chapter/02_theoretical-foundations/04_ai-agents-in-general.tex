@@ -55,33 +55,31 @@ A description of the actual system can be found in the section on system archite
 \subsection{Prompt Engineering and Context Engineering}
 \label{sec:context-engineering}
 
-Allgemein bezeichte Context engineering das Designen, organiseren und managen von kontexsenstiiver infromatioen,
-so das machienen im einklaing mit der menschlichen intention aggieren. \cite[p. 3]{huaContextEngineering202025}
+In general, context engineering refers to the design, organization, and management of context-sensitive information,
+so that machines act in accordance with human intent. \cite[p. 3]{huaContextEngineering202025}
 
-Obwohl das Context Engineering bereits in frühen Frameworks der Mensch-Computer-Interaktion eine Rolle
-spielte \cite[p. 1]{huaContextEngineering202025}, hat die Forschung aufgrund der wachsenden Herausforderungen in der
-Human-Agent-Interaction (HAI) in jüngster Zeit eine verstärkte Fokussierung auf dieses Gebiet erfahren.
-
-Die Relevanz dafür sit begründet auf aktuellen Limitiationen (TODO Beispile), Performance Verbeserungen (TODO
-Beispiele) und Resroucen Optmierung.
+Although context engineering already played a role in early human-computer interaction frameworks
+\cite[p. 1]{huaContextEngineering202025}, research has recently placed greater emphasis on this field due to
+the growing challenges in
+human-agent interaction (HAI).
 
 Mei et al. (2025) haben in ihrer Meta-Studi \cite{meiSurveyContextEngineering2025} über 1.400
 Forschungsarbeiten zum Thema Context Engineering für LLMs analysiert.
-Laut den Autoren haben sich LLMs von einfachen Systemen, die lediglich Anweisungen
-befolgen (sog. Prompt Engineering), zu zentralen Schlussfolgerungsmodulen entwickelt. Dabei habe sich
+Laut den Autoren haben sich LLMs von einfachen Systemen, die lediglich Anweisungen befolgen (sog. Prompt
+Engineering), zu zentralen Schlussfolgerungsmodulen entwickelt. Dabei habe sich
 die Gestaltung und Verwaltung von Informationsinhalten zu einer eigenständigen Disziplin weiterentwickelt
 (Context Engineering) \cite{meiSurveyContextEngineering2025}
 
-Bei LLM-basierter Systeme lässt sich Context Engineering wie folgt definieren:
+For LLM-based systems, context engineering can be defined as follows::
 
 \begin{quote}
   "Context engineering is the practice of deliberately structuring and optimizing the information passed to an
   LLM or Agent to produce more accurate and relevant outputs." \cite[00:34]{ibmtechnologyWhatContextEngineering2026}
 \end{quote}
 
-Damit geht Context Engineering über das klassische Prompt Engineering hinaus und umfasst erweiterte Methoden wie
-Retrieval-Augmented Generation (RAG), Speichersysteme, Tool-integriertes Reasoning sowie Multi-Agent-Systeme
-(vgl. Mei et al., 2025). \cite[p. 12-26]{meiSurveyContextEngineering2025}
+Context engineering thus goes beyond traditional prompt engineering and encompasses advanced methods such as
+retrieval-augmented generation (RAG), memory systems, tool-integrated reasoning, and multi-agent systems
+(see Mei et al., 2025). \cite[p. 12-26]{meiSurveyContextEngineering2025}
 
 \begin{figure}[htbp]
   \centering
@@ -91,13 +89,13 @@ Retrieval-Augmented Generation (RAG), Speichersysteme, Tool-integriertes Reasoni
   \label{fig:venn-diagram-prompt-engineering-context-engineering}
 \end{figure}
 
-Obwohl in der Literatur verschiedene Methoden zum Kontext Engineering diskutiert werden, weisen Mei et al.
-kritisch darauf hin, dass die Praxis derzeit ohne einheitliche theoretische Grundlagen operiert. Diese
-Grundlagen wären notwendig, um die unterschiedlichen Techniken miteinander zu verknüpfen und
-prinzipienbasierte Entwurfsrichtlinien abzuleiten. Die Forschungslücke wird zudem durch das Fehlen
-mathematischer Rahmenwerke verstärkt, die es ermöglichen würden, optimale Entwurfsprinzipien für das Kontext
-Engineering in komplexen Systemen zu charakterisieren. Dies steht im Zusammenhang mit dem Mangel an Methoden
-zur Bestimmung der optimalen Kontextzusammensetzung. \cite[p. 51]{meiSurveyContextEngineering2025}
+Although various methods of context engineering are discussed in the literature, Mei et al.
+critically point out that current practice operates without a unified theoretical foundation. Such a
+foundation would be necessary to link the various techniques together and
+derive principle-based design guidelines. This research gap is further exacerbated by the lack of
+mathematical frameworks that would make it possible to characterize optimal design principles for context
+engineering in complex systems. This is related to the lack of methods
+for determining the optimal context composition. \cite[p. 51]{meiSurveyContextEngineering2025}
 
 %%%%%%%
 % ---------------------------------------------------------------------------------------------------------------------
@@ -105,9 +103,11 @@ zur Bestimmung der optimalen Kontextzusammensetzung. \cite[p. 51]{meiSurveyConte
 \subsection{Building blocks for LLM-based Workflows and Agents}
 \label{sec:ai-agent-building-blocks}
 
-Um den späteren AI-Agent zu bauen, war es notwenidg sich zunächst mit den Grundbausteinen der KI-Agenten zu
-beschäftigen. Antrhopic hat dies bezüglich eine Blogpost \cite{anthropicBuildingEffectiveAI} veröffetnlicht
-welcher die Grundbauseite aus deren Sicht zusammenfasst und als Hauptgrundlage für dieses Kapitel dient.
+In order to develop the AI agent described later, it was first necessary to examine the fundamental building
+blocks of AI agents.
+Anthropic has published a blog post on this topic, \cite{anthropicBuildingEffectiveAI}, which summarizes
+these fundamental building blocks from their perspective and serves as the primary basis for this chapter. We
+first examined all currently common patterns, even though not all of them were ultimately used in the actual system.
 
 \newpage
 
@@ -124,7 +124,7 @@ welcher die Grundbauseite aus deren Sicht zusammenfasst und als Hauptgrundlage f
 
 In prompt chaining, a complex task is broken down into a sequential series of substeps. Each step is
 described by a prompt and an LLM call, which uses the result of the previous step as context for the next step.
-Programmatic checks can be inserted in between.
+Programmatic checks can be inserted in between. \cite{anthropicBuildingEffectiveAI}
 
 \textbf{Routing}
 
@@ -137,10 +137,10 @@ Programmatic checks can be inserted in between.
   \label{fig:routing}
 \end{figure}
 
-Beim Routing werden aufgaben klassifiziert und an untersysteme welche auf das lösen dieser Kategorie von
-aufgaben spezialisert sind weitergeleitet. Dadruch entsteht eine klare Ternnung von Verantwortlichkeiten, was
-besonder gut geeignet ist wenn komplexe Aufgaben in klar abgrezbare Kategoiren aufgeteilt werden können und
-von spezialsierten LLMs andern KI-Modelen oder Algorithmen bearbeitet werden können.
+During routing, tasks are classified and forwarded to subsystems that specialize in solving that category of
+tasks. This results in a clear separation of responsibilities, which
+is particularly well-suited when complex tasks can be divided into clearly definable categories and
+processed by specialized LLMs, other AI models, or algorithms. \cite{anthropicBuildingEffectiveAI}
 
 \textbf{Parallelization}
 
@@ -154,11 +154,11 @@ von spezialsierten LLMs andern KI-Modelen oder Algorithmen bearbeitet werden kö
   \label{fig:parallelization}
 \end{figure}
 
-Beim Parallelisierungs-Workflow werden mehrere Aufgaben gleichzeitig bearbeitet und die Ergebnisse
-programmatisch aggregiert. Typische Anwendungsfälle liegen vor, wenn Aufgaben in unabhängige Teilaufgaben
-unterteilt werden können (Segmentierung) oder wenn mehrere Perspektiven für ein zuverlässigeres Ergebnis
-erforderlich sind (Voting). Bei komplexen Aufgaben mit mehreren Aspekten erzielen LLMs bessere Ergebnisse,
-wenn jeder Aspekt durch einen separaten Aufruf mit spezialisiertem Prompt fokussiert bearbeitet wird.
+In the parallelization workflow, multiple tasks are processed simultaneously, and the results
+are aggregated programmatically. Typical use cases arise when tasks can be broken down into independent subtasks
+or when multiple perspectives are required to achieve a more reliable result
+(e.g. voting). For complex tasks with multiple aspects, LLMs achieve better results
+when each aspect is addressed separately using a specialized prompt. \cite{anthropicBuildingEffectiveAI}
 
 \textbf{Orchestrator-workers}
 
@@ -173,10 +173,10 @@ wenn jeder Aspekt durch einen separaten Aufruf mit spezialisiertem Prompt fokuss
   \label{fig:orchestrator-workers}
 \end{figure}
 
-Der Orchestrator-Worker-Workflow ähnelt dem Parallelisierungs-Workflow, unterscheidet sich jedoch darin, dass
-er eingesetzt wird, wenn die benötigten Teilaufgaben nicht im Voraus bekannt sind. Ein zentrales LLM zerlegt
-die Hauptaufgabe dynamisch in Teilaufgaben und delegiert diese an eine beliebige Anzahl von Worker-LLMs,
-deren Ergebnisse abschließend aggregiert werden.
+The Orchestrator-Worker workflow is similar to the parallelization workflow, but differs in that
+it is used when the required subtasks are not known in advance. A central LLM dynamically breaks down
+the main task into subtasks and delegates them to any number of worker LLMs,
+whose results are then aggregated. \cite{anthropicBuildingEffectiveAI}
 
 \textbf{Evaluator-optimizer}
 
@@ -190,114 +190,84 @@ deren Ergebnisse abschließend aggregiert werden.
   \label{fig:evaluator-optimizer}
 \end{figure}
 
-Der Evaluator-Optimizer-Workflow nutzt eine Feedbackschleife, in der ein LLM Antworten generiert, während ein
-weiteres diese bewertet und durch Feedback versucht zu optimieren. Dieser Ansatz ist besonders effektiv, wenn
-klare Bewertungskriterien vorliegen und iterative Verbesserungen messbar sind.
-
-\textbf{Augmented LLM}
-
-Diese Workflows orientieren sich an klaren Argumentationsketten. Die Informationen folgen einem im Code
-prozedural gesteuerten sequenzeller Weg, während LLM-Aufrufe bewusst für entsprechende Teilaufgaben mit einer zuvor
-bekannten Intention stattfinden. Mit anderen Worten: Es existieren vordefinierte, klare Pfade, denen die
-Daten sowie die Ausgaben der LLM-Aufrufe folgen.
-
-Bei Agenten gibt es diese kar vordefinierten prozeduralen Pfade in dem sinne nicht. Das LLM
-selbst wird genutzt, um zu entscheiden, welche Wege eingeschlagen werden sollen.
-Dies kann insbesondere bei offenen Problemen hilfreich sein, die sich nicht ohne Weiteres in einem starren
-Workflow abbilden lassen.
-Dabei wird das LLM mit verschiedenen Tools ausgestattet, und es bleibt dem Modell überlassen, ob und wann es diese Tools
-aufruft. Die Qualität des Gesamtoutputs hängt somit auch davon ab, wie zuverlässig das LLM das korrekte Tool
-auswählt. Dies abstrahiert offene Probleme in eine Struktur, in der Tool-Calling in einer Schleife
-stattfindet, bis das LLM selbst entscheidet, dass das gewünschte Ergebnis erreicht ist.
-
-%%%%%
-Diese workflows orienteirren sich an klaren Argumentationsketten. Die Infroamtionen folgen einem im code
-procedural gesteuretem weg und llm calls finden intentila für entsprechende unteraufgaben mmit einer vorher
-bekannt intention zu einem squenziall beaknten zeitrahmen statt. Anders ausgerdück gibt es vordefinierte
-klare Wege, welche die Daten und die outputs der LLM-Calls folgen.
-
-Folgt man der Definition von Athropic werden diese klaren vordefinierten entfernt und ein LLM wird
-genutzt um selbst zu entscheiden, welche wege eingeschalagen werden. Dies kann besonders offene Problme
-hilfreich sein, die nicht einfach in einem Workflow eingefangen werden können. Hierbei wird ein LLM mit
-verscheinde Tools ausgestattet und es dem llm wird überlassen ob es dieses Tool aufrufen wird. Die Qualtiät
-des gesamt outputs häng somti auch damit zusammen wie zuverlässig dass LLM das korrekte Tool aufruft. Dies
-abstrahiert somit offene Problme in eine struktur in der Tool-Calling in a Loop stattfinde, bis das LLM
-selbst entscheiden, wann das gewünsche ergbeniss erreicht ist.
-
-Wrokflos Desing lassen smoit granularer Kontroole zu, während Agents etwas losgelöster aggieren können.
+The evaluator-optimizer workflow uses a feedback loop in which one LLM generates responses while another
+evaluates them and attempts to optimize them through feedback. This approach is particularly effective when
+clear evaluation criteria are in place and iterative improvements are measurable. \cite{anthropicBuildingEffectiveAI}
 
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{Evaluating and Testing of AI-Systems}
 \label{sec:evaluating-ai-systems}
 
-Auf Grund des propablistischen Charakters von KI-basierten Systmen unterscheidet sich das testen von
-KI-basierten Systmen grundlegend von herkömmlichen Testverfahren.
+Due to the probabilistic nature of AI-based systems, testing
+AI-based systems differs fundamentally from conventional testing methods.
 
-Das International Software Testing Qualifications Board (ISTQB®) legt daher nahe dass dieser popalibisitsche
-Charakter statistische Testverfahren erfordern würde. \cite[p. 39]{istqbrISTQBCertifiedTester}
+The International Software Testing Qualifications Board (ISTQB®) therefore suggests that this probabilistic
+nature would require statistical testing methods. \cite[p. 39]{istqbrISTQBCertifiedTester}
 
-Eine zusätzliche Herausforderung besteht darin, dass einige KI-Systeme nicht nur statisch, sondern auch
-adaptiv sind und sich somit kontinuierlich anpassen können \cite[p.~39]{istqbrISTQBCertifiedTester}.
+An additional challenge is that some AI systems are not only static but also
+adaptive, and can therefore continuously adjust themselves \cite[p.~39]{istqbrISTQBCertifiedTester}.
 
-Diese Anpassungen können mindestens auf zwei Ebenen auftreten:
+These adjustments can occur on at least two levels::
 \begin{itemize}
-  \item \textbf{Kontextbasierte Anpassung::} Innerhalb der Anwendung kann sich das KI-System dynamisch an
-    veränderte Rahmenbedingungen oder die vielfältigen Möglichkeiten des zu diesem Zeitpuntk bereitgestellen
-    Kontexts anpassen.
-  \item \textbf{Modellbasierte Anpassung:} Unabhängig vom konkreten Kontext des Use-Cases können sich die
-    zugrundeliegenden KI-Modelle selbst verändern, etwa durch den Einsatz selbstlernender Algorithmen. Bei
-    der Integration externer Large Language Models (LLMs) kann der Anbieter Modifikationen am Modell
-    vornehmen, die für den Nutzer nicht direkt ersichtlich sind.
+  \item \textbf{Context-Based Adaptation:} Within the application, the AI system can dynamically adapt to
+    changing conditions or the diverse possibilities offered by the
+    context available at that moment.
+  \item \textbf{Model-Based Adaptation:} Regardless of the specific context of the use case, the
+    underlying AI models may change on their own, for example through the use of self-learning algorithms. When
+    integrating external large language models (LLMs), the provider may make modifications to the model
+    that are not immediately apparent to the user.
 \end{itemize}
-Die Festlegung eines Test-Orakels, also die Definition der erwarteten Ausgaben bei bestimmten Eingabewerten
-für das zu testende System, ist bei komplexen KI-Systemen daher extrem schwierig oder sogar
-unmöglich \cite[p.~39]{istqbrISTQBCertifiedTester}.
+Defining a test oracle that is, specifying the expected outputs for specific input values for the system
+under test is therefore extremely difficult or even impossible in complex AI systems
+\cite[p.~39]{istqbrISTQBCertifiedTester}.
 
-Dies gilt auf für LLM-basierte Systeme.
+In a live meeting scenario, context-based adaptation is particularly relevant. In any given meeting, there
+may be a variety of participants working on different topics, which makes the context in which the AI system
+operates highly variable.
 
-Auch Mohammadi et al \cite[p. 1]{mohammadiEvaluationBenchmarkingLLM2025} weisen darauf hin, dass das evaluieren und
-Testen von LLM-basierte Agenten ein komplexes und noch wenig erforschtes Gebiet sei, insbesondere weil
-Agetnten oft in einem dynamischeren und interactivem Kontext opereieren.
-Sie beschreiben daher das testen von LLM-Agents als zusammenspiel der verscheinen Perspektiven von Naturla
-Langugae Processing (NLP), human.computerinteraction (HCI) und Software engineering.
+Mohammadi et al. \cite[p. 1]{mohammadiEvaluationBenchmarkingLLM2025} also point out that evaluating and
+testing LLM-based agents is a complex and still under-researched field, particularly because
+agents often operate in a more dynamic and interactive context.
+They therefore describe the testing of LLM agents as an interplay of the various perspectives of natural
+language processing (NLP), human-computer interaction (HCI), and software engineering.
 
-Codebasierte Methoden (engl. code-based methods) versuchen, die Leistung von KI-Systemen durch expliziten
-Programmcode, definierte Regeln und Testfälle mit Assertions zu überprüfen. Dabei wird geprüft, ob die
-ausgeführten Aktionen exakt vorgegebenen Kriterien entsprechen. \cite[p. 7]{mohammadiEvaluationBenchmarkingLLM2025}
+Code-based methods aim to evaluate the performance of AI systems using explicit
+program code, defined rules, and test cases with assertions. This involves verifying whether the
+actions performed exactly meet specified criteria. \cite[p. 7]{mohammadiEvaluationBenchmarkingLLM2025}
 
-Hierfür können beispielsweise mögliche Zustände, die das System durchläuft, modelliert und anhand von
-Trajektorienvergleichen analysiert werden.
-Bestehende Benchmarking-Verfahren wie AgentBoard \cite{maAgentBoardAnalyticalEvaluation2024} sind jedoch oft
-allgemein gehalten und für domainspezieifsche Use Cases nur bedingt geeignet.
+For this purpose, for example, possible states that the system goes through can be modeled and analyzed using
+trajectory comparisons. However, existing benchmarking methods such as AgentBoard
+\cite{maAgentBoardAnalyticalEvaluation2024} are often
+general in nature and only partially suitable for domain-specific use cases.
 
-Insbesondere bei offenen oder qualitativen Antworten sowie bei kreativen Problemen, bei denen die Korrektheit
-subjektiv bewertet werden kann, stoßen codebasierte Verfahren an ihre Grenzen
+Code-based methods reach their limits, particularly with open-ended or qualitative responses, as well as with
+creative problems where correctness
+can be evaluated subjectively
 \cite[p.~7]{mohammadiEvaluationBenchmarkingLLM2025}.
 
-Der LLM-as-a-Judge-Ansatz nutzt die Argumentationsfähigkeiten von LLMs, um die Antworten von Agenten anhand
-qualitativer Kriterien zu bewerten. Dabei werden die Antworten basierend auf
-den in den Anweisungen vorgegebenen Bewertungsmaßstäben analysiert. \cite[p.~7]{mohammadiEvaluationBenchmarkingLLM2025}.
+The “LLM-as-a-Judge” approach leverages the reasoning capabilities of LLMs to evaluate agents' responses based on
+qualitative criteria. In this process, the responses are analyzed based on
+the evaluation metrics specified in the instructions. \cite[p.~7]{mohammadiEvaluationBenchmarkingLLM2025}.
 
-Die Authoren Zheng et al. \cite[p. 4]{zhengJudgingLLMasaJudgeMTBench2023} schalgen drei Varianten des
-LLM-as-a-Judge-Ansatzes vor, die einzeln oder kombiniert angewendet werden können:
+The authors Zheng et al. \cite[p. 4]{zhengJudgingLLMasaJudgeMTBench2023} propose three variants of the
+LLM-as-a-Judge approach, which can be applied individually or in combination:
 \begin{itemize}
-  \item Pairwise Comparison: Ein LLM vergleicht zwei Antworten auf eine Frage und entscheidet, welche besser
-    ist oder ob ein Unentschieden vorliegt.
-  \item Single Answer Grading: Ein LLM bewertet eine einzelne Antwort direkt anhand einer Skala oder eines
-    Kriterienkatalogs.
-  \item Reference-Guided Grading: Ein LLM bewertet eine Antwort im Vergleich zu einer vorgegebenen
-    Referenzlösung, z. B. bei mathematischen Aufgaben.
+  \item Pairwise Comparison: An LLM compares two answers to a question and decides which is better or whether
+    there is a tie.
+  \item Single Answer Grading: An LLM evaluates a single answer directly using a scale or a set of criteria.
+  \item Reference-Guided Grading: An LLM evaluates an answer by comparing it to a given
+    reference solution, e.g., for math problems.
 \end{itemize}
 
-Im Anhang des Papers „Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena“ finden sich entsprechende
-Prompts, die für die verschiedenen Varianten des LLM-as-a-Judge-Ansatzes verwendet werden können
+The appendix to the paper “Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena” contains the corresponding
+prompts that can be used for the various variants of the LLM-as-a-Judge approach
 \cite{zhengJudgingLLMasaJudgeMTBench2023}.
 
-Laut Mohammadi et al. gilt jedoch nach wie vor die Human-in-the-Loop-Evaluierung als Goldstandard, bei der
-Menschen (etwa in Nutzerstudien, Expertenaudits oder durch Crowdworker) die Ausgaben annotieren oder
-bewerten \cite[p.~7]{mohammadiEvaluationBenchmarkingLLM2025}. Dieser Ansatz ist jedoch oft schwer skalierbar
-und mit hohem Aufwand sowie Kosten verbunden.
+According to Mohammadi et al., however, human-in-the-loop evaluation is still considered the gold standard, in which
+people (such as in user studies, expert audits, or through crowdworkers) annotate or
+evaluate the outputs \cite[p.~7]{mohammadiEvaluationBenchmarkingLLM2025}. However, this approach is often
+difficult to scale and involves significant effort and costs.
 
-Ein weitverbreiteter Ansatz ist Evaluation-Driven Development (EDD), bei dem KI-basierte Systeme und Agenten
-während der Entwicklungsphase kontinuierlich evaluiert werden, um Abweichungen zu erkennen und neue Use Cases
-zu identifizieren \cite[p.~6]{mohammadiEvaluationBenchmarkingLLM2025}.
+A widely used approach is Evaluation-Driven Development (EDD), in which AI-based systems and agents
+are continuously evaluated during the development phase to detect deviations and identify new use cases
+\cite[p.~6]{mohammadiEvaluationBenchmarkingLLM2025}.
