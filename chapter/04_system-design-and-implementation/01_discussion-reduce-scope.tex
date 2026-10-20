@@ -1,84 +1,78 @@
 \section{Discussion of research results and decision to narrow down}
 \label{sec:discussion-reduce-scope}
 
-\subsection{Warum trotz bedenken an dem proaktiven ansatz festeglten wurde.}
+\subsection{Retaining Proactive Facilitation Despite Empirical Concerns}
 
-Diese Arbeit ist von einer bestimmten Prämisse ausgegangen: ein KI-System, das in einem
-zielorientierten Remote-Meeting moderierend eingreift, solange das Meeting läuft, und das dies
-proaktiv tut.
+This thesis is based on a specific premise: an AI system that proactively steps in to moderate a
+goal-oriented remote meeting while the meeting is in progress.
 
-Da faciliattorien eben falls proaktiv in meeting eingreifne und moderation teil ihrer rolle ist
-fragt, Forschungsfrage~2 fragt deshalb nicht, ob Moderation grundsätzlich nützlich wäre. Sie fragt,
-welche der in RQ1 beschriebenen Herausforderungen ein solches System im laufenden Meeting
-überhaupt erreichen kann, und wie der Eingriff beschaffen sein muss.
+Since facilitators also intervene proactively in meetings and facilitation is part of their role, RQ2 does
+not ask whether facilitation would be useful in principle. It asks which of the challenges
+described in RQ1 such a system could actually address during an ongoing meeting, and what form the
+intervention must take.
 
-Es könnte kritisert, werden dass diese Annahme zu eng war. In der Literatur wurden, beretis tendenzen
-festgestellt, sich Meeting tielenhemden eher zu weniger proaktiv eingreifender systeme tendieren. (vgl. 2.3.2)
+One could argue that this assumption was too narrow. The literature has already identified a tendency for
+meeting facilitators to lean toward systems that intervene less proactively. (See 2.3.2)
 
-Auch aus den Experten interview gehen einige vermutete Limitation bei eingereifder KI hervor, welche exakte
-solche proaktiven ansätze welche die arbeit eingetlich untersucht als nicht viel versprechend deklaieren.
+The expert interviews also reveal some presumed limitations of proactive, interventionist AI meeting systems,
+with experts declaring precisely those proactive approaches, which this study aims to investigate in depth, to
+be unpromising.
 
-Gleichzeitig geht aus der Literatur und  Interviews hervor, dassproaktives einschreiten in einigen
-entscheidungs fokusierten Meeting mit convergierendem charakter, nötig und bei menschlichen Facilitatorn
-gänige Praxis ist. Vom autor gesichter forschungsansätz verfolgen bei KI-Systemen aber eher zurückhalender Ansätze,
-was z.B. unteranderem zur folge hat das die beiträge der KI ignoriert wurden. (vgl. 2.32)
+At the same time, the literature and interviews indicate that proactive intervention is necessary in some
+decision-focused meetings with a convergent nature and is common practice among human facilitators. However,
+the research approaches examined by the author tend to take a more cautious stance when it comes to AI
+systems, which has sometimes resulted, for example, in the AI’s contributions being ignored. (see 2.32)
 
-Desweiteren sind die limitation welche die expertern interviews implizieren, auch wenn sie plausible
-erscheinen, hypotetisch.
+Furthermore, the limitations implied by the expert interviews, althougt they seem plausible, hypothetical.
 
-Offen bleibt die frage wie tielnehmenden in ziel-orietneiren-remote meetings eine proactives eingreifne eines
-KI-Systems den tatäschlich wahrnehmen würden. Aber dem autor in seiner
-literatru recherche keine systeme aufgefallen, welche tatäschlich versucht hätten in einer live-meeting
-situation proaktiv einzugreifen, weshlab auch wenige system design wurden, die dies versuchen.
+The question remains as to how participants in goal-oriented remote meetings would actually perceive a
+proactive intervention by an
+AI system.
+However, in his literature review, the author did not find any systems that had actually attempted to
+intervene proactively in a live meeting situation, which is why research in this area, with concrete
+implementation proposals, is limited.
 
-Daher hat sich der Atuor dazu entschieden an der ursprüglichen premisse verzuhalten und zu versuchen einen
-ersten KI protoyp zu entferne welcher tatsälich in einer live meeting situation evaluiert werden kann.
-Dies geschah nicht weil die geäußerten Bedenken oder Limitationen nicht für plausible Emfindungen wurden, sondern
-viel mehr aus der annahme heraus, dass ein erster verusch ein solches proaktives system zu desingen, weiter
-erkenntisse und herausfoderungen sowie chancen offenlegen würde, die sonst wenig beachtung gefunden hätten.
-Aus diesen Leranings wird sich erfhoft patter abzuleiten werden, um solche proaktiv moderirne system weieter
-zuentwickeln.
+Therefore, the author decided to stay with the original premise and attempt to develop an initial AI
+prototype that could actually be evaluated in a live meeting situation.
+This was not because the concerns or limitations raised were deemed implausible, but rather based on the
+assumption that an initial attempt to design such a proactive system would reveal further insights,
+challenges, and opportunities that would otherwise have received little attention.
+It is hoped that patterns can be derived from these learnings to further develop such proactive moderation systems.
 
 % ---------------------------------------------------------------------------------------------------------------------
-\subsection{Warum eine weitere Einschränkung notwendig war}
+\subsection{Focusing the Design Scope on Hidden Profile Szenarios}
 
-Die vorangegangenen Kapitel öffnen einen weiten Problemraum. Zielorientierte Remote-Meetings
-scheitern an Tempo, Fokus, ausbleibenden Entscheidungen, ungleicher Beteiligung und verzerrtem
-Informationsaustausch (\autoref{sec:facilitation-and-group-decisions},
-\autoref{sec:hidden-profiles}).
+The previous chapters have opened up a broad range of issues. Goal-oriented remote meetings often fail due to
+a lack of pace, focus, and decision-making, as well as uneven participation and a skewed exchange of
+information (\autoref{sec:facilitation-and-group-decisions}, \autoref{sec:hidden-profiles}).
 
-Die Experteninterviews identifizieren darin mehrere Faciliating verhaltenweise, die je nach Meeting situation
-praktikabel ist. Ein system zu entwicklen, welches auf alle diese verhaltenweise reagieren kann, wäre zu
-komplex undwürde RQ2 nicht beantworten. Eine beobachtete Wirkung ließe
-sich keiner einzelnen Designentscheidung zurechnen.
+The expert interviews identify several facilitating behaviors that are applicable depending on the meeting
+situation. Developing a system capable of responding to all of these behaviors would be too complex and would
+not answer RQ2. Any observed effect could not be attributed to any single design decision.
 
-Einige der vorschläge der Expterne fpr Potenziale des meetings fallen außerhalb des scopes. Vorbereitung und
-Dokumentation (F8, F7) liegen vor und nach dem Meeting.
-Zusammenfassung, Clustering und Zeit-Erinnerungen (F1, F2) nähern bestehende Werkzeuge bereits
-an (\autoref{sec:existing-meeting-ai-tools}). Fehlt eine Rolle, fragen Facilitatoren die Gruppe,
-was diese Rolle sagen würde. Sie wie in (F6) zu simulieren ein andere Ansazt, welcher nicht unter eine
-proactive moderation fällt.  ist ein anderer Eingriff.
-Ein Entscheidungsverfahren (F3) kann die Gruppe einschalten, sobald Optionen sichtbar sind. Diese
-Züge bleiben gültige Praxis. Sie verlangen kein System, das ungefragt in das laufende Gespräch
-eintritt.
+Some of the experts’ suggestions regarding the potential of AI-supported meeting systems fall outside the
+scope. Preparation and documentation (F8, F7) take place before and after the meeting.
+Summarization, clustering, and time reminders (F1, F2) are already being addressed by existing tools
+(\autoref{sec:existing-meeting-ai-tools}). If a role is missing, facilitators ask the group what that role
+would say. Simulating this as in (F6) is a different approach that does not fall under proactive moderation.
+A decision-making process (F3) can be initiated by the group as soon as options become apparent.  It does not
+require a system that intervenes in the ongoing conversation without being asked.
 
-Daher wurde als vielversprechender Ansatz der Bias-Hinweis (F5) gewählt, welcher am ehesten mit der
-Froschugnsfrage einhergeht. Gleichzeitig bleibt es trotz der vermuteten Grenzen gerechtfertigt, diesen
-proaktiveren Ansatz zu verfolgen, denn hier ist der Nutzen eines proaktiven Systems am größten. Da die Gruppe die
-Verzerrung ggf. nicht selber erlebt, welche aktiv um hilfe geben werden müssen vermutlich gar nicht erst
-getriggert und zu passive ansätze könnten ggf. ignoriert werden.
+Therefore, the bias indicator (F5) was selected as a promising approach, as it is most closely aligned with
+the research question. At the same time, despite the presumed limitations, it remains justified to pursue
+this more proactive approach, as this is where the benefits of a proactive system are greatest. Since the
+group may not experience the bias themselves, those who would need to actively provide help might not even be
+prompted to do so in the first place, and overly passive approaches could potentially be ignored.
 
-Der Bias, der an einer Kernaufgabe von Facilitatoren zusamenhängt, ist der Shared-Information-Bias
-(\autoref{sec:hidden-profiles}). Teilnehmende zu integrieren heißt in dieser Praxis, die Stimme
-oder den Fakt einzubringen, der das Ergebnis verändern würde
-(\autoref{sec:interview-facilitation-practice}). Für Entscheidungen ist das besonders erfoderlich.
-Im Hidden Profile liegt die relevante Information bereits vor, nur über die Gruppe
-verteilt. Jede Person bildet auf ihrem Teilwissen eine schlechtere Präferenz, als die Gruppe sie
-aus der gemeinsamen Lage bilden würde. Die bessere Option muss in der konvergenten Phase gesagt
-werden. Sie muss weder beschafft noch neu erzeugt werden.
+The bias associated with a core task of facilitators is the shared-information bias
+(\autoref{sec:hidden-profiles}). In this practice, integrating participants means contributing the opinion or
+fact that would change the outcome
+(\autoref{sec:interview-facilitation-practice}). This is particularly essential for decision-making.
+In the hidden profile, the relevant information is already available, but distributed across the group. Based
+on their partial knowledge, each person forms a preference that is inferior to the one the group would form
+based on the shared situation.
 
-Das Inner-Thoughts-Framework biete eine technische grundlage welche durch adaption an diesen usecase
-angepasst werden kann.
+The Inner-Thoughts Framework provides a technical foundation that can be adapted to this use case.
 
-somit wurde diese fokusierung als sowohl viel verpsrehcen im kontext der bisherh gewonne erkennist es als
-auch als technisch umsetzbar eingestuft.
+Consequently, this focus was deemed both promising in the context of the insights gained so far and
+technically feasible.
