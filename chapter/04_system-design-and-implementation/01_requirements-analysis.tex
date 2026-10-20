@@ -23,23 +23,6 @@ damit spätere Design- und Scope-Entscheidungen eindeutig darauf verweisen könn
   \refstepcounter{us}%
 \textbf{US\theus}\label{#1}}
 \newcommand{\usref}[1]{US\ref{#1}}
-\newcommand{\acrow}[1]{%
-  & \multicolumn{2}{@{}>{\raggedright\arraybackslash}p{\dimexpr\linewidth-1.15cm-2\tabcolsep\relax}@{}}{%
-    \begin{minipage}[t]{\linewidth}
-      \footnotesize
-      \textit{Acceptance criteria}\par\vspace{0.3em}%
-      \begin{itemize}[
-            nosep,
-            leftmargin=1.15em,
-            itemsep=0.32em,
-            topsep=0pt,
-            parsep=0pt,
-          label=\textendash]
-          #1
-      \end{itemize}%
-    \end{minipage}%
-  }%
-}
 \newcommand{\usblocksep}{%
   \addlinespace[0.35em]
   \midrule
@@ -55,8 +38,7 @@ damit spätere Design- und Scope-Entscheidungen eindeutig darauf verweisen könn
     >{\small\raggedright\arraybackslash}X
     >{\small\raggedright\arraybackslash}X
   @{}}
-  \caption{Derived user stories for an AI facilitator, including acceptance criteria and references to the
-  source chapters}
+  \caption{Derived user stories for an AI facilitator, with references to the source chapters}
   \label{tab:ai-facilitator-user-stories}\\[0.9em]
   \toprule
   \textbf{ID} & \textbf{User Story} & \textbf{Reasoning / References} \\
@@ -77,16 +59,7 @@ damit spätere Design- und Scope-Entscheidungen eindeutig darauf verweisen könn
   failure mode of goal-oriented meetings
   (see \autoref{sec:facilitation}; \autoref{sec:key-challenges-in-meetings}).
   The expert interviews confirm that unclear purpose undermines facilitation quality
-  (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\*
-  \addlinespace[0.45em]
-  \acrow{
-  \item The agent can retrieve the stated meeting goal and intended process from its facilitation
-    mandate and paraphrase them in one or two sentences.
-  \item At the start, or when the group loses the thread, it can restate goal and next process step
-    without inventing a goal that was never agreed.
-  \item If the goal is missing or internally contradictory, it flags the ambiguity instead of
-    deciding a purpose on its own.
-  } \\
+  (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\
   \usblocksep
   \usid{us:quiet-voices}
   & Als AI-Facilitator möchte ich Personen, die noch wenig gesagt haben, auf rücksichtsvolle Weise in
@@ -96,16 +69,7 @@ damit spätere Design- und Scope-Entscheidungen eindeutig darauf verweisen könn
   (see \autoref{sec:key-challenges-in-meetings}).
   Expert facilitators invite quiet members, but warn that doing so online can stigmatize or feel like
   control
-  (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\*
-  \addlinespace[0.45em]
-  \acrow{
-  \item Speaking-time shares are available as an external cue, so prolonged silence of a relevant
-    participant can be detected.
-  \item The invitation is face-saving (short, optional, addressed by name) and does not expose
-    monitoring as blame (\enquote{you have not said anything}).
-  \item The same person is not re-invited in a short window after a declined or unanswered
-    invitation.
-  } \\
+  (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\
   \usblocksep
   \usid{us:unshared-information}
   & Als AI-Facilitator möchte ich gezielt nach noch nicht genannten oder nicht ins Bild passenden
@@ -115,15 +79,7 @@ damit spätere Design- und Scope-Entscheidungen eindeutig darauf verweisen könn
   (see \autoref{sec:hidden-profiles}).
   The interviews describe the same practice of checking whether all relevant voices and facts are on
   the table
-  (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\*
-  \addlinespace[0.45em]
-  \acrow{
-  \item When the discussion recycles already shared points, the agent may ask whether information
-    has not yet been mentioned or does not fit the emerging picture.
-  \item It does not introduce unique facts of its own about the decision alternatives.
-  \item The prompt is directed at the group or at a named holder of potentially unique information,
-    not at pushing a preferred option.
-  } \\
+  (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\
   \usblocksep
   \usid{us:hold-dissent}
   & Als AI-Facilitator möchte ich Meinungsverschiedenheiten nicht vorschnell auflösen, damit Dissent
@@ -132,14 +88,7 @@ damit spätere Design- und Scope-Entscheidungen eindeutig darauf verweisen könn
   information search too early
   (see \autoref{sec:hidden-profiles}; \autoref{sec:divergent-convergent}).
   Interviewed facilitators likewise open first, then converge
-  (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\*
-  \addlinespace[0.45em]
-  \acrow{
-  \item While two or more positions are still being explored, the agent does not propose a
-    premature consensus, vote, or majority close.
-  \item It may invite a missing or dissenting view, but it does not evaluate which side is correct.
-  \item Disagreement is treated as process information, not as a conflict to be extinguished.
-  } \\
+  (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\
   \usblocksep
   \usid{us:sparse-intervention}
   & Als AI-Facilitator möchte ich nur sparsam und mit klarem Prozessnutzen eingreifen, damit die
@@ -150,15 +99,7 @@ damit spätere Design- und Scope-Entscheidungen eindeutig darauf verweisen könn
   (see \autoref{sec:research-approaches-to-ai-supported-meeting-systems};
   \autoref{sec:interaction-paradigms}).
   Experts warn against over-facilitation and a missing sense of presence
-  (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\*
-  \addlinespace[0.45em]
-  \acrow{
-  \item An utterance is spoken only if a thought passes a facilitation-motivation threshold; casual
-    filler is not spoken.
-  \item Each intervention is one short facilitation act (at most one or two sentences).
-  \item Immediately after speaking, repetition of the same move is suppressed for a cooldown
-    period.
-  } \\
+  (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\
   \usblocksep
   \usid{us:agenda-time}
   & Als AI-Facilitator möchte ich thematische Abweichungen und Zeitdruck erkennen und die Gruppe
@@ -166,14 +107,7 @@ damit spätere Design- und Scope-Entscheidungen eindeutig darauf verweisen könn
   & Lack of focus, off-topic talk, and failure to reach a decision are long-standing GSS problems
   (see \autoref{sec:key-challenges-in-meetings}).
   Timekeeping and agenda-keeping were named in the interviews as a particularly useful AI contribution
-  (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\*
-  \addlinespace[0.45em]
-  \acrow{
-  \item The agent can compare the current topic and elapsed time against the stated agenda.
-  \item When the group drifts or overruns, it offers a brief process check
-    (\enquote{shall we return to \ldots?}), rather than cutting speakers off as a referee.
-  \item It does not skip remaining agenda items on its own authority.
-  } \\
+  (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\
   \usblocksep
   \usid{us:sensemaking}
   & Als AI-Facilitator möchte ich den Diskussionsstand zusammenfassen und Entscheidungsoptionen
@@ -184,16 +118,7 @@ damit spätere Design- und Scope-Entscheidungen eindeutig darauf verweisen könn
   Making the live meeting state visible has also been evaluated positively in related AI probes
   (see \autoref{sec:research-approaches-to-ai-supported-meeting-systems}).
   Experts see fast summarization as the strongest concrete AI benefit
-  (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\*
-  \addlinespace[0.45em]
-  \acrow{
-  \item At a convergent moment, or when asked, the agent can restate the options and candidate next
-    steps in a short summary.
-  \item The summary is offered as a check (\enquote{have I understood this correctly?}), not as a
-    decision.
-  \item The agent does not add new options of its own unless the group asks for a process
-    suggestion.
-  } \\
+  (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\
   \usblocksep
   \usid{us:neutrality}
   & Als AI-Facilitator möchte ich inhaltlich neutral bleiben und selbst keine Entscheidung treffen,
@@ -202,21 +127,6 @@ damit spätere Design- und Scope-Entscheidungen eindeutig darauf verweisen könn
   authority
   (see \autoref{sec:facilitation}).
   Interviewed facilitators invite leadership to interpret, but do not decide in the group's place
-  (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\*
-  \addlinespace[0.45em]
-  \acrow{
-  \item The agent never ranks, scores, or recommends a decision alternative.
-  \item It may invite a designated decision-owner to interpret what was heard; it never casts a
-    vote or declares an outcome.
-  \item Facilitation memory stores the mandate, criteria, and process knowledge, not personal
-    preferences about the options under discussion.
-  } \\
+  (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\
 \end{xltabular}
 \renewcommand{\arraystretch}{1}
-
-Für den Prototyp werden daraus bewusst nur die Stories priorisiert, die Hidden Profiles und ungleiche
-Beteiligung betreffen: \usref{us:quiet-voices}, \usref{us:unshared-information}, \usref{us:hold-dissent},
-\usref{us:sparse-intervention} und \usref{us:neutrality}.
-\usref{us:goal-clarity} ist nur insoweit relevant, als das Ziel im Facilitation-Mandat vorliegt.
-\usref{us:agenda-time} und \usref{us:sensemaking} bleiben wünschenswert, liegen aber außerhalb des
-evaluierten Interventionsmechanismus.
