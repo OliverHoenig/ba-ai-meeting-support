@@ -153,55 +153,71 @@ Design consequences are taken up in the next subsection.
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{Lessons Learned: Implications for similar System Designs}
 
-Im druchschnitt hat die KI alle x minuten interveniwert. man könnte dies ggf. darduch reduzieren, dass der
-interrupt und der imThreshold heruntergesetzt werden. Allerdings würde dies dazuführen, dass die meisten
-gedanekn unausgesprochen bleiben. Dies wirk erstmal verschwenderisch. es müsste eine gleichgewicht gefunden
-werden dass wirklich relevante gedanekn in dem aktuellen moment angepsrochen werden. andere wiederum
+Aus den beobachtungen wurden folgende Lessons learnd abgelgiet für jemanden der ähnliche system entwickeltn mcöhte.
 
-Besser kontext, wenn eien genaua agend vorliegt und facilitatorin anweiseungen was in diesm agenda puntk
-besonders relevant ist. das könnten die antworten verbesseren. Hinzukommt auch eine grnularere ein teilung in
-phasen. in diesem beipsiel hätte z.B. der Facilitator am anfang ein vorgehen vorschalgen können. "Wir sammeln
-Reihum die vor und nachteile der kandidaten und entscheiden dann welcher kandidat am besten passt."
+Die Trace anlayse war sinnvoll um während des Prototpyings ein intuitives verstädnis von dem System zu
+entwickeltn. für die evalueirung von echten szenarien hat sich allerdigns herausgestellt, dies diese exterm
+aufweändig ist. in dem vorliegene protoyp werden pro conversations element, finden llm cals auf grund der
+turn prediction statt, dann soviel cllas wei gedanekn geneirt werden, für das retreivel werden embedinngs
+gecalled und letztlich wird der gedanke dann zu einer aussprechbaren text fomruliert. während in kurzen
+session und beim prototyping sich darüber noch ein überblick verstand werden kann war dies in einem live
+session szenario in dem unterschiedlcih teilner zu nicht bekannten zeitpunkten mit nicht bekanntem kontext
+inteagieren nicht pratikable zu analyiseren. Daher leitet der autor erkennt an, dass eien trace analyse eine
+genauere insight über das system ermöglichen, weißt aber drauf hin, dass für solche system genung zeit
+eingeplatn wird diese traces dann auch analyiserbar zu machen. Ggf. biete sich uach erstmal ein LLM as a juge
+an, welche den meeting kontext erhält und dann beipielseweise die gednaken basieren auf den kontext
+analyisert. Dies wäre somit ein domain spezifiesches auf den protppy abgestimmtes evaluations layer. hier zu
+könnte einge foschung betrieben werden.
 
-Zukünfige arbeiten sollten nicht versuchen einen generischen Facilaitor zu entwciklen, welche passend
-reagiert, sondern sich bewährte strukturen nutzen diesn ablauf festlegen, dann die eingschaften und wichtigen
-Punkte für die Phasen dieser strukur ableiten und klar formulieren. ein KI-Facilitator würde sich dann auf.
-somit kann dann besser evaluiert werden, ob der facilitator sich an die merkamle dieser phasen gehalten hat.
-die reduziert die aufgaben des fecilaitoas auf wenige haupt punkt und würde vermutlich einen größern impakt erzeugen.
+Die Interaktions rate ist bei einem proaktiven System das in meetings in dne gruppen entscheidugen treffen
+udn vermtulich auch in anderen meetings exterm entscheident. Dieser Protyp hat gezeigt, dass die
+Interaktion zu hoch war und infolge dessen das system von vielen ignoriert wurde. das vertrauen in das system scheint
+druch ein paar falsche interaktieon so schenll gefallen zu sein, dass weiter interaktione unabhänig davon ob
+dies ggf. sinnvoll waren ignoriert wruden. somit besthet die gefahr, dass der tatsächlich possitive effekte
+des system in User Stuiden nicht deutlich erkennbar sind, weil die tielnehmende das system auf grund der zu
+hohen interaktion rate ignorerie. dies heißt aber nicht zwangsläufig das die geäußerter beiträge nicht auch
+sinnvoll wäre. [hier zitat einfügen]
 
-Es wäre dann möglihc die heurisiken desinner thoughs models an diese granualren phasen anzupassen.
+User studien sind gut geeigent um die live interaktion eines solchen system zu testen, allerdigns sind die
+einschätzungen der user in szenarien in den ein bias vorliegt mit vorsicht zu genießen. die gruppen war in
+einem hiden profiles szenario unddie KI hat versucht die personen zu integieren. in gruppe ein merkte ein
+tielnehmde sogar an, dass die KI das hidden profiles szenario aufgedeckt hat und dies für ihn das nützlichste
+war. zeitgleich bewertet die gruppe alleridgns das system so, dass es nicht dabei geholfen hat neue
+information aufzudecken. Im allgemein ist schwer einzuschätzen ob das system hier tatsächlich der gruppe
+dabei geholfen hat dies aufzudekcn oder ob die gruppe nicht gerade eh dabei war das selbst herauszufinden.
+Wenn teilenhmden allerdigns gbiasd sind, könen sie ggf. die meeting situaion nciht ganzheitlich einschätzun
+und somit ist fraglich ob sie den mehrwert eines solchen systems erkennen. Des wetiern greift das system
+aktiv ein und hat Leute unterborchen. Auch wenn dies in eingein fällen sinnvoll war, heißt dies nicht dass
+die tielnehmden das dann auch als sinnvoll bewerten. In diesm fall sage ein Teilneher aus gruppe 03 "Ziata
+lucien". diese einschätzung seltzt aber eine geweisse selbst reflektion vorraus, welche nicht von allen
+teilnehmedne  erwarter werden kann.
 
-[TODO: Abbildung mit phasen, wie ein weiteres System design aussehen könnte.]
+Live-Meeting interaktion utnerleigen einen höhren anspruch als chat interaktionen bezüglich der reaktion
+szeit des system und den interakton mgölichkeiten. das inner thogs framewokr wurde
+als chat framework konzipiert. Chat sind asynchrone interaktionen. Wärhend eines meetings erwarte tielnehmden
+das der agent auf den aktuell kontext reagiren, kann dies bedeute insbsonder auch dass situation gehänelt
+werden könne müssen in denen jemadn dem KI-Faciliator ins wort fällt. Dies ist nicht unbedingt eine
+herausforderung welche nur für ki facilitation oder GSS gilt, sonder vermutlich eher eine allgemein herausforderung im
+desin von KI-Voice-Agenten. Es wurde die annahme getroffen, dass domain spcifice System etnscheidungen die
+auf das faclitatin abziehlen isoliert geteset werden können. Nach den bobachtungen aus den user test,
+schlussfolgert der autor alleridgs, dass dies nur begrenz möglich ist. eine solide architektur struktur eines
+vocie agents der allgmeien interkations funktionlität ermöglihct wäre als grund lage gut um darauf hin ein
+solches system zu adapteiren.
 
-Im Zuge dessen wäre es dann entscheident das logging der LLM-Traces zu verbessern, um das system besser
-evaluieren zu können.
+Zukünfige arbeiten sollten nicht versuchen einen generischen Facilaitor zu entwciklen. Wie im vorherigen
+puntk erwähnt ist dies allerdigns eine schwierige Abwängunssache. ist der funktions umfang zu eingeschärnkt
+(z.B. interaktion sind nicht natürlich ) könnte man gefarh laufen, dass das system nach nicht erfüllt
+erwarunghaltung mit für menschen als normal empfunden interaktions möglichen, dazuführ, dass das system
+ignoiert wrid. Ein ansaätz wäre allerding sich auf eine ganz konkrte facilitation methode (z.B. Liberation
+Strutures oder Thinklets) oder einer sinnvoll aneinder gereihten sequenz solcher bewährter methoden zu
+beschränken. Die aufgaben des KI-Ageten sind dann die erklärung der aufgabe, das beantwortn zu rückfragen der
+methodik/aufgabe stlelung und time keeping. nach evaluerung eines solchen system könnten proaktivere Ansätze,
+die für die gewählte methode förderlich sind punktell hinzugefügt werden.
 
-entscheidender währe dann die übergänge zwischnen den phasen.
-
-Es gibt neben effekte die das evaluaieren des systems erschweren: die trun allocation könnten
-fälschlicherweise den faciliatoatr zu weisen, dann reicht der imThreshoad um einen gedanken zu äußern. da
-sich die gedanekn aber warhshcienlcih eh, um ein relevantes theam drehen führt das nicht zwangsläufig zu
-eienr falschen intervention. Sei kann trotzdem passend sein. (ggf. Beispiele ergänzen)
-
-gedanken die geäußert wurden , waren immer sehr ähnlich. und die auswertung udn das monitoring von sovielen
-traces ist sehr aufwendig. vereinfachen und gesagtes buffern udn dann in einem
-batch verarbieten.
-
-Obwohl das problem des overtalking im system design erkennt wurde und druch dei ageing funktion veruscht
-wrude das äußer des selben gendekn zu ferindern, war dies nicht aussreichend. Vermutlich hätte eine cooldown
-auf die sprache generell die qualität verbessert. Zwar hätte die ki hier relevante informatione verpassen
-könenn, allerdings wäre dies ein tradeoff welche hinnehmbar wäre, wenn dadruch die akzeptanz steigen würde
-
-Live interaktion utnerleigen einen höhren anspruch als chat interaktionen. das inner thogs framewokr wurde
-als chat framework konzipiert. in chats ist es ünlich das eine nachricht auchmal nicht ganz genau auf den
-aktuelln kontext passt. (user sind es geäht, dass das tippen dauert und es sit eien asyncrone interaktione).
-bei live interaktione ist die ander. teilenhmden fallen latzen auf. wenn nicht direkt informationen
-
-Tracebility ist aufwändig und schwer zu interpretieren. eine platform wie langfuse hat während der
-Entwikclung enorm geholfen ein intuitives verständniss für das system zu entwikclen.
-Jedoch sollte sich gut gedanken gemacht werden wie die
-traces in einer solch platform gelogget werden, um sie später zu analysieren.
-
-bereits nach der ersten interation des Systems wruden deutlich schwachstellen ersichtlich. der besser ansatz
-wäre gewesen das system direkt zu verbessern und dann die nächste user gruppe drauf zu setzen. für diese
-prototpy evaluierung wären kleiner phasen ggf besser gewesen.
+Arbeiten die auf ähnliche wystem abzihelen sollten merher interatione mit user test einplanen und das system
+iterrative verbessern. Der Autor merkt an, dass in dem fall der evaluerung diese protyps bereits nach der
+erste user stuide schachstelle deutlich aufgezeigt wurden. Weiter user studien haben zwar erkenntnisse
+erkentnisse bestägti und teilweise um andere perspketiven erweitert, dies hätten aber kaum neue erkentnisse
+geboten. derautor vermutet, dass für solche procativen Meeting system, das system lieber früh wenigen user
+stuiden unterzogen wird um diesen dann zu verbessern. mit zu nhemender anzahl der interation und hoffentlich
+besser werdnen ergebnisse, kann dann die anzhal der User stuiden erhäht werden.
