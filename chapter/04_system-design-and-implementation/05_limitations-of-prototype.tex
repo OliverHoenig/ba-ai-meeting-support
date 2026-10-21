@@ -1,76 +1,77 @@
 \section{Limitations of the Prototype}
 \label{sec:limitations-of-prototype}
 
-\minisec{Eingegrenzter Funktionsumfang}
-Der Prototyp ist im Funktionsumfang bewusst begrenzt und als Minimum Viable Product primär auf
-Hidden Profiles zugeschnitten, damit Fokus und anschließende Validierung zurechenbar bleiben
-(vgl.\ \autoref{sec:hidden-profiles}).
-Diese Eingrenzung setzt voraus, dass sich das Phänomen isoliert betrachten lässt. Diese Voraussetzung
-ist vermutlich unterkomplex: In realen Meetings überlagert sich der Shared-Information-Bias mit Status- und
-Hierarchieeffekten, Confirmation Bias und Groupthink sowie Zeitdruck, thematischer Abweichung und
-unklarer Zielsetzung (vgl.\ \autoref{sec:key-challenges-in-meetings}).
-Dieses Zusammenwirken deckt die vorliegende Version, wenn überhaupt nur implizit ab.
-Zusätzlich sind mit dem Fortschritt allgemein verfügbarer KI-Systeme Menschen daran gewöhnt, frei mit
-Sprachmodellen zu sprechen und Antworten auf beliebige Anliegen zu erwarten.
-Diese Erwartungshaltung kann das enge Repertoire des Prototyps übersteigen. Teilnehmende
-könnten Antwort- und Interaktionsmöglichkeiten voraussetzen, die das System nicht bereitstellt und somit das
-vertrauen, auf Grund dieser wahrgenommenen Lücke, auch in bestehende, eigentlich nicht mangelhafte Funktionen des
-Systems verlieren.
+\minisec{Limited functional scope}
+The prototype is deliberately limited in scope and, as a minimum viable product, is aimed primarily
+at hidden profiles, so that the focus and the subsequent validation remain attributable
+(cf.\ \autoref{sec:hidden-profiles}).
+This scoping assumes that the phenomenon can be examined in isolation. That assumption
+is presumably too simple: in real meetings, shared-information bias overlaps with status and
+hierarchy effects, confirmation bias and groupthink, as well as time pressure, drifting off topic, and
+an unclear goal (cf.\ \autoref{sec:key-challenges-in-meetings}).
+The present version covers this interplay, if at all, only implicitly.
+In addition, as generally available AI systems have advanced, people have grown used to speaking
+freely with language models and to expecting answers to any concern.
+That expectation can exceed the narrow repertoire of the prototype. Participants
+might assume response and interaction options that the system does not provide, and thus, because of
+this perceived gap, lose trust even in existing functions of the
+system that are not actually deficient.
 
-\minisec{Unimodale Wahrnehmung}
-Das System arbeitet ausschließlich auf dem Transkript.
-Transkriptionsfehler, etwa bei undeutlicher Aussprache oder schlechter Mikrofonqualität, gehen direkt
-in den Kontext der LLM-Pipeline ein und können Gedanken und Interventionen verzerren.
-Prosodie (Betonung, Aussrpache Tonfall) und visuelle Signale wie Mimik, Blick und sichtbare Aufmerksamkeit
-oder Desinteresse fehlen.
-Facilitatoren nutzen jedoch genau diese Signale, um zu lesen, wie eine Aussage gemeint ist und ob jemand
-präsent ist (vgl.\ \autoref{ch:empirical-analysis-of-facilitating-strategies}).
-Eine Sentimentanalyse auf dem Audiostream wurde nicht implementiert.
-Das ist eine interpretative Lücke. Sie steht aber im Einklang mit den in den Interviews geäußerten
-Bedenken gegenüber Kontrolle und Überwachung.
+\minisec{Unimodal perception}
+The system works exclusively on the transcript.
+Transcription errors, for instance from unclear pronunciation or poor microphone quality, enter
+directly into the context of the LLM pipeline and can distort thoughts and interventions.
+Prosody (stress, pronunciation, tone of voice) and visual signals such as facial expression, gaze, and
+visible attention or lack of interest are absent.
+Facilitators, however, use precisely these signals to read how an utterance is meant and whether
+someone is present (cf.\ \autoref{ch:empirical-analysis-of-facilitating-strategies}).
+A sentiment analysis of the audio stream was not implemented.
+This is an interpretive gap. It is, however, in line with the concerns about control and
+surveillance expressed in the interviews.
 
-\minisec{Laufzeitmechanik}
-Die Thought-Pipeline ist mehrstufig und probabilistisch. Interventionen können deshalb verzögert
-eintreffen, und dieselbe Gesprächslage kann unterschiedlich ausfallen.
-FIM-Scores werden einmal vergeben und nur deterministisch gealtert. Sie werden nicht semantisch neu
-bewertet (vgl.\ \autoref{sec:dynamic-im}).
+\minisec{Runtime mechanics}
+The thought pipeline is multi-stage and probabilistic. Interventions can therefore arrive
+late, and the same conversational situation can turn out differently.
+FIM scores are assigned once and then only aged deterministically. They are not
+re-evaluated semantically (cf.\ \autoref{sec:dynamic-im}).
 
-\minisec{Dazwischenreden}
-Spricht eine teilnehmende Person in eine laufende Äußerung des Agenten hinein, bricht das System
-diese nicht ab.
-Der bereits ausgewählte Gedanke wird bis zum nächsten menschlichen Redeanteil zu Ende gesprochen.
-Erst dieses neue Element stößt die Pipeline erneut an, sodass ein weiterer Gedanke gebildet und
-geäußert werden kann.
-Eine überlappende Wortmeldung verändert den laufenden Beitrag daher nicht und kann zu merkwürdigen bzw.
-unnatürlichen Interaktionen führen, wenn Teilnehmende weitersprechen, während der AI-Facilitator spricht.
+\minisec{Speaking over the agent}
+If a participant speaks into an ongoing utterance of the agent, the system
+does not break it off.
+The thought already selected is spoken through until the next human turn.
+Only this new element starts the pipeline again, so that a further thought can be formed and
+uttered.
+An overlapping turn therefore does not change the contribution in progress, and it can lead to odd or
+unnatural interactions when participants continue speaking while the AI facilitator is speaking.
 
-\minisec{Eigene Meetingplattform}
-Das Meeting läuft in einer eigens gebauten Webanwendung und nicht in etablierten Meetingplattformen wie z.B.
-Zoom oder Teams. Das sichert Kontrolle über Interaktion und UX. Jedoch sind Teilnehmende diese neue
-Anwendung im Gegensatz zu den bekannten Tools nicht gewohnt.
-Die Vergleichbarkeit mit der bekannten Nutzungssituation ist deshalb eingeschränkt.
+\minisec{Custom meeting platform}
+The meeting runs in a purpose-built web application and not on established meeting platforms such as
+Zoom or Teams. This secures control over interaction and UX. Participants, however, are not used to
+this new application, unlike the familiar tools.
+Comparability with the familiar situation of use is therefore limited.
 
-\minisec{Modifizierte Turn-Allocation-Prediction}
-Die Vorhersage, wer als Nächstes spricht, stützt sich auf Liu et al.\
+\minisec{Modified turn-allocation prediction}
+The prediction of who speaks next is based on Liu et al.\
 \cite{liuProactiveConversationalAgents2025}.
-Der Prompt musste jedoch von Alltagsdialogen auf den Facilitationskontext angepasst werden.
-Deshalb kann nicht davon ausgegangen werden, dass sich die Ergebnisse aus dem Paper 1 zu 1 auf diesen Kontext
-übertragen lassen.
-Eine genauere statistische Validierung wäre empfehlens wert, war aber mangels eines geeignene
-domänenspezifisches Korpus aus Facilitationssettings mit Turn-allocation Notation, nicht möglich.
+The prompt, however, had to be adapted from everyday dialogue to the facilitation context.
+It therefore cannot be assumed that the results of the paper transfer one-to-one to this context.
+A closer statistical validation would be advisable, but it was not possible for lack of a suitable
+domain-specific corpus of facilitation settings with turn-allocation notation.
 
-\minisec{Annahme gleicher Redeanteile}
-Der Participation Balancer setzt voraus, dass eine ausgeglichene Verteilung der Redezeit dem
-Meeting zuträglich ist (vgl.\ \eqref{eq:fair-slot}).
-Diese Voraussetzung gilt für das evaluierte Entscheidungsformat, in dem ungeteilte Informationen
-nur durch Wortmeldungen in die Diskussion gelangen.
-Sie gilt nicht für Formate, deren Zweck eine ungleiche Redezeit ist, etwa Präsentationen oder
-längere Beiträge von Expertinnen und Experten.
-Dort würden Curtailment und Invitation auslösen, obwohl die ungleiche Verteilung beabsichtigt ist.
+\minisec{Assumption of equal speaking shares}
+The participation balancer assumes that a balanced distribution of speaking time is
+beneficial to the meeting (cf.\ \eqref{eq:fair-slot}).
+This assumption holds for the decision format under evaluation, in which unshared information
+enters the discussion only through spoken turns.
+It does not hold for formats whose purpose is unequal speaking time, such as presentations or
+longer contributions from experts.
+There, curtailment and invitation would trigger even though the unequal distribution is intended.
 
-\minisec{Geringe nachweisbarkeit ob threasholds und prompts ideal sind}
-Die promts basieren zwar auf auf den origianl Promts aus dem Inner Thougts framework und wurden intutiv basis
-der erkennisee der litertur und der expertern interviews angpesse, denn noch bleibt eine gewissen
-unsicherheite ob diese prompots ideal gewählt wurden und den tatsächlichen effekt erzeilen. dies ist zum tiel
-den limitierungen beim context engineering zurückzufohern (vgl. 2.4.2) Außer dem ist die Anpassung der promts
-autorenseitig geprägt und wurden druch das EDD vorgehen angepasst.
+\minisec{Limited evidence that the thresholds and prompts are ideal}
+The prompts are based on the original prompts of the Inner Thoughts framework and were adapted
+intuitively on the basis of the findings from the literature and the expert interviews.
+Some uncertainty nevertheless remains as to whether these prompts were chosen ideally and produce
+the effect they are meant to have. This is partly due to the limitations of context engineering
+(cf.\ \autoref{sec:context-engineering}).
+In addition, the adaptation of the prompts is shaped by the author and was adjusted through the
+EDD procedure.

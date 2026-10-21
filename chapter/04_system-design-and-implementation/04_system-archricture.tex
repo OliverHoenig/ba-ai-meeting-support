@@ -23,8 +23,11 @@
 \end{figure}
 
 The system is strongly derived from the Inner Thoughts framework of Liu et al.
-Thought formation, the evaluation of thoughts, and turn-taking prediction were adopted.
-They are adapted to this use case and, in particular, to the live setting.
+Thought formation \cite{liuProactiveConversationalAgents2025}, the evaluation of thoughts, the creation of
+thougts, utterance formation, and turn-taking
+prediction were adopted to this use case and, in particular, to the live setting. The Timed stimulus pipline
+was added, aging and cooldown and the direct answer graph. the rest are concepts form Liu et al
+\cite{liuProactiveConversationalAgents2025}.
 
 In the version by Liu et al., the framework is designed for interactions that can be classified as social
 chitchat.
@@ -140,7 +143,7 @@ facilitator without decision-making authority would want to utter it now
 The evaluator sees the last fifteen events and up to ten salient long-term memories.
 The prompt retains the structure of Liu et al.\ and replaces personal relevance with this
 facilitation motivation.
-The wording is in the appendix (\autoref{annex:fim-scoring}).
+The wording is in the appendix.
 The score is then multiplied by \(1.01\) raised to the number of turns since the last facilitator utterance
 and capped at 1 to 5.
 This value is the base score \(s_0\), stored together with the time of evaluation.
