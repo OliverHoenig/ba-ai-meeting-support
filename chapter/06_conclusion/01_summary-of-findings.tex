@@ -1,1 +1,57 @@
 \section{Summary of Findings}
+
+This thesis investigated how a proactive, context-sensitive AI system can support goal-oriented remote
+meetings during convergent decision-making processes. It addressed three research questions, moving from the
+identification of facilitation strategies and challenges to the design and empirical evaluation of an
+AI-based facilitation prototype.
+
+Regarding RQ1, facilitating strategies and challenges in goal-oriented remote meetings, the literature review
+and three expert interviews highlighted that effective decision-making requires more than a clearly defined
+agenda. Facilitators must maintain focus, structure the decision-making process, ensure that relevant
+information is considered, and create an environment in which participants can express differing
+perspectives. Particular challenges arise from unequal participation, premature consensus, and the tendency
+to discuss shared information more extensively than information held by individual participants. The
+interviews also revealed considerable reservations about proactive AI interventions. Concerns included
+inappropriate timing, the potential to embarrass participants, insufficient contextual understanding, and the
+risk of undermining group autonomy. While AI was considered promising for structured and clearly defined
+tasks, the experts emphasized that human facilitation involves social and contextual competencies that are
+difficult to replicate technically.
+
+Building on these findings, RQ2, concerning the design requirements for an AI-based facilitation system, was
+addressed through the development of a scoped prototype. Rather than attempting to replicate the full range
+of facilitation activities, the system focused on hidden-profile scenarios, in which relevant information is
+distributed asymmetrically among participants. The prototype was designed to support balanced participation,
+encourage the sharing of unique information, and preserve dissent to counteract premature consensus. Its
+architecture adapted the Inner Thoughtsframework to enable the AI to continuously assess the ongoing
+conversation, evaluate potential facilitation interventions, and decide whether to contribute proactively. At
+the same time, the system was designed to remain neutral regarding the substantive decision and to avoid
+imposing its own preferences. The development process demonstrated how established facilitation principles
+can be translated into concrete system requirements and implemented in an LLM-based prototype. However, the
+findings also underline that context-sensitive facilitation requires more than generating relevant questions:
+the system must recognize when an intervention is needed and deliver it at an appropriate moment.
+
+RQ3 examined how participants perceived meetings involving a proactive AI moderator. The prototype was
+evaluated in three hidden-profile group sessions involving twelve participants. The results revealed a
+discrepancy between the intended benefits of proactive facilitation and the actual interaction experience.
+Participants generally perceived the quality of discussion positively, and no consistently negative pattern
+emerged across the measured dimensions of communication, status effects, teamwork, and efficiency.
+Nevertheless, the AI's interventions were predominantly perceived as disruptive. Participants considered the
+system to intervene too frequently, often at inappropriate moments or with delays that made its contributions
+less relevant to the ongoing discussion. Some interventions also demonstrated insufficient contextual
+understanding, including misunderstandings of information about the candidates.
+At the same time, participants recognized the potential value of the system's intended functions. Addressing
+quieter participants and explicitly requesting additional perspectives were perceived as helpful in some
+situations. The findings therefore suggest that the underlying facilitation objectives were not inherently
+rejected; rather, their implementation frequently failed to provide value at the right moment. Although the
+system addressed several of its intended user stories, only one of the three groups selected the optimal
+candidate. This outcome cannot be attributed to the AI's interventions alone, but it illustrates that the
+presence of a proactive moderator does not automatically ensure a well-founded group decision.
+
+Taken together, the findings indicate that the central challenge of proactive AI facilitation is not simply
+determining what to say, but deciding whether, when, and how to intervene. Proactive systems may offer value
+where relevant information would otherwise remain unshared or where premature consensus threatens decision
+quality. However, poorly timed or repetitive contributions can undermine these benefits by interrupting
+communication and reducing participants' willingness to engage with the system. The results therefore support
+the continued investigation of proactive AI facilitation while emphasizing the importance of contextual
+accuracy, restrained intervention, and human control. The prototype represents an initial step toward this
+goal rather than a mature solution for practical deployment.
