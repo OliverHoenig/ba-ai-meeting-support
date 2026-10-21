@@ -4,7 +4,9 @@ The analysis considered two levels. The first level comprises general observatio
 the AI system, which were derived from the transcripts and recordings of the user studies. This level
 describes overarching observations and was linked to the user studies. The second level consists of the
 analysis of the participants’ perceptions regarding the meeting in general as well as the AI facilitator.
-This is based on the questionnaire, which specifically includes open-ended responses.
+This is based on the questionnaire, which specifically includes open-ended responses. Wenn sich auf einen
+Participants in the user study are referred to below using a short code: For example, G1-P3 refers to a
+participant from Group 1 who received the third information sheet in the hidden-profile experiment.
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{General Observations and link to user stories}
 
@@ -82,15 +84,15 @@ naturalness of the interaction and the system's acceptance. In some cases, the a
 ongoing thought but interrupted its own utterance to express a newly emerging thought instead.
 {\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
   \begin{quote}\small
-    \enquote{Thank you, F. I hear the point about engagement and the possible interpretation\ldots}\\
-    \enquote{Thank you, J. The point is important when we consider Jones' positi—\ldots}\\
-    \enquote{Thank you, F. You are already close to the key distinctions. To ensure that we
+    \enquote{Thank you, [Name of G2-P2]. I hear the point about engagement and the possible interpretation\ldots}\\
+    \enquote{Thank you, [Name of G2-P3] The point is important when we consider Jones' positi—\ldots}\\
+    \enquote{Thank you, [Name of G2-P2] You are already close to the key distinctions. To ensure that we
       move beyond impressions, what would be the clearest exclusion criterion for Jones, if
     there is one?}
 \end{quote}}
 
 Although this behavior theoretically allowed the agent to incorporate new information into the interaction as
-it emerged, it unnatural. The existing system design lacked a mechanism for naturally
+it emerged, it is unnatural. The existing system design lacked a mechanism for naturally
 integrating a newly emerging thought into an utterance that had already begun. This limitation highlights a
 gap in the system design.
 
@@ -226,16 +228,22 @@ This section explicitly describes how the AI facilitator was perceived by the pa
   \label{fig:likert-agent-2}
 \end{minipage}
 
-Es bestand eine ganz klare zustimmung das die Beiträge des KI-Facilitator die diskussion gestört haben.
-zusätzlich bestand einigkeit darüber dass die KI zu oft interagiert hat.
-
-G1-P2 beschreibt dies wie folgt: "Sie ist nach jedem Redebeitrag angesprungen und hat den Redefluss dann sehr
-stark eingeschränkt."
-
-Nru eine Person gab an die KI habe zu selten intervieniert.
-G1-P4 beschreibt eine möglich erklärung dafür wie folgt: "Also zusammengefasst kam es mir so vor, als ob die
-ki viel zu oft an unpassenden Stellen störend eingegriffen hat und dafür an anderen Stellen, weniger, wo es vielleicht
-jemand gebraucht hättet, der jetzt die Leere füllt. "
+There was clear agreement that the AI facilitator's contributions disrupted the discussion.
+Participants likewise agreed that the agent intervened too often.
+G1-P2 described this as follows:
+{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
+  \begin{quote}\small
+    \enquote{She [the AI facilitator] would jump in after every comment and then severely limit the flow of the
+    conversation}~\textit{\scriptsize[G1-P2]}
+\end{quote}}
+Only one participant reported that the AI had intervened too rarely.
+G1-P4 offered a possible explanation:
+{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
+  \begin{quote}\small
+    \enquote{To sum it up, it seemed to me that the AI intervened in a disruptive way far too often at
+      inappropriate moments, while doing so less often in other situations where someone might have been needed
+    to fill the void}~\textit{\scriptsize[G1-P4]}
+\end{quote}}
 
 \paragraph{Agent attributes}\mbox{}\\*[0.75ex]
 \noindent
@@ -248,69 +256,99 @@ jemand gebraucht hättet, der jetzt die Leere füllt. "
   \label{fig:likert-agent}
 \end{minipage}
 
-Zu A7 äußerten sich 8 Teilnehmende positiv und lediglich zwei neutral. Bei den Teilnehmden hersschte eine
-klar tendenz dazu dass es gut war das war wie der KI-Faciliator agiert.
-G3-P4: "An sich ist es positiv, dass explizit auch Leute angesprochen werden, dadurch konnten generelel auch
-Leute zur Sprache kommen, die sich sonst eher zurückhalten."
-G3-P2 mwekr an, dass er es gut fand , dass die KI anerkennend war. G1-P1 erkannte ein wieder kehrendes Muster
-bei den Beiträgen der KI:
+On A7, eight participants responded positively and only two neutrally.
+There was a clear tendency to regard the way the AI facilitator acted as positive.
+G3-P4 stated:
 {\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
   \begin{quote}\small
-    \enquote{Die KI hat sich dann immer bedankt, das zuletzt Gesagte zusammengefasst
-    und ihre Frage formuliert.}~\textit{\scriptsize[G1-P1]}
-\end{quote}} Auch G1-P2 beschreiben diese Muster aber als leicht nervig auf grund der hohen wiederholung.
+    \enquote{In principle, it is positive that people are explicitly addressed as well. That way,
+    people who otherwise tend to hold back were generally able to speak}~\textit{\scriptsize[G3-P4]}
+\end{quote}}
+G3-P2 noted that he appreciated the AI's appreciative manner.
+G1-P1 identified a recurring pattern in the AI's contributions:
+{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
+  \begin{quote}\small
+    \enquote{The AI would always say thank you, summarize what had just been said,
+    and then formulate its question}~\textit{\scriptsize[G1-P1]}
+\end{quote}}
+G1-P2 described the same pattern as mildly annoying because it was repeated so often.
 
-A3 legt nahe dass die anworte der KI unpassend zum akteullen kontext waren. dies ist verbunden mit dem
-Zeitpunkt der interaktion A1 ,welche als noch negativer wahrgenommen wrude. Eine korrekte Interatkion die
-eigentlich sinnvoll gewesen wäre nun zu spät kommt wird als störend wahrgenommen so sagt G3-P1: "Inhallich
-waren die Beiträge gut, allerdings verzögert, oder hinter unserem Denkprozess"
-G1-P4 sagt dass er sich hauptsächlich an situation erinnert indenen die KI zum falschen Zeitpunkt eingegiriffen hat.
-G3-P4 beschreibt es wie folgt:
+The responses to A3 suggest that the AI's replies were poorly suited to the current context.
+This is connected to the timing of the interventions (A1), which was perceived even more negatively.
+An interaction that would have been useful is perceived as disruptive when it arrives too late.
+G3-P1 stated:
 {\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
   \begin{quote}\small
-    \enquote{Die KI hat verzögert reagiert, dadurch Gespräche unterbrochen, ohne
-    einen Mehrwert zu liefern.}~\textit{\scriptsize[G3-P4]}
+    \enquote{In terms of content, the contributions were good, but delayed, or behind our thought
+    process}~\textit{\scriptsize[G3-P1]}
 \end{quote}}
-Wurden teilnehmde druch die KI unterborchen empfenden diese das als störend, insbesondere wenn der
-beitrag dann nicht zum kontext gepasst hat. so saget G2-P1 "Die KI hat mich beim Spreechen unterborchen udn
-wollte auf ein anderes Thema lenken, was aber nicht im Konsenz mit dem momentaten Gruppenziel war, also im
-Prinzip wars störend"
-diese verzögerung wrude von eingen kandiaten beobachtet.
-G3-P3 erkannte zwar an weshalb er unterbochen wurde auch wenn es ihn gestört hat: "In meinen Augen war hilfreich
-das sie mich unterbrochen hat um {Name von G3-P1} und {Name von G3-P4} mehr raum zu geben, das war gut, auch
-wenn es mich gestört hat "
-Außerdem gab es Interaktione in dnen die KI den kontext falsch verstande hat und eine falsch aussage geätitgt
-hat. G1-P2 beschreibt eine situation in der die KI dem falschen Kandiaten eine negative Eigenschaft zu geschreiben hat.
-Andere Teilnehmende, wie zum Beispiel G1-P4, konkretisieren, dass die KI Personen
-verwechselt hat:
+G1-P4 reported that he mainly remembered situations in which the AI intervened at the wrong moment.
+G3-P4 described this as follows:
 {\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
   \begin{quote}\small
-    \enquote{Gestört hat auch, dass sie die Person verwechselt hat.}~\textit{\scriptsize[G1-P4]}
+    \enquote{The AI reacted with a delay and thereby interrupted conversations without providing any
+    added value}~\textit{\scriptsize[G3-P4]}
 \end{quote}}
-
-Bei A6 scheinen die Befragen sich einige zu sein, dass der KI-Facilitator nicht dabei geholfen hat infromationen zu
-enthüllen die sonst unerkannt blieben. Gleichzeitg beschreiben einige Kandidaten aber eingeschaften, die auf
-gegentieliges hindeuten. so sagt G1-P2: "{Name von G1-P4} ist eher stiller bei der Diskussion gewesen und
-wurde durch die KI gezielt angesprochen, sodass auch seine Meinung in Ruhe angehört werden konnte." weiter
-beschreibt G1-P4:
+When participants were interrupted by the AI, they experienced this as disruptive, especially when the
+contribution did not fit the context.
+G2-P1 stated:
 {\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
   \begin{quote}\small
-    \enquote{Die Situation, wo die KI aufgelöst hat, dass wir unterschiedliche
-    Informationen hatten, war wahrscheinlich das Hilfreichste.}~\textit{\scriptsize[G1-P4]}
+    \enquote{The AI interrupted me while I was speaking and wanted to steer us toward another topic,
+      which was not in line with the group's goal at that moment, so in principle it was
+    disruptive}~\textit{\scriptsize[G2-P1]}
 \end{quote}}
+This delay was observed by some participants.
+G3-P3 did acknowledge why he had been interrupted, even though it bothered him:
 {\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
   \begin{quote}\small
-    \enquote{Die KI hat explizit Teilnehmer angesprochen und nach deren Meinung zu
-      etwas Speziellem gefragt. Das fand ich hilfreich, um alle Perspektiven zu
-    erhalten.}~\textit{\scriptsize[G1-P1]}
+    \enquote{In my view, it was helpful that the AI interrupted me in order to give
+      [G3-P1] and [G3-P4] more space. That was good, even though it bothered
+    me}~\textit{\scriptsize[G3-P3]}
+\end{quote}}
+There were also interactions in which the AI misunderstood the context and made an incorrect statement.
+G1-P2 described a situation in which the AI attributed a negative trait to the wrong candidate.
+Other participants, for example G1-P4, specified that the AI had confused people:
+{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
+  \begin{quote}\small
+    \enquote{It was also disruptive that the AI mixed up the person}~\textit{\scriptsize[G1-P4]}
 \end{quote}}
 
-Abschließend ist in diesem Kontext die  A5 liegen überraschende Ergebnisse vor.
-Obwohl die Störung als hoch wahrgenommen wurde und auch die Interventionsfrequenz
-deutlich zu hoch war, gaben lediglich 6 der 12 Teilnehmenden an, nicht zuzustimmen,
-dass es in Ordnung war, dass der KI-Agent von allein gesprochen hat.
-Die anderen 6 hatten eine neutrale Ansicht oder stimmten sogar zu, dass es in
-Ordnung war, dass die KI aktiv gesprochen hat.
+On A6, respondents appeared to agree that the AI facilitator had not helped to bring out information
+that would otherwise have remained unnoticed.
+At the same time, some participants described behavior that points in the opposite direction:
+{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
+  \begin{quote}\small
+    \enquote{[G1-P4] was rather quiet during the discussion and was specifically addressed by the AI,
+    so that his opinion could be heard calmly as well}~\textit{\scriptsize[G1-P2]}
+\end{quote}}
+{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
+  \begin{quote}\small
+    \enquote{The situation in which the AI figured out that we had different information was probably
+    the most helpful thing}~\textit{\scriptsize[G1-P4]}
+\end{quote}}
+{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
+  \begin{quote}\small
+    \enquote{The AI explicitly addressed participants and asked them for their opinion on something
+    specific. I found that helpful for getting all perspectives}~\textit{\scriptsize[G1-P1]}
+\end{quote}}
+
+Einige teilnehmden nahmen den KI-agetn als zusätzlich störende entiät wahr.
+
+Ob wohl einige Teilnehmde postive aspkte bei der Wahrnehmung des AI facilitator wahr nahmen schein der
+konsesn eher negativ geprägt zu sein, insbsonder wegen der hohe interaktion, dem verzögert wahrgenommen
+timing und des teilweise als nicht zu kontext passenden
+
+G1-P3 "[...] unterschiedlichen Parteien und da dann noch die KI ist, was
+das ganze störend wirken lässt, weil es wie noch eine Partei wirkt, die sich einmischt"
+
+G2-P1 "Störend war, dass die KI gefühlt versucht hat eine eigene Agenda zu verfolgen"
+
+Finally, in this context, A5 yielded a surprising result.
+Although disruption was perceived as high and the frequency of interventions was clearly too high,
+only six of the twelve participants indicated that they did not agree it was acceptable for the AI agent
+to speak of its own accord.
+The other six held a neutral view or even agreed that it was acceptable for the AI to speak actively.
 
 %_____
 
