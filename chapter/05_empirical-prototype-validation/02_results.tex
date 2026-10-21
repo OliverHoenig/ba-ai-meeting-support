@@ -1,72 +1,120 @@
 \section{Results}
 
-Für die auswerung wurde unteanderem
-
+The analysis considered two levels. The first level comprises general observations regarding interaction with
+the AI system, which were derived from the transcripts and recordings of the user studies. This level
+describes overarching observations and was linked to the user studies. The second level consists of the
+analysis of the participants’ perceptions regarding the meeting in general as well as the AI facilitator.
+This is based on the questionnaire, which specifically includes open-ended responses.
 % ---------------------------------------------------------------------------------------------------------------------
-\subsection{General Observations}
+\subsection{General Observations and link to user stories}
 
-Um die auswertung des frage bognes besser zu verstehn wird hier zu nächste auffälligkeiten die während der
-User test vorkamen beschreiben.
+Overall, five of the six user stories were addressed by the system during its interactions. The only
+exception was User Story 1, which concerned addressing the meeting agenda or goal. The system did not refer
+to either the agenda or the meeting objective in any of the three user studies. However, the system remained
+neutral throughout all three studies and did not make decisions on its own, thereby fulfilling User Story 6.
 
-der übergerondete eindruck ist, dass das System zu oft intervineiert hat. sowohl die zeitpuntk als auch die
-häufigkeiten wurden vom author als unpassend wahrgenommen. Dies deckt sich mit den wahrnehmungen.
+Regarding User Story 5, which aimed to ensure that the system intervened sparingly and only when doing so
+clearly added value, the overall impression was that the system intervened too frequently.
 
-Des weitern ist ein patter aufgefallen was eher als technische Schwachstelle klassifiert werden kan. Ist ist
-immer weider vorgekommen das der AI-Faciliatoar angesetzt hat zu sprechen, siene aussage nicht zu endegeführt
-hat und dann einen neuen gedanken formiert hat.
+\begin{table}[H]
+  \centering
+  \caption{Frequency of spoken AI interventions in the three user studies.}
+  \label{tab:intervention-frequency}
+  \footnotesize
+  \begin{tabular}{@{}lrrr@{}}
+    \toprule
+    Group & AI contributions & Session length (min) & Interventions per minute \\
+    \midrule
+    G01 & 19 & 20 & 0.95 \\
+    G02 & 12 & 25 & 0.48 \\
+    G03 & 11 & 19 & 0.58 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
-Es haben sich 3 unterschiedliche dynamiken mit dem Umgang der KI entwicklet.
+For the remaining user stories, specific interactions could be clearly identified and assigned to the
+respective user stories. The following table presents the number of system interactions that could be
+unambiguously attributed to each user story, along with examples of how these interactions were phrased.
 
-Gruppe eiins hat begeonnen irendwann die KI hauptsächlich zu ignorieren und während die KI gesprochen hat
-einfach weiter gesprochen.
+\begin{table}[H]
+  \centering
+  \caption{System interactions attributed to user stories, with one example AI-Facilitator utterance each.}
+  \label{tab:user-story-interactions}
+  \footnotesize
+  \begin{tabularx}{\textwidth}{@{}
+      >{\RaggedRight\arraybackslash}p{3.6cm}
+      ccc
+      >{\RaggedRight\arraybackslash}X
+    @{}}
+    \toprule
+    User story & G01 & G02 & G03 & Example \\
+    \midrule
+    \usref{us:quiet-voices}\newline
+    {\scriptsize Balanced participation}
+    & 3 & 2 & 3
+    & \enquote{Then I'd like to briefly bring L.\ and M.\ into the discussion.
+    What criteria are important to you when making this decision?}
+    \textit{\scriptsize(G03)} \\
+    \addlinespace[0.45em]
+    \usref{us:unshared-information}\newline
+    {\scriptsize Ensuring information completeness}
+    & 4 & 5 & 3
+    & \enquote{D., is there anything else about Stevens, Roberts, or Jones that's
+    important for the comparison and hasn't been mentioned yet?}
+    \textit{\scriptsize(G02)} \\
+    \addlinespace[0.45em]
+    \usref{us:hold-dissent}\newline
+    {\scriptsize Preserving dissent}
+    & 2 & 2 & 3
+    & \enquote{My takeaway is that we should make sure to consider the opposing
+    viewpoints on all three candidates before we rule anyone out too soon.}
+    \textit{\scriptsize(G02)} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
 
-Gruppe 03 war irritiert von der KI. und hat eine latenz beim denken vermuetet, weshlab sie stellen weise dazu
-übergegangen sind auf die KI zu warten. Insbesondere, wenn die KI eine frage gestellt hatte, schienen die
-Teilnehmden auf eine einordnung der KI zu warten nach dem die antowrt gegeben wurde. Nach ausbleiben der
-antwort ist die gruppe dann nach einer kurzen pause weider in die diskussion übergegangen. Dadurch entsanden
-stellen in diene die Gruppe auf den KI-Faciliator wartet aber eien antwort ausblieb.
+In addition to the interactions listed above, some system interactions could not be clearly assigned to a
+single user story, while others addressed two user stories simultaneously. In particular, the system
+frequently combined User Stories 2 and 3 in its interventions.
 
-Somit sind die Resulatet unter diesen beobachtungen einzuordnen.
+Furthermore, several additional issues with the AI agent's behavior were observed, affecting both the
+naturalness of the interaction and the system's acceptance. In some cases, the agent did not complete an
+ongoing thought but interrupted its own utterance to express a newly emerging thought instead.
+{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
+  \begin{quote}\small
+    \enquote{Thank you, F. I hear the point about engagement and the possible interpretation\ldots}\\
+    \enquote{Thank you, J. The point is important when we consider Jones' positi—\ldots}\\
+    \enquote{Thank you, F. You are already close to the key distinctions. To ensure that we
+      move beyond impressions, what would be the clearest exclusion criterion for Jones, if
+    there is one?}
+\end{quote}}
 
-% ---------------------------------------------------------------------------------------------------------------------
-\subsection{Observed Intervention Dynamics}
-\label{sec:observed-intervention-dynamics}
+Although this behavior theoretically allowed the agent to incorporate new information into the interaction as
+it emerged, it unnatural. The existing system design lacked a mechanism for naturally
+integrating a newly emerging thought into an utterance that had already begun. This limitation highlights a
+gap in the system design.
 
-% Process / behavioral results: what the system did in the sessions.
-% Place before subjective measures (Davison, A1--A7) so that perception can refer back to concrete events.
+Another recurring observation was the increasing tendency of participants across all three groups to ignore
+the AI agent's interventions, either occasionally or over extended periods. This behavior manifested in
+participants not responding to the agent's contributions or continuing their conversations while the agent
+was speaking. A lack of contextual awareness and poorly timed interventions appeared to be contributing
+factors. Some differences were observed between the groups. In Group 2, a participant suggested ignoring the
+AI agent after only its second interaction. Group 1 also gradually developed a tendency to largely disregard
+the agent's interventions and continue their own conversation without interruption while the agent was
+speaking (8/19 Interactions). In Group 3, by contrast, participants initially appeared confused by the
+agent's interaction behavior. They seemed to suspect a delay in the AI's processing of the conversation and,
+particularly at the beginning, sometimes waited for its responses. This was especially apparent when the
+agent asked a question: after answering, participants appeared to expect the AI to provide further input or
+contextualize their responses. Participants sometimes responded immediately by verbally expressing their
+frustration. This is illustrated by a statement made by a participant during User Study 3:
+“I would, if you didn't keep interrupting me.”
 
-% --- 1. Descriptives ---
-% Per session (and pooled): duration; number of generated thoughts; number of spoken interventions;
-% interventions per minute; share of thoughts that crossed imThreshold / interrupt threshold but were
-% not spoken (cooldown, aging, turn-taking, etc.). Short table is enough.
-
-% --- 2. Thought trajectory over time ---
-% Figure: highest (or selected) thought score over the meeting timeline; horizontal lines for
-% imThreshold and interrupt threshold; markers when an intervention was actually spoken.
-% Optionally shade a ``near-miss'' band (e.g.\ below imThreshold but above a lower reference) to show
-% when an intervention might have occurred under a less selective policy.
-% One panel per session, or a representative case + summary if n is larger.
-
-% --- 3. Intervention typology ---
-% Cluster spoken interventions by facilitative function, e.g.:
-%   - invite quieter participants / rebalance participation;
-%   - surface unique / unshared information or counter shared-information bias;
-%   - restore goal focus / interrupt thematic drift;
-%   - address dominance / interrupt a frequent speaker;
-%   - other (timekeeping, clarification, \ldots).
-% Report counts or shares (bar chart or small table). Tie clusters briefly to the situations the
-% hidden-profile task was expected to elicit (see Methodology).
-
-% --- 4. Reception and uptake ---
-% From F1/F2 (and optional observer coding of the transcript/recording): which intervention types
-% were experienced as helpful vs.\ disruptive; whether the group ignored, acknowledged, or acted on
-% the agent's contribution. Note that A1--A7 are global ratings (reported in the next subsection),
-% not per-utterance scores---link episodes from free text to the typology above where possible.
-
-% --- 5. Task outcome (optional but recommended) ---
-% Decision quality in the Baker hidden-profile: chosen candidate vs.\ hidden-profile-optimal choice;
-% optionally how many unique information items were mentioned before/after relevant interventions.
-% Keep brief; interpret in Discussion.
+Regarding the hidden-profile scenario, the following observations were made: Of the three groups, only Group
+2 selected the ideal candidate. This group recognized on its own and early on that it was in a hidden-profile
+scenario. Group 1 did not notice until toward the end of the meeting (around the 16-minute mark) that they
+apparently had different information about the candidates. While the group was confused by the seemingly
+inconsistent information, the AI facilitator suggested clarifying exactly which candidate should be assigned
+each negative trait.
 
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{Perceived Meeting Quality (Davison Instrument)}
@@ -99,10 +147,8 @@ are still plotted together.
   \label{fig:likert-communication}
 \end{minipage}
 
-Die die Communication innerhalb des Meetings wurde von den teilnehmden, gut bewertet, was darauf hindeute,
-dass zwischen den teilnehmden keine communikatione problme aufgetreten sind. C3 zeigt die stärkste negative
-tendenz. dies ist vermtulcih darauf hinauszuführen , dasss der der KI-Failiator zu oft unterborchen hat. es
-ist eher erstunlich dass dieser punkt unter den gegeben umständen nicht negativer bewertet wurde.
+The perception of the ability to express one's opinion is the most negative. This may be attributable to the
+high interaction rate of the AI and the resulting interruptions.
 
 \paragraph{Quality of discussions}\mbox{}\\*[0.75ex]
 \noindent
@@ -116,8 +162,7 @@ ist eher erstunlich dass dieser punkt unter den gegeben umständen nicht negativ
   \label{fig:likert-discussion}
 \end{minipage}
 
-Die Qualität der Diskussion wird ebenfalls als positiv wahr genommen. Auch wenn es unwahrscheinlich ist, dass
-dies auf den KI-Faciliatoar zurückzufürhen ist.
+The quality of the discussion is viewed positively
 
 \paragraph{Status effects}\mbox{}\\*[0.75ex]
 \noindent
@@ -130,9 +175,9 @@ dies auf den KI-Faciliatoar zurückzufürhen ist.
   \label{fig:likert-status}
 \end{minipage}
 
-Bei den Status effkten schien es keine ströenden fakroren zu geben. lediglich S3 zeigt negative tendezen.
-Dies könnte darauf zurückzuführen sein ,dass die Teilnehmenden die KI als Meeting teilnehmer klassifiziert
-haben und sich somit die negativen tendezen auf den KI-Faciliatoar beziehen.
+There do not appear to have been any disruptive factors affecting the status effects. Only S3 shows negative
+tendencies. This could be due to the fact that the participants classified the AI as a meeting participant,
+and the negative tendencies therefore relate to the AI facilitator.
 
 \paragraph{Team work}\mbox{}\\*[0.75ex]
 \noindent
@@ -145,8 +190,9 @@ haben und sich somit die negativen tendezen auf den KI-Faciliatoar beziehen.
   \label{fig:likert-teamwork}
 \end{minipage}
 
-auch beim Team work gabe es keine überwegend negative tendzen, außer bei T2, was auch in deiese fall auf die
-unpräzise fragestellung zurückzufürehn sein kann, welche es erlaubt den KI-Facilaitoar als teil des teams zu sehen.
+There were no predominantly negative trends in teamwork either, with the exception of T2. Similar to S3, this
+can also be attributed to the wording of the question, which theoretically allows the AI facilitator to be
+considered part of the team.
 
 \paragraph{Efficiency}\mbox{}\\*[0.75ex]
 \noindent
@@ -160,16 +206,14 @@ unpräzise fragestellung zurückzufürehn sein kann, welche es erlaubt den KI-Fa
   \label{fig:efficiency-share}
 \end{minipage}
 
-Die wahrgenommen Effiziens bewegte sich im median zwischn 60\% und 85\%. Es konnte aber kein diretkter
-zusammenahng zwischen der effizenz und den interaktionen des KI-Facilitator festgestetll werden. auffällig
-ist lediglich das Groupe 3 jene gruppe wa, welche hin und weider auf die antworten der KI-geartet hat, die
-aber ausbleiben, weshlab sie zeit verloren hat, was diese negative Efficenc erklären könnte
+The median perceived efficiency ranged from 60\% to 85\%. However, no direct correlation was found between
+efficiency and the AI facilitator's interactions.
 
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{Participants' Perception of the Proactive AI Moderator's Interventions}
 \label{sec:participant-perception}
 
-In diesem abschnitt bag es frei text antworten welche hier in den kontext eingordnet werden.
+This section explicitly describes how the AI facilitator was perceived by the participants.
 \paragraph{Disruption and frequency}\mbox{}\\*[0.75ex]
 \noindent
 \begin{minipage}{\linewidth}
@@ -182,10 +226,16 @@ In diesem abschnitt bag es frei text antworten welche hier in den kontext eingor
   \label{fig:likert-agent-2}
 \end{minipage}
 
-Es bestand eine ganz klare zustimmung die Beiträge der des KI-Agetnen die diskussion gestört haben.
-zusätzlich bestan einigkeit darüber dass die KI zu oft interagiert hat.
+Es bestand eine ganz klare zustimmung das die Beiträge des KI-Facilitator die diskussion gestört haben.
+zusätzlich bestand einigkeit darüber dass die KI zu oft interagiert hat.
+
+G1-P2 beschreibt dies wie folgt: "Sie ist nach jedem Redebeitrag angesprungen und hat den Redefluss dann sehr
+stark eingeschränkt."
+
 Nru eine Person gab an die KI habe zu selten intervieniert.
-Dieses Intervnetions verhalten war von US5 nicht indierte. somit konnte US5 nicth erfüllt werden.
+G1-P4 beschreibt eine möglich erklärung dafür wie folgt: "Also zusammengefasst kam es mir so vor, als ob die
+ki viel zu oft an unpassenden Stellen störend eingegriffen hat und dafür an anderen Stellen, weniger, wo es vielleicht
+jemand gebraucht hättet, der jetzt die Leere füllt. "
 
 \paragraph{Agent attributes}\mbox{}\\*[0.75ex]
 \noindent
@@ -198,28 +248,74 @@ Dieses Intervnetions verhalten war von US5 nicht indierte. somit konnte US5 nict
   \label{fig:likert-agent}
 \end{minipage}
 
-Zu A7 äußerten sich 8 Teilnehmende positiv und lediglich zwei neutral.
-Das war ein intendierter Effekt unter anderem von \usref{us:quiet-voices}.
+Zu A7 äußerten sich 8 Teilnehmende positiv und lediglich zwei neutral. Bei den Teilnehmden hersschte eine
+klar tendenz dazu dass es gut war das war wie der KI-Faciliator agiert.
+G3-P4: "An sich ist es positiv, dass explizit auch Leute angesprochen werden, dadurch konnten generelel auch
+Leute zur Sprache kommen, die sich sonst eher zurückhalten."
+G3-P2 mwekr an, dass er es gut fand , dass die KI anerkennend war. G1-P1 erkannte ein wieder kehrendes Muster
+bei den Beiträgen der KI:
+{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
+  \begin{quote}\small
+    \enquote{Die KI hat sich dann immer bedankt, das zuletzt Gesagte zusammengefasst
+    und ihre Frage formuliert.}~\textit{\scriptsize[G1-P1]}
+\end{quote}} Auch G1-P2 beschreiben diese Muster aber als leicht nervig auf grund der hohen wiederholung.
 
-Zu A5 liegen überraschende Ergebnisse vor.
+A3 legt nahe dass die anworte der KI unpassend zum akteullen kontext waren. dies ist verbunden mit dem
+Zeitpunkt der interaktion A1 ,welche als noch negativer wahrgenommen wrude. Eine korrekte Interatkion die
+eigentlich sinnvoll gewesen wäre nun zu spät kommt wird als störend wahrgenommen so sagt G3-P1: "Inhallich
+waren die Beiträge gut, allerdings verzögert, oder hinter unserem Denkprozess"
+G1-P4 sagt dass er sich hauptsächlich an situation erinnert indenen die KI zum falschen Zeitpunkt eingegiriffen hat.
+G3-P4 beschreibt es wie folgt:
+{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
+  \begin{quote}\small
+    \enquote{Die KI hat verzögert reagiert, dadurch Gespräche unterbrochen, ohne
+    einen Mehrwert zu liefern.}~\textit{\scriptsize[G3-P4]}
+\end{quote}}
+Wurden teilnehmde druch die KI unterborchen empfenden diese das als störend, insbesondere wenn der
+beitrag dann nicht zum kontext gepasst hat. so saget G2-P1 "Die KI hat mich beim Spreechen unterborchen udn
+wollte auf ein anderes Thema lenken, was aber nicht im Konsenz mit dem momentaten Gruppenziel war, also im
+Prinzip wars störend"
+diese verzögerung wrude von eingen kandiaten beobachtet.
+G3-P3 erkannte zwar an weshalb er unterbochen wurde auch wenn es ihn gestört hat: "In meinen Augen war hilfreich
+das sie mich unterbrochen hat um {Name von G3-P1} und {Name von G3-P4} mehr raum zu geben, das war gut, auch
+wenn es mich gestört hat "
+Außerdem gab es Interaktione in dnen die KI den kontext falsch verstande hat und eine falsch aussage geätitgt
+hat. G1-P2 beschreibt eine situation in der die KI dem falschen Kandiaten eine negative Eigenschaft zu geschreiben hat.
+Andere Teilnehmende, wie zum Beispiel G1-P4, konkretisieren, dass die KI Personen
+verwechselt hat:
+{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
+  \begin{quote}\small
+    \enquote{Gestört hat auch, dass sie die Person verwechselt hat.}~\textit{\scriptsize[G1-P4]}
+\end{quote}}
+
+Bei A6 scheinen die Befragen sich einige zu sein, dass der KI-Facilitator nicht dabei geholfen hat infromationen zu
+enthüllen die sonst unerkannt blieben. Gleichzeitg beschreiben einige Kandidaten aber eingeschaften, die auf
+gegentieliges hindeuten. so sagt G1-P2: "{Name von G1-P4} ist eher stiller bei der Diskussion gewesen und
+wurde durch die KI gezielt angesprochen, sodass auch seine Meinung in Ruhe angehört werden konnte." weiter
+beschreibt G1-P4:
+{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
+  \begin{quote}\small
+    \enquote{Die Situation, wo die KI aufgelöst hat, dass wir unterschiedliche
+    Informationen hatten, war wahrscheinlich das Hilfreichste.}~\textit{\scriptsize[G1-P4]}
+\end{quote}}
+{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
+  \begin{quote}\small
+    \enquote{Die KI hat explizit Teilnehmer angesprochen und nach deren Meinung zu
+      etwas Speziellem gefragt. Das fand ich hilfreich, um alle Perspektiven zu
+    erhalten.}~\textit{\scriptsize[G1-P1]}
+\end{quote}}
+
+Abschließend ist in diesem Kontext die  A5 liegen überraschende Ergebnisse vor.
 Obwohl die Störung als hoch wahrgenommen wurde und auch die Interventionsfrequenz
 deutlich zu hoch war, gaben lediglich 6 der 12 Teilnehmenden an, nicht zuzustimmen,
 dass es in Ordnung war, dass der KI-Agent von allein gesprochen hat.
 Die anderen 6 hatten eine neutrale Ansicht oder stimmten sogar zu, dass es in
 Ordnung war, dass die KI aktiv gesprochen hat.
-Dass diese Einschätzung nicht noch negativer ausfällt, ist gerade deshalb
-bemerkenswert, weil die Teilnehmenden unmittelbar zuvor an einem Meeting
-teilgenommen haben, bei dem der AI-Facilitator störend interagiert hat.
-Dies ist also keine hypothetische Überlegung der Teilnehmenden, sondern bezieht
-sich auf eine direkt zuvor gemachte Erfahrung.
 
-Die Teilnehmenden beobachteten ein Muster bei den Antworten der KI.
-So beschreibt G1-P1:
-{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
-  \begin{quote}\small
-    \enquote{Die KI hat sich dann immer bedankt, das zuletzt Gesagte zusammengefasst
-    und ihre Frage formuliert.}~\textit{\scriptsize[G1-P1]}
-\end{quote}}
+%_____
+
+Weiter negativ aufgefallen ist die Lönge der Interaktion und das komplette ausreden.
+G1-P1"Wenn sie unterbrochen hat, hat sie immer komplett ausgeredet, auch wenn der Einwand unnötig war"
 
 Bei A3 stimmen die Teilnehmenden nicht zu, dass der KI-Agent für den Kontext
 angemessen reagiert hat.
@@ -229,47 +325,13 @@ So beschreibt beispielsweise G2-P2:
     \enquote{Leider sehr störend, da die KI nicht wirklich den Kontext verstanden
     hat.}~\textit{\scriptsize[G2-P2]}
 \end{quote}}
-Andere Teilnehmende, wie zum Beispiel G1-P4, konkretisieren, dass die KI Personen
-verwechselt hat:
-{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
-  \begin{quote}\small
-    \enquote{Gestört hat auch, dass sie die Person verwechselt hat.}~\textit{\scriptsize[G1-P4]}
-\end{quote}}
+
 Dies bezüglich wruden vom Atuor folgende beobaachtung gemacht. Alle meeting tielnehmden hatte die Kandiaten
 in der gleichen reihenfolge vorleigen. Somit haben sie teilse kandidaten mit dernen namen angepsrochen oder
 mit der densprechendne Nummer. (z.B. "Der erste Kandiat..."). Der KI-Faciliator hatte kein mapping zwischen
-der kandiaten reihenfolge und den namen.
+der kandiaten reihenfolge und den namen. was diese falschen Referenzierungen erklären kann.
 
 Auch beim Timing gab es große Ablehnung.
-G3-P4 beschreibt es wie folgt:
-{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
-  \begin{quote}\small
-    \enquote{Die KI hat verzögert reagiert, dadurch Gespräche unterbrochen, ohne
-    einen Mehrwert zu liefern.}~\textit{\scriptsize[G3-P4]}
-\end{quote}}
-
-Gemäß A6 sahen die Teilnehmenden nicht, dass das System dazu beigetragen hätte,
-Informationen zu enthüllen, die sonst nicht bekannt geworden wären.
-Diese starke Ablehnung ist etwas überraschend, da Freitextantworten
-Gegenteiliges beschreiben.
-So beschreibt G1-P4:
-{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
-  \begin{quote}\small
-    \enquote{Die Situation, wo die KI aufgelöst hat, dass wir unterschiedliche
-    Informationen hatten, war wahrscheinlich das Hilfreichste.}~\textit{\scriptsize[G1-P4]}
-\end{quote}}
-Der Teilnehmende bezieht sich hier auf eine Situation im Meeting, bei der die KI
-explizit darauf hingewiesen hat, dass gerade unterschiedliche Informationen zu
-den Kandidaten geteilt wurden, und daraufhin angeregt hat, dass die Gruppe
-erst einmal die Informationsgrundlage klären sollte.
-Diese Intervention passierte allerdings zu einem Zeitpunkt, zu dem die Gruppe
-ohnehin bereits dabei war, selbst zu erkennen, dass sie unterschiedliche
-Informationen zu den Kandidaten hatten.
-Es wirkte eher so, als hätte die KI diese Verwunderung aufgegriffen und lediglich
-zu expliziterer Klärung aufgefordert.
-
-Dies war intendiertes Verhalten des Systems.
-Dieses Muster wurde in den Experteninterviews beobachtet.
 
 Als positiv wurde von vielen Teilnehmenden beschrieben, dass die KI versucht hat,
 allen einen ähnlichen Redeanteil zu geben.
@@ -281,7 +343,17 @@ allen einen ähnlichen Redeanteil zu geben.
 \end{quote}}
 Dies war intendiertes Verhalten, das auf \usref{us:quiet-voices} und
 \usref{us:unshared-information} zurückzuführen ist.
-Andererseits gab es auch Situationen, in denen dies nicht gelungen ist.
+
+G3-P3 war einer der Teilnehmden welcher die Diskussion tendenziell dominierte worauf hin die ki versucht
+andere einzugeziehen.
+
+{\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
+  \begin{quote}\small
+    \enquote{In meinen Augen war hilfreich das sie mich unterbrochen hat um {Name von G3-P1} und {Name von G3-P4} mehr
+    raum zu geben, das war gut, auch wenn es mich gestört hat.}~\textit{\scriptsize[G1-P1]}
+\end{quote}}
+
+Andererseits gab es auch Situationen, in denen dies integration nicht gelungen ist.
 So beschreibt G3-P2:
 {\setlength{\topsep}{0.25\baselineskip}\setlength{\partopsep}{0pt}%
   \begin{quote}\small
@@ -291,10 +363,8 @@ So beschreibt G3-P2:
 \end{quote}}
 Der Teilnehmende hat dies als negativ empfunden.
 Es könnte sein, dass das KI-System hier explizit Redeanteile ausgleichen wollte
-oder dass die Meinung der nicht gefragten Teilnehmenden bereits geäußert worden
-war.
+oder dass die Meinung der nicht gefragten Teilnehmenden bereits geäußert worden.
 
-\usref{us:neutrality} konnte nicht zuverlässig eingehalten werden.
 Es gab Situationen, in denen die KI versuchte, den Teilnehmenden einen Prozess
 aufzuerlegen, den sie selbst gar nicht wollten.
 So beschreibt G2-P1 beispielsweise:
