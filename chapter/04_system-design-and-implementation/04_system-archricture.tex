@@ -22,331 +22,325 @@
   \label{fig:thought-pipeline-sequence}
 \end{figure}
 
-Das System ist stark vom Inner-Thoughts-Framework von Liu et al.\ abgeleitet.
-Übernommen wurden die Gedankenbildung, die Bewertung der Gedanken und die Turn-Taking-Prediction.
-Angepasst sind sie an diesen Anwendungsfall und insbesondere an das Live-Szenario.
+The system is strongly derived from the Inner Thoughts framework of Liu et al.
+Thought formation, the evaluation of thoughts, and turn-taking prediction were adopted.
+They are adapted to this use case and, in particular, to the live setting.
 
-In der Fassung von Liu et al.\ ist das Framework auf Interaktionen ausgelegt, die sich als soziales
-Plaudern einordnen lassen.
-Das ist nicht das, was ein Facilitator tun würde.
-Die Idee, ein KI-System über eine intrinsische Motivation zu modellieren, bevor es etwas zu einer
-Gruppendiskussion beiträgt, bleibt für diese Arbeit dennoch relevant.
-Insbesondere deutet der Ansatz auf eine höhere Genauigkeit bei der Self-Selection hin
+In the version by Liu et al., the framework is designed for interactions that can be classified as social
+chitchat.
+That is not what a facilitator would do.
+The idea of modeling an AI system through an intrinsic motivation before it contributes anything to a
+group discussion nevertheless remains relevant for this thesis.
+In particular, the approach indicates higher accuracy in self-selection
 (\autoref{sec:proactive-ai-interactions}).
 
-In der Diskussion weisen die Autoren selbst darauf hin, dass sich das System durch Anpassung der
-Bewertungskriterien auf aufgabenorientierte Kontexte übertragen lässt und dort zielorientiertes
-proaktives Handeln ermöglichen kann
+In the discussion, the authors themselves point out that, by adapting the evaluation criteria, the system
+can be transferred to task-oriented contexts and can enable goal-oriented proactive action there
 \cite["8.2 Apllying Inner Thougs Beyond Casual
 Conversations"]{liuProactiveConversationalAgents2025}.
-Für weitere Arbeiten schlagen sie vor, das System mit domänenspezifischen Heuristiken an reale Aufgaben
-anzupassen.
-Das Vorgehen des Ursprungsmodells wurde deshalb weitgehend übernommen; angepasst wurden die
-entsprechenden Prompts.
+For further work, they propose adapting the system to real tasks with domain-specific heuristics.
+The procedure of the original model was therefore largely adopted; the corresponding prompts were adapted.
 
-Das System reagiert auf eingehende Gesprächsereignisse in From von Text basirend auf dem live transkript des
-gesagten.
-Bei jedem Ereignis, das nicht die eigene Äußerung des Systems ist, laufen drei Pipelines mit LLM-Komponenten
-gleichzeitig. (vgl.
-2.4.3 Parallelization ) Die anfragen ginen an Open-AI
+The system reacts to incoming conversation events in the form of text, based on the live transcript of
+what was said.
+On every event that is not the system's own utterance, three pipelines with LLM components run
+simultaneously (cf.\ 2.4.3 Parallelization). The requests were sent to OpenAI.
 
-Sie teilen sich vier Speicher: den Gesprächsstrom, den Meeting-Brief, das Gedächtnis und das
-Gedankenreservoir.
+They share four stores: the conversation stream, the meeting brief, the memory, and the
+thought reservoir.
 
 \begin{itemize}
-  \item \textbf{Zeitgesteuerter Stimulus} (Timed Stimulus).
-    Basirend auf programatischen vorbedinungen, liest er das gesamte Transkript und fügt einen spezialisierten
-    Prozessgedanken hinzu: entweder eine Prüfung auf Shared Information Bias und Einseitigkeit oder eine Prüfung der
-    Redeanteile.
-    Seine Aufgabe ist, Risiken sichtbar zu machen, die eine Reaktion von Zug zu Zug verpassen kann.
-  \item \textbf{Gedankenpipeline} (Thought Pipeline).
-    Sie deutet das aktuelle Ereignis, aktualisiert, welche Erinnerungen und früheren Gedanken relevant sind,
-    bildet neue Gedanken und bewertet, wie stark jeder Gedanke eine Intervention rechtfertigt.
-    Ihre Aufgabe ist, ein Reservoir von Facilitationsimpulsen bereitzuhalten, bevor eine
-    Sprechgelegenheit entsteht.
-  \item \textbf{Sprechpipeline} (Speaking Pipeline).
-    Die Entscheidung, das Wort zu ergreifen.
-    Sie klassifiziert, wem der nächste Turn gehört, beantwortet eine direkte Frage aus dem Meeting-Brief,
-    wenn die Äußerung an den Facilitator gerichtet ist, und spricht andernfalls den stärksten bereits im
-    Reservoir liegenden Gedanken oder bleibt stumm.
-    Ihre Aufgabe ist, nur dann einzugreifen, wenn Rederecht und Bewertung des Gedankens es
-    rechtfertigen.
-  \item \textbf{Gesprächsstrom} (Conversation Stream).
-    Ein geordnetes Protokoll der Sprachbeiträge, die während des Meetings live transkribiert werden:
-    die Beiträge der Teilnehmenden und die des Systems.
+  \item \textbf{Timed Stimulus}.
+    Based on programmatic preconditions, it reads the full transcript and adds a specialized
+    process thought: either a check for shared-information bias and one-sidedness, or a check of
+    speaking shares.
+    Its task is to make visible risks that a turn-by-turn reaction can miss.
+  \item \textbf{Thought Pipeline}.
+    It interprets the current event, updates which memories and earlier thoughts are relevant,
+    forms new thoughts, and evaluates how strongly each thought justifies an intervention.
+    Its task is to keep a reservoir of facilitation impulses ready before a
+    speaking opportunity arises.
+  \item \textbf{Speaking Pipeline}.
+    The decision to take the floor.
+    It classifies who the next turn belongs to, answers a direct question from the meeting brief
+    when the utterance is addressed to the facilitator, and otherwise speaks the strongest thought
+    already in the reservoir or remains silent.
+    Its task is to intervene only when the right to speak and the evaluation of the thought
+    justify it.
+  \item \textbf{Conversation Stream}.
+    An ordered record of the speech contributions that are transcribed live during the meeting:
+    the contributions of the participants and those of the system.
 \end{itemize}
 
-Die Ereignisse werden seriell verarbeitet, eines nach dem anderen.
-Hat das System selbst einen Beitrag geleistet, wird dieses Ereignis nicht erneut verarbeitet, weil das
-System sonst auf seine eigenen Beiträge reagieren könnte.
-Jedes andere Ereignis startet alle drei Pipelines.
-Die beiden Scans des zeitgesteuerten Stimulus haben zusätzliche Gates und tragen sonst nichts bei.
+Events are processed serially, one after another.
+If the system itself has contributed, that event is not processed again, because the
+system could otherwise react to its own contributions.
+Every other event starts all three pipelines.
+The two scans of the timed stimulus have additional gates and otherwise contribute nothing.
 
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{Thought Pipeline}
 
-Deutung, Retrieval und die Zweiteilung in System~1 und System~2 stammen aus dem Inner-Thoughts-Framework
+Interpretation, retrieval, and the division into System~1 and System~2 come from the Inner Thoughts framework
 \cite{liuProactiveConversationalAgents2025}.
 
 \textbf{Interpret and embed.}
-Bei einem menschlichen Ereignis wartet die Pipeline, bis eine Deutung und beide Embeddings gespeichert sind.
-Die Deutung ist eine Lesart der Äußerung in ein bis zwei Sätzen vor dem jüngsten Transkript.
-dies wurde auch \cite{liuProactiveConversationalAgents2025} übernommen.
+On a human event, the pipeline waits until an interpretation and both embeddings are stored.
+The interpretation is a reading of the utterance in one to two sentences, placed before the most recent
+transcript.
+This was also adopted from \cite{liuProactiveConversationalAgents2025}.
 
 \textbf{Retrieval.}
-Die Salienz von Langzeitgedächtnis, Kurzzeitgedächtnis und bestehenden Gedanken wird gegen das aktuelle
-Ereignis neu berechnet.
-Danach wird das Ereignis an das Kurzzeitgedächtnis angehängt.
-Auch diese retreivla basierte \cite{liuProactiveConversationalAgents2025}
+The salience of long-term memory, short-term memory, and existing thoughts is recalculated against the
+current event.
+The event is then appended to short-term memory.
+This retrieval was also based on \cite{liuProactiveConversationalAgents2025}.
 
 \textbf{Thought formation.}
 
-System~1 und System~2 laufen gemeinsam.
-System~1 ist eine schnelle Reaktion auf die letzten fünf Ereignisse: Anerkennung, Tempo, eine leichte
-Einbezugskontrolle oder Zurückhaltung.
-Es liest nur dieses Transkript.
-Die Einbezugskontrolle berührt \usref{us:quiet-voices}, die Zurückhaltung \usref{us:sparse-intervention}.
-Ob der Gedanke gesprochen wird, entscheiden erst Bewertung und Sprechschwelle.
-System~2 ist überlegt. Vorgegeben sind zwei Gedanken.
-Der Prompt enthält die letzten fünfzehn Ereignisse, den Meeting-Brief, bis zu fünf saliente
-saliente Kurzzeiterinnerungen und bis zu drei frühere System-2-Gedanken.
-Gedanken haben unter 15 Wörter.
-Hier können die Impulse aus \usref{us:unshared-information} und \usref{us:hold-dissent} entstehen.
+System~1 and System~2 run together.
+System~1 is a fast reaction to the last five events: acknowledgment, pace, a light
+inclusion check, or restraint.
+It reads only this transcript.
+The inclusion check relates to \usref{us:quiet-voices}, and restraint relates to \usref{us:sparse-intervention}.
+Whether the thought is spoken is decided only later, by the evaluation and the speaking threshold.
+System~2 is deliberate. Two thoughts are prescribed.
+The prompt contains the last fifteen events, the meeting brief, up to five salient
+short-term memories, and up to three earlier System~2 thoughts.
+Thoughts have fewer than 15 words.
+The impulses from \usref{us:unshared-information} and \usref{us:hold-dissent} can arise here.
 
-Bei der Anpassung der Heurisitken und prompts wurden sowohl die Literatur als auch die erkentnisse aus den
-Interviews berücksichtigt. Die Evaluierungs-Heursitik zu bewertung der Gedanken wurde so angepasst, dass sie
-das kognitionspyschologsche Fundament des Innter Thoughts-Modelles (basierend  auf grice, Sacks, Goffman und
-Berly) mit en organisationspsychologischen Prinzipien zur Kompenstation des Shared Information bias (Stasser \&
-Titus; Brodbeck et al.) und den HCI-Richtlinen für inklusive Moderation (Houttie et al; Davison) kombiniert.
+When the heuristics and prompts were adapted, both the literature and the findings from the
+interviews were taken into account. The evaluation heuristic for scoring thoughts was adapted so that it
+combines the cognitive-psychological foundation of the Inner Thoughts model (based on Grice, Sacks, Goffman, and
+Berlyne) with the organizational-psychology principles for compensating shared-information bias (Stasser \&
+Titus; Brodbeck et al.) and the HCI guidelines for inclusive facilitation (Houtti et al.; Davison).
 
-System 1 und System 2 laufen gemeinsam.
-
-im original Inner thougs modell von Liu et al.\ werden Gedanken nach persönlicher Relevanz, individuellen
-Interessen oder einzigartigkeit des beitrags bewerten, was kritern waren die aus deren Think out loud stuide
-abgeletiet wruden.
-Für informelles Gespräch stützt das Authentizität.
-Für diesen Prototyp wäre dieselbe Bewertung die falsche Anforderung:
-\usref{us:neutrality} verlangt inhaltliche Neutralität,
-\usref{us:unshared-information} und \usref{us:hold-dissent} verlangen Prozessgedanken zu ungeteilter
-Information und zu offenem Dissens.
-Eine bewertung nach persönlichen Interessen würde Präferenzen einbringen und damit den
-Shared-Information-Bias wiederholen, den der Facilitator ausgleichen soll
+In the original Inner Thoughts model of Liu et al., thoughts are evaluated by personal relevance, individual
+interests, or the uniqueness of the contribution, criteria that were derived from their think-aloud study.
+For informal conversation, this supports authenticity.
+For this prototype, the same evaluation would be the wrong requirement:
+\usref{us:neutrality} demands substantive neutrality,
+and \usref{us:unshared-information} and \usref{us:hold-dissent} demand process thoughts about unshared
+information and about open dissent.
+An evaluation by personal interests would introduce preferences and thereby repeat the
+shared-information bias that the facilitator is supposed to compensate
 (\autoref{sec:hidden-profiles}; \cite{schulz-hardtGroupDecisionMaking2006}).
-Prozessgedanken lägen in dieser Heuristik voraussichtlich zu niedrig.
-Die Prompts folgen deshalb der Anregung von Liu et al., Bewertungskriterien an aufgabenorientierte Kontexte
-anzupassen.
-Sie behalten deren Bildung von Gedanken bei und richten sie auf die Neutralität des Facilitators
+Process thoughts would likely score too low under this heuristic.
+The prompts therefore follow the suggestion by Liu et al.\ to adapt evaluation criteria to task-oriented
+contexts.
+They retain their formation of thoughts and direct it toward the neutrality of the facilitator
 (\autoref{sec:facilitation})
-und auf die Interviewpraxis, zuerst zu öffnen, eine fehlende Stimme oder einen fehlenden Fakt einzubringen
-und die Entscheidung bei der Gruppe zu lassen
+and toward the interview practice of opening first, bringing in a missing voice or a missing fact,
+and leaving the decision with the group
 (\autoref{sec:interview-facilitation-practice}).
-Jeder neue Gedanke erhält eine Facilitationsmotivation von 1 bis 5: wie stark ein inhaltlich neutraler
-Facilitator ohne Entscheidungsbefugnis ihn jetzt äußern wollen würde
+Each new thought receives a facilitation motivation from 1 to 5: how strongly a substantively neutral
+facilitator without decision-making authority would want to utter it now
 (\usref{us:neutrality}, \usref{us:sparse-intervention}; \autoref{sec:facilitation}).
-Der Bewerter sieht die letzten fünfzehn Ereignisse und bis zu zehn saliente Langzeiterinnerungen.
-Der Prompt behält die Struktur von Liu et al.\ und ersetzt persönliche Relevanz durch diese
-Facilitationsmotivation.
-Der Wortlaut steht im Anhang (\autoref{annex:fim-scoring}).
-Anschließend wird die Bewertung mit \(1{,}01\) hoch der Turnzahl seit der letzten Facilitator-Äußerung
-multipliziert und auf 1 bis 5 begrenzt.
-Dieser Wert ist die Basisbewertung \(s_0\), gespeichert mit dem Bewertungszeitpunkt.
-Hypothese: Längeres Schweigen soll den Impuls leicht anheben, ohne die inhaltliche Bewertung zu ersetzen.
-Die Basis \(1{,}01\) ist ein gesetzter Parameter.
-Eine fehlgeschlagene Bewertung speichert \(s_0 = 0\) und schließt den Gedanken von der Auswahl aus.
+The evaluator sees the last fifteen events and up to ten salient long-term memories.
+The prompt retains the structure of Liu et al.\ and replaces personal relevance with this
+facilitation motivation.
+The wording is in the appendix (\autoref{annex:fim-scoring}).
+The score is then multiplied by \(1.01\) raised to the number of turns since the last facilitator utterance
+and capped at 1 to 5.
+This value is the base score \(s_0\), stored together with the time of evaluation.
+Hypothesis: longer silence should raise the impulse slightly, without replacing the substantive evaluation.
+The base \(1.01\) is a set parameter.
+A failed evaluation stores \(s_0 = 0\) and excludes the thought from selection.
 
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{Speaking pipeline}
 
 \textbf{Turn-taking prediction.}
-Ein Klassifikator liest die letzten fünf Ereignisse und weist das nächste Rederecht zu.
-Die Grundstruktur stammt von Liu et al.; der Prompt ist auf die Facilitator-Rolle umgestellt.
-Drei Klassen:
+A classifier reads the last five events and assigns the next right to speak.
+The basic structure comes from Liu et al.; the prompt is recast for the facilitator role.
+Three classes:
 \begin{itemize}
-  \item \textbf{facilitator}: der jüngste Turn richtet sich an den Facilitator oder fragt nach Prozess,
-    Struktur oder weiterem Vorgehen;
-  \item \textbf{group}: ein genannter Mensch ist adressiert, der jüngste Turn ist eine Domänenfrage, oder nur
-    die Teilnehmenden können den Gegenstand weiterführen;
-  \item \textbf{anyone}: das Rederecht ist offen.
+  \item \textbf{facilitator}: the most recent turn is addressed to the facilitator or asks about process,
+    structure, or how to proceed;
+  \item \textbf{group}: a named person is addressed, the most recent turn is a domain question, or only
+    the participants can carry the subject further;
+  \item \textbf{anyone}: the floor is open.
 \end{itemize}
-Die Klassen dienen \usref{us:sparse-intervention} und \usref{us:neutrality}: eine Domänenfrage bleibt bei der
-Gruppe, eine Prozessfrage kann beim Facilitator liegen.
-Hypothese: Diese drei Klassen trennen die Übernahme eines inhaltlichen Turns von einer zulässigen
-Prozesseinladung.
-Sie sind ein gesetztes Klassenschema, kein geschätztes Turn-Taking-Modell dieser Meetings.
-Die Interviews belegen die Richtung: die Entscheidung bleibt bei der Gruppe, und eine nicht erbetene Struktur
-soll nicht aufgezwungen werden
+The classes serve \usref{us:sparse-intervention} and \usref{us:neutrality}: a domain question stays with the
+group, and a process question can lie with the facilitator.
+Hypothesis: these three classes separate taking over a content turn from a permissible
+process invitation.
+They are a set class scheme, not an estimated turn-taking model of these meetings.
+The interviews support the direction: the decision stays with the group, and a structure that was not
+requested should not be imposed
 (\autoref{sec:interview-facilitation-practice}, \autoref{sec:interview-ai-cofacilitator}).
 
 \textbf{Direct answer graph.}
-Bevor ein Reservoir-Gedanke gewählt wird, prüft das System, ob eine Auskunft verlangt ist.
-Auskünfte werden sofort beantwortet.
-Alles andere geht in die Entscheidung, zu sprechen oder zu schweigen.
-So bleiben feste Auskünfte vom offenen Facilitieren getrennt
+Before a reservoir thought is selected, the system checks whether information is being requested.
+Requests for information are answered immediately.
+Everything else goes into the decision to speak or to remain silent.
+In this way, fixed information stays separate from open facilitation
 (\usref{us:goal-clarity}, \usref{us:neutrality}).
 
-Die Prüfung beginnt mit einer Textregel ohne Sprachmodell.
-Sie sucht den Namen oder die Rolle des Facilitators oder eine Frageform.
-Fehlt beides, endet sie.
-Findet sie eines von beiden, startet der Antwortgraph, wenn die Äußerung den Facilitator nennt, oder wenn
-das vorhergesagte Rederecht bereits bei ihm liegt und die Äußerung eine Frage ist.
-Eine Frage nur unter den Teilnehmenden startet den Graphen nicht.
+The check begins with a text rule and no language model.
+It looks for the name or the role of the facilitator, or for a question form.
+If both are missing, it ends.
+If it finds either, the answer graph starts when the utterance names the facilitator, or when
+the predicted right to speak already lies with the facilitator and the utterance is a question.
+A question only among the participants does not start the graph.
 
-Der Graph ist ein einmal aufgebauter LangGraph-Zustandsgraph.
-Der Zustand enthält die Äußerung, den Meeting-Brief, den Namen des Facilitators und die Sprache.
-Der erste Schritt klassifiziert nur die Absicht und leitet an einen darauf spezialisierten Aufruf weiter
-(Routing, \autoref{sec:ai-agent-building-blocks}).
-Fünf Absichten:
+The graph is a LangGraph state graph built once.
+The state contains the utterance, the meeting brief, the name of the facilitator, and the language.
+The first step classifies only the intent and forwards it to a call specialized for that intent
+(routing, \autoref{sec:ai-agent-building-blocks}).
+Five intents:
 \begin{itemize}
-  \item \textbf{meeting facts} (\usref{us:goal-clarity}): Agenda, Zeiten, Ziel, aktueller Punkt und
-    Anwesende, ausschließlich aus dem Brief.
-    Hypothese: Eine Antwort nur aus dem Brief verhindert, dass das System ein Ziel erfindet, das die Gruppe
-    nicht gesetzt hat.
-  \item \textbf{decision help} (\usref{us:neutrality}, \usref{us:hold-dissent}): eines von Mehrheitsentscheid,
-    Konsent, Konsens oder einer benannten Person, die entscheidet, nachdem die Gruppe gehört wurde.
-    Das entspricht der Interviewpraxis, ein Verfahren anzubieten und die Entscheidung nicht zu übernehmen
+  \item \textbf{meeting facts} (\usref{us:goal-clarity}): agenda, times, goal, current item, and
+    attendees, exclusively from the brief.
+    Hypothesis: an answer drawn only from the brief prevents the system from inventing a goal that the group
+    has not set.
+  \item \textbf{decision help} (\usref{us:neutrality}, \usref{us:hold-dissent}): one of majority decision,
+    consent, consensus, or a named person who decides after the group has been heard.
+    This corresponds to the interview practice of offering a procedure and not taking over the decision
     (\autoref{sec:interview-facilitation-practice}).
-  \item \textbf{capabilities}: was der Facilitator kann, ohne das laufende Meeting vorzulesen.
-    Das macht die Rollengrenze sichtbar und ist keiner User Story zugeordnet.
-  \item \textbf{out of scope} (\usref{us:neutrality}): eine feste Grenzantwort, wenn eine inhaltliche Antwort
-    außerhalb des Auftrags verlangt wird.
-  \item \textbf{facilitate}: keine dieser Anfragen.
-    Der Graph erzeugt keine Antwort; die Sprechpipeline entscheidet über einen Reservoir-Gedanken.
+  \item \textbf{capabilities}: what the facilitator can do, without reading out the ongoing meeting.
+    This makes the role boundary visible and is not assigned to any user story.
+  \item \textbf{out of scope} (\usref{us:neutrality}): a fixed boundary answer when a substantive answer
+    outside the mandate is requested.
+  \item \textbf{facilitate}: none of these requests.
+    The graph produces no answer; the speaking pipeline decides on a reservoir thought.
 \end{itemize}
 
 \textbf{Aging and cooldown.}
-Im Original bleibt die Bewertung nach der Erzeugung unverändert.
-In frühen Entwicklungsläufen sprach das System Gedanken, die die weitere Diskussion bereits überholt hatte
+In the original, the score remains unchanged after it is produced.
+In early development runs, the system spoke thoughts that the further discussion had already overtaken
 (\autoref{sec:evaluation-driven-development}).
-Jeden offenen Gedanken nach jedem Ereignis erneut bewerten zu lassen, würde die Aktualität wiederherstellen
-und die Latenz für ein Live-Meeting unbrauchbar machen.
-Der Prototyp behält \(s_0\) und gewichtet deterministisch nach.
-Zwei Hypothesen tragen das:
+Re-evaluating every open thought after every event would restore currency
+and would make the latency unusable for a live meeting.
+The prototype keeps \(s_0\) and reweights it deterministically afterward.
+Two hypotheses carry this:
 \begin{itemize}
-  \item Ein Facilitationsgedanke beschreibt den aktuellen Prozessbedarf schlechter, je weiter das Gespräch
-    seit der Bewertung gegangen ist, weil spätere Information bei der Bewertung fehlte.
-    Die Priorität soll deshalb mit dem Alter fallen.
-  \item Eine soeben gesprochene Intervention sofort zu wiederholen würde die Diskussion zudrängen.
-    \usref{us:sparse-intervention} begründet den Cooldown.
-    Hypothese: Die Motivation für denselben Prozesspunkt ist unmittelbar danach sehr niedrig und kann
-    zurückkehren, wenn die Gruppe ihn nicht aufnimmt.
+  \item A facilitation thought describes the current process need less well the further the conversation
+    has moved since the evaluation, because later information was missing at the time of evaluation.
+    Priority should therefore fall with age.
+  \item Repeating an intervention that has just been spoken would crowd the discussion.
+    \usref{us:sparse-intervention} justifies the cooldown.
+    Hypothesis: the motivation for the same process point is very low immediately afterward and can
+    return if the group does not take it up.
 \end{itemize}
-Vor der Sprechentscheidung wird für jeden bewerteten Gedanken die gewichtete Bewertung aus \(s_0\) neu
-berechnet.
-Die seit der Bewertung vergangene Zeit lässt \(s_0\) linear gegen null fallen.
-Der Zerfallshorizont ist die Gerade, die \(s_{\text{hold}}\) nach \(t_{\text{hold}}\) Sekunden genau auf die
-Schwelle \(\tau\) für offenes Rederecht legt.
-Die Werte \(s_{\text{hold}} = 5\), \(\tau = 4{,}4\) und \(t_{\text{hold}} = 150\) Sekunden sind
-Kalibrierparameter.
-Ein bereits gesprochener Gedanke wird zusätzlich mit einem Smoothstep der Zeit seit dem Sprechen, geteilt
-durch den Cooldown, multipliziert.
-Der Standard-Cooldown beträgt 60 Sekunden: unmittelbar nach der Artikulation ist der Faktor 0, am Ende 1.
-Ein nie gesprochener Gedanke behält den Faktor 1.
-Die gewichtete Bewertung liegt zwischen 0 und 5.
-Die Neuberechnung läuft auch, wenn der Turn über eine direkte Antwort endet.
+Before the speaking decision, the weighted score is recalculated from \(s_0\) for every evaluated thought.
+The time elapsed since the evaluation lets \(s_0\) fall linearly toward zero.
+The decay horizon is the straight line that places \(s_{\text{hold}}\) exactly on the
+threshold \(\tau\) for an open floor after \(t_{\text{hold}}\) seconds.
+The values \(s_{\text{hold}} = 5\), \(\tau = 4.4\), and \(t_{\text{hold}} = 150\) seconds are
+calibration parameters.
+A thought that has already been spoken is additionally multiplied by a smoothstep of the time since it was
+spoken, divided by the cooldown.
+The default cooldown is 60 seconds: immediately after articulation the factor is 0, and at the end it is 1.
+A thought that was never spoken keeps the factor 1.
+The weighted score lies between 0 and 5.
+The recalculation also runs when the turn ends through a direct answer.
 
 \textbf{Speak or stay silent.}
-Gesprochen wird der Gedanke mit der höchsten gewichteten Bewertung, wenn sie die Schwelle der
-vorhergesagten Turn-Klasse überschreitet.
-Die Schwellen sind einstellbar und operationalisieren \usref{us:sparse-intervention}: je höher die Schwelle,
-desto schwerwiegender muss der Prozessnutzen sein.
-Liu et al.\ halten übermäßiges Sprechen in ihrem Plauder-Setting für beherrschbar.
-Hypothese: Ein Facilitator muss seltener eingreifen als ein Gesprächsteilnehmer, deshalb ist das Risiko der
-Überkompensation hier höher.
-Die Schwellen steuern dieses Risiko.
-Sie sind kein Beleg, dass es bereits gemessen wurde.
-Die Interviews stützen die Vorsicht: nicht entscheiden, keine unerbetene Struktur aufzwingen und eine stille
-Person nicht beschämen
+The thought with the highest weighted score is spoken if it exceeds the threshold of the
+predicted turn class.
+The thresholds are adjustable and operationalize \usref{us:sparse-intervention}: the higher the threshold,
+the more serious the process benefit must be.
+Liu et al.\ consider excessive speaking manageable in their chitchat setting.
+Hypothesis: a facilitator must intervene less often than a conversation participant, so the risk of
+overcompensation is higher here.
+The thresholds control this risk.
+They are not evidence that it has already been measured.
+The interviews support the caution: do not decide, do not impose unrequested structure, and do not shame a
+quiet person
 (\autoref{sec:interview-ai-cofacilitator}).
 
 \textbf{Utterance formation.}
-Der ausgewählte Gedanke wird als ein Facilitationszug verbalisiert.
-Bedingung sind die jüngste Äußerung, das jüngere Transkript (bis zu 25 Ereignisse), die Stimuli und die
-Bewertungsbegründung, der Meeting-Brief und salientes Langzeitgedächtnis.
-Der Zug soll den Prozesspunkt sagen und keine eigene Präferenz setzen
+The selected thought is verbalized as one facilitation move.
+The conditions are the most recent utterance, the more recent transcript (up to 25 events), the stimuli and the
+evaluation rationale, the meeting brief, and salient long-term memory.
+The move should state the process point and should not set a preference of its own
 (\usref{us:neutrality}).
 
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{Timed Stimulus pipeline}
 
-Liu et al.\ leiten Beteiligung im Original nur aus inneren Gedanken ab und behandeln externe Hinweise als
-Ergänzung, nicht als Ersatz der intrinsischen Motivation
+In the original, Liu et al.\ derive participation only from inner thoughts and treat external cues as a
+supplement, not as a replacement for intrinsic motivation
 \cite[8.1]{liuProactiveConversationalAgents2025}.
-Die beiden Scans sind diese Ergänzung.
-Sie erzeugen Prozessgedanken, die eine Reaktion von Zug zu Zug verpassen kann.
-Beide durchlaufen danach dieselbe Bewertung wie die Thought Pipeline.
-Hypothese: Weil die Auslösebedingung fest kodiert ist, sind solche Gedanken im Moment des Auslösens
-besonders relevant und werden nach der Bewertung um \(0{,}8\) angehoben.
-Der Boost ist ein gesetzter Parameter, kein geschätztes Gewicht.
+The two scans are this supplement.
+They produce process thoughts that a turn-by-turn reaction can miss.
+Both then pass through the same evaluation as the thought pipeline.
+Hypothesis: because the trigger condition is hard-coded, such thoughts are especially relevant at the moment
+they are triggered and are raised by \(0.8\) after the evaluation.
+The boost is a set parameter, not an estimated weight.
 
 \textbf{Bias scan.}
-Der Scan dient \usref{us:unshared-information} und \usref{us:hold-dissent}.
-Gruppen diskutieren geteilte Information stärker als ungeteilte, und vorschneller Konsens schließt die Suche
-zu früh
+The scan serves \usref{us:unshared-information} and \usref{us:hold-dissent}.
+Groups discuss shared information more strongly than unshared information, and premature consensus closes the
+search too early
 (\autoref{sec:hidden-profiles}; \cite{schulz-hardtGroupDecisionMaking2006}).
-Die Interviews beschreiben die entsprechende Praxis: eine fehlende Stimme oder einen fehlenden Fakt
-einbringen und Dissens nicht vorschnell schließen
+The interviews describe the corresponding practice: bringing in a missing voice or a missing fact
+and not closing dissent prematurely
 (\autoref{sec:interview-facilitation-practice}).
-E2 würde ein System einen benannten Bias ansagen lassen
+E2 would have a system announce a named bias
 (\autoref{sec:interview-ai-cofacilitator}).
-Das Gate öffnet alle \(N\) menschlichen Ereignisse.
-Standard ist \(N = 15\); \(N \le 0\) schaltet den Scan ab.
-\(N\) ist ein gesetzter Takt.
-Das Modell liest das vollständige Transkript und den Meeting-Brief und bildet einen Gedanken zum wichtigsten
-Prozessrisiko, das es sieht: Shared-Information-Bias, übergangene Kriterien, Anchoring, dominante Rahmung,
-fehlende Perspektiven oder vorschneller Konsens.
-Wirkt die Diskussion bereits ausgewogen, entsteht ein Beobachtungsgedanke.
-Stimuli sind die Gesprächszüge.
+The gate opens every \(N\) human events.
+The default is \(N = 15\); \(N \le 0\) switches the scan off.
+\(N\) is a set interval.
+The model reads the complete transcript and the meeting brief and forms a thought about the most important
+process risk it sees: shared-information bias, overlooked criteria, anchoring, dominant framing,
+missing perspectives, or premature consensus.
+If the discussion already appears balanced, an observation thought is formed.
+The stimuli are the conversation turns.
 
 \textbf{Participation scan.}
-Der Scan operationalisiert \usref{us:quiet-voices} und stützt \usref{us:unshared-information}.
-Ungeteilte Information kann nur einbringen, wer sie hat, und Redeanteile sind nach Status ungleich verteilt
+The scan operationalizes \usref{us:quiet-voices} and supports \usref{us:unshared-information}.
+Unshared information can be brought in only by the person who has it, and speaking shares are unequally
+distributed by status
 (\autoref{sec:hidden-profiles};
 \cite{stasserExpertRolesInformation1995,bakerEnhancingGroupDecision2010}).
-Die Interviews laden stille Personen ein und warnen, dass das online stigmatisieren kann
+The interviews invite quiet people and warn that doing so online can stigmatize
 (\autoref{sec:interview-facilitation-practice}, \autoref{sec:interview-ai-cofacilitator}).
-Der Scan erzeugt deshalb einen Beteiligungsgedanken und keine direkte Ansprache.
-Ob er gesprochen wird, entscheiden Bewertung und Schwelle.
-Die Interviews belegen das Beschämungsrisiko.
-Sie belegen nicht, dass dieser Scan es vermeidet.
+The scan therefore produces a participation thought and not a direct address.
+Whether it is spoken is decided by the evaluation and the threshold.
+The interviews substantiate the risk of shaming.
+They do not substantiate that this scan avoids it.
 
-Der Scan läuft höchstens alle \(N\) menschlichen Wörter, standardmäßig 250.
-Geprüft wird einmal, wenn die Wortzahl das nächste Vielfache von \(N\) überschreitet.
-\(N \le 0\) schaltet ihn ab.
-Gezählt werden nur Wörter menschlicher Äußerungen.
-Als gleicher Anteil gilt diese Wortzahl geteilt durch die Zahl der Teilnehmenden.
-Eine ungleiche Verteilung liegt vor, wenn eine Person mindestens das 1,6-Fache oder höchstens das 0,4-Fache
-dieses Anteils hält.
-Eine Einladung (\usref{us:quiet-voices}) setzt nur einen niedrigen Anteil und anhaltendes Schweigen voraus.
-Ein Zurückdrängen ist keiner User Story zugeordnet.
-Hypothese: Ein hoher Anteil wird erst dann zum Prozessproblem, wenn zugleich eine andere Person unter der
-Hälfte eines gleichen Anteils liegt.
-Die Faktoren 1,6 und 0,4, die Hälfte und \(N = 250\) sind gesetzte Parameter.
+The scan runs at most every \(N\) human words, 250 by default.
+It is checked once, when the word count crosses the next multiple of \(N\).
+\(N \le 0\) switches it off.
+Only words from human utterances are counted.
+An equal share is this word count divided by the number of participants.
+An unequal distribution is present when one person holds at least 1.6 times or at most 0.4 times
+this share.
+An invitation (\usref{us:quiet-voices}) requires only a low share and continued silence.
+Curtailment is not assigned to any user story.
+Hypothesis: a high share becomes a process problem only when, at the same time, another person lies below
+half of an equal share.
+The factors 1.6 and 0.4, the half, and \(N = 250\) are set parameters.
 
 % ---------------------------------------------------------------------------------------------------------------------
 \subsection{Technology Stack: Facilitation Agent Runtime and Meeting Client}
 
-Für die Entwicklung des AI-Facilitators wurden LangChain und LangGraph als zentrale Frameworks ausgewählt.
-LangChain bietet eine modular aufgebaute Toolbox für die effiziente Entwicklung von LLM-basierten
-Anwendungen, während LangGraph die Definition und Steuerung agentenbasierter Workflows ermöglicht.
+LangChain and LangGraph were selected as the central frameworks for developing the AI facilitator.
+LangChain provides a modular toolbox for the efficient development of LLM-based
+applications, while LangGraph makes it possible to define and control agent-based workflows.
 
-Für die Durchführung der User Study wurde eine eigens entwickelte Webanwendung eingesetzt, die als einfache
-Videokonferenzlösung fungiert. Diese wurde mit Svelte, SvelteKit und Tailwind CSS implementiert und auf einem
-Hetzner-Server gehostet. Es wurde mediasoup als WebRTC-Server und als SFU eingesetzt.
+A purpose-built web application was used to conduct the user study. It functions as a simple
+video-conferencing solution. It was implemented with Svelte, SvelteKit, and Tailwind CSS and hosted on a
+Hetzner server. mediasoup was used as the WebRTC server and as the SFU.
 
-Das der KI-Faciliatoar arbiete erstmal nur mit text. das transkripoieren des gesagten findet im Meeting
-client und die tts findet im meeting clieent statt.
+For now, the AI facilitator works with text only. Transcription of what is said takes place in the meeting
+client, and text-to-speech likewise takes place in the meeting client.
 
 % ---------------------------------------------------------------------------------------------------------------------
-\subsection{UX und UI of Meeting Client}
+\subsection{UX and UI of the Meeting Client}
 
-Dies ist nciht der Fokus dieser Arbiet, weshlab sich bei dem MeetingClinet auf bestehdne UI von bewährten
-Meeting Tools orienterit wrude. Die ursprüngliche idee dieser eignen Sturkt war, dass so das system flexibler
-desing werden kann.
+This is not the focus of this thesis, which is why the meeting client was oriented toward the existing UI of
+established meeting tools. The original idea of this purpose-built structure was that the system could thus be
+designed more flexibly.
 
-So wurde z.B. sowohl ber ton als auch visuell hervorgehen, wenn der KI-Agent sprechen will. ein viseller cue
-gab an wenn der agent gedanekn formt und die hintergrund frabe des meeting lines färbete sich leicht blau
-wenn der KI-Agetn sprach. dadruch sollte eindeutig gemacht werden, dass die KI gerade spricht.
+For example, it was indicated both acoustically and visually when the AI agent wants to speak. A visual cue
+showed when the agent is forming thoughts, and the background color of the meeting line turned a light blue
+when the AI agent was speaking. This was intended to make it unambiguous that the AI is currently speaking.
 
-Druch diese eignen meeting clinet, war auch die idee die user während der stuide eine evaluierungs fenster
-anzueigen, so dass diese mit daumen hoch bzw. daumen runter den aktuelln gedanekn bewerten konntne. die
-funktionalität ist umgesetzt, konnte allerdings aus zeitlichen gründen nicht mehr ausgewertet werden.
+This purpose-built meeting client also carried the idea of showing users an evaluation window during the study, so that
+they could rate the current thought with thumbs up or thumbs down. The functionality is implemented, but it
+could no longer be evaluated for reasons of time.
