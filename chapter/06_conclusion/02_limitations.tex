@@ -1,19 +1,25 @@
 \section{Limitations and Future Research}
 
-Ai-Voice interaktione wurden inde rder rechereche nicht beachtet.
-
-Die hohe interaktions rate des protopys schränkt die abgeliteten erkentnisse ein, da das systemvon den
-teilnehmden so mit als ungünsigt wargenommenn wrid.
-
 This study has several limitations that should be considered when interpreting the findings. First, the
 empirical evaluation involved only twelve participants across three groups and focused on a single
-hidden-profile scenario. Although this setting provided a controlled environment for examining the system’s
+hidden-profile scenario. Although this setting provided a controlled environment for examining the system's
 ability to support information exchange and decision-making, the findings cannot be generalized to other
 meeting contexts or group constellations. Moreover, the short duration of the sessions and the reliance on
-immediate post-meeting questionnaires limited the assessment of long-term acceptance and the system’s effects
+immediate post-meeting questionnaires limited the assessment of long-term acceptance and the system's effects
 on collaboration and decision-making.
 
-Second, the prototype was subject to technical limitations that affected the interaction between the AI agent
+Second, the high rate of interaction limits what can be concluded from the evaluation. Across the three
+sessions the prototype produced between eleven and nineteen spoken contributions, or about 0.5 to 1.0
+interventions per minute (\autoref{tab:intervention-frequency}). Participants predominantly perceived these
+contributions as disruptive and, after repeated interruptions, began to disregard the agent. The meeting
+among the participants was still rated favorably, but the system itself was perceived unfavorably. Under
+that condition, a useful contribution is difficult to distinguish from one that went unheard because trust
+had already declined. Positive effects of proactive moderation can therefore remain invisible. The findings
+describe this prototype at the observed frequency. They leave open whether a sparser and more selective
+pattern of intervention would be accepted, and whether it would support information sharing and decision
+quality.
+
+Third, the prototype was subject to technical limitations that affected the interaction between the AI agent
 and participants. Its reliance on text-based transcripts restricted its ability to recognize contextual cues
 beyond the spoken content, while transcription errors and response latency sometimes reduced the relevance
 and timing of interventions. Furthermore, the system could not reliably manage situations in which
@@ -21,23 +27,38 @@ participants spoke simultaneously or continued speaking while the agent interven
 thresholds, and turn-allocation mechanisms were also based on heuristic decisions and have not yet been
 systematically validated in the context of goal-oriented meetings.
 
+Fourth, research on spoken AI interaction was not treated as a distinct part of the literature review. The
+account of proactive behavior drew primarily on chatbot-oriented work, in particular the Inner Thoughts
+framework, which was designed and evaluated for asynchronous text conversation
+(\autoref{sec:proactive-ai-interactions}; \cite{liuProactiveConversationalAgents2025}). Spoken multi-party
+meetings impose further demands. A response is expected to fit the current moment, turns overlap, and an
+ongoing contribution of the agent can be interrupted. These conditions were not examined in their own right,
+so assumptions about when and how an agent should take a turn were carried over from chat to voice. The user
+studies indicate that this transfer holds only in part. Facilitation decisions and the mechanics of spoken
+interaction proved difficult to separate, which limits how far the observed difficulties can be attributed
+to the facilitation logic alone.
+
 Future research should address these limitations by evaluating the system with larger and more diverse
 samples across different meeting scenarios and formats. This would help determine whether the observed
-patterns also apply to other convergent tasks, such as prioritization or problem-solving. Further technical
-development should focus on improving contextual awareness, reducing latency, and ensuring that interventions
-are both relevant and appropriately timed. In addition, systematic testing of prompts, thresholds, and
-turn-allocation strategies could help establish more reliable intervention mechanisms. The potential use of
-additional contextual signals may also be explored, while carefully considering privacy and participants’
-concerns about surveillance.
+patterns also apply to other convergent tasks, such as prioritization or problem-solving. Such studies
+should also vary the intervention rate. A comparison between the frequency observed here and a deliberately
+sparse pattern would show whether participants take up facilitative contributions when the agent speaks less
+often, and whether acceptance and decision quality change with that frequency. Further technical development
+should focus on improving contextual awareness, reducing latency, and ensuring that interventions are both
+relevant and appropriately timed. In addition, systematic testing of prompts, thresholds, and turn-allocation
+strategies could help establish more reliable intervention mechanisms. The potential use of additional
+contextual signals may also be explored, while carefully considering privacy and participants' concerns about
+surveillance.
 
-Beyond technical improvements, future studies should investigate how the level of proactivity influences user
-acceptance and meeting outcomes. Comparing fully proactive interventions with approaches that require
-participants’ permission or respond only when requested could help identify an appropriate balance between
-automated support and user control. Participants could also be given clearer options to dismiss, interrupt,
-or adjust the agent’s interventions. Finally, longer-term studies in realistic meeting environments would
+Work on comparable systems should also draw on research into spoken multi-party interaction, including
+overlap, interruption, and real-time turn-taking. An architecture that already provides these functions
+would offer a firmer basis on which facilitation logic can be tested. Beyond technical improvements, future
+studies should investigate how the level of proactivity influences user acceptance and meeting outcomes.
+Finally, longer-term studies in realistic meeting environments with a more surficant an dspecialeded system would
 provide valuable insights into sustained acceptance and the effects of proactive AI moderation on
 participation, information sharing, communication quality, and decision-making.
+
 Overall, the prototype demonstrates the potential of proactive AI moderation to support goal-oriented remote
 meetings, while highlighting the challenges of intervening in a context-sensitive and unobtrusive manner.
 Further research is necessary to determine how AI systems can provide selective and well-timed facilitation
-without disrupting the natural flow of discussion or limiting participants’ autonomy.
+without disrupting the natural flow of discussion or limiting participants' autonomy.
