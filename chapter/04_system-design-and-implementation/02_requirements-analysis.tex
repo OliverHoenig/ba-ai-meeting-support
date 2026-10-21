@@ -1,22 +1,22 @@
 \section{Requirements Analysis and Scoped Requirements Catalog for the Prototype (User Stories)}
 \label{sec:requirements-analysis}
 
-Die Anforderungen werden in Form von User Stories festgehaltens Laut Ott können diese
-einen in Alltagssprache formulierten Software-Anforderungskatalog darstellen
-\cite[p.~18]{ottAppsEffektivManagen2019}. Die Formulierungen orientieren sich an diesem Muster:
+The requirements are documented in the form of user stories. According to Ott, these can serve as a catalog
+of software requirements formulated in ordinary language
+\cite[p.~18]{ottAppsEffektivManagen2019}. The wording follows this pattern:
 \begin{quote}
-  \enquote{Als <Rolle>, ich möchte <Ziel/Wunsch>, um <Nutzen>.}
+  \enquote{As a <role>, I want to <goal/desire> in order to <benefit>.}
   \cite[p.~18]{ottAppsEffektivManagen2019}
 \end{quote}
 
-Die Anforderungen wurden aus der Literatur und den Experteninterviews extrahiert und der in 4.1.2
-beschreibenen fokusiereung. Die Begründungen verweisen auf die Abschnitte dieser Arbeit, in denen die
-jeweilige Herleitung bereits ausgeführt ist, weshlab die quellen hier nicht wiederholt.
+The requirements were extracted from the literature and expert interviews and analyzed using the approach
+described in 4.1.2. The justifications refer to the sections of this thesis in which the respective
+derivations have already been explained; therefore, the sources are not repeated here.
 
-Die User Stories sind aus der Perspektive eines AI-Facilitators geschrieben, der mit modreine elmente proativ
-in das meeting eingreifen möchte und beim aufdecken von hidden profiles hilft.
-\autoref{tab:ai-facilitator-user-stories} bündelt sechs zentrale Stories mit stabilen IDs (\texttt{US1}--\texttt{US6}),
-damit spätere Design- und Scope-Entscheidungen eindeutig darauf verweisen können.
+The user stories are written from the perspective of an AI facilitator who wants to proactively intervene in
+the meeting using modern elements and help uncover hidden profiles. \autoref{tab:ai-facilitator-user-stories}
+groups six key stories with IDs (\texttt{US1}–\texttt{US6}) so that later design and scope decisions can
+clearly reference them.
 
 \newcounter{us}
 \newcommand{\usid}[1]{%
@@ -53,8 +53,8 @@ damit spätere Design- und Scope-Entscheidungen eindeutig darauf verweisen könn
   \bottomrule
   \endlastfoot
   \usid{us:goal-clarity}
-  & Als AI-Facilitator möchte ich Ablauf und Ziel des Meetings klar machen können, damit die Gruppe
-  einen gemeinsamen Bezugsrahmen hat und zu einer tragfähigen Entscheidung kommt.
+  & As an AI facilitator, I want to be able to clarify the meeting's agenda and objectives so that the group
+  has a shared frame of reference and can reach a sound decision.
   & Structuring tasks and communicating the meeting goal are core facilitation duties and a documented
   failure mode of goal-oriented meetings
   (see \autoref{sec:facilitation}; \autoref{sec:key-challenges-in-meetings}).
@@ -62,9 +62,8 @@ damit spätere Design- und Scope-Entscheidungen eindeutig darauf verweisen könn
   (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\
   \usblocksep
   \usid{us:quiet-voices}
-  & Als AI-Facilitator möchte ich Personen, die noch wenig gesagt haben, auf rücksichtsvolle Weise in
-  die Diskussion einladen, damit alle relevanten Stimmen gehört werden, ohne Schweigen zu
-  stigmatisieren.
+  & As an AI facilitator, I want to invite people who haven’t spoken much yet to join the discussion in a
+  considerate way, so that all relevant voices are heard without stigmatizing silence.
   & Unequal participation is a key meeting challenge and is linked to hierarchy and status
   (see \autoref{sec:key-challenges-in-meetings}).
   Expert facilitators invite quiet members, but warn that doing so online can stigmatize or feel like
@@ -72,8 +71,8 @@ damit spätere Design- und Scope-Entscheidungen eindeutig darauf verweisen könn
   (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\
   \usblocksep
   \usid{us:unshared-information}
-  & Als AI-Facilitator möchte ich gezielt nach noch nicht genannten oder nicht ins Bild passenden
-  Informationen fragen, damit ungeteiltes Wissen in die Entscheidung einfließen kann.
+  & As an AI facilitator, I want to ask specific questions about information that hasn’t been mentioned yet
+  or that doesn’t fit the picture, so that all available knowledge can be factored into the decision.
   & Groups systematically under-discuss unshared information; asking for information that does not yet
   fit the picture is a documented counter-strategy
   (see \autoref{sec:hidden-profiles}).
@@ -82,8 +81,8 @@ damit spätere Design- und Scope-Entscheidungen eindeutig darauf verweisen könn
   (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\
   \usblocksep
   \usid{us:hold-dissent}
-  & Als AI-Facilitator möchte ich Meinungsverschiedenheiten nicht vorschnell auflösen, damit Dissent
-  den Informationsaustausch vertieft und bessere Alternativen sichtbar bleiben.
+  & As an AI facilitator, I don't want to resolve disagreements too quickly, so that dissent can deepen the
+  exchange of information and keep better alternatives on the table.
   & Dissent improves hidden-profile solution rates; rushing through the Groan Zone closes that
   information search too early
   (see \autoref{sec:hidden-profiles}; \autoref{sec:divergent-convergent}).
@@ -91,8 +90,8 @@ damit spätere Design- und Scope-Entscheidungen eindeutig darauf verweisen könn
   (see \autoref{ch:empirical-analysis-of-facilitating-strategies}). \\
   \usblocksep
   \usid{us:sparse-intervention}
-  & Als AI-Facilitator möchte ich nur sparsam und mit klarem Prozessnutzen eingreifen, damit die
-  menschliche Diskussion nicht übersteuert wird.
+  & As an AI facilitator, I want to intervene only sparingly and only when it clearly benefits the process,
+  so as not to overshadow the human discussion.
   & A facilitator is substantively neutral and must not dominate the group
   (see \autoref{sec:facilitation}).
   Fully automatic or overly frequent intervention produces mistrust
