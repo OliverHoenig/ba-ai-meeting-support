@@ -73,103 +73,103 @@ Respond with a JSON object in the following format:
 \noindent
 \texttt{channel} is either \texttt{speak} (default) or \texttt{chat}.
 
-\subsection*{Adaptation mapping (original $\rightarrow$ facilitation)}
+% \subsection*{Adaptation mapping (original $\rightarrow$ facilitation)}
 
-\autoref{tab:articulation-adaptations} lists only the units that changed.
-Lines that were kept (do not repeat prior speakers; leave room for others;
-JSON articulation field) are not restated.
+% \autoref{tab:articulation-adaptations} lists only the units that changed.
+% Lines that were kept (do not repeat prior speakers; leave room for others;
+% JSON articulation field) are not restated.
 
-\begin{table}[htbp]
-  \centering
-  \caption{Mapping from the original Inner Thoughts articulation prompt to
-  the facilitation version, with the warrant used in this thesis.}
-  \label{tab:articulation-adaptations}
-  \small
-  \setlength{\tabcolsep}{3.5pt}
-  \begin{tabularx}{\textwidth}{@{}
-      >{\raggedright\arraybackslash}p{2.55cm}
-      >{\raggedright\arraybackslash}p{3.55cm}
-      >{\raggedright\arraybackslash}X
-    @{}}
-    \toprule
-    \textbf{Original} & \textbf{Adaptation} & \textbf{Warrant} \\
-    \midrule
-    Role: participant in a multi-party chat; name only
-    & Role: professional AI facilitator in a goal-oriented meeting
-    & \autoref{sec:facilitation};
-    \autoref{sec:adapted-inner-thoughts} \\
-    \addlinespace
-    Goal: strangers having a natural conversation
-    & Goal: objective decision, inclusion, on-track process; mitigate
-    shared-information bias; no decision authority
-    & Schwarz / Hayne (\autoref{sec:facilitation});
-    \autoref{sec:hidden-profiles} \\
-    \addlinespace
-    Speak the thought as the next chat line
-    & Do not speak $t^{*}$ raw; formulate one facilitation act
-    & Utterance Formation
-    (\autoref{sec:adapted-inner-thoughts}) \\
-    \addlinespace
-    Under 15 words; natural online chat
-    & One or two short sentences; one move; do not dominate
-    & Over-talking as failure mode
-    (\autoref{sec:adapted-inner-thoughts});
-    interviews: short invitations and summaries
-    (\autoref{ch:empirical-analysis-of-facilitating-strategies}) \\
-    \addlinespace
-    Do not always end with a question
-    & One open question is allowed (invitation / check);
-    do not stack questions
-    & Original keep-room rule;
-    interviews: inviting missing voices is the method
-    (\autoref{ch:empirical-analysis-of-facilitating-strategies},
-    \autoref{annex:interview-guide-facilitators}, item 3.2) \\
-    \addlinespace
-    Human-like online-chat voice
-    & Professional, warm, face-saving remote-facilitation tone;
-    address invitees by name; match conversation language
-    & Interviews: inviting silence can stigmatize online
-    (\autoref{sec:interview-meeting-dynamics},
-    \autoref{sec:interview-facilitation-practice}) \\
-    \addlinespace
-    Insert typos, grammar errors, colloquialisms
-    & Removed. No slang, abbreviations, or deliberate mistakes
-    & Trust and false-positive risk of proactive AI
-    (\autoref{sec:research-approaches-to-ai-supported-meeting-systems},
-    \autoref{sec:interview-ai-cofacilitator}) \\
-    \addlinespace
-    LTM as generic memory
-    & LTM as facilitation mandate (goal, criteria, process knowledge)
-    & Same restriction as FIM
-    (\autoref{annex:fim-scoring};
-    \autoref{sec:facilitation}) \\
-    \addlinespace
-    Context: overall, history, LTM
-    & Plus speaking-time shares and active ESI policy
-    & \autoref{sec:adapted-inner-thoughts};
-    \autoref{sec:meetings-in-modern-work} \\
-    \addlinespace
-    ---
-    & Do not introduce own preference among options
-    & Schwarz neutrality (\autoref{sec:facilitation});
-    hidden-profile sampling
-    (\autoref{sec:hidden-profiles}) \\
-    \addlinespace
-    ---
-    & Do not stigmatize silence or expose monitoring
-    & Interviews: face, culture, and control / DSGVO concerns
-    (\autoref{sec:interview-meeting-dynamics},
-    \autoref{sec:interview-ai-cofacilitator}) \\
-    \addlinespace
-    Spoken text only
-    & \texttt{channel}: \texttt{speak} (default) or \texttt{chat}
-    & Tools for chat or voice
-    (\autoref{sec:adapted-inner-thoughts});
-    addressee and channel
-    (\autoref{sec:interview-facilitation-practice});
-    visual / less interrupting alternatives
-    (Keeper note in
-    \autoref{sec:adapted-inner-thoughts}) \\
-    \bottomrule
-  \end{tabularx}
-\end{table}
+% \begin{table}[htbp]
+%   \centering
+%   \caption{Mapping from the original Inner Thoughts articulation prompt to
+%   the facilitation version, with the warrant used in this thesis.}
+%   \label{tab:articulation-adaptations}
+%   \small
+%   \setlength{\tabcolsep}{3.5pt}
+%   \begin{tabularx}{\textwidth}{@{}
+%       >{\raggedright\arraybackslash}p{2.55cm}
+%       >{\raggedright\arraybackslash}p{3.55cm}
+%       >{\raggedright\arraybackslash}X
+%     @{}}
+%     \toprule
+%     \textbf{Original} & \textbf{Adaptation} & \textbf{Warrant} \\
+%     \midrule
+%     Role: participant in a multi-party chat; name only
+%     & Role: professional AI facilitator in a goal-oriented meeting
+%     & \autoref{sec:facilitation};
+%     \autoref{sec:adapted-inner-thoughts} \\
+%     \addlinespace
+%     Goal: strangers having a natural conversation
+%     & Goal: objective decision, inclusion, on-track process; mitigate
+%     shared-information bias; no decision authority
+%     & Schwarz / Hayne (\autoref{sec:facilitation});
+%     \autoref{sec:hidden-profiles} \\
+%     \addlinespace
+%     Speak the thought as the next chat line
+%     & Do not speak $t^{*}$ raw; formulate one facilitation act
+%     & Utterance Formation
+%     (\autoref{sec:adapted-inner-thoughts}) \\
+%     \addlinespace
+%     Under 15 words; natural online chat
+%     & One or two short sentences; one move; do not dominate
+%     & Over-talking as failure mode
+%     (\autoref{sec:adapted-inner-thoughts});
+%     interviews: short invitations and summaries
+%     (\autoref{ch:empirical-analysis-of-facilitating-strategies}) \\
+%     \addlinespace
+%     Do not always end with a question
+%     & One open question is allowed (invitation / check);
+%     do not stack questions
+%     & Original keep-room rule;
+%     interviews: inviting missing voices is the method
+%     (\autoref{ch:empirical-analysis-of-facilitating-strategies},
+%     \autoref{annex:interview-guide-facilitators}, item 3.2) \\
+%     \addlinespace
+%     Human-like online-chat voice
+%     & Professional, warm, face-saving remote-facilitation tone;
+%     address invitees by name; match conversation language
+%     & Interviews: inviting silence can stigmatize online
+%     (\autoref{sec:interview-meeting-dynamics},
+%     \autoref{sec:interview-facilitation-practice}) \\
+%     \addlinespace
+%     Insert typos, grammar errors, colloquialisms
+%     & Removed. No slang, abbreviations, or deliberate mistakes
+%     & Trust and false-positive risk of proactive AI
+%     (\autoref{sec:research-approaches-to-ai-supported-meeting-systems},
+%     \autoref{sec:interview-ai-cofacilitator}) \\
+%     \addlinespace
+%     LTM as generic memory
+%     & LTM as facilitation mandate (goal, criteria, process knowledge)
+%     & Same restriction as FIM
+%     (\autoref{annex:fim-scoring};
+%     \autoref{sec:facilitation}) \\
+%     \addlinespace
+%     Context: overall, history, LTM
+%     & Plus speaking-time shares and active ESI policy
+%     & \autoref{sec:adapted-inner-thoughts};
+%     \autoref{sec:meetings-in-modern-work} \\
+%     \addlinespace
+%     ---
+%     & Do not introduce own preference among options
+%     & Schwarz neutrality (\autoref{sec:facilitation});
+%     hidden-profile sampling
+%     (\autoref{sec:hidden-profiles}) \\
+%     \addlinespace
+%     ---
+%     & Do not stigmatize silence or expose monitoring
+%     & Interviews: face, culture, and control / DSGVO concerns
+%     (\autoref{sec:interview-meeting-dynamics},
+%     \autoref{sec:interview-ai-cofacilitator}) \\
+%     \addlinespace
+%     Spoken text only
+%     & \texttt{channel}: \texttt{speak} (default) or \texttt{chat}
+%     & Tools for chat or voice
+%     (\autoref{sec:adapted-inner-thoughts});
+%     addressee and channel
+%     (\autoref{sec:interview-facilitation-practice});
+%     visual / less interrupting alternatives
+%     (Keeper note in
+%     \autoref{sec:adapted-inner-thoughts}) \\
+%     \bottomrule
+%   \end{tabularx}
+% \end{table}
